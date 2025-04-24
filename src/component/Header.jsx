@@ -47,7 +47,8 @@ export default function Header() {
     },
     { name: 'Blogs', link: '/blogs' },
     { name: 'Cases', link: '/cases' },
-    { name: 'Contact Us', link: '/contact' }
+    { name: 'Contact Us', link: '/contact' },
+    { name: 'Gallery', link: '/gallery' }
   ];
 
   return (
