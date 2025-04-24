@@ -1,144 +1,112 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-  
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700">
-      {/* Background elements and design */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent"></div>
-        <img 
-          src="/api/placeholder/1920/1080" 
-          alt="Medical background" 
-          className="object-cover w-full h-full"
-        />
-      </div>
-      
-      {/* Pattern overlay */}
-      <div className="absolute inset-0 z-0 opacity-10 bg-[url('/api/placeholder/100/100')] bg-repeat"></div>
-      
-      {/* Main content container */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 py-12 min-h-screen flex flex-col lg:flex-row items-center justify-between">
-        {/* Left side (text content) */}
-        <div className={`max-w-xl lg:w-1/2 text-white transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
-          <div className="mb-4">
-            <span className="inline-block bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wider">
-              Premier Healthcare
-            </span>
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Dr. Monika Pandey
-            <span className="block text-yellow-300 mt-2">Excellence in Medicine</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl mb-6 font-light">
-            Transforming lives through compassionate care and medical innovation
-          </p>
-          
-          <p className="mb-8 text-lg opacity-90">
-            Experience world-class medical treatment with personalized care. Dr. Pandey combines cutting-edge expertise with a warm, patient-centered approach.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button className="bg-red-500 hover:bg-red-600 text-white py-3 px-8 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-              Book Appointment
-            </button>
-            <button className="border-2 border-white hover:bg-white/10 text-white py-3 px-8 rounded-full font-semibold text-lg hover:-translate-y-1 transition-all flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
-              </svg>
-              Our Services
-            </button>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { value: '15+', label: 'Years Experience' },
-              { value: '5000+', label: 'Patients Treated' },
-              { value: '98%', label: 'Patient Satisfaction' }
-            ].map((stat, index) => (
-              <div 
-                key={index} 
-                className="bg-white/10 backdrop-blur-md p-4 rounded-lg border-l-4 border-yellow-400 hover:-translate-y-1 transition-all"
-              >
-                <div className="text-3xl font-bold text-yellow-300">{stat.value}</div>
-                <div className="text-sm font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className="font-sans">
+      {/* Hero Section - Full Screen Height */}
+      <div className="min-h-screen bg-gradient-to-br from-pink-100 via-pink-200 to-pink-300 relative overflow-hidden flex items-center py-20">
+        {/* Decorative Elements */}
+        <div className="absolute top-10 left-10 w-32 h-32 bg-pink-400 rounded-full opacity-20"></div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 bg-pink-500 rounded-full opacity-20"></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-purple-400 rounded-full opacity-20"></div>
+        <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-pink-300 rounded-full opacity-30"></div>
         
-        {/* Right side (doctor image) */}
-        <div className={`lg:w-2/5 mt-12 lg:mt-0 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
-          <div className="relative">
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-500 rounded-full opacity-30 animate-pulse"></div>
-            <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-red-500 rounded-full opacity-20 animate-pulse delay-300"></div>
+        <div className="max-w-7xl mx-auto px-4 py-12 z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            {/* Left Side Image */}
+            <div className="lg:w-1/4 mb-6 lg:mb-0 transform -rotate-6 relative animate-pulse">
+              <div className="bg-white p-4 rounded-2xl shadow-xl">
+                <img src="https://themes.envytheme.com/mavis/wp-content/uploads/2024/07/banner1.jpg" alt="Smiling child" className="rounded-xl" />
+              </div>
+            </div>
             
-            <div className="relative z-10 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm p-4 rounded-2xl shadow-2xl">
-              <img 
-                src="/api/placeholder/600/800" 
-                alt="Dr. Monika Pandey" 
-                className="w-full h-auto rounded-xl object-cover shadow-lg"
-              />
-              
-              {/* Floating Card */}
-              <div className="absolute -bottom-10 -right-10 bg-white rounded-xl p-4 shadow-xl flex items-center max-w-xs animate-bounce-slow">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-400 rounded-full p-3 mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+            {/* Center Content */}
+            <div className="lg:w-2/4 text-center mb-8 lg:mb-0">
+              <div className="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm p-8 rounded-3xl shadow-lg">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 mb-6 leading-tight">
+                  Growing Smiles, Healing Hearts
+                </h1>
+                <p className="text-gray-700 text-xl mb-8 font-light">
+                  Where every child receives the gentlest care, the warmest smiles, and the brightest medical expertise.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <button className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-medium flex items-center justify-center transform transition-transform hover:scale-105 shadow-lg">
+                    Book Appointment
+                    <ArrowRight size={20} className="ml-2" />
+                  </button>
+                  <button className="bg-white text-pink-600 border-2 border-pink-500 px-8 py-4 rounded-full font-medium hover:bg-pink-50 flex items-center justify-center transform transition-transform hover:scale-105 shadow-lg">
+                    Our Services
+                  </button>
                 </div>
-                <div className="text-gray-800">
-                  <h3 className="font-bold text-lg">Emergency Care</h3>
-                  <p className="text-sm text-gray-600">24/7 priority appointments available</p>
+                <div className="mt-8 flex flex-wrap justify-center gap-6">
+                  <div className="flex items-center">
+                    <div className="bg-pink-100 p-2 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-600">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                      </svg>
+                    </div>
+                    <span className="ml-2 font-medium text-gray-700">Compassionate Care</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="bg-pink-100 p-2 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-600">
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                      </svg>
+                    </div>
+                    <span className="ml-2 font-medium text-gray-700">Expert Pediatricians</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="bg-pink-100 p-2 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-600">
+                        <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </div>
+                    <span className="ml-2 font-medium text-gray-700">24/7 Care</span>
+                  </div>
                 </div>
+              </div>
+            </div>
+            
+            {/* Right Side Image */}
+            <div className="lg:w-1/4 transform rotate-6 relative animate-pulse">
+              <div className="bg-white p-4 rounded-2xl shadow-xl">
+                <img src="https://themes.envytheme.com/mavis/wp-content/uploads/2024/07/banner2.jpg" alt="Doctor with child" className="rounded-xl" />
+              </div>
+            </div>
+          </div>
+          
+          {/* Trust Indicators */}
+          <div className="mt-12 bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+            <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-pink-600">5000+</h3>
+                <p className="text-gray-600">Happy Patients</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-pink-600">50+</h3>
+                <p className="text-gray-600">Specialists</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-pink-600">20+</h3>
+                <p className="text-gray-600">Years of Excellence</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-pink-600">24/7</h3>
+                <p className="text-gray-600">Emergency Support</p>
               </div>
             </div>
           </div>
         </div>
+        
+        {/* Wave Shape at Bottom */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
+            <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,144C672,117,768,75,864,80C960,85,1056,139,1152,149.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-20 h-20 rounded-full bg-blue-300 opacity-20 animate-float"></div>
-      <div className="absolute bottom-20 left-10 w-32 h-32 rounded-full bg-red-300 opacity-20 animate-float-delay"></div>
-      
-      <style jsx>{`
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-          100% { transform: translateY(0px); }
-        }
-        
-        @keyframes float-delay {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-          100% { transform: translateY(0px); }
-        }
-        
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        
-        .animate-float-delay {
-          animation: float 10s ease-in-out infinite 2s;
-        }
-        
-        .animate-bounce-slow {
-          animation: bounce 4s infinite;
-        }
-      `}</style>
     </div>
   );
 }

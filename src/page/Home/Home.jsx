@@ -3,6 +3,10 @@ import HeroSection from './HeroSection'
 import HomeSlider from './HomeSlider'
 import HomeAbout from './HomeAbout'
 import Services from './HomeServices'
+import WhyWeChooseUs from './WhyChooseUs'
+import AnotherService from './AnotherService'
+import PriyankaAbout from './PriyankaAbout'
+import CTA from '../../component/CTA'
 
 const Home = () => {
   return (
@@ -11,6 +15,10 @@ const Home = () => {
         {/* <HomeSlider/> */}
         <HomeAbout/>
         <Services/>
+        <WhyWeChooseUs/>
+        <AnotherService/>
+        <PriyankaAbout/>
+        <CTA/>
     </div>
   )
 }
