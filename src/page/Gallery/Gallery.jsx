@@ -11,30 +11,9 @@ import img6 from "../../assets/gallery/gallery6.jpg";
 import img7 from"../../assets/gallery/gallery7.jpg";
 import img8 from "../../assets/gallery/gallery7.jpg";
 import img9 from "../../assets/gallery/gallery9.jpg";
+import BreadCrumbs from '../../component/Breadcums';
 
-const BreadcrumbComponent = ({ headerText, items }) => {
-  return (
-    <div className="bg-pink-100 py-8">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold text-pink-800 mb-2">{headerText}</h1>
-        <div className="flex items-center space-x-2 text-pink-600">
-          {items.map((item, index) => (
-            <div key={index} className="flex items-center">
-              {index > 0 && <span className="mx-2">/</span>}
-              {item.href ? (
-                <a href={item.href} className="hover:text-pink-800 transition-colors">
-                  {item.label}
-                </a>
-              ) : (
-                <span className="font-semibold">{item.label}</span>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+
 
 // Simple slider component
 const Slider = ({ children, settings, ref }) => {
@@ -111,7 +90,7 @@ export default function Gallery() {
 
   return (
     <section className="bg-pink-50 min-h-screen">
-      <BreadcrumbComponent headerText='Gallery' items={breadcrumbItems} />
+     <BreadCrumbs  headText={"Gallery"} items={breadcrumbItems} />
       <div className="relative">
         <div className="bg-pink-50 py-6 sm:py-8 lg:py-16">
           <div className="mx-auto container px-4 md:px-8">
@@ -132,7 +111,7 @@ export default function Gallery() {
                     alt={`Gallery ${index + 1}`}
                     className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-40"></div>
+                  {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-40"></div> */}
                 </a>
               ))}
             </div>
@@ -140,7 +119,7 @@ export default function Gallery() {
         </div>
 
         {isOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="fixed inset-0 z-50 flex items-center justify-center ">
             <div className="relative w-full max-w-3xl p-4 bg-white rounded-lg overflow-hidden">
               <button
                 onClick={closeModal}

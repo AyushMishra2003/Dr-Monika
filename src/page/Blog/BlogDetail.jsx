@@ -1,170 +1,172 @@
 import { useState, useEffect } from 'react';
 import BreadcrumbComponent from '../../component/Breadcums';
 import { MessageCircleQuestion } from 'lucide-react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { href, useNavigate, useParams } from 'react-router-dom';
 
 const BlogDetails = () => {
   const [currentPost, setCurrentPost] = useState(null);
   const [relatedPosts, setRelatedPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
-  const { slug } = useParams();
-  
+  const { detail } = useParams()
+
 
   const blogPosts = [
     {
       id: 1,
-      title: "Understanding Common Health Issues and Their Treatments",
-      excerpt: "Learn about everyday health concerns and how Dr. Monika provides effective treatments for these conditions.",
+      title: "The Importance of Regular Dental Check-ups",
+      excerpt: "Regular dental check-ups are crucial for maintaining oral health. Learn why you should visit your dentist every six months and what happens during these important appointments.",
       image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-      author: "Dr. Monika",
+      author: "Dr. Monika Pandey",
       date: "April 15, 2025",
-      category: "General Health",
+      category: "Preventive Care",
       content: `
-        Understanding common health issues is essential for maintaining overall wellbeing. From seasonal allergies to chronic pain, knowing what treatments are available can help you make informed decisions about your health.
+        Regular dental check-ups are a cornerstone of good oral health. Visiting your dentist every six months allows for early detection of potential issues before they become serious problems.
 
-        Many people experience recurring health problems that affect their quality of life. These can include digestive issues, skin conditions, respiratory problems, and various types of pain. While some conditions require specialized care, many can be effectively managed with the right treatment plan.
+        During a typical check-up, your dentist will perform a thorough examination of your teeth, gums, and mouth. This includes checking for cavities, plaque, and tartar, as well as examining your gums for signs of gingivitis or other periodontal disease. Many dentists also conduct oral cancer screenings during routine visits.
 
-        Dr. Monika specializes in providing comprehensive treatment options for a wide range of health concerns. Rather than focusing on just one area of medicine, she takes a holistic approach that considers how different body systems interact with each other.
+        Professional cleaning is another important component of your dental check-up. Even with diligent brushing and flossing at home, plaque can build up in hard-to-reach areas. Your dental hygienist has specialized tools to remove this buildup effectively.
 
-        During a typical consultation, Dr. Monika conducts a thorough assessment of your symptoms and medical history. This allows her to develop a personalized treatment plan that addresses the root cause of your health issues, not just the symptoms.
+        These regular visits also provide an opportunity for your dentist to offer personalized advice on improving your oral hygiene routine. They can demonstrate proper brushing and flossing techniques tailored to your specific needs.
 
-        Many patients find that this integrated approach helps them achieve better health outcomes than they experienced with more specialized treatments. By addressing multiple aspects of health simultaneously, Dr. Monika helps patients achieve balanced wellness.
+        For children, regular dental visits help establish comfort with dental procedures and instill good habits early. Many dental problems in adulthood can be prevented with proper care from a young age.
 
-        Regular check-ups with Dr. Monika enable early detection and treatment of potential health issues before they become serious problems. This preventive approach is key to maintaining good health and avoiding more intensive interventions later.
+        Remember, prevention is always better than treatment. By maintaining a schedule of regular check-ups, you're investing in your long-term oral health and potentially avoiding more expensive and uncomfortable procedures down the road.
       `,
-      url: "understanding-common-health-issues-and-treatments"
+      url: "the-importance-of-regular-dental-check-ups"
     },
     {
       id: 2,
-      title: "The Benefits of Holistic Medicine in Modern Healthcare",
-      excerpt: "Discover how holistic treatment approaches can complement conventional medicine for better health outcomes.",
+      title: "Understanding Teeth Whitening Procedures",
+      excerpt: "Teeth whitening has become increasingly popular. Discover the different methods available, their effectiveness, and whether professional whitening is right for you.",
       image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-      author: "Dr. Monika",
+      author: "Dr. Monika Pandey",
       date: "April 10, 2025",
-      category: "Holistic Health",
+      category: "Cosmetic Dentistry",
       content: `
-        Holistic medicine approaches health from a whole-person perspective, considering physical, emotional, social, and spiritual wellbeing. This comprehensive approach has gained recognition for its ability to complement conventional medical treatments.
+        Teeth whitening has become one of the most popular cosmetic dental procedures, with numerous options available ranging from professional treatments to over-the-counter products.
 
-        Instead of focusing solely on specific symptoms, holistic medicine examines how different aspects of a person's life contribute to their overall health. This may include diet, exercise, stress management, sleep quality, and environmental factors.
+        Professional whitening performed in a dental office typically uses high-concentration bleaching agents and specialized lights or lasers to accelerate the process. This method offers the most dramatic results, often brightening teeth by several shades in just one visit.
 
-        Dr. Monika incorporates principles of holistic medicine into her practice, combining conventional medical knowledge with complementary therapies when appropriate. This integrated approach allows her to address health concerns more comprehensively.
+        Take-home whitening kits provided by dentists offer a more gradual approach. These typically include custom-fitted trays and professional-grade whitening gel to be used at home according to your dentist's instructions.
 
-        Many patients find that holistic treatments help reduce their reliance on medications with potential side effects. While pharmaceuticals play an important role in treating many conditions, complementary approaches can sometimes achieve similar benefits with fewer unwanted effects.
+        Over-the-counter options like whitening strips, toothpastes, and rinses can help maintain whiteness or provide mild improvement, but they generally don't match the effectiveness of professional treatments.
 
-        Research increasingly supports the effectiveness of certain holistic treatments that were once considered alternative. Mind-body practices, nutritional interventions, and lifestyle modifications have all demonstrated benefits for various health conditions.
+        It's important to understand that not all discoloration responds equally to whitening treatments. Yellowing tends to respond well, while brown or gray tones may be more resistant. Additionally, whitening won't affect the color of fillings, crowns, or bonded surfaces.
 
-        For those with chronic health issues, holistic approaches often improve quality of life even when a condition cannot be completely cured. These therapies can help manage symptoms, reduce stress, and improve overall functioning.
-
-        Before pursuing any treatment approach, it's important to consult with a qualified healthcare provider like Dr. Monika. She can help determine which combination of conventional and complementary treatments will best address your specific health concerns.
+        Before pursuing any whitening treatment, it's wise to consult with your dentist. They can help determine the cause of your tooth discoloration and recommend the most appropriate whitening method for your specific situation.
       `,
-      url: "benefits-of-holistic-medicine"
+      url: "understanding-teeth-whitening-procedures"
     },
     {
       id: 3,
-      title: "Managing Chronic Health Conditions Effectively",
-      excerpt: "Learn strategies for living well with chronic health conditions and how Dr. Monika's treatments can help improve your quality of life.",
+      title: "How to Properly Care for Dental Implants",
+      excerpt: "Dental implants require special care to ensure their longevity. Learn the best practices for maintaining your implants and keeping your smile healthy for years to come.",
       image: "https://html.awaikenthemes.com/dentaire/images/post-3.jpg",
-      author: "Dr. Monika",
+      author: "Dr. Monika Pandey",
       date: "April 5, 2025",
-      category: "Chronic Conditions",
+      category: "Restorative Dentistry",
       content: `
-        Chronic health conditions require ongoing management to minimize symptoms and maintain quality of life. With the right treatment approach, many people with chronic conditions can lead active, fulfilling lives despite their health challenges.
+        Dental implants represent a significant investment in your oral health and appearance. With proper care, they can last a lifetime, making proper maintenance essential.
 
-        A personalized treatment plan is essential for effectively managing chronic conditions. Dr. Monika works closely with each patient to develop strategies tailored to their specific health needs, preferences, and circumstances.
+        Daily cleaning is the foundation of implant care. While implants can't develop cavities like natural teeth, the surrounding gum tissue is still susceptible to infection. Brush at least twice daily with a soft-bristled toothbrush, paying special attention to the area where the implant meets the gumline.
 
-        Many chronic conditions respond well to a combination of conventional and complementary treatments. Medications may address specific symptoms, while dietary changes, exercise, and stress management techniques can improve overall health and reduce flare-ups.
+        Flossing around implants requires a slightly different technique than with natural teeth. Many dentists recommend using floss specifically designed for implants or interdental brushes to clean between and around the implant structures.
 
-        Regular monitoring is crucial for chronic condition management. Dr. Monika schedules follow-up appointments to assess how treatments are working and make adjustments as needed to optimize results.
+        Regular professional cleanings remain important after getting implants. Your dental hygienist will use specialized tools designed to be safe for the implant surface while effectively removing buildup.
 
-        For some conditions, patients may need to work with multiple healthcare providers. Dr. Monika collaborates with specialists when necessary to ensure comprehensive care while helping coordinate different aspects of treatment.
+        Avoid using abrasive products on your implants. Toothpastes containing harsh abrasives, baking soda, or stain removers can scratch the implant surface, creating areas where bacteria can accumulate.
 
-        Patient education is a key component of chronic disease management. Understanding your condition and treatment options empowers you to take an active role in your health care and make informed decisions about managing your condition.
+        Be aware of habits that could damage your implants. Avoid chewing extremely hard items like ice or hard candy, and if you grind your teeth at night, talk to your dentist about a protective nightguard.
 
-        Support from family, friends, and sometimes support groups can make a significant difference for those living with chronic health issues. Dr. Monika often recommends community resources that can provide additional assistance and emotional support.
+        Finally, maintain regular dental check-ups. Your dentist can monitor the condition of your implants and surrounding tissues, addressing any concerns before they become serious problems.
       `,
-      url: "managing-chronic-health-conditions"
+      url: "how-to-properly-care-for-dental-implants"
     },
     {
       id: 4,
-      title: "Preventive Health Measures for Every Age Group",
-      excerpt: "Discover essential preventive health practices for different life stages and how Dr. Monika can help you maintain optimal health.",
+      title: "Children's Dental Health: What Parents Should Know",
+      excerpt: "Establishing good dental habits early is essential for children's oral health. Find out when to schedule their first appointment and how to make dental care fun for kids.",
       image: "https://html.awaikenthemes.com/dentaire/images/post-2.jpg",
-      author: "Dr. Monika",
+      author: "Dr. Monika Pandey",
       date: "March 30, 2025",
-      category: "Preventive Care",
+      category: "Pediatric Dentistry",
       content: `
-        Preventive healthcare is the foundation of lifelong wellness. By taking proactive measures at every stage of life, you can reduce your risk of developing serious health conditions and enjoy better quality of life as you age.
+        Establishing good dental habits in childhood creates a foundation for lifelong oral health. Parents play a crucial role in this process through both direct care and modeling positive attitudes toward dental health.
 
-        For children and adolescents, preventive care includes regular health check-ups, appropriate vaccinations, and establishing healthy habits like nutritious eating and regular physical activity. These early interventions set the stage for healthy development and can prevent health problems later in life.
+        Children should have their first dental visit by their first birthday or within six months after their first tooth appears. These early visits help familiarize children with the dental environment and allow dentists to monitor development from the beginning.
 
-        Young adults should focus on maintaining healthy lifestyle choices while also addressing stress management and mental health. Regular screenings for common health issues become increasingly important during this stage of life.
+        For infants, oral care begins before teeth emerge. Gently wipe gums with a clean, damp cloth after feedings. Once teeth appear, brush them twice daily with a tiny smear of fluoride toothpaste (about the size of a grain of rice) using an infant toothbrush.
 
-        Middle-aged adults benefit from more comprehensive health screenings to detect conditions like high blood pressure, diabetes, and certain cancers early when they're most treatable. This is also a crucial time to address risk factors for heart disease and other chronic conditions.
+        As children grow, gradually increase the amount of toothpaste to a pea-sized amount around age three. Supervise brushing until around age seven or eight, when children develop the manual dexterity to brush effectively on their own.
 
-        For older adults, preventive care emphasizes maintaining mobility, preventing falls, managing chronic conditions, and preserving cognitive function. Regular medication reviews and vaccinations appropriate for this age group are also important preventive measures.
+        Diet plays a significant role in dental health. Limit sugary snacks and drinks, and avoid putting a baby to bed with a bottle containing anything other than water, as this can lead to "baby bottle tooth decay."
 
-        Dr. Monika provides personalized preventive care recommendations based on your age, health history, and specific risk factors. Her comprehensive approach helps ensure that you're receiving the appropriate preventive services for your individual needs.
+        Make dental care fun through positive reinforcement. Use colorful toothbrushes, flavored toothpaste (approved for children), and perhaps a timer or song to ensure they brush for the recommended two minutes. Many smartphone apps are now available that make brushing entertaining.
 
-        Remember that prevention is always more effective than treatment. By investing in preventive healthcare throughout your life, you can avoid many health problems and enjoy better overall wellness.
+        Remember that children learn by example. When they see parents prioritizing their own dental care, they're more likely to value oral health themselves.
       `,
-      url: "preventive-health-measures-for-every-age"
+      url: "children-s-dental-health-what-parents-should-know"
     },
     {
       id: 5,
-      title: "Natural Approaches to Managing Common Ailments",
-      excerpt: "Explore effective natural remedies and lifestyle changes that can help address everyday health concerns under Dr. Monika's guidance.",
+      title: "The Link Between Oral Health and Overall Wellness",
+      excerpt: "Research continues to show connections between oral health and conditions like heart disease and diabetes. Learn how taking care of your teeth can benefit your entire body.",
       image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-      author: "Dr. Monika",
+      author: "Dr. Monika Pandey",
       date: "March 25, 2025",
-      category: "Natural Remedies",
+      category: "Health & Wellness",
       content: `
-        Natural approaches to health management have gained popularity as people seek gentler alternatives for addressing common ailments. When used appropriately, these methods can provide relief with fewer side effects than some conventional treatments.
+        The connection between oral health and overall wellness has become increasingly clear through scientific research. Your mouth serves as a window to the rest of your body, often showing signs of systemic diseases before other symptoms appear.
 
-        For digestive issues like occasional indigestion or bloating, dietary modifications often provide significant relief. Identifying and eliminating trigger foods, increasing fiber intake, and staying properly hydrated can resolve many digestive complaints without medication.
+        Periodontal (gum) disease has been linked to several serious health conditions. The inflammation associated with this common oral infection may contribute to cardiovascular problems, including heart disease and stroke. Bacteria from infected gums can enter the bloodstream, potentially affecting heart valves and causing inflammation in blood vessels.
 
-        Minor respiratory conditions such as seasonal allergies or the common cold may respond to natural interventions like saline nasal irrigation, honey for coughs (in adults and older children), and certain herbal preparations with anti-inflammatory properties.
+        For people with diabetes, the relationship with oral health works both ways. Diabetes increases susceptibility to gum disease, while gum infections can make blood glucose levels more difficult to control, creating a challenging cycle.
 
-        Sleep problems affect many people and can impact overall health. Natural approaches to improving sleep include establishing consistent sleep routines, creating a sleep-conducive environment, limiting caffeine and electronic device use before bedtime, and relaxation techniques.
+        Respiratory conditions may also be affected by oral health. Bacteria from the mouth can be aspirated into the lungs, potentially causing or exacerbating pneumonia and chronic obstructive pulmonary disease (COPD).
 
-        For mild to moderate pain, alternatives to medication may include heat or cold therapy, gentle movement, relaxation techniques, and certain supplements with anti-inflammatory properties. These approaches can be particularly helpful for managing chronic pain conditions.
+        Pregnancy complications, including low birth weight and premature birth, have been associated with periodontal disease in expectant mothers. Hormonal changes during pregnancy already increase the risk of gum problems, making dental care particularly important during this time.
 
-        Stress management is essential for overall health, as chronic stress contributes to numerous health problems. Natural approaches include mindfulness practices, regular exercise, spending time in nature, and social connection.
+        Even cognitive health may be connected to oral wellness. Some research suggests potential links between gum disease and increased risk of Alzheimer's disease, though more study is needed in this area.
 
-        Dr. Monika can help you determine which natural approaches are most appropriate for your specific health concerns. She combines traditional medical knowledge with evidence-based natural remedies to provide comprehensive care that addresses both symptoms and underlying causes.
+        These connections underscore the importance of regular dental care as part of your overall health strategy. Brushing twice daily, flossing, and maintaining regular dental check-ups aren't just good for your smile—they're investments in your total health.
       `,
-      url: "natural-approaches-to-common-ailments"
+      url: "the-link-between-oral-health-and-overall-wellness"
     },
     {
       id: 6,
-      title: "Advances in Integrative Medicine for Better Outcomes",
-      excerpt: "Learn how modern integrative medicine combines the best of conventional and complementary approaches for optimal health.",
+      title: "Advances in Pain-Free Dentistry",
+      excerpt: "Modern dental techniques have revolutionized the patient experience. Discover how new technologies are making dental visits more comfortable than ever before.",
       image: "https://html.awaikenthemes.com/dentaire/images/post-3.jpg",
-      author: "Dr. Monika",
+      author: "Dr. Monika Pandey",
       date: "March 20, 2025",
-      category: "Integrative Medicine",
+      category: "Technology",
       content: `
-        Integrative medicine represents a significant advancement in healthcare by combining evidence-based conventional treatments with complementary therapies that address the whole person. This approach has gained recognition for its effectiveness in treating various health conditions.
+        Dental anxiety has historically kept many people from seeking necessary care, but modern advances in pain management and technology have transformed the dental experience. Today's dental visits can be remarkably comfortable, even for traditionally uncomfortable procedures.
 
-        Modern research has validated many traditional healing practices that were once dismissed by conventional medicine. Techniques like acupuncture, certain herbal medicines, and mind-body practices now have substantial scientific evidence supporting their benefits for specific conditions.
+        Enhanced anesthetics represent one significant advancement. Today's local anesthetics are more effective and can be administered with minimal discomfort. Computer-controlled delivery systems can regulate the flow and pressure of anesthesia, reducing pain during injection and providing more consistent numbness.
 
-        Technology has enhanced the field of integrative medicine through innovations like advanced diagnostic tools that can detect subtle imbalances in body systems. These tools allow practitioners to identify potential health issues before they develop into serious problems.
+        For patients with severe anxiety, sedation dentistry offers several options. From mild relaxation through nitrous oxide (laughing gas) to oral sedatives or IV sedation for deeper relaxation, these approaches help patients remain calm while still conscious. For complex procedures or extreme anxiety, general anesthesia remains an option in some cases.
 
-        Personalized treatment plans are a hallmark of integrative medicine. Dr. Monika conducts thorough assessments of each patient's health history, current symptoms, lifestyle factors, and preferences to develop individualized approaches that address their unique needs.
+        Laser dentistry has revolutionized many procedures. Dental lasers can prepare teeth for fillings, reshape gum tissue, and treat infections with minimal discomfort. The precision of laser treatment often eliminates the need for drills and reduces the necessity for anesthesia in some procedures.
 
-        The mind-body connection is increasingly recognized as crucial for health and healing. Integrative medicine incorporates techniques that harness this connection, such as biofeedback, guided imagery, and mindfulness-based stress reduction.
+        Digital imaging has replaced uncomfortable traditional impressions in many practices. Instead of biting into trays filled with impression material, optical scanners can create 3D models of your teeth without discomfort.
 
-        Nutritional science has evolved significantly, with research demonstrating how dietary choices can influence inflammation, immune function, and even gene expression. Integrative medicine applies this knowledge through targeted nutritional interventions.
+        Even the dental environment itself has evolved to reduce stress. Many modern dental offices incorporate soothing design elements, comfortable seating, entertainment options during procedures, and noise-canceling headphones to create a more relaxing atmosphere.
 
-        For patients with complex or chronic health conditions, integrative medicine often provides options when conventional treatments alone have not been fully effective. By addressing multiple aspects of health simultaneously, this approach can help improve outcomes and quality of life.
+        These innovations have made dentistry more accessible to those who previously avoided treatment due to fear. If dental anxiety has kept you from seeking care, discussing these modern options with your dentist might help you find a comfortable approach to maintaining your oral health.
       `,
-      url: "advances-in-integrative-medicine"
+      url: "advances-in-pain-free-dentistry"
     }
   ];
+
+
+
+
+
+
   useEffect(() => {
-    const post = blogPosts.find(post => post.url === slug);
-      // console.log("bhai mai slug hu",post)  ;
-      
+    const post = blogPosts.find(post => post.url === detail);
     if (!post) {
       navigate("/404");
     } else {
@@ -173,55 +175,50 @@ const BlogDetails = () => {
       setRelatedPosts(related);
     }
     setIsLoading(false);
-  }, [slug]);
-
-
+  }, [detail]);
 
   if (isLoading) {
-    return <div className="flex justify-center items-center min-h-screen">
-      <div className="animate-pulse text-pink-500 text-xl">Loading...</div>
-    </div>;
+    return <div>Loading...</div>;
   }
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blogs' },
     { label: currentPost?.title },
+
   ]
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [detail]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
 
   return (
-    <div className="bg-pink-50 min-h-screen">
-      <BreadcrumbComponent headerText={currentPost?.title} items={breadcrumbItems} />
+    <div className="bg-gray-50 min-h-screen">
+
+
+      <BreadcrumbComponent headText={currentPost?.title} items={breadcrumbItems} />
 
       {/* Content */}
-      <main className="container mx-auto lg:px-10 px-4 py-8">
+      <main className="container mx-auto lg:px-10 px-2 py-8 ">
+
+
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
-          <div className="lg:w-2/3 w-full">
+          <div className="lg:w-[80rem]">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img
                 src={currentPost.image}
                 alt={currentPost.title}
                 className="w-full h-64 md:h-96 object-cover"
               />
-              <div className="py-6 px-4 lg:px-8">
-                <div className="text-pink-600 lg:text-3xl text-2xl font-bold mb-4">
+              <div className="py-4 lg:px-6  px-2">
+                <div className='text-[#E47F9F] lg:text-3xl text-2xl font-extrabold mb-4'>
                   {currentPost?.title}
-                </div>
-                <div className="flex items-center text-sm text-gray-500 mb-6">
-                  <span className="mr-4">{currentPost.author}</span>
-                  <span className="mr-4">|</span>
-                  <span className="mr-4">{currentPost.date}</span>
-                  <span className="mr-4">|</span>
-                  <span>{currentPost.category}</span>
                 </div>
                 <div className="prose max-w-none">
                   {currentPost.content.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-gray-700 leading-relaxed">{paragraph.trim()}</p>
+                    <p key={idx} className="mb-4 text-justify">{paragraph.trim()}</p>
                   ))}
                 </div>
 
@@ -229,57 +226,45 @@ const BlogDetails = () => {
                 <div className="mt-8">
                   <div className="text-sm text-gray-600 mb-2">Tags:</div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Health</span>
-                    <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">{currentPost.category}</span>
-                    <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Wellness</span>
+                    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Dental Health</span>
+                    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">{currentPost.category}</span>
+                    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Oral Care</span>
                   </div>
                 </div>
 
                 {/* Author */}
-                <div className="mt-8 p-4 bg-pink-50 rounded-lg flex items-center">
-                  <div className="h-14 w-14 rounded-full bg-pink-200 flex items-center justify-center text-pink-700 font-bold text-xl mr-4">
+                <div className="mt-8 p-4 bg-gray-50 rounded-lg flex items-center">
+                  <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-[#E47F9F] font-bold text-xl mr-4">
                     {currentPost.author.split(' ').map(name => name[0]).join('')}
                   </div>
                   <div>
-                    <div className="font-medium text-gray-800">{currentPost.author}</div>
-                    <div className="text-gray-600 text-sm">Medical Practitioner</div>
+                    <div className="font-medium">{currentPost.author}</div>
+                    <div className="text-gray-600 text-sm">Senior Dental Surgeon</div>
                   </div>
                 </div>
               </div>
             </div>
+
+
           </div>
 
+
           {/* Sidebar */}
-          <div className="lg:w-1/3 w-full">
-            {/* About Dr. Monika */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h3 className="font-semibold text-pink-600 text-lg mb-3">About Dr. Monika</h3>
-              <p className="text-gray-700 text-sm mb-4">
-                Dr. Monika is a trusted healthcare provider specializing in a wide range of medical treatments. With years of experience, she offers comprehensive care for various health conditions.
-              </p>
-              <div className="border-t border-pink-100 pt-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-gray-600 text-sm">Experience</span>
-                  <span className="text-pink-600 font-medium">15+ Years</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600 text-sm">Specialties</span>
-                  <span className="text-pink-600 font-medium">Multiple Treatments</span>
-                </div>
-              </div>
-            </div>
+          <div className="lg:w-[20rem]">
+
+
 
             {/* Recent Posts */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h3 className="font-semibold text-pink-600 text-lg mb-4">Recent Posts</h3>
+            <div className="bg-white rounded-lg shadow-md lg:p-6 mb-6 cursor-pointer">
+              <h3 className="font-semibold mb-4">Recent Posts</h3>
               <div className="space-y-4">
-                {blogPosts.slice(0, 4).map((post) => (
-                  <div key={post.id} onClick={() => navigate(`/blog/${post?.url}`)} className="flex gap-3 group cursor-pointer">
+                {blogPosts.map((post) => (
+                  <div key={post.id} onClick={() => navigate(`/blog/${post?.url}`)} className="flex gap-3 group">
                     <div className="w-20 h-16 bg-gray-200 rounded flex-shrink-0 overflow-hidden">
                       <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm group-hover:text-pink-600 line-clamp-2">{post.title}</h4>
+                      <h4 className="font-medium text-sm group-hover:text-[#E47F9F] line-clamp-2">{post.title}</h4>
                       <p className="text-gray-500 text-xs mt-1">{post.date}</p>
                     </div>
                   </div>
@@ -287,56 +272,41 @@ const BlogDetails = () => {
               </div>
             </div>
 
-            {/* Contact */}
-            <div className="bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg p-6 text-white">
+
+            <div className="bg-[#E47F9F] rounded-lg p-6 text-white">
               <div className="flex justify-center mb-4">
                 <MessageCircleQuestion size={48} />
               </div>
               <h2 className="text-2xl font-bold text-center mb-2">Need help?</h2>
               <p className="text-center text-sm mb-4">
-                Schedule your consultation today and start your journey towards better health. Dr. Monika offers treatments for various conditions!
+                Schedule your initial consultation today and start your journey towards a pain-free, healthier smile. Contact us now!
               </p>
               <div className="flex justify-center">
-                <button className="bg-white text-pink-600 hover:bg-pink-100 rounded-full px-6 py-2 font-medium flex items-center shadow-md transition duration-300 cursor-pointer" onClick={() => navigate("/contact")}>
+                <button className="bg-white text-[#E47F9F] rounded-full px-4 py-2 flex items-center cursor-pointer" onClick={() => navigate("/contact")}>
                   Contact Us
-                  <span className="ml-2 bg-pink-600 rounded-full p-1 text-white">
+                  <span className="ml-2 bg-[#E47F9F] rounded-full p-1 text-white">
                     <MessageCircleQuestion size={16} />
                   </span>
                 </button>
               </div>
             </div>
 
-            {/* Categories */}
-            <div className="bg-white rounded-lg shadow-md p-6 mt-6">
-              <h3 className="font-semibold text-pink-600 text-lg mb-4">Categories</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center justify-between">
-                  <span className="text-gray-700 hover:text-pink-600 cursor-pointer">General Health</span>
-                  <span className="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">6</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-gray-700 hover:text-pink-600 cursor-pointer">Holistic Health</span>
-                  <span className="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">4</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-gray-700 hover:text-pink-600 cursor-pointer">Chronic Conditions</span>
-                  <span className="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">8</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-gray-700 hover:text-pink-600 cursor-pointer">Natural Remedies</span>
-                  <span className="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">5</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-gray-700 hover:text-pink-600 cursor-pointer">Preventive Care</span>
-                  <span className="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">7</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-};
 
-export default BlogDetails;
+          </div>
+
+
+
+        </div>
+
+
+      </main>
+
+
+
+
+
+    </div>
+  )
+}
+
+export default BlogDetails

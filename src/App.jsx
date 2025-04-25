@@ -8,6 +8,8 @@ import Contact from './page/Contact/Contact'
 import Gallery from './page/Gallery/Gallery'
 import BlogPage from './page/Blog/BlogPage'
 import BlogDetails from './page/Blog/BlogDetail'
+import AboutDrMonika from './page/About/PriyankaAbout'
+import AboutClinic from './page/About/AboutClinic'
 
 const App = () => {
   return (
@@ -15,10 +17,12 @@ const App = () => {
       <Header/>
          <Routes>
           <Route  path='/'  element={<Home/>}/>
+          <Route  path='/about/dr-monika'  element={<AboutDrMonika/>}/>
+          <Route  path='/about/clinic'  element={<AboutClinic/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
           <Route path='/blogs' element={<BlogPage/>}/>
-          <Route path='/blog/:slug' element={<BlogDetails/>} />
+          <Route path='/blog/:detail' element={<BlogDetails/>} />
          </Routes>
          <Footer/>
          <BottomFooter/>
