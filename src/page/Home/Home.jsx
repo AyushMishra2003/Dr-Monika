@@ -5,20 +5,35 @@ import HomeAbout from './HomeAbout'
 import Services from './HomeServices'
 import WhyWeChooseUs from './WhyChooseUs'
 import AnotherService from './AnotherService'
-import PriyankaAbout from './PriyankaAbout'
 import CTA from '../../component/CTA'
+import ClinicStats from '../../component/Stats'
+import Testinomial from '../../component/Testinomial'
+
+import MonikaAbout from './PriyankaAbout'
+import HowWeWorkPremium from '../../component/HowWeWork'
+import HomeBlogSlider from './HomeBlogSlider'
+
+
+
+
 
 const Home = () => {
   return (
     <div className='text-red-500'>
-        <HeroSection/>
+        {/* <HeroSection/> */}
+
+        <HomeSlider/>
         {/* <HomeSlider/> */}
         <HomeAbout/>
         <Services/>
+        <ClinicStats/>
         <WhyWeChooseUs/>
         <AnotherService/>
-        <PriyankaAbout/>
-        <CTA/>
+        <MonikaAbout/>
+        <HowWeWorkPremium/>
+        <Testinomial/>
+        <HomeBlogSlider/>
+        {/* <CTA/> */}
     </div>
   )
 }

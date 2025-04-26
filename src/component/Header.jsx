@@ -131,7 +131,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center z-10">
             <a
               href="/appointment"
-              className="ml-4 px-6 py-2 bg-pink-500 text-white font-medium rounded-full flex items-center hover:bg-pink-600 transition-colors shadow-md"
+              className="ml-4 px-6 py-2 bg-[#E39AB2] text-white font-medium rounded-full flex items-center hover:bg-pink-600 transition-colors shadow-md"
             >
               <Calendar size={18} className="mr-2" />
               Appointment

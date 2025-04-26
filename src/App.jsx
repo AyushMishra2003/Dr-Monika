@@ -10,6 +10,15 @@ import BlogPage from './page/Blog/BlogPage'
 import BlogDetails from './page/Blog/BlogDetail'
 import AboutDrMonika from './page/About/PriyankaAbout'
 import AboutClinic from './page/About/AboutClinic'
+import PsychiatricServicesDetails from './page/service/ServiceDetail1'
+import GynecologyObstetricsServices from './page/service/ServiceDetail2'
+
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
+
+
+
 
 const App = () => {
   return (
@@ -23,6 +32,8 @@ const App = () => {
           <Route path='/gallery' element={<Gallery/>}/>
           <Route path='/blogs' element={<BlogPage/>}/>
           <Route path='/blog/:detail' element={<BlogDetails/>} />
+          <Route path='/services/physiotherapy' element={<PsychiatricServicesDetails/>} />
+          <Route path='/services/gynecology' element={<GynecologyObstetricsServices/>} />
          </Routes>
          <Footer/>
          <BottomFooter/>

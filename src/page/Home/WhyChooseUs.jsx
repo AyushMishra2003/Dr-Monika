@@ -67,7 +67,7 @@ const WhyWeChooseUs = () => {
     return (
         <div className="w-full bg-gray-50 py-12 px-4 md:px-12 ">
             {/* Stats Section */}
-            <div className="container mx-auto mb-12 px-10">
+            {/* <div className="container mx-auto mb-12 px-10">
                 <div className="flex flex-wrap justify-center gap-8 md:gap-4 md:justify-between">
                     {stats.map((stat, index) => (
                         <div key={index} className="text-center px-4">
@@ -76,13 +76,13 @@ const WhyWeChooseUs = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             <div className="container mx-auto px-10 ">
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Left Content */}
                     <div className="lg:w-1/2">
-                        <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-medium mb-6 transition-all">
+                        <button className="bg-[#E47F97] hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-medium mb-6 transition-all">
                             Why Choose Us
                         </button>
 
@@ -121,7 +121,7 @@ const WhyWeChooseUs = () => {
 
                         {/* Call to Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                            <button className="bg-pink-600  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
+                            <button className="bg-[#E47F97]  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
                                 Book An Appointment
                                 <ChevronRight className="ml-2 w-5 h-5" />
                             </button>
@@ -131,7 +131,7 @@ const WhyWeChooseUs = () => {
                                     <p className="text-gray-600 text-sm">Need Urgent Care?</p>
                                     <p className="text-blue-950 font-bold text-xl">(629) 555-0129</p>
                                 </div>
-                                <div className="bg-red-500 p-3 rounded-full text-white">
+                                <div className="bg-[#E47F97] p-3 rounded-full text-white">
                                     <Phone className="w-6 h-6" />
                                 </div>
                             </div>

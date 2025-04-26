@@ -24,6 +24,10 @@ const HomeSlider = () => {
     ],
   };
 
+
+  const b1="https://astitvagynaeclinic.com/assets/somyabanner2-q6QfdruC.jpg"
+  const b2="https://astitvagynaeclinic.com/assets/somyabanner1-D-0Xsmb0.jpg"
+
   return (
     <div className="relative w-full mx-auto h-fit">
 
@@ -32,7 +36,7 @@ const HomeSlider = () => {
       <Slider {...settings} className="relative h-fit">
         <div className="relative">
           <img
-            src={img1}
+            src={b1}
             alt="Gastroenterology Specialist - Book Your Appointment"
             className="w-full  object-cover"
             loading="lazy"
@@ -40,7 +44,7 @@ const HomeSlider = () => {
         </div>
         <div className="relative">
           <img
-            src={img2}
+            src={b2}
             alt="Advanced Medical Treatments - Consult Our Experts"
             className="w-full  object-cover"
             loading="lazy"
@@ -53,13 +57,13 @@ const HomeSlider = () => {
 };
 
 const SampleNextArrow = ({ onClick }) => (
-  <div className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-[#1f708e] text-white rounded-full p-3 cursor-pointer hover:bg-[#1f708e] z-10" onClick={onClick}>
+  <div className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-[#E47F97] text-white rounded-full p-3 cursor-pointer  z-10" onClick={onClick}>
     <FaArrowRight size={20} />
   </div>
 );
 
 const SamplePrevArrow = ({ onClick }) => (
-  <div className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-[#1f708e] text-white rounded-full p-3 cursor-pointer hover:bg-[#1f708e] z-10" onClick={onClick}>
+  <div className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-[#E47F97] text-white rounded-full p-3 cursor-pointer  z-10" onClick={onClick}>
     <FaArrowLeft size={20} />
   </div>
 );

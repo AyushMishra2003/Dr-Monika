@@ -24,7 +24,7 @@ const HomeAbout = () => {
                         {/* Main image */}
                         <div className="relative">
                             <img
-                                src="/api/placeholder/500/600"
+                                src="https://lh3.googleusercontent.com/p/AF1QipO7qc_MAY337K4YjBCSSUxmvTXvzbxlo4Ghr4pY=s1360-w1360-h1020-rw"
                                 alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
                                 className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
                             />
@@ -41,13 +41,13 @@ const HomeAbout = () => {
 
                     {/* Right side with text content */}
                     <div className="w-full lg:w-1/2 lg:pl-12">
-                        <div className="text-pink-500 font-medium flex items-center mb-2">
+                        <div className="text-[#E47F97] font-medium flex items-center mb-2">
                             <span className="mr-2">+</span>
                             <span>ABOUT DR. MONIKA PANDEY'S CLINIC</span>
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                            <span className="text-pink-500">Dr. Monika Pandey's Clinic</span> – Complete Medical Care in Lucknow
+                            <span className="text-[#E47F97]">Dr. Monika Pandey's Clinic</span> – Complete Medical Care in Lucknow
                         </h1>
 
                         <p className="text-gray-600 mb-4 text-justify">
@@ -59,28 +59,28 @@ const HomeAbout = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                             <div className="flex items-center">
-                                <div className="bg-pink-500 rounded-full p-1 mr-3">
+                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Complete Range of Medicines</span>
                             </div>
 
                             <div className="flex items-center">
-                                <div className="bg-pink-500 rounded-full p-1 mr-3">
+                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Quality Healthcare Services</span>
                             </div>
 
                             <div className="flex items-center">
-                                <div className="bg-pink-500 rounded-full p-1 mr-3">
+                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Experienced Medical Staff</span>
                             </div>
 
                             <div className="flex items-center">
-                                <div className="bg-pink-500 rounded-full p-1 mr-3">
+                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Emergency Medical Assistance</span>

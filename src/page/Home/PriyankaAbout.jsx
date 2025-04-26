@@ -1,66 +1,81 @@
-import { useState } from 'react';
-import { Calendar, Phone, Mail } from 'lucide-react';
+import React from 'react';
 
-const PriyankaAbout=()=> {
-  const [isHovered, setIsHovered] = useState(false);
-  
+export default function MonikaAbout() {
   return (
-    <div className="w-full bg-gradient-to-r from-pink-100 to-pink-50">
-      <div className="container mx-auto px-10  py-12 md:py-20 ">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Image Section */}
-          <div className="w-full md:w-2/5">
-            <div className="rounded-full overflow-hidden border-8 border-pink-300 shadow-xl transform transition-transform duration-300 hover:scale-105">
-              <img 
-                src="/api/placeholder/400/400" 
-                alt="Dr. Priyanka" 
-                className="w-full object-cover"
-              />
+    <div className="container mx-auto p-4 md:p-6">
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="flex flex-col md:flex-row">
+          {/* Left side - Information */}
+          <div className="w-full md:w-2/3 p-4 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-purple-900">Dr. Monika Pandey</h1>
+            <h2 className="text-lg md:text-xl font-semibold text-pink-500 mt-2">Obstetrician-Gynecologist & Family Counselor</h2>
+            
+            <div className="mt-4 md:mt-6">
+              <p className="text-gray-700 mb-4">
+                Dr. Monika Pandey is an <span className="font-semibold">Obstetrician-Gynecologist and Family Counselor</span> who operates a clinic in Indira Nagar, Bangalore. She is known for her supporting nature, good communication skills, and expertise in utilizing the latest technologies, according to patient reviews.
+              </p>
+              
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold text-purple-800 mb-2">Practice Details</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <div className="text-pink-500 mr-2">•</div>
+                    <div>
+                      <span className="font-semibold">Specialization:</span> Obstetrics and Gynecology, Family Counseling
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="text-pink-500 mr-2">•</div>
+                    <div>
+                      <span className="font-semibold">Clinic Location:</span> Indira Nagar, Bangalore
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="text-pink-500 mr-2">•</div>
+                    <div>
+                      <span className="font-semibold">Patient Experience:</span> Supportive, Understanding, Excellent Communication
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="text-pink-500 mr-2">•</div>
+                    <div>
+                      <span className="font-semibold">Services:</span> Online Appointments, Onsite Services, Google Pay Accepted
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="text-pink-500 mr-2">•</div>
+                    <div>
+                      <span className="font-semibold">Facilities:</span> Gender-neutral Restroom, Nursing Room, LGBTQ+ Friendly
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="text-pink-500 mr-2">•</div>
+                    <div>
+                      <span className="font-semibold">Opening Hours:</span> Monday to Sunday (Same hours daily)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="mt-6">
+                <button className="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600 transition duration-300 mr-2">
+                  Book Appointment
+                </button>
+                <button className="bg-white text-purple-800 border border-purple-800 px-4 py-2 rounded-md hover:bg-purple-50 transition duration-300">
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
           
-          {/* Content Section */}
-          <div className="w-full md:w-3/5 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-pink-600 mb-4">
-              Dr. Priyanka
-            </h1>
-            <h2 className="text-xl md:text-2xl text-pink-500 font-medium mb-6">
-              Specialist in Healthcare
-            </h2>
-            <p className="text-gray-700 text-lg mb-8 max-w-3xl">
-              Dr. Priyanka brings over 10 years of experience in providing compassionate and comprehensive healthcare. With a focus on preventive medicine and holistic wellness, she is dedicated to helping patients achieve their optimal health goals.
-            </p>
-            
-            {/* Quick Info */}
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex items-center justify-center md:justify-start">
-                <Calendar className="text-pink-500 mr-2" size={20} />
-                <span className="text-gray-600">Available Mon-Fri</span>
-              </div>
-              <div className="flex items-center justify-center md:justify-start">
-                <Phone className="text-pink-500 mr-2" size={20} />
-                <span className="text-gray-600">24/7 Support</span>
-              </div>
-              <div className="flex items-center justify-center md:justify-start">
-                <Mail className="text-pink-500 mr-2" size={20} />
-                <span className="text-gray-600">Quick Response</span>
-              </div>
-            </div>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button
-                className={`px-8 py-3 rounded-full bg-pink-500 text-white font-medium text-lg transition-all duration-300 transform ${
-                  isHovered ? 'bg-pink-600 scale-105' : ''
-                } hover:bg-pink-600 hover:shadow-lg`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                Book Appointment
-              </button>
-              <button className="px-8 py-3 rounded-full bg-white text-pink-500 font-medium text-lg border-2 border-pink-300 hover:border-pink-500 transition-all duration-300 hover:shadow-lg">
-                Learn More
-              </button>
+          {/* Right side - Photo */}
+          <div className="w-full md:w-1/3 p-4 md:p-0">
+            <div className="h-full flex items-center justify-center bg-gray-100">
+              <img 
+                src="https://lh3.googleusercontent.com/p/AF1QipO7qc_MAY337K4YjBCSSUxmvTXvzbxlo4Ghr4pY=s1360-w1360-h1020" 
+                alt="Dr. Monika Pandey" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -68,5 +83,3 @@ const PriyankaAbout=()=> {
     </div>
   );
 }
-
-export default PriyankaAbout

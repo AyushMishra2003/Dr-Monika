@@ -4,7 +4,14 @@ import BreadCrumbs from '../../component/Breadcums';
 export default function AboutClinic() {
   return (
     <div className="font-sans">
-       <BreadCrumbs/>
+             <BreadCrumbs
+                items={[
+                    { label: 'Home', path: '/' },
+                    { label: 'About Clinic' },
+        
+                ]}
+                headText="About Clinic"
+            />
 
       {/* Main Content */}
       <main>
