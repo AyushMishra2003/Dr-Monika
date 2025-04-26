@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 
@@ -105,6 +105,10 @@ export default function PsychiatricServicesDetails() {
             longDescription: "Group therapy involves one or more therapists working with a group of people. It provides the opportunity to learn that you're not alone in your struggles, gain different perspectives, and practice new skills in a supportive environment."
         }
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">

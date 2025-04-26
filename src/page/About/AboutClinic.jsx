@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BreadCrumbs from '../../component/Breadcums';
 
 export default function AboutClinic() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="font-sans">
              <BreadCrumbs

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     Calendar,
     Users,
@@ -150,6 +150,10 @@ export default function GynecologyObstetricsServices() {
             icon: <Trophy className="w-6 h-6 text-white" />
         }
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">

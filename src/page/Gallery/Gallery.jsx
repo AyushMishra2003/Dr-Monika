@@ -88,6 +88,10 @@ export default function Gallery() {
     arrows: false,
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="bg-pink-50 min-h-screen">
      <BreadCrumbs  headText={"Gallery"} items={breadcrumbItems} />

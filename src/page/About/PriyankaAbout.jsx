@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Heart, Calendar, Mail, Phone, MapPin, Award, BookOpen } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 
@@ -6,6 +6,11 @@ export default function AboutDrMonika() {
   // Define our color scheme as constants
   const primaryColor = "#E47F9F";
   const secondaryColor = "#5B2E67";
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <section>
