@@ -10,50 +10,59 @@ const HomeBlogSlider = () => {
 
     const blogPosts = [
         {
+            id: 1,
+            title: "The Importance of Mental Health Awareness",
+            excerpt: "Mental health awareness is crucial for recognizing the signs of mental health issues. Learn why staying informed about mental health can help individuals get the support they need.",
+            image: "https://tse3.mm.bing.net/th?id=OIF.cuWRIGUMWjAKVs%2fn5LGoRg&pid=Api&P=0&h=180",
+            author: "Dr. Monika Pandey",
+            date: "April 15, 2025",
+            category: "Psychiatric"
+        },
+        {
             id: 2,
-            title: "Understanding Teeth Whitening Procedures",
-            excerpt: "Teeth whitening has become increasingly popular. Discover the most effective procedures and what to expect from treatments.",
-            image: "https://html.awaikenthemes.com/dentaire/images/post-2.jpg",
-            author: "Dr. Rahul Soni",
+            title: "Understanding Anxiety and Its Treatment",
+            excerpt: "Anxiety is one of the most common mental health conditions. Explore the various treatment options available and how therapy and medication can help manage symptoms effectively.",
+            image: "https://tse4.mm.bing.net/th?id=OIP.GEtBBgroXmRfcJs4AppvmwHaD2&pid=Api&P=0&h=180",
+            author: "Dr. Monika Pandey",
             date: "April 10, 2025",
-            category: "Cosmetic Dentistry"
+            category: "Psychiatric"
         },
         {
             id: 3,
-            title: "How to Properly Care for Dental Implants",
-            excerpt: "Dental implants require special care to ensure their longevity. Learn the best practices for maintaining your implants.",
-            image: "https://html.awaikenthemes.com/dentaire/images/post-3.jpg",
-            author: "Dr. Rahul Soni",
+            title: "How to Cope with Depression: A Guide",
+            excerpt: "Depression affects millions worldwide. Learn how to identify the symptoms and the importance of seeking professional help to manage this condition and regain a sense of well-being.",
+            image: "https://img.freepik.com/free-photo/full-shot-depressed-woman-bed_23-2149071882.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
+            author: "Dr. Monika Pandey",
             date: "April 5, 2025",
-            category: "Restorative Dentistry"
+            category: "Psychiatric"
         },
         {
             id: 4,
-            title: "Children's Dental Health: What Parents Should Know",
-            excerpt: "Establishing good dental habits early is essential for children's oral health. Get expert advice for your child's smile.",
-            image: "https://html.awaikenthemes.com/dentaire/images/post-2.jpg",
-            author: "Dr. Rahul Soni",
+            title: "Pregnancy Health: Essential Tips for Expecting Mothers",
+            excerpt: "Pregnancy requires special care to ensure both the mother's and the baby's health. Learn about proper nutrition, prenatal care, and the changes to expect during pregnancy.",
+            image: "https://img.freepik.com/free-photo/portrait-happy-pregnant-woman-touching-her-belly_171337-7024.jpg?t=st=1745824321~exp=1745827921~hmac=1c1517eb89f913d9ff146cea1a8f8a7ef233a8dbb52ececaf4f92898f024560f&w=1380",
+            author: "Dr. Monika Pandey",
             date: "March 30, 2025",
-            category: "Pediatric Dentistry"
+            category: "Gynecology and Obstetrics"
         },
         {
             id: 5,
-            title: "The Link Between Oral Health and Overall Wellness",
-            excerpt: "Research continues to show connections between oral health and conditions like heart disease and diabetes.",
-            image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-            author: "Dr. Rahul Soni",
+            title: "Understanding Postpartum Care: What You Need to Know",
+            excerpt: "After childbirth, a mother’s body goes through many changes. Learn about postpartum care, recovery, and how to address the challenges new mothers face after delivery.",
+            image: "https://img.freepik.com/free-photo/woman-using-nursing-pillow-home-newborn-baby_52683-110702.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
+            author: "Dr. Monika Pandey",
             date: "March 25, 2025",
-            category: "Health & Wellness"
+            category: "Gynecology and Obstetrics"
         },
-        // {
-        //     id: 6,
-        //     title: "Advances in Pain-Free Dentistry",
-        //     excerpt: "Modern dental techniques have revolutionized the patient experience. Learn how we make your visit comfortable.",
-        //     image: "https://html.awaikenthemes.com/dentaire/images/post-3.jpg",
-        //     author: "Dr. Rahul Soni",
-        //     date: "March 20, 2025",
-        //     category: "Technology"
-        // }
+        {
+            id: 6,
+            title: "The Importance of Regular Gynecological Check-ups",
+            excerpt: "Routine gynecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and ensure your well-being.",
+            image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
+            author: "Dr. Monika Pandey",
+            date: "March 20, 2025",
+            category: "Gynecology and Obstetrics"
+        }
     ];
 
     const slugify = (text) =>

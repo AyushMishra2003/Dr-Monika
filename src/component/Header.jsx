@@ -35,15 +35,15 @@ export default function Header() {
       name: 'About',
       dropdown: true,
       items: [
-        { name: 'Dr. Monika', link: '/about/dr-monika' },
-        { name: 'Clinic', link: '/about/clinic' }
+        { name: 'About Dr. Monika', link: '/about/dr-monika' },
+        { name: 'About  Sambhawna Clinic', link: '/about/clinic' }
       ]
     },
     {
       name: 'Services',
       dropdown: true,
       items: [
-        { name: 'Physiotherapy', link: '/services/physiotherapy' },
+        { name: 'Psychiatric', link: '/services/physiotherapy' },
         { name: 'Gynecology', link: '/services/gynecology' }
       ]
     },

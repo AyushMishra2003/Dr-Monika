@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import BreadCrumbs from '../../component/Breadcums';
+import image from '../../assets/monika.png'
+import image1 from '../../assets/clinic.webp'
+
 
 export default function AboutClinic() {
   
@@ -76,26 +79,26 @@ export default function AboutClinic() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-2">
                   <div className="bg-gray-100 p-4 rounded-lg">
-                    <img src="/api/placeholder/400/150" alt="Clinic Sign" className="w-full h-auto rounded" />
+                    <img src={image1} alt="Clinic Sign" className="w-full h-auto rounded" />
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <div className="bg-gray-100 p-4 rounded-lg h-full">
                     <img src="/api/placeholder/200/150" alt="Doctor's Office" className="w-full h-auto rounded" />
                   </div>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <div className="bg-gray-100 p-4 rounded-lg h-full">
                     <img src="/api/placeholder/200/150" alt="Examination Room" className="w-full h-auto rounded" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </section>
 
         {/* Statistics Section */}
-        <section className="py-12" style={{ background: `linear-gradient(to right, ${hexToRgba('#E47F97', 0.8)}, ${hexToRgba('#5B2E67', 0.9)})` }}>
+        <section className="py-8" style={{ background: `linear-gradient(to right, ${hexToRgba('#E47F97', 0.8)}, ${hexToRgba('#5B2E67', 0.9)})` }}>
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="p-4">
@@ -276,7 +279,7 @@ export default function AboutClinic() {
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <img src="/api/placeholder/400/500" alt="Dr. Monika Pandey" className="w-full h-auto rounded-lg shadow-lg" />
+                <img src={image} alt="Dr. Monika Pandey" className="w-full h-[65vh] object-cover rounded-lg shadow-lg" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-2" style={{ color: '#E47F97' }}>Meet Our Specialist</h3>
@@ -298,7 +301,7 @@ export default function AboutClinic() {
         </section>
 
         {/* Contact */}
-        <section className="py-12 px-4" style={{ backgroundColor: '#5B2E67' }}>
+        {/* <section className="py-12 px-4" style={{ backgroundColor: '#5B2E67' }}>
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Schedule Your Appointment?</h2>
             <p className="text-white mb-8 max-w-2xl mx-auto">
@@ -308,7 +311,11 @@ export default function AboutClinic() {
               Contact Us Now
             </button>
           </div>
-        </section>
+        </section> */}
+
+
+
+
       </main>
 
     </div>

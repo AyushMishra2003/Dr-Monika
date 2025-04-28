@@ -10,155 +10,115 @@ const BlogDetails = () => {
   const navigate = useNavigate();
   const { detail } = useParams()
 
-
   const blogPosts = [
     {
-      id: 1,
-      title: "The Importance of Regular Dental Check-ups",
-      excerpt: "Regular dental check-ups are crucial for maintaining oral health. Learn why you should visit your dentist every six months and what happens during these important appointments.",
-      image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-      author: "Dr. Monika Pandey",
-      date: "April 15, 2025",
-      category: "Preventive Care",
-      content: `
-        Regular dental check-ups are a cornerstone of good oral health. Visiting your dentist every six months allows for early detection of potential issues before they become serious problems.
+        id: 1,
+        title: "The Importance of Mental Health Awareness",
+        excerpt: "Mental health awareness is crucial for recognizing the signs of mental health issues. Learn why staying informed about mental health can help individuals get the support they need.",
+        image: "https://tse3.mm.bing.net/th?id=OIF.cuWRIGUMWjAKVs%2fn5LGoRg&pid=Api&P=0&h=180",
+        author: "Dr. Anjali Sharma",
+        date: "April 15, 2025",
+        category: "Psychiatric",
+        content: `
+          Mental health awareness plays a critical role in recognizing and addressing mental health issues early on. As we become more informed, we are better equipped to identify signs of conditions like depression, anxiety, and other disorders that can significantly affect a person’s well-being.
 
-        During a typical check-up, your dentist will perform a thorough examination of your teeth, gums, and mouth. This includes checking for cavities, plaque, and tartar, as well as examining your gums for signs of gingivitis or other periodontal disease. Many dentists also conduct oral cancer screenings during routine visits.
+          It's important to understand that mental health is just as important as physical health. Many people struggle in silence, unaware of the resources available to them. By raising awareness, we can reduce the stigma surrounding mental health and create an environment where people feel comfortable seeking help.
 
-        Professional cleaning is another important component of your dental check-up. Even with diligent brushing and flossing at home, plaque can build up in hard-to-reach areas. Your dental hygienist has specialized tools to remove this buildup effectively.
-
-        These regular visits also provide an opportunity for your dentist to offer personalized advice on improving your oral hygiene routine. They can demonstrate proper brushing and flossing techniques tailored to your specific needs.
-
-        For children, regular dental visits help establish comfort with dental procedures and instill good habits early. Many dental problems in adulthood can be prevented with proper care from a young age.
-
-        Remember, prevention is always better than treatment. By maintaining a schedule of regular check-ups, you're investing in your long-term oral health and potentially avoiding more expensive and uncomfortable procedures down the road.
-      `,
-      url: "the-importance-of-regular-dental-check-ups"
+          Educating ourselves about mental health issues can lead to earlier intervention and treatment, which can drastically improve outcomes. Whether it's through therapy, support groups, or medication, there are many paths to recovery. Let's work together to ensure everyone has access to the support they need.
+        `,
+        url: "the-importance-of-mental-health-awareness"
     },
     {
-      id: 2,
-      title: "Understanding Teeth Whitening Procedures",
-      excerpt: "Teeth whitening has become increasingly popular. Discover the different methods available, their effectiveness, and whether professional whitening is right for you.",
-      image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-      author: "Dr. Monika Pandey",
-      date: "April 10, 2025",
-      category: "Cosmetic Dentistry",
-      content: `
-        Teeth whitening has become one of the most popular cosmetic dental procedures, with numerous options available ranging from professional treatments to over-the-counter products.
+        id: 2,
+        title: "Understanding Anxiety and Its Treatment",
+        excerpt: "Anxiety is one of the most common mental health conditions. Explore the various treatment options available and how therapy and medication can help manage symptoms effectively.",
+        image: "https://tse4.mm.bing.net/th?id=OIP.GEtBBgroXmRfcJs4AppvmwHaD2&pid=Api&P=0&h=180",
+        author: "Dr. Anjali Sharma",
+        date: "April 10, 2025",
+        category: "Psychiatric",
+        content: `
+          Anxiety is a common but often misunderstood condition. It can manifest as excessive worry, restlessness, and even physical symptoms like a rapid heartbeat. While it's normal to feel anxious in stressful situations, chronic anxiety can interfere with daily life.
 
-        Professional whitening performed in a dental office typically uses high-concentration bleaching agents and specialized lights or lasers to accelerate the process. This method offers the most dramatic results, often brightening teeth by several shades in just one visit.
+          Treatment options for anxiety are varied, ranging from therapy to medication. Cognitive-behavioral therapy (CBT) is one of the most effective forms of therapy for managing anxiety. CBT helps individuals identify and challenge negative thought patterns, which can alleviate anxiety symptoms.
 
-        Take-home whitening kits provided by dentists offer a more gradual approach. These typically include custom-fitted trays and professional-grade whitening gel to be used at home according to your dentist's instructions.
+          Medications, including anti-anxiety medications and antidepressants, can also be prescribed to manage more severe cases of anxiety. It’s important to consult with a healthcare professional to determine the best treatment plan tailored to an individual's needs.
 
-        Over-the-counter options like whitening strips, toothpastes, and rinses can help maintain whiteness or provide mild improvement, but they generally don't match the effectiveness of professional treatments.
-
-        It's important to understand that not all discoloration responds equally to whitening treatments. Yellowing tends to respond well, while brown or gray tones may be more resistant. Additionally, whitening won't affect the color of fillings, crowns, or bonded surfaces.
-
-        Before pursuing any whitening treatment, it's wise to consult with your dentist. They can help determine the cause of your tooth discoloration and recommend the most appropriate whitening method for your specific situation.
-      `,
-      url: "understanding-teeth-whitening-procedures"
+          Early intervention is key to managing anxiety effectively. If you or someone you know is struggling with anxiety, don't hesitate to seek help.
+        `,
+        url: "understanding-anxiety-and-its-treatment"
     },
     {
-      id: 3,
-      title: "How to Properly Care for Dental Implants",
-      excerpt: "Dental implants require special care to ensure their longevity. Learn the best practices for maintaining your implants and keeping your smile healthy for years to come.",
-      image: "https://html.awaikenthemes.com/dentaire/images/post-3.jpg",
-      author: "Dr. Monika Pandey",
-      date: "April 5, 2025",
-      category: "Restorative Dentistry",
-      content: `
-        Dental implants represent a significant investment in your oral health and appearance. With proper care, they can last a lifetime, making proper maintenance essential.
+        id: 3,
+        title: "How to Cope with Depression: A Guide",
+        excerpt: "Depression affects millions worldwide. Learn how to identify the symptoms and the importance of seeking professional help to manage this condition and regain a sense of well-being.",
+        image: "https://img.freepik.com/free-photo/full-shot-depressed-woman-bed_23-2149071882.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
+        author: "Dr. Anjali Sharma",
+        date: "April 5, 2025",
+        category: "Psychiatric",
+        content: `
+          Depression is a serious mental health condition that affects millions of people worldwide. It can cause persistent feelings of sadness, hopelessness, and a lack of interest in activities once enjoyed.
 
-        Daily cleaning is the foundation of implant care. While implants can't develop cavities like natural teeth, the surrounding gum tissue is still susceptible to infection. Brush at least twice daily with a soft-bristled toothbrush, paying special attention to the area where the implant meets the gumline.
+          Identifying the symptoms of depression early is crucial for getting the right treatment. Common symptoms include persistent low mood, difficulty concentrating, fatigue, and changes in appetite or sleep patterns.
 
-        Flossing around implants requires a slightly different technique than with natural teeth. Many dentists recommend using floss specifically designed for implants or interdental brushes to clean between and around the implant structures.
+          Fortunately, depression is treatable. Therapy, such as cognitive-behavioral therapy (CBT), can help individuals change negative thinking patterns. In some cases, medication such as antidepressants may be recommended to help balance brain chemicals.
 
-        Regular professional cleanings remain important after getting implants. Your dental hygienist will use specialized tools designed to be safe for the implant surface while effectively removing buildup.
-
-        Avoid using abrasive products on your implants. Toothpastes containing harsh abrasives, baking soda, or stain removers can scratch the implant surface, creating areas where bacteria can accumulate.
-
-        Be aware of habits that could damage your implants. Avoid chewing extremely hard items like ice or hard candy, and if you grind your teeth at night, talk to your dentist about a protective nightguard.
-
-        Finally, maintain regular dental check-ups. Your dentist can monitor the condition of your implants and surrounding tissues, addressing any concerns before they become serious problems.
-      `,
-      url: "how-to-properly-care-for-dental-implants"
+          It’s important to remember that seeking help for depression is a sign of strength, not weakness. With the right treatment, many people with depression can recover and lead fulfilling lives.
+        `,
+        url: "how-to-cope-with-depression-a-guide"
     },
     {
-      id: 4,
-      title: "Children's Dental Health: What Parents Should Know",
-      excerpt: "Establishing good dental habits early is essential for children's oral health. Find out when to schedule their first appointment and how to make dental care fun for kids.",
-      image: "https://html.awaikenthemes.com/dentaire/images/post-2.jpg",
-      author: "Dr. Monika Pandey",
-      date: "March 30, 2025",
-      category: "Pediatric Dentistry",
-      content: `
-        Establishing good dental habits in childhood creates a foundation for lifelong oral health. Parents play a crucial role in this process through both direct care and modeling positive attitudes toward dental health.
+        id: 4,
+        title: "Pregnancy Health: Essential Tips for Expecting Mothers",
+        excerpt: "Pregnancy requires special care to ensure both the mother's and the baby's health. Learn about proper nutrition, prenatal care, and the changes to expect during pregnancy.",
+        image: "https://img.freepik.com/free-photo/portrait-happy-pregnant-woman-touching-her-belly_171337-7024.jpg?t=st=1745824321~exp=1745827921~hmac=1c1517eb89f913d9ff146cea1a8f8a7ef233a8dbb52ececaf4f92898f024560f&w=1380",
+        author: "Dr. Priya Verma",
+        date: "March 30, 2025",
+        category: "Gynecology and Obstetrics",
+        content: `
+          Pregnancy is an exciting yet challenging time, requiring special attention to both the mother's and the baby’s health. Proper nutrition is essential during this period. A balanced diet rich in vitamins, minerals, and protein supports the development of the baby and helps maintain the mother's energy levels.
 
-        Children should have their first dental visit by their first birthday or within six months after their first tooth appears. These early visits help familiarize children with the dental environment and allow dentists to monitor development from the beginning.
+          Prenatal care is vital, with regular check-ups to monitor the progress of the pregnancy. These visits allow healthcare professionals to track the baby's growth, detect any potential issues early, and provide guidance on managing common pregnancy symptoms.
 
-        For infants, oral care begins before teeth emerge. Gently wipe gums with a clean, damp cloth after feedings. Once teeth appear, brush them twice daily with a tiny smear of fluoride toothpaste (about the size of a grain of rice) using an infant toothbrush.
-
-        As children grow, gradually increase the amount of toothpaste to a pea-sized amount around age three. Supervise brushing until around age seven or eight, when children develop the manual dexterity to brush effectively on their own.
-
-        Diet plays a significant role in dental health. Limit sugary snacks and drinks, and avoid putting a baby to bed with a bottle containing anything other than water, as this can lead to "baby bottle tooth decay."
-
-        Make dental care fun through positive reinforcement. Use colorful toothbrushes, flavored toothpaste (approved for children), and perhaps a timer or song to ensure they brush for the recommended two minutes. Many smartphone apps are now available that make brushing entertaining.
-
-        Remember that children learn by example. When they see parents prioritizing their own dental care, they're more likely to value oral health themselves.
-      `,
-      url: "children-s-dental-health-what-parents-should-know"
+          Expectant mothers should also be aware of physical changes and take steps to prepare for labor and delivery. Staying active, managing stress, and practicing relaxation techniques can all contribute to a healthy pregnancy.
+        `,
+        url: "pregnancy-health-essential-tips-for-expecting-mothers"
     },
     {
-      id: 5,
-      title: "The Link Between Oral Health and Overall Wellness",
-      excerpt: "Research continues to show connections between oral health and conditions like heart disease and diabetes. Learn how taking care of your teeth can benefit your entire body.",
-      image: "https://html.awaikenthemes.com/dentaire/images/post-1.jpg",
-      author: "Dr. Monika Pandey",
-      date: "March 25, 2025",
-      category: "Health & Wellness",
-      content: `
-        The connection between oral health and overall wellness has become increasingly clear through scientific research. Your mouth serves as a window to the rest of your body, often showing signs of systemic diseases before other symptoms appear.
+        id: 5,
+        title: "Understanding Postpartum Care: What You Need to Know",
+        excerpt: "After childbirth, a mother’s body goes through many changes. Learn about postpartum care, recovery, and how to address the challenges new mothers face after delivery.",
+        image: "https://img.freepik.com/free-photo/woman-using-nursing-pillow-home-newborn-baby_52683-110702.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
+        author: "Dr. Priya Verma",
+        date: "March 25, 2025",
+        category: "Gynecology and Obstetrics",
+        content: `
+          The postpartum period is a time of significant physical and emotional changes. After childbirth, new mothers may experience a range of physical symptoms such as vaginal bleeding, uterine contractions, and changes in breast tissue as they begin breastfeeding.
 
-        Periodontal (gum) disease has been linked to several serious health conditions. The inflammation associated with this common oral infection may contribute to cardiovascular problems, including heart disease and stroke. Bacteria from infected gums can enter the bloodstream, potentially affecting heart valves and causing inflammation in blood vessels.
+          Postpartum care focuses on helping mothers recover from delivery and adapt to the challenges of caring for a newborn. It’s essential to attend follow-up appointments with your doctor to monitor recovery and address any concerns, such as postpartum depression or difficulties with breastfeeding.
 
-        For people with diabetes, the relationship with oral health works both ways. Diabetes increases susceptibility to gum disease, while gum infections can make blood glucose levels more difficult to control, creating a challenging cycle.
-
-        Respiratory conditions may also be affected by oral health. Bacteria from the mouth can be aspirated into the lungs, potentially causing or exacerbating pneumonia and chronic obstructive pulmonary disease (COPD).
-
-        Pregnancy complications, including low birth weight and premature birth, have been associated with periodontal disease in expectant mothers. Hormonal changes during pregnancy already increase the risk of gum problems, making dental care particularly important during this time.
-
-        Even cognitive health may be connected to oral wellness. Some research suggests potential links between gum disease and increased risk of Alzheimer's disease, though more study is needed in this area.
-
-        These connections underscore the importance of regular dental care as part of your overall health strategy. Brushing twice daily, flossing, and maintaining regular dental check-ups aren't just good for your smile—they're investments in your total health.
-      `,
-      url: "the-link-between-oral-health-and-overall-wellness"
+          Mental health support is just as important as physical recovery. Many new mothers experience emotional ups and downs, and seeking support from family, friends, or a counselor can help ease the transition.
+        `,
+        url: "understanding-postpartum-care-what-you-need-to-know"
     },
     {
-      id: 6,
-      title: "Advances in Pain-Free Dentistry",
-      excerpt: "Modern dental techniques have revolutionized the patient experience. Discover how new technologies are making dental visits more comfortable than ever before.",
-      image: "https://html.awaikenthemes.com/dentaire/images/post-3.jpg",
-      author: "Dr. Monika Pandey",
-      date: "March 20, 2025",
-      category: "Technology",
-      content: `
-        Dental anxiety has historically kept many people from seeking necessary care, but modern advances in pain management and technology have transformed the dental experience. Today's dental visits can be remarkably comfortable, even for traditionally uncomfortable procedures.
+        id: 6,
+        title: "The Importance of Regular Gynecological Check-ups",
+        excerpt: "Routine gynecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and maintain your well-being.",
+        image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
+        author: "Dr. Priya Verma",
+        date: "March 20, 2025",
+        category: "Gynecology and Obstetrics",
+        content: `
+          Regular gynecological check-ups are crucial for maintaining women's health and preventing serious conditions such as cervical cancer, ovarian cancer, and sexually transmitted infections (STIs). These check-ups allow your gynecologist to monitor your reproductive health and catch any potential issues early.
 
-        Enhanced anesthetics represent one significant advancement. Today's local anesthetics are more effective and can be administered with minimal discomfort. Computer-controlled delivery systems can regulate the flow and pressure of anesthesia, reducing pain during injection and providing more consistent numbness.
+          The American College of Obstetricians and Gynecologists (ACOG) recommends women begin seeing a gynecologist in their teenage years and continue routine visits throughout adulthood. Regular screenings, such as Pap smears and mammograms, can detect abnormal changes that may require further investigation or treatment.
 
-        For patients with severe anxiety, sedation dentistry offers several options. From mild relaxation through nitrous oxide (laughing gas) to oral sedatives or IV sedation for deeper relaxation, these approaches help patients remain calm while still conscious. For complex procedures or extreme anxiety, general anesthesia remains an option in some cases.
-
-        Laser dentistry has revolutionized many procedures. Dental lasers can prepare teeth for fillings, reshape gum tissue, and treat infections with minimal discomfort. The precision of laser treatment often eliminates the need for drills and reduces the necessity for anesthesia in some procedures.
-
-        Digital imaging has replaced uncomfortable traditional impressions in many practices. Instead of biting into trays filled with impression material, optical scanners can create 3D models of your teeth without discomfort.
-
-        Even the dental environment itself has evolved to reduce stress. Many modern dental offices incorporate soothing design elements, comfortable seating, entertainment options during procedures, and noise-canceling headphones to create a more relaxing atmosphere.
-
-        These innovations have made dentistry more accessible to those who previously avoided treatment due to fear. If dental anxiety has kept you from seeking care, discussing these modern options with your dentist might help you find a comfortable approach to maintaining your oral health.
-      `,
-      url: "advances-in-pain-free-dentistry"
+          By maintaining regular check-ups, women can take proactive steps to ensure their overall health and well-being.
+        `,
+        url: "the-importance-of-regular-gynecological-check-ups"
     }
-  ];
+];
+
 
 
 

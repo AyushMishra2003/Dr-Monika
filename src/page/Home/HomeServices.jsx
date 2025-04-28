@@ -60,7 +60,7 @@ const HomeService = () => {
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="md:text-center text-start mb-16">
           <span className="inline-block px-4 py-1 rounded-full bg-gray-100 text-gray-800 text-sm font-medium mb-4">
             World-Class Healthcare
           </span>
@@ -68,7 +68,7 @@ const HomeService = () => {
             Our Specialized Services
           </h2>
           <div className="w-32 h-1 mx-auto mb-6" style={{ backgroundColor: primaryPink }}></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
             Dr. Monika Pandey's Clinic provides exceptional care with a personalized approach to your health and wellbeing
           </p>
         </div>

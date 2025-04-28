@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Heart, Calendar, Mail, Phone, MapPin, Award, BookOpen } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
+import image from  '../../assets/monika.png'
 
 export default function AboutDrMonika() {
   // Define our color scheme as constants
@@ -36,8 +37,8 @@ export default function AboutDrMonika() {
               <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                 {/* Placeholder for doctor image */}
                 <img 
-                  src="https://lh3.googleusercontent.com/p/AF1QipO7qc_MAY337K4YjBCSSUxmvTXvzbxlo4Ghr4pY=s1360-w1360-h1020" 
-                  alt="Dr. Monika" 
+                  src={image}
+                  alt="Dr. Monika Pandey" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -45,16 +46,13 @@ export default function AboutDrMonika() {
             
             <div className="text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">
-                Dr. Monika Singh
+                Dr. Monika Pandey
               </h1>
               <p className="text-white text-xl opacity-90 mb-4">
-                Obstetrics & Gynecology Specialist
+                General Physician
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
                 <span className="bg-white bg-opacity-30 text-[#E48F97] px-4 py-1 rounded-full text-sm">MBBS</span>
-                <span className="bg-white bg-opacity-30 text-[#E48F97] px-4 py-1 rounded-full text-sm">MD</span>
-                <span className="bg-white bg-opacity-30 text-[#E48F97] px-4 py-1 rounded-full text-sm">MRCOG</span>
-                <span className="bg-white bg-opacity-30 text-[#E48F97] px-4 py-1 rounded-full text-sm">FMAS</span>
               </div>
             </div>
           </div>
@@ -65,10 +63,10 @@ export default function AboutDrMonika() {
       <div className="container mx-auto px-4 md:px-8 -mt-16 relative z-20">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center" style={{ color: primaryColor }}>
-            Compassionate Care for Every Woman
+            Compassionate Care for Every Patient
           </h2>
           <p className="text-gray-700 mb-6 text-center max-w-4xl mx-auto">
-            A skilled and compassionate obstetrician and gynecologist, Dr. Monika Singh is committed to not just treating her patients, but understanding them. With a unique focus on holistic healthcare and personalized treatment plans, her practice reflects the belief that women's health is deeply personal and needs an individualized approach.
+            A skilled and compassionate general physician, Dr. Monika Pandey is committed to not just treating her patients, but understanding them. With 30 years of experience in the field, her practice reflects the belief that healthcare is deeply personal and needs an individualized approach.
           </p>
           
           <div className="flex justify-center">
@@ -101,7 +99,7 @@ export default function AboutDrMonika() {
                 Expert Care
               </h3>
               <p className="text-gray-700">
-                With over a decade of experience in women's health, Dr. Monika combines clinical expertise with genuine empathy for her patients. She specializes in managing complex obstetric and gynecological cases, focusing on minimally invasive procedures and preventive care.
+                With three decades of experience in general medicine, Dr. Monika combines clinical expertise with genuine empathy for her patients. She specializes in managing a wide range of medical conditions with a focus on preventive care.
               </p>
             </div>
             
@@ -110,7 +108,7 @@ export default function AboutDrMonika() {
                 Personal Philosophy
               </h3>
               <p className="text-gray-700">
-                Her philosophy of care is simple: to empower women to make informed choices about their health while providing unwavering support. Dr. Monika believes in partnership with patients for better outcomes.
+                Her philosophy of care is simple: to empower patients to make informed choices about their health while providing unwavering support. Dr. Monika believes in partnership with patients for better outcomes.
               </p>
             </div>
             
@@ -128,7 +126,7 @@ export default function AboutDrMonika() {
                 Holistic Methods
               </h3>
               <p className="text-gray-700">
-                She's known for her expertise in using holistic methods, advocating for lifestyle changes, and taking a conservative approach to surgery—always opting for the least invasive options first.
+                She's known for her expertise in using holistic methods, advocating for lifestyle changes, and taking a comprehensive approach to healthcare—always focusing on the overall wellbeing of her patients.
               </p>
             </div>
           </div>
@@ -154,14 +152,14 @@ export default function AboutDrMonika() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Obstetric Care", desc: "Complex obstetric care and high-risk pregnancies" },
-                { title: "Minimally Invasive Surgery", desc: "Minimally invasive gynecological surgery" },
-                { title: "Advanced Procedures", desc: "Laparoscopic and hysteroscopic procedures" },
-                { title: "Reproductive Health", desc: "Comprehensive reproductive health management" },
-                { title: "Infertility", desc: "Infertility consultation and treatment options" },
-                { title: "Menopause", desc: "Menopause management and hormone therapy" },
-                { title: "Adolescent Care", desc: "Adolescent gynecology and counseling" },
-                { title: "Pelvic Health", desc: "Pelvic floor disorders and treatments" }
+                { title: "General Medicine", desc: "Comprehensive general medical care" },
+                { title: "Preventive Care", desc: "Health screenings and preventive medicine" },
+                { title: "Chronic Disease Management", desc: "Long-term care for chronic conditions" },
+                { title: "Infectious Diseases", desc: "Diagnosis and treatment of infectious diseases" },
+                { title: "Elderly Care", desc: "Specialized care for elderly patients" },
+                { title: "Women's Health", desc: "General women's health issues" },
+                { title: "Primary Healthcare", desc: "Primary and family healthcare services" },
+                { title: "Health Education", desc: "Patient education and counseling" }
               ].map((item, index) => (
                 <div 
                   key={index}
@@ -212,33 +210,21 @@ export default function AboutDrMonika() {
             {/* Timeline items */}
             {[
               { 
-                year: "2005", 
+                year: "1995", 
                 degree: "MBBS", 
-                institution: "GSVMC Medical College Kanpur",
+                institution: "Agra University",
                 side: "left" 
               },
               { 
-                year: "2010", 
-                degree: "MD (Obstetrics and Gyenecology)", 
-                institution: "KGMU, Command Hospital, Lucknow",
+                year: "1996", 
+                degree: "Medical Registration", 
+                institution: "Uttar Pradesh Medical Council (Reg. No. 40837)",
                 side: "right" 
               },
               { 
-                year: "2013", 
-                degree: "MRCOG", 
-                institution: "Royal College of Obstertrics and Gyenecology, London",
-                side: "left" 
-              },
-              { 
-                year: "2015", 
-                degree: "FMAS & FICMCH", 
-                institution: "Fellowship in Minimal Access Surgery",
-                side: "right" 
-              },
-              { 
-                year: "2017", 
-                degree: "Fellowship", 
-                institution: "Diagnostic and Operative Hysteroscopy",
+                year: "Current", 
+                degree: "Practicing at", 
+                institution: "Sadbhawna Clinic, Indira Nagar, Lucknow",
                 side: "left" 
               }
             ].map((item, index) => (
@@ -315,7 +301,7 @@ export default function AboutDrMonika() {
                   <MapPin size={24} className="text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
-                <p className="text-gray-300">14/25, Indira Nagar, Near Mahi Medical Store, Lucknow</p>
+                <p className="text-gray-300">10/2, Jama Masjid Road, Indira Nagar, Lucknow</p>
               </div>
             </div>
             
@@ -334,7 +320,7 @@ export default function AboutDrMonika() {
       {/* Footer */}
       {/* <footer className="bg-black text-white py-6">
         <div className="container mx-auto px-4 md:px-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Dr. Monika Singh Obstetrics & Gynecology. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Dr. Monika Pandey General Physician. All rights reserved.</p>
         </div>
       </footer> */}
     </div>

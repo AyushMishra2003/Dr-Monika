@@ -65,7 +65,7 @@ const WhyWeChooseUs = () => {
     ];
 
     return (
-        <div className="w-full bg-gray-50 py-12 px-4 md:px-12 ">
+        <div className="w-full bg-gray-50 lg:py-12 py-8 px-4 md:px-12  ">
             {/* Stats Section */}
             {/* <div className="container mx-auto mb-12 px-10">
                 <div className="flex flex-wrap justify-center gap-8 md:gap-4 md:justify-between">
@@ -78,7 +78,7 @@ const WhyWeChooseUs = () => {
                 </div>
             </div> */}
 
-            <div className="container mx-auto px-10 ">
+            <div className="container mx-auto lg:px-10 ">
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Left Content */}
                     <div className="lg:w-1/2">

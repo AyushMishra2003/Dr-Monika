@@ -1,6 +1,13 @@
 import React from 'react';
+import image from '../../assets/monika.png'
+import { useNavigate } from 'react-router-dom';
+
 
 export default function MonikaAbout() {
+
+
+  const navigate = useNavigate();
+
   return (
     <div className="container mx-auto p-4 md:p-6">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -8,7 +15,7 @@ export default function MonikaAbout() {
           {/* Left side - Information */}
           <div className="w-full md:w-2/3 p-4 md:p-8">
             <h1 className="text-2xl md:text-3xl font-bold text-purple-900">Dr. Monika Pandey</h1>
-            <h2 className="text-lg md:text-xl font-semibold text-pink-500 mt-2">Obstetrician-Gynecologist & Family Counselor</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-[#E47F9F] mt-2">Obstetrician-Gynecologist & Family Counselor</h2>
             
             <div className="mt-4 md:mt-6">
               <p className="text-gray-700 mb-4">
@@ -19,37 +26,37 @@ export default function MonikaAbout() {
                 <h3 className="text-lg font-semibold text-purple-800 mb-2">Practice Details</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <div className="text-pink-500 mr-2">•</div>
+                    <div className="text-[#E47F9F] mr-2">•</div>
                     <div>
                       <span className="font-semibold">Specialization:</span> Obstetrics and Gynecology, Family Counseling
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <div className="text-pink-500 mr-2">•</div>
+                    <div className="text-[#E47F9F] mr-2">•</div>
                     <div>
                       <span className="font-semibold">Clinic Location:</span> Indira Nagar, Bangalore
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <div className="text-pink-500 mr-2">•</div>
+                    <div className="text-[#E47F9F] mr-2">•</div>
                     <div>
                       <span className="font-semibold">Patient Experience:</span> Supportive, Understanding, Excellent Communication
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <div className="text-pink-500 mr-2">•</div>
+                    <div className="text-[#E47F9F] mr-2">•</div>
                     <div>
                       <span className="font-semibold">Services:</span> Online Appointments, Onsite Services, Google Pay Accepted
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <div className="text-pink-500 mr-2">•</div>
+                    <div className="text-[#E47F9F] mr-2">•</div>
                     <div>
                       <span className="font-semibold">Facilities:</span> Gender-neutral Restroom, Nursing Room, LGBTQ+ Friendly
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <div className="text-pink-500 mr-2">•</div>
+                    <div className="text-[#E47F9F] mr-2">•</div>
                     <div>
                       <span className="font-semibold">Opening Hours:</span> Monday to Sunday (Same hours daily)
                     </div>
@@ -58,7 +65,7 @@ export default function MonikaAbout() {
               </div>
               
               <div className="mt-6">
-                <button className="bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-600 transition duration-300 mr-2">
+                <button  onClick={()=>navigate("/contact")}   className="bg-[#E47F9F] text-white px-4 py-2 rounded-md hover:bg-pink-600 transition duration-300 mr-2">
                   Book Appointment
                 </button>
                 <button className="bg-white text-purple-800 border border-purple-800 px-4 py-2 rounded-md hover:bg-purple-50 transition duration-300">
@@ -72,7 +79,7 @@ export default function MonikaAbout() {
           <div className="w-full md:w-1/3 p-4 md:p-0">
             <div className="h-full flex items-center justify-center bg-gray-100">
               <img 
-                src="https://lh3.googleusercontent.com/p/AF1QipO7qc_MAY337K4YjBCSSUxmvTXvzbxlo4Ghr4pY=s1360-w1360-h1020" 
+                src={image}
                 alt="Dr. Monika Pandey" 
                 className="w-full h-full object-cover"
               />
