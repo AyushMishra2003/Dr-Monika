@@ -17,10 +17,10 @@ const Footer = () => {
                 </svg>
             </div>
 
-            <div className="relative bg-[#E47F97] py-12">
+            <div className="relative bg-[#E47F97] lg:py-12 py-6 md:py-8 ">
                 <div className="mx-auto max-w-7xl flex flex-col lg:flex-row justify-between max-w-8xl px-4 gap-6">
                     {/* Contact Section */}
-                    <div className="w-full lg:w-1/4 mb-8 ">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 ">
                         <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
                         <li className="mb-4 flex items-center text-md">
                             <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
@@ -44,7 +44,7 @@ const Footer = () => {
                     </div>
 
                     {/* Services Section */}
-                    <div className="w-full lg:w-1/4 mb-8 lg:ml-[4rem]">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 lg:ml-[4rem]">
                         <h2 className="text-xl font-semibold mb-4 text-white">Our Services</h2>
                         <ul className="text-md">
                             <Link to={`/services/gynecology`}>
@@ -79,7 +79,7 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links Section */}
-                    <div className="w-full lg:w-1/4 mb-8 lg:ml-[4rem]">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-2  lg:ml-[4rem]">
                         <h2 className="text-xl font-semibold mb-4 text-white">Quick Links</h2>
                         <ul className="text-md">
                             <Link to={"/"}>
@@ -121,7 +121,7 @@ const Footer = () => {
                         <h2 className="text-xl font-semibold mb-4 text-white" >Find Us</h2>
                         <div className="h-48 lg:h-64 w-full bg-gray-300 rounded-lg overflow-hidden shadow-md">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9729506889243!2d-73.985308!3d40.748817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0xaca05ca48ab0802!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1736494854741!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.569616102303!2d80.99869537489408!3d26.885411761264237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999592fb08ce83b%3A0x969f7467a24cfb3b!2sDr%20Monika%20Pandey%20Best%20Gynaecologist%20in%20Indira%20Nagar!5e0!3m2!1sen!2sin!4v1745921970061!5m2!1sen!2sin"
                                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="Location Map"
                             ></iframe>
                         </div>

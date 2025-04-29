@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { CalendarDays, User, ArrowRight } from 'lucide-react';
 import BreadcrumbComponent from '../../component/Breadcums';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const BlogPage = () => {
     // Sample blog data
@@ -94,6 +95,39 @@ const BlogPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <Helmet>
+        <title>Health & Wellness Blog | Dr. Monika Pandey</title>
+        <meta
+          name="description"
+          content="Stay informed with expert tips and guidance on mental health, women's healthcare, pregnancy, and wellness from Dr. Monika Pandey. Read latest blogs now."
+        />
+        <meta
+          name="keywords"
+          content="health blog, mental health blog, gynecology tips, pregnancy advice, women health articles, Dr Monika Pandey, wellness blog, medical tips"
+        />
+        <meta name="author" content="Dr. Monika Pandey" />
+        <link rel="canonical" href="https://yourdomain.com/blog" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Blog - Health & Wellness by Dr. Monika Pandey" />
+        <meta
+          property="og:description"
+          content="Read expert blogs by Dr. Monika Pandey on mental health, women’s healthcare, gynecology, and wellbeing. Stay updated and informed."
+        />
+        <meta property="og:url" content="https://yourdomain.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://yourdomain.com/images/blog-cover.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Blog | Medical & Health Insights by Dr. Monika Pandey" />
+        <meta
+          name="twitter:description"
+          content="Discover informative articles on women's health, psychiatry, and wellness by Dr. Monika Pandey. Follow our blog for expert insights."
+        />
+        <meta name="twitter:image" content="https://yourdomain.com/images/blog-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
             {/* Header */}
             <BreadcrumbComponent items={breadcrumbItems}  headText='Our Blogs' />
 

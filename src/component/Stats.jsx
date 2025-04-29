@@ -62,7 +62,7 @@ const ClinicStats = () => {
               <div className="mb-4 text-main">{stat.icon}</div>
 
               {/* Count */}
-              <h4 className="text-4xl sm:text-5xl font-extrabold text-[#5B2E67] mb-1">
+              <h4 className="text-4xl sm:text-5xl font-extrabold text-[#E47F9F] mb-1">
                 {stat.count}+
               </h4>
 

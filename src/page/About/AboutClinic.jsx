@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import BreadCrumbs from '../../component/Breadcums';
 import image from '../../assets/monika.png'
 import image1 from '../../assets/clinic.webp'
+import { Helmet } from 'react-helmet';
 
 
 export default function AboutClinic() {
@@ -13,6 +14,7 @@ export default function AboutClinic() {
 
   return (
     <div className="font-sans">
+      
       <BreadCrumbs
         items={[
           { label: 'Home', path: '/' },
@@ -24,10 +26,31 @@ export default function AboutClinic() {
 
       {/* Main Content */}
       <main>
+      <Helmet>
+        <title>Sambhawna Clinic - Women's Health Care in Lucknow | Dr. Monika Pandey</title>
+        <meta
+          name="description"
+          content="Sambhawna Clinic in Lucknow, led by Dr. Monika Pandey, offers expert gynecological and obstetric care with over 15 years of experience. Personalized, compassionate care for every woman."
+        />
+        <meta
+          name="keywords"
+          content="Sambhawna Clinic, Women's Health Care, Gynecologist in Lucknow, Obstetrician, Dr. Monika Pandey, High-Risk Pregnancy, Laparoscopic Surgery, Women's Wellness, Fertility Care, Women's Health Clinic"
+        />
+        <meta name="author" content="Dr. Monika Pandey" />
+        <link rel="canonical" href="https://yourdomain.com/about-clinic" />
+        <meta property="og:title" content="Sambhawna Clinic - Women's Health Care in Lucknow" />
+        <meta
+          property="og:description"
+          content="Dr. Monika Pandey offers compassionate and expert care in gynecology and obstetrics at Sambhawna Clinic, Lucknow. Book your appointment today."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/about-clinic" />
+        <meta property="og:image" content="https://yourdomain.com/images/sambhawna-clinic.jpg" />
+      </Helmet>
         {/* Hero Section */}
         <section className="py-8 px-4">
           <div className="container mx-auto">
-            <h2 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4" style={{ color: '#E47F97' }}>About Astitva Clinic For Women's Health Care</h2>
+            <h2 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4" style={{ color: '#E47F97' }}>About Sambhawna Clinic For Women's Health Care</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className=''>
                 <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold lg:mb-6 mb-2 md:mb-4" style={{ color: '#5B2E67' }}>

@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 // Placeholder BreadCrumbs component
 
@@ -159,6 +160,38 @@ export default function GynecologyObstetricsServices() {
 
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
+            <Helmet>
+        <title>Women's Healthcare & Gynecology Services | Dr. Monika Pandey</title>
+        <meta
+          name="description"
+          content="Expert gynecology and obstetrics care by Dr. Monika Pandey. Comprehensive pregnancy support, high-risk consultations, delivery options, and women’s wellness services in Lucknow."
+        />
+        <meta
+          name="keywords"
+          content="gynecology Lucknow, women healthcare, pregnancy care, obstetrician Lucknow, normal delivery, C-section, prenatal checkups, high-risk pregnancy, Dr Monika Pandey"
+        />
+        <meta name="author" content="Dr. Monika Pandey" />
+        <link rel="canonical" href="https://yourdomain.com/services/gynecology" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Women's Healthcare & Pregnancy Support in Lucknow" />
+        <meta
+          property="og:description"
+          content="Comprehensive gynecology and obstetrics care with Dr. Monika Pandey. From prenatal care to safe delivery and postpartum support, get expert help at every stage."
+        />
+        <meta property="og:url" content="https://yourdomain.com/services/gynecology" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://yourdomain.com/images/gynecology-cover.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Gynecology & Women's Healthcare | Dr. Monika Pandey" />
+        <meta
+          name="twitter:description"
+          content="Personalized gynecological and obstetric care for every woman. Book an appointment with Dr. Monika Pandey for safe and compassionate healthcare."
+        />
+        <meta name="twitter:image" content="https://yourdomain.com/images/gynecology-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
             <BreadCrumbs
                 items={[
                     { label: 'Home', path: '/' },
@@ -169,7 +202,7 @@ export default function GynecologyObstetricsServices() {
             />
             <div className="container mx-auto px-4 py-12">
                 {/* Hero Section with Image */}
-                <div className="mb-16 text-center relative overflow-hidden rounded-3xl shadow-xl">
+                <div className="mb-16 text-center relative overflow-hidden rounded-3xl shadow-xl py-6">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#7e3f8f]/90 to-[#e47f9f]/90 z-10"></div>
                     <img src="https://assets-global.website-files.com/5ede763fa68713434223e0bc/5f584e20dc51eb99d0b7c1fe_During-Pregnancy-003.jpg" alt="Women's healthcare" className="w-full object-cover h-64 md:h-96" />
                     <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -257,7 +290,7 @@ export default function GynecologyObstetricsServices() {
                                         </div>
                                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
                                     </div>
-                                    <div className="p-6">
+                                    <div className="lg:p-6 p-2">
                                         <p className="text-gray-600 mb-4">{service.longDescription}</p>
                                         <div>
                                             <h4 className="font-semibold text-[#7e3f8f] mb-2">Service Includes:</h4>
@@ -319,7 +352,7 @@ export default function GynecologyObstetricsServices() {
                                         </div>
                                         <h3 className="text-xl font-bold text-white">{service.title}</h3>
                                     </div>
-                                    <div className="p-6">
+                                    <div className="lg:p-6 p-2">
                                         <p className="text-gray-600 mb-4">{service.longDescription}</p>
                                         <div className="mb-4">
                                             <h4 className="font-semibold text-[#7e3f8f] mb-2">Key Benefits:</h4>

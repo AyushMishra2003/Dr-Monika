@@ -7,6 +7,7 @@ import { MdContactPhone, MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import BreadCrumbs from "../../component/Breadcums";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
 
@@ -77,6 +78,15 @@ const Contact = () => {
 
   return (
     <section>
+      <Helmet>
+        <title>Contact Us | Dr. Monika Pandey - Best Gynaecologist in Indira Nagar</title>
+        <meta name="description" content="Get in touch with Dr. Monika Pandey's clinic in Indira Nagar, Lucknow. Contact for appointments, inquiries, and more information." />
+        <meta name="keywords" content="Dr. Monika Pandey, Gynaecologist Lucknow, Contact Clinic, Indira Nagar, Women's Health" />
+        <meta property="og:title" content="Contact Us | Dr. Monika Pandey Clinic" />
+        <meta property="og:description" content="Reach out to Dr. Monika Pandey for appointments and inquiries. Located in Indira Nagar, Lucknow." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/contact" />
+      </Helmet>
 
       <BreadCrumbs
         items={[
@@ -101,7 +111,7 @@ const Contact = () => {
 
                 <div className="flex items-start space-x-4">
                   <a
-                    href="https://www.google.com/maps/dir//dr+somya+singh/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3999580646718413:0xee7dcdad487cc31b?sa=X&ved=1t:3061&ictx=111"
+                    href="https://www.google.co.in/maps/place/Dr+Monika+Pandey+Best+Gynaecologist+in+Indira+Nagar/@26.8854118,80.9986954,17z/data=!3m1!4b1!4m6!3m5!1s0x3999592fb08ce83b:0x969f7467a24cfb3b!8m2!3d26.885407!4d81.0012703!16s%2Fg%2F11vpf7nlyn?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#E47F9F] p-3 rounded-md"
@@ -111,7 +121,7 @@ const Contact = () => {
                   <div>
                     <h2 className="text-[#E47F9F] text-[1.3rem] sora-600">Address</h2>
                     <a
-                      href="https://www.google.com/maps/dir//dr+somya+singh/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3999580646718413:0xee7dcdad487cc31b?sa=X&ved=1t:3061&ictx=111"
+                      href="https://www.google.co.in/maps/place/Dr+Monika+Pandey+Best+Gynaecologist+in+Indira+Nagar/@26.8854118,80.9986954,17z/data=!3m1!4b1!4m6!3m5!1s0x3999592fb08ce83b:0x969f7467a24cfb3b!8m2!3d26.885407!4d81.0012703!16s%2Fg%2F11vpf7nlyn?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
@@ -136,7 +146,7 @@ const Contact = () => {
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
                       +91-9838346118
-                    </a> , 
+                    </a> ,
                     <a
                       href="tel:919277163686"
                       className="sora-400 text-[1rem] text-[#535760] no-underline ml-1"
@@ -159,7 +169,7 @@ const Contact = () => {
                       href="tel:917379127000"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      10:00-1:30 PM (MON-SUN) , 
+                      10:00-1:30 PM (MON-SUN) ,
                     </a>
                     <a
                       href="tel:917379127000"
@@ -170,7 +180,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-       
+
 
                 <div className="flex items-start space-x-4">
                   <a
@@ -185,7 +195,7 @@ const Contact = () => {
                       href="mailto:monikapandey185"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                    monikapandey185@gmail.com
+                      monikapandey185@gmail.com
                     </a>
                   </div>
                 </div>

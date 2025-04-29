@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -107,14 +108,47 @@ export default function PsychiatricServicesDetails() {
         }
     ];
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
+            <Helmet>
+        <title>Physiotherapy Services | Comprehensive Rehab & Pain Relief Care</title>
+        <meta
+          name="description"
+          content="Restore mobility and relieve pain with our expert physiotherapy services. Personalized rehab, injury recovery, and chronic pain care tailored to your unique needs."
+        />
+        <meta
+          name="keywords"
+          content="physiotherapy in Lucknow, pain management, rehabilitation, post-surgery physiotherapy, back pain, joint therapy, physical therapy clinic"
+        />
+        <meta name="author" content="Sambhawna Clinic" />
+        <link rel="canonical" href="https://yourdomain.com/services/physiotherapy" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Physiotherapy Services | Restore Movement & Relieve Pain" />
+        <meta
+          property="og:description"
+          content="Get personalized physiotherapy care at Sambhawna Clinic. We specialize in pain relief, mobility restoration, and rehabilitation."
+        />
+        <meta property="og:url" content="https://yourdomain.com/services/physiotherapy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://yourdomain.com/images/physiotherapy-cover.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Physiotherapy Services | Sambhawna Clinic" />
+        <meta
+          name="twitter:description"
+          content="Expert physiotherapists offering rehab, injury recovery, and pain management at Sambhawna Clinic. Book your session today."
+        />
+        <meta name="twitter:image" content="https://yourdomain.com/images/physiotherapy-cover.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
             <BreadCrumbs
                 items={[
                     { label: 'Home', path: '/' },
@@ -123,7 +157,7 @@ export default function PsychiatricServicesDetails() {
                 ]}
                 headText="Gynecology & Obstetrics"
             />
-            <div className="container mx-auto px-4 lg:py-12 py-6 md:py-8">
+            <div className="container mx-auto px-4 lg:py-12 py-6 md:py-8 ">
                 {/* Hero Section with Image */}
                 <div className="lg:mb-16 mb-6 md:mb-10 text-center relative overflow-hidden rounded-3xl shadow-xl">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#5b2e67]/90 to-[#e47f9f]/90 z-10"></div>
@@ -136,7 +170,7 @@ export default function PsychiatricServicesDetails() {
                             <p className="text-xl text-white/80 max-w-2xl mx-auto">
                                 Personalized care for mental health and wellbeing with evidence-based treatments
                             </p>
-                            <button  onClick={()=>navigate("/contact")} className="mt-6 cursor-pointer bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <button onClick={() => navigate("/contact")} className="mt-6 cursor-pointer bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Schedule a Consultation
                             </button>
                         </div>
@@ -203,7 +237,7 @@ export default function PsychiatricServicesDetails() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                             {treatments.map((treatment, index) => (
                                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                     <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
@@ -212,7 +246,7 @@ export default function PsychiatricServicesDetails() {
                                         </div>
                                         <h3 className="text-xl font-bold text-white">{treatment.title}</h3>
                                     </div>
-                                    <div className="p-6">
+                                    <div className="lg:p-6 p-2">
                                         <p className="text-gray-600 mb-4">{treatment.longDescription}</p>
                                         <div>
                                             <h4 className="font-semibold text-[#5b2e67] mb-2">Common Symptoms:</h4>
@@ -273,7 +307,7 @@ export default function PsychiatricServicesDetails() {
                                         </div>
                                         <h3 className="text-xl font-bold text-white">{therapy.title}</h3>
                                     </div>
-                                    <div className="p-6">
+                                    <div className="lg:p-6 p-2">
                                         <p className="text-gray-600 mb-4">{therapy.longDescription}</p>
                                         <div className="mb-4">
                                             <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
@@ -323,7 +357,7 @@ export default function PsychiatricServicesDetails() {
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                       
+
                                     <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Psychiatric care philosophy" className="w-full h-full object-cover" />
                                 </div>
                             </div>
@@ -511,7 +545,7 @@ export default function PsychiatricServicesDetails() {
                             Our compassionate team of experts is ready to help you overcome your challenges and improve your mental wellbeing.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link   to="/contact"  className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <Link to="/contact" className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Schedule Consultation
                             </Link>
                         </div>

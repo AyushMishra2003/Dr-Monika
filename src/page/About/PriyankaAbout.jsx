@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Heart, Calendar, Mail, Phone, MapPin, Award, BookOpen } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 import image from  '../../assets/monika.png'
+import { Helmet } from 'react-helmet';
 
 export default function AboutDrMonika() {
   // Define our color scheme as constants
@@ -15,6 +16,39 @@ export default function AboutDrMonika() {
   
   return (
     <section>
+      <Helmet>
+        <title>Dr. Monika Pandey - General Physician in Lucknow | 30+ Years Experience</title>
+        <meta
+          name="description"
+          content="Dr. Monika Pandey is a compassionate general physician with 30+ years of experience in providing personalized and holistic healthcare in Lucknow. Book an appointment today."
+        />
+        <meta
+          name="keywords"
+          content="Dr. Monika Pandey, General Physician in Lucknow, MBBS Doctor, Experienced Family Doctor, Preventive Healthcare, Holistic Medicine, Chronic Disease Management"
+        />
+        <meta name="author" content="Dr. Monika Pandey" />
+        <link rel="canonical" href="https://yourdomain.com/about-dr-monika-pandey" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Dr. Monika Pandey - Experienced General Physician in Lucknow" />
+        <meta
+          property="og:description"
+          content="With 30 years of experience, Dr. Monika Pandey offers individualized and holistic care as a trusted general physician in Lucknow."
+        />
+        <meta property="og:url" content="https://yourdomain.com/about-dr-monika-pandey" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:image" content="https://yourdomain.com/images/dr-monika-pandey.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="Dr. Monika Pandey - General Physician in Lucknow" />
+        <meta
+          name="twitter:description"
+          content="MBBS, 30+ years experience. Trusted general physician offering expert, holistic care in Lucknow. Book an appointment now."
+        />
+        <meta name="twitter:image" content="https://yourdomain.com/images/dr-monika-pandey.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       {/* <BreadCrumbs/> */}
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Header with curved bottom */}
@@ -191,7 +225,7 @@ export default function AboutDrMonika() {
       </div>
 
       {/* Education Section */}
-      <div className="container mx-auto px-4 md:px-8 py-16">
+      <div className="container mx-auto px-4 md:px-8 lg:py-16 py-8 md:py-12">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-center mb-10">
             <div className="h-0.5 flex-1 bg-gray-200"></div>
