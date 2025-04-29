@@ -11,9 +11,9 @@ export default function MonikaAbout() {
   return (
     <div className="container mx-auto p-4 md:p-6">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col lg:flex-row">
           {/* Left side - Information */}
-          <div className="w-full md:w-2/3 p-4 md:p-8">
+          <div className="w-full lg:w-2/3 p-4 md:p-8">
             <h1 className="text-2xl md:text-3xl font-bold text-purple-900">Dr. Monika Pandey</h1>
             <h2 className="text-lg md:text-xl font-semibold text-[#E47F9F] mt-2">Obstetrician-Gynecologist & Family Counselor</h2>
             
@@ -76,7 +76,7 @@ export default function MonikaAbout() {
           </div>
           
           {/* Right side - Photo */}
-          <div className="w-full md:w-1/3 p-4 md:p-0">
+          <div className="w-full lg:w-1/3 p-4 md:p-0">
             <div className="h-full flex items-center justify-center bg-gray-100">
               <img 
                 src={image}
@@ -85,6 +85,7 @@ export default function MonikaAbout() {
               />
             </div>
           </div>
+
         </div>
       </div>
     </div>

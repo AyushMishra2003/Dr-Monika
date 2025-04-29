@@ -86,14 +86,14 @@ const Contact = () => {
         ]}
         headText="Contact Us"
       />
-      <div className="relative w-full  flex items-center justify-center lg:p-8 p-4  bg-gray-100 overflow-hidden">
+      <div className="relative w-full  flex items-center justify-center lg:p-8 p-2  md:px-4   bg-gray-100 overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-gradient-to-b from-teal-500 to-teal-600 rounded-full transform translate-x-[40%] translate-y-[40%] opacity-30"></div>
 
         <div className="grid md:grid-cols-2 w-full bg-white rounded-lg shadow-lg overflow-hidden max-w-7xl">
           {/* Contact Info Section */}
-          <div className="max-w-[34rem] px-4 md:max-w-[35rem] flex pt-6 border border-red-500">
+          <div className="max-w-[34rem] px-4 md:max-w-[35rem] flex lg: lg:pt-6 pt-2 md:pt-4  border-red-500">
             <div>
-              <h1 className="sora-600 leading-[3rem]  text-xl sm:text-2xl lg:text-2xl text-[#E47F9F] mb-6">
+              <h1 className="sora-600 leading-[3rem]  text-xl sm:text-2xl lg:text-2xl text-[#E47F9F] lg:mb-6 mb-2 md:mb-4">
                 Get In Touch With Us
               </h1>
 
@@ -116,8 +116,8 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      14/25, Indira Nagar, Near Mahi Medical Store, <br />
-                      Lucknow, Uttar Pradesh
+                      Indira Nagar,   <br />
+                      Lucknow, Uttar Pradesh 226016
                     </a>
                   </div>
                 </div>
@@ -132,10 +132,16 @@ const Contact = () => {
                   <div>
                     <h2 className="text-[#E47F9F] text-[1.3rem] sora-600">Call for Help</h2>
                     <a
-                      href="tel:917379127000"
+                      href="tel:919838346118"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      +91-7379127000
+                      +91-9838346118
+                    </a> , 
+                    <a
+                      href="tel:919277163686"
+                      className="sora-400 text-[1rem] text-[#535760] no-underline ml-1"
+                    >
+                      +91-9277163686
                     </a>
                   </div>
                 </div>
@@ -153,10 +159,18 @@ const Contact = () => {
                       href="tel:917379127000"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      6:00-9:00 PM
+                      10:00-1:30 PM (MON-SUN) , 
+                    </a>
+                    <a
+                      href="tel:917379127000"
+                      className="sora-400 text-[1rem] text-[#535760] no-underline ml-1"
+                    >
+                      06-8:30 PM (MON-SUN)
                     </a>
                   </div>
                 </div>
+
+       
 
                 <div className="flex items-start space-x-4">
                   <a
@@ -168,10 +182,10 @@ const Contact = () => {
                   <div>
                     <h2 className="text-[#E47F9F] text-[1.3rem] sora-600">Mail for Information</h2>
                     <a
-                      href="mailto:saumya.751983@gmail.com"
+                      href="mailto:monikapandey185"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      saumya.751983@gmail.com
+                    monikapandey185@gmail.com
                     </a>
                   </div>
                 </div>

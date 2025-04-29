@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Calendar, Clipboard, Stethoscope, FileText, PhoneCall } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HowWeWorkPremium() {
   const [activeStep, setActiveStep] = useState(0);
@@ -84,7 +85,7 @@ export default function HowWeWorkPremium() {
   };
 
   return (
-    <div className="w-full bg-gray-100 py-16 px-4 md:px-8">
+    <div className="w-full bg-gray-100 lg:py-12 py-4 sm:py-6 md:py-8 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 rounded-full bg-pink-100 text-[#5B2E67] font-medium text-sm mb-4">Our Process</span>
@@ -170,7 +171,7 @@ export default function HowWeWorkPremium() {
         </div>
         
         {/* Tablet View - Timeline */}
-        <div className="hidden md:block lg:hidden mb-12">
+        <div className="hidden sm:block lg:hidden mb-12">
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#E47F97] to-[#5B2E67]"></div>
             
@@ -179,10 +180,10 @@ export default function HowWeWorkPremium() {
                 key={index} 
                 className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
               >
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-left' : 'pl-12 text-left'}`}>
                   <span className="block text-sm font-bold text-[#E47F97] mb-1">{step.number}</span>
                   <h3 className="text-xl font-bold text-[#5B2E67] mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className="text-gray-600 text-justify">{step.description}</p>
                 </div>
                 
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-[#E47F97] flex items-center justify-center z-10">
@@ -196,7 +197,7 @@ export default function HowWeWorkPremium() {
         </div>
         
         {/* Mobile View - Modern Card Carousel */}
-        <div className="md:hidden">
+        <div className="sm:hidden">
           <div className="relative overflow-hidden pb-12">
             <div className={`flex transition-transform duration-300 ${isAnimating ? 'opacity-50' : 'opacity-100'}`} style={{ transform: `translateX(-${activeStep * 100}%)` }}>
               {steps.map((step, index) => (
@@ -254,9 +255,9 @@ export default function HowWeWorkPremium() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <a 
-            href="#book-appointment" 
+        <div className="lg:mt-16  md:mt-8 text-center">
+          <Link to={"/contact"} 
+    
             className="group relative inline-flex items-center px-8 py-4 overflow-hidden rounded-full bg-gradient-to-r from-[#E47F97] to-[#5B2E67] text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-pink-200"
           >
             <span className="absolute left-0 w-0 h-full rounded-full bg-white opacity-10 transition-all duration-300 group-hover:w-full"></span>
@@ -264,8 +265,8 @@ export default function HowWeWorkPremium() {
               <Calendar className="w-5 h-5 mr-2" /> 
               Book Your Appointment
             </span>
-          </a>
-          <p className="mt-4 text-gray-500 text-sm">Or call us at (123) 456-7890</p>
+          </Link>
+          <p className="mt-4 text-gray-500 text-sm">Or call us        <a href="tel:9838346118" className="hover:text-[#5B2E67]">+91 9838346118</a></p>
         </div>
       </div>
     </div>

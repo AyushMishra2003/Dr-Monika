@@ -86,7 +86,7 @@ const WhyWeChooseUs = () => {
                             Why Choose Us
                         </button>
 
-                        <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 mb-4">
                             Our Commitment To Excellence In Pediatric Care
                         </h2>
 

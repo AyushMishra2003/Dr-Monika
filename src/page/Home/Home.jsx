@@ -24,7 +24,7 @@ const Home = () => {
       window.scrollTo(0, 0);
     }, []);
   return (
-    <div className='text-red-500'>
+    <div className='text-red-500 overflow-x-hidden'>
         {/* <HeroSection/> */}
 
         <HomeSlider/>

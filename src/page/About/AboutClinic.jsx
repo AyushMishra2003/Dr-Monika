@@ -5,7 +5,7 @@ import image1 from '../../assets/clinic.webp'
 
 
 export default function AboutClinic() {
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -13,14 +13,14 @@ export default function AboutClinic() {
 
   return (
     <div className="font-sans">
-             <BreadCrumbs
-                items={[
-                    { label: 'Home', path: '/' },
-                    { label: 'About Clinic' },
-        
-                ]}
-                headText="About Clinic"
-            />
+      <BreadCrumbs
+        items={[
+          { label: 'Home', path: '/' },
+          { label: 'About Clinic' },
+
+        ]}
+        headText="About Clinic"
+      />
 
       {/* Main Content */}
       <main>
@@ -39,7 +39,7 @@ export default function AboutClinic() {
                 <p className="mb-6 text-gray-700">
                   At our clinic, we prioritize your comfort and health. We offer a range of services from routine check-ups to specialized treatments, ensuring every woman receives the highest standard of care.
                 </p>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
@@ -75,7 +75,7 @@ export default function AboutClinic() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-2">
                   <div className="bg-gray-100 p-4 rounded-lg">
@@ -127,53 +127,53 @@ export default function AboutClinic() {
             <h2 className="text-4xl font-bold mb-12 text-center" style={{ color: '#5B2E67' }}>
               Our Vision and Mission for the Future: To Serve with Integrity and Compassion
             </h2>
-            
+
             <div className="flex flex-wrap justify-center mb-12">
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>ABOUT</button>
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: '#E47F97', color: 'white' }}>Why Choose Us</button>
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>MISSION</button>
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>Approach</button>
             </div>
-            
+
             {/* Why Choose Us Section */}
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-12">
               <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Why Choose Us</h3>
-              
+
               <p className="mb-8 text-gray-700">
                 At Astitva Clinic, we combine medical excellence with a deeply compassionate approach to women's healthcare. Our commitment to your wellbeing sets us apart.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
                   <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Expert Medical Team</h4>
                   <p className="text-gray-700">Led by Dr. Monika Pandey, our team consists of highly qualified professionals dedicated to providing the best care possible for women.</p>
                 </div>
-                
+
                 <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
                   <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Patient-Centered Approach</h4>
                   <p className="text-gray-700">We take time to listen to your concerns, answer questions, and develop personalized treatment plans tailored to your specific needs.</p>
                 </div>
-                
+
                 <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
                   <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Advanced Technology</h4>
                   <p className="text-gray-700">Our clinic is equipped with state-of-the-art medical technology that ensures accurate diagnosis and effective treatments.</p>
                 </div>
-                
+
                 <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
                   <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Comprehensive Care</h4>
                   <p className="text-gray-700">From routine check-ups to complex procedures, we offer a wide range of services to address all aspects of women's health.</p>
                 </div>
               </div>
             </div>
-            
+
             {/* Mission Section */}
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-12">
               <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Our Mission</h3>
-              
+
               <p className="mb-6 text-gray-700">
                 Our mission is to empower women through comprehensive healthcare, education, and support. We strive to:
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
@@ -186,7 +186,7 @@ export default function AboutClinic() {
                     <p className="text-gray-700">Deliver the highest quality medical care with integrity, expertise, and compassion.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -198,7 +198,7 @@ export default function AboutClinic() {
                     <p className="text-gray-700">Equip women with knowledge and resources to make informed decisions about their health.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -210,7 +210,7 @@ export default function AboutClinic() {
                     <p className="text-gray-700">Ensure every woman feels respected, heard, and supported throughout her healthcare journey.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -224,15 +224,15 @@ export default function AboutClinic() {
                 </div>
               </div>
             </div>
-            
+
             {/* Approach Section */}
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
               <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Our Approach</h3>
-              
+
               <p className="mb-8 text-gray-700">
                 We prioritize a patient-centered approach in gynecological care, integrating cutting-edge medical advancements with compassionate service.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#E47F97' }}>
@@ -242,7 +242,7 @@ export default function AboutClinic() {
                   </div>
                   <p className="ml-4 text-gray-700">Comprehensive Gynecological Services for all stages of life.</p>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#5B2E67' }}>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -251,7 +251,7 @@ export default function AboutClinic() {
                   </div>
                   <p className="ml-4 text-gray-700">Education and Empowerment to help women make informed health decisions.</p>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#E47F97' }}>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -260,7 +260,7 @@ export default function AboutClinic() {
                   </div>
                   <p className="ml-4 text-gray-700">Seamless Care Coordination for a smooth healthcare experience.</p>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#5B2E67' }}>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -319,12 +319,12 @@ export default function AboutClinic() {
       </main>
 
     </div>
-    
+
   )
 }
 
 
-  // Helper function to convert hex to rgba for gradient backgrounds
+// Helper function to convert hex to rgba for gradient backgrounds
 function hexToRgba(hex, alpha) {
   const r = parseInt(hex.slice(1, 3), 16);
   const g = parseInt(hex.slice(3, 5), 16);

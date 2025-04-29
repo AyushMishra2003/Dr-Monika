@@ -94,7 +94,7 @@ const HomeBlogSlider = () => {
 
     return (
         <section className='bg-gray-100'>
-            <div className="px-4 lg:px-2 py-10 sm:py-12 md:py-14 lg:py-16 bg-gray-100 max-w-7xl mx-auto">
+            <div className="px-4 lg:px-2 py-8 sm:py-12 md:py-14 lg:py-16 bg-gray-100 max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Latest Blog Posts</h2>
                 <div className="slick-equal-height">
                     <Slider {...settings}>
@@ -114,7 +114,7 @@ const HomeBlogSlider = () => {
                                     </div>
                                     
                                     {/* Content Container with Fixed Height */}
-                                    <div className="p-5 flex flex-col h-48">
+                                    <div className="p-5 flex flex-col h-68">
                                         {/* Title with Fixed Height */}
                                         <h2 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 h-14">
                                             {post.title}

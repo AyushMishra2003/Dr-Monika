@@ -10,19 +10,20 @@ const HomeService = () => {
   const services = [
     {
       id: "physiotherapy",
-      title: "Physiotherapy",
-      subtitle: "Expert Movement Rehabilitation",
-      description: "Specialized therapeutic techniques to restore mobility, reduce pain and improve quality of life after injury or surgery.",
+      title: "Psychiatrist",
+      subtitle: "Mental Health & Wellness",
+      description: "Comprehensive psychiatric care for emotional, behavioral, and mental health challenges with personalized treatment approaches.",
       icon: <Activity className="h-10 w-10" />,
       color: primaryPurple,
       features: [
         {
           icon: <Shield className="h-5 w-5" />,
-          text: "Expert Certified Therapists"
+          text: "Licensed Mental Health Experts"
+
         },
         {
           icon: <Star className="h-5 w-5" />,
-          text: "Personalized Treatment Plans"
+        text: "Confidential & Personalized Therapy"
         },
         // {
         //   icon: <Clock className="h-5 w-5" />,
@@ -60,11 +61,11 @@ const HomeService = () => {
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="md:text-center text-start mb-16">
+        <div className="md:text-center text-start lg:mb-16 mb-6 md:mb-8 ">
           <span className="inline-block px-4 py-1 rounded-full bg-gray-100 text-gray-800 text-sm font-medium mb-4">
             World-Class Healthcare
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" style={{ color: primaryPurple }}>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2" style={{ color: primaryPurple }}>
             Our Specialized Services
           </h2>
           <div className="w-32 h-1 mx-auto mb-6" style={{ backgroundColor: primaryPink }}></div>

@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
+import image from '../../assets/monika.png'
 
 const HomeAbout = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -15,7 +16,7 @@ const HomeAbout = () => {
     }, []);
 
     return (
-        <div className="bg-white font-sans py-10">
+        <div className="bg-white font-sans lg:py-10 py-4 sm:py-6 md:py-8">
             {/* Main content */}
             <main className="max-w-7xl mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center">
@@ -24,7 +25,7 @@ const HomeAbout = () => {
                         {/* Main image */}
                         <div className="relative">
                             <img
-                                src="https://lh3.googleusercontent.com/p/AF1QipO7qc_MAY337K4YjBCSSUxmvTXvzbxlo4Ghr4pY=s1360-w1360-h1020-rw"
+                                src={image}
                                 alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
                                 className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
                             />

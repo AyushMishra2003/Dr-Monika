@@ -17,6 +17,7 @@ import GynecologyObstetricsServices from './page/service/ServiceDetail2'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 import NotFound from './component/NotFound'
+import Pratice from './page/pratice/Pratice'
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
           <Route  path='/about/clinic'  element={<AboutClinic/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
+          <Route path='/pratice' element={<Pratice/>}/>
           <Route path='/blogs' element={<BlogPage/>}/>
           <Route path='/blog/:detail' element={<BlogDetails/>} />
           <Route path='/services/physiotherapy' element={<PsychiatricServicesDetails/>} />
