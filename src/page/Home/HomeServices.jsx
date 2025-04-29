@@ -82,7 +82,7 @@ const HomeService = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] group"
               style={{ borderBottom: `5px solid ${service.color}` }}
             >
-              <div className="p-8 md:p-10">
+              <div className="p-4 md:6 lg:p-10">
                 {/* Card Header */}
                 <div className="flex items-center mb-6">
                   <div 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -106,6 +107,8 @@ export default function PsychiatricServicesDetails() {
         }
     ];
 
+    const navigate=useNavigate()
+
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
@@ -120,20 +123,20 @@ export default function PsychiatricServicesDetails() {
                 ]}
                 headText="Gynecology & Obstetrics"
             />
-            <div className="container mx-auto px-4 py-12">
+            <div className="container mx-auto px-4 lg:py-12 py-6 md:py-8">
                 {/* Hero Section with Image */}
-                <div className="mb-16 text-center relative overflow-hidden rounded-3xl shadow-xl">
+                <div className="lg:mb-16 mb-6 md:mb-10 text-center relative overflow-hidden rounded-3xl shadow-xl">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#5b2e67]/90 to-[#e47f9f]/90 z-10"></div>
                     <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Mental health support" className="w-full object-cover h-64 md:h-96" />
                     <div className="absolute inset-0 flex items-center justify-center z-20">
                         <div className="px-4 py-6 text-white">
-                            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                                 Comprehensive <span className="text-white/90">Psychiatric Services</span>
                             </h1>
                             <p className="text-xl text-white/80 max-w-2xl mx-auto">
                                 Personalized care for mental health and wellbeing with evidence-based treatments
                             </p>
-                            <button className="mt-6 bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <button  onClick={()=>navigate("/contact")} className="mt-6 cursor-pointer bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Schedule a Consultation
                             </button>
                         </div>
@@ -172,8 +175,8 @@ export default function PsychiatricServicesDetails() {
                 {activeTab === 'treatments' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-[#5b2e67] mb-4">Mental Health Conditions We Treat</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Mental Health Conditions We Treat</h2>
+                            <p className="text-gray-600 md:max-w-3xl w-full mx-auto text-lg text-justify md:text-center">
                                 Our experienced team of psychiatrists and therapists provides evidence-based treatment for a wide range of
                                 psychiatric conditions. We offer comprehensive care tailored to your unique needs and circumstances.
                             </p>
@@ -182,7 +185,7 @@ export default function PsychiatricServicesDetails() {
                         {/* Featured Treatment */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex">
-                                <div className="md:w-1/2 bg-gradient-to-br from-[#5b2e67] to-[#e47f9f] p-8 text-white">
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#5b2e67] to-[#e47f9f] lg:p-8 p-4 text-white">
                                     <h3 className="text-2xl font-bold mb-4">Understanding Mental Health Conditions</h3>
                                     <p className="mb-4">
                                         Mental health conditions affect your thinking, feeling, mood, and behavior in ways that influence your ability to relate to others and function in daily life. These conditions are medical problems that often result from a complex interplay of genetic, biological, psychological, and environmental factors.
@@ -233,18 +236,18 @@ export default function PsychiatricServicesDetails() {
                 {activeTab === 'therapies' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-[#5b2e67] mb-4">Our Therapeutic Services</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Our Therapeutic Services</h2>
+                            <p className="text-gray-600 lg:max-w-3xl w-full text-justify md:text-center mx-auto text-lg">
                                 We offer a comprehensive range of evidence-based therapies tailored to your unique needs.
                                 Our expert clinicians are trained in various therapeutic modalities to address a wide spectrum of mental health concerns.
                             </p>
                         </div>
 
                         {/* Featured Therapy Section */}
-                        <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div className="lg:mb-12 bg-white rounded-xl shadow-lg overflow-hidden mb-4">
                             <div className="md:flex flex-row-reverse">
-                                <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#5b2e67] p-8 text-white">
-                                    <h3 className="text-2xl font-bold mb-4">The Power of Therapeutic Intervention</h3>
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#5b2e67] lg:p-8 p-4 text-white">
+                                    <h3 className="lg:text-2xl text-xl font-bold mb-4">The Power of Therapeutic Intervention</h3>
                                     <p className="mb-4">
                                         Therapy provides a supportive environment where you can talk openly with a trained professional who's objective, neutral, and nonjudgmental. Through various therapeutic techniques, you can gain insight into your feelings, behaviors, and thoughts, develop coping strategies, and work toward positive change.
                                     </p>
@@ -297,8 +300,8 @@ export default function PsychiatricServicesDetails() {
                 {activeTab === 'approach' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-[#5b2e67] mb-4">Our Treatment Approach</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Our Treatment Approach</h2>
+                            <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-center text-justify ">
                                 Our approach to psychiatric care is comprehensive, personalized, and focused on long-term wellbeing.
                                 We believe in treating the whole person, not just symptoms.
                             </p>
@@ -307,7 +310,7 @@ export default function PsychiatricServicesDetails() {
                         {/* Philosophy Section */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex">
-                                <div className="md:w-1/2 bg-gradient-to-br from-[#5b2e67] to-[#e47f9f] p-8 text-white">
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#5b2e67] to-[#e47f9f] lg:p-8 p-4 text-white">
                                     <h3 className="text-2xl font-bold mb-4">Our Philosophy of Care</h3>
                                     <p className="mb-4">
                                         We believe that every individual deserves compassionate, respectful, and evidence-based care for their mental health needs. Our approach is founded on the understanding that mental health is an essential component of overall wellbeing, and that recovery is possible with proper support and treatment.
@@ -320,12 +323,13 @@ export default function PsychiatricServicesDetails() {
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="/api/placeholder/600/400" alt="Psychiatric care philosophy" className="w-full h-full object-cover" />
+                       
+                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Psychiatric care philosophy" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+                        <div className="bg-white rounded-xl shadow-lg p-4 md:p-8 mb-12">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                 <div>
                                     <h3 className="text-xl font-bold text-[#5b2e67] mb-6 flex items-center">
@@ -393,7 +397,7 @@ export default function PsychiatricServicesDetails() {
                                         Our Core Principles
                                     </h3>
 
-                                    <div className="bg-purple-50 p-6 rounded-xl">
+                                    <div className="bg-purple-50 lg:p-6 p-2 md:p-4 rounded-xl">
                                         <ul className="space-y-4">
                                             <li className="flex">
                                                 <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
@@ -461,7 +465,7 @@ export default function PsychiatricServicesDetails() {
                         </div>
 
                         {/* Patient Experience Section */}
-                        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                        <div className="bg-white rounded-xl shadow-lg p-2 md:p-8">
                             <h3 className="text-xl font-bold text-[#5b2e67] mb-6 text-center">What to Expect as a Patient</h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -470,7 +474,7 @@ export default function PsychiatricServicesDetails() {
                                         <Calendar className="w-8 h-8" />
                                     </div>
                                     <h4 className="font-semibold text-[#5b2e67] mb-2">Initial Consultation</h4>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 text-justify md:text-center">
                                         Your first appointment will focus on understanding your concerns, history, and treatment goals. We'll begin to develop a personalized care plan together.
                                     </p>
                                 </div>
@@ -480,7 +484,7 @@ export default function PsychiatricServicesDetails() {
                                         <Users className="w-8 h-8" />
                                     </div>
                                     <h4 className="font-semibold text-[#5b2e67] mb-2">Ongoing Care</h4>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 text-justify md:text-center">
                                         Regular sessions with your treatment team will help monitor progress, adjust treatment as needed, and provide ongoing support through your recovery journey.
                                     </p>
                                 </div>
@@ -490,7 +494,7 @@ export default function PsychiatricServicesDetails() {
                                         <Trophy className="w-8 h-8" />
                                     </div>
                                     <h4 className="font-semibold text-[#5b2e67] mb-2">Long-Term Support</h4>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 text-justify md:text-center">
                                         As you progress, we'll help you transition to maintenance care, develop relapse prevention strategies, and provide resources for continued wellbeing.
                                     </p>
                                 </div>
@@ -500,16 +504,16 @@ export default function PsychiatricServicesDetails() {
                 )}
 
                 {/* Call to Action */}
-                <div className="mt-16 text-center">
+                <div className="lg:mt-16 mt-8 text-center">
                     <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white py-10 px-6 rounded-2xl shadow-lg">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">Begin Your Healing Journey Today</h2>
                         <p className="text-white/90 max-w-2xl mx-auto mb-8">
                             Our compassionate team of experts is ready to help you overcome your challenges and improve your mental wellbeing.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <button className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <Link   to="/contact"  className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Schedule Consultation
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

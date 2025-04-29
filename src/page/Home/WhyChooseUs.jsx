@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { ChevronRight, Phone } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const WhyWeChooseUs = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
+    const navigate=useNavigate()
 
     const features = [
         {
@@ -121,7 +123,7 @@ const WhyWeChooseUs = () => {
 
                         {/* Call to Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                            <button className="bg-[#E47F97]  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
+                            <button onClick={()=>navigate("/contact")}  className="bg-[#E47F97] cursor-pointer  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
                                 Book An Appointment
                                 <ChevronRight className="ml-2 w-5 h-5" />
                             </button>
@@ -129,10 +131,14 @@ const WhyWeChooseUs = () => {
                             <div className="flex items-center">
                                 <div className="mr-4">
                                     <p className="text-gray-600 text-sm">Need Urgent Care?</p>
-                                    <p className="text-blue-950 font-bold text-xl">(629) 555-0129</p>
+                                 
+                                    <a href="tel:919838346118" className="text-blue-950 font-bold text-xl" >+91 9838346118</a>
                                 </div>
+                                
                                 <div className="bg-[#E47F97] p-3 rounded-full text-white">
+                                    <a href="tel:919838346118"  className='cursor-pointer'>
                                     <Phone className="w-6 h-6" />
+                                    </a>
                                 </div>
                             </div>
                         </div>

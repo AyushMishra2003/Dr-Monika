@@ -27,10 +27,10 @@ export default function AboutClinic() {
         {/* Hero Section */}
         <section className="py-8 px-4">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: '#E47F97' }}>About Astitva Clinic For Women's Health Care</h2>
+            <h2 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4" style={{ color: '#E47F97' }}>About Astitva Clinic For Women's Health Care</h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h1 className="text-4xl font-bold mb-6" style={{ color: '#5B2E67' }}>
+              <div className=''>
+                <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold lg:mb-6 mb-2 md:mb-4" style={{ color: '#5B2E67' }}>
                   Best Obstetrician and Gynecologist in Lucknow
                 </h1>
                 <p className="mb-6 text-gray-700">
@@ -78,43 +78,36 @@ export default function AboutClinic() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-2">
-                  <div className="bg-gray-100 p-4 rounded-lg">
+                  <div className="bg-gray-100 lg:p-4 rounded-lg">
                     <img src={image1} alt="Clinic Sign" className="w-full h-auto rounded" />
                   </div>
                 </div>
-                {/* <div>
-                  <div className="bg-gray-100 p-4 rounded-lg h-full">
-                    <img src="/api/placeholder/200/150" alt="Doctor's Office" className="w-full h-auto rounded" />
-                  </div>
-                </div> */}
-                {/* <div>
-                  <div className="bg-gray-100 p-4 rounded-lg h-full">
-                    <img src="/api/placeholder/200/150" alt="Examination Room" className="w-full h-auto rounded" />
-                  </div>
-                </div> */}
+               
               </div>
+
+
             </div>
           </div>
         </section>
 
         {/* Statistics Section */}
         <section className="py-8" style={{ background: `linear-gradient(to right, ${hexToRgba('#E47F97', 0.8)}, ${hexToRgba('#5B2E67', 0.9)})` }}>
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto lg:px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="p-4">
-                <div className="text-white text-5xl font-bold mb-2">10000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
                 <div className="text-white font-semibold">HAPPY PATIENTS</div>
               </div>
               <div className="p-4">
-                <div className="text-white text-5xl font-bold mb-2">15+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">15+</div>
                 <div className="text-white font-semibold">YEARS EXPERIENCE</div>
               </div>
               <div className="p-4">
-                <div className="text-white text-5xl font-bold mb-2">10000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
                 <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
               </div>
               <div className="p-4">
-                <div className="text-white text-5xl font-bold mb-2">7000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">7000+</div>
                 <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
               </div>
             </div>
@@ -122,13 +115,13 @@ export default function AboutClinic() {
         </section>
 
         {/* Vision and Mission */}
-        <section className="py-16 px-4">
+        <section className="lg:py-16 py-6 md:py-10 px-4">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center" style={{ color: '#5B2E67' }}>
+            <h2 className="lg:text-4xl text-2xl md:text-3xl font-bold lg:mb-10 mb-6 md:mb-8 text-center" style={{ color: '#5B2E67' }}>
               Our Vision and Mission for the Future: To Serve with Integrity and Compassion
             </h2>
 
-            <div className="flex flex-wrap justify-center mb-12">
+            <div className="flex flex-wrap justify-center lg:mb-10 mb-6 md:mb-8">
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>ABOUT</button>
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: '#E47F97', color: 'white' }}>Why Choose Us</button>
               <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>MISSION</button>
@@ -136,7 +129,7 @@ export default function AboutClinic() {
             </div>
 
             {/* Why Choose Us Section */}
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-12">
+            <div className="bg-white lg:p-8 p-4 rounded-lg shadow-sm border border-gray-100 mb-12">
               <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Why Choose Us</h3>
 
               <p className="mb-8 text-gray-700">
@@ -167,7 +160,7 @@ export default function AboutClinic() {
             </div>
 
             {/* Mission Section */}
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-12">
+            <div className="bg-white lg:p-8 p-4 rounded-lg shadow-sm border border-gray-100 mb-12">
               <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Our Mission</h3>
 
               <p className="mb-6 text-gray-700">
@@ -226,7 +219,7 @@ export default function AboutClinic() {
             </div>
 
             {/* Approach Section */}
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white lg:p-8 p-4 rounded-lg shadow-sm border border-gray-100">
               <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Our Approach</h3>
 
               <p className="mb-8 text-gray-700">

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronUp, Calendar, Microscope, Heart } from 'lucide-react';
 import logo from '../assets/logo1.jpg'
 import logo1 from '../assets/logo.jpg'
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,6 +67,8 @@ export default function Header() {
       <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
+          <Link to={"/"}>
+    
           <div className="flex items-center z-10">
             <img src={logo} alt="sambhawna_logo" className="w-[4rem] h-[4rem]" />
 
@@ -79,6 +82,9 @@ export default function Header() {
               </div>
             </div>
           </div>
+
+
+          </Link>
 
 
 {/* 
@@ -130,7 +136,7 @@ export default function Header() {
           {/* Appointment Button */}
           <div className="hidden lg:flex items-center z-10">
             <a
-              href="/appointment"
+              href="/contact"
               className="ml-4 px-6 py-2 bg-[#E39AB2] text-white font-medium rounded-full flex items-center hover:bg-pink-600 transition-colors shadow-md"
             >
               <Calendar size={18} className="mr-2" />
@@ -200,7 +206,7 @@ export default function Header() {
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex flex-col space-y-3">
                 <a
-                  href="/appointment"
+                  href="/contact"
                   className="px-4 py-2 bg-pink-500 text-white font-medium rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors shadow-md"
                 >
                   <Calendar size={18} className="mr-2" />

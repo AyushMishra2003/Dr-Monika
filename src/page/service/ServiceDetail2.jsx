@@ -12,12 +12,14 @@ import {
     MapPin
 } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
+import { useNavigate } from 'react-router-dom';
 
 // Placeholder BreadCrumbs component
 
 
 export default function GynecologyObstetricsServices() {
     const [activeTab, setActiveTab] = useState('obstetrics');
+    const navigate=useNavigate()
 
     const obstetricServices = [
         {
@@ -153,7 +155,7 @@ export default function GynecologyObstetricsServices() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
 
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
@@ -172,13 +174,13 @@ export default function GynecologyObstetricsServices() {
                     <img src="https://assets-global.website-files.com/5ede763fa68713434223e0bc/5f584e20dc51eb99d0b7c1fe_During-Pregnancy-003.jpg" alt="Women's healthcare" className="w-full object-cover h-64 md:h-96" />
                     <div className="absolute inset-0 flex items-center justify-center z-20">
                         <div className="px-4 py-6 text-white">
-                            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                                 Complete <span className="text-white/90">Women's Healthcare</span>
                             </h1>
                             <p className="text-xl text-white/80 max-w-2xl mx-auto">
                                 Specialized gynecology and obstetrics care for every stage of a woman's life
                             </p>
-                            <button className="mt-6 bg-white text-[#7e3f8f] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <button onClick={()=>navigate("/contact")} className="mt-6 bg-white cursor-pointer text-[#7e3f8f] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Book an Appointment
                             </button>
                         </div>
@@ -217,8 +219,8 @@ export default function GynecologyObstetricsServices() {
                 {activeTab === 'obstetrics' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-[#7e3f8f] mb-4">Obstetric Care Services</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Obstetric Care Services</h2>
+                            <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
                                 Our experienced team provides complete care throughout pregnancy, from
                                 pre-conception counseling to delivery and postnatal support, ensuring the health
                                 and wellbeing of both mother and baby.
@@ -228,8 +230,8 @@ export default function GynecologyObstetricsServices() {
                         {/* Featured Obstetrics Service */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex">
-                                <div className="md:w-1/2 bg-gradient-to-br from-[#7e3f8f] to-[#e47f9f] p-8 text-white">
-                                    <h3 className="text-2xl font-bold mb-4">Comprehensive Pregnancy Care</h3>
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#7e3f8f] to-[#e47f9f] lg:p-8 p-4 text-white">
+                                    <h3 className="lg:text-2xl text-xl font-bold mb-4">Comprehensive Pregnancy Care</h3>
                                     <p className="mb-4">
                                         Pregnancy is a remarkable journey that requires specialized medical attention. Our complete pregnancy care ensures that you and your baby receive the highest standard of healthcare throughout all stages of pregnancy.
                                     </p>
@@ -279,8 +281,8 @@ export default function GynecologyObstetricsServices() {
                 {activeTab === 'gynecology' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-[#7e3f8f] mb-4">Gynecological Services</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Gynecological Services</h2>
+                            <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
                                 We offer comprehensive gynecological care for women of all ages, addressing
                                 reproductive health concerns, preventive care, and specialized treatments for
                                 various conditions.
@@ -290,7 +292,7 @@ export default function GynecologyObstetricsServices() {
                         {/* Featured Gynecology Section */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex flex-row-reverse">
-                                <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#7e3f8f] p-8 text-white">
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#7e3f8f] lg:p-8 p-4 text-white">
                                     <h3 className="text-2xl font-bold mb-4">Complete Women's Healthcare</h3>
                                     <p className="mb-4">
                                         Our gynecological services cover all aspects of women's reproductive health, from routine check-ups to specialized treatments for complex conditions. We believe that every woman deserves personalized care that addresses her unique needs.
@@ -344,8 +346,8 @@ export default function GynecologyObstetricsServices() {
                 {activeTab === 'approach' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl font-bold text-[#7e3f8f] mb-4">Our Care Approach</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Our Care Approach</h2>
+                            <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
                                 Our approach to women's healthcare combines medical expertise with compassionate support,
                                 focusing on personalized care plans that address individual needs and concerns.
                             </p>
@@ -354,7 +356,7 @@ export default function GynecologyObstetricsServices() {
                         {/* Philosophy Section */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex">
-                                <div className="md:w-1/2 bg-gradient-to-br from-[#7e3f8f] to-[#e47f9f] p-8 text-white">
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#7e3f8f] to-[#e47f9f] lg:p-8 p-4 text-white">
                                     <h3 className="text-2xl font-bold mb-4">Our Philosophy of Care</h3>
                                     <p className="mb-4">
                                         We believe that women deserve healthcare that recognizes their unique needs throughout all stages of life. Our practice is built on the understanding that optimal health requires a personalized approach that considers physical, emotional, and social wellbeing.
@@ -372,7 +374,7 @@ export default function GynecologyObstetricsServices() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12">
+                        <div className="bg-white rounded-xl shadow-lg p-2 md:p-8 mb-12">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                 <div>
                                     <h3 className="text-xl font-bold text-[#7e3f8f] mb-6 flex items-center">
@@ -508,17 +510,17 @@ export default function GynecologyObstetricsServices() {
                         </div>
 
                         {/* Patient Experience Section */}
-                        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                            <h3 className="text-xl font-bold text-[#7e3f8f] mb-6 text-center">Your Patient Experience</h3>
+                        <div className="bg-white rounded-xl shadow-lg p-2 md:p-8">
+                            <h3 className="text-xl font-bold text-[#5b2e67] mb-6 text-center">What to Expect as a Patient</h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="text-center p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#7e3f8f] text-white flex items-center justify-center">
+                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#5b2e67] text-white flex items-center justify-center">
                                         <Calendar className="w-8 h-8" />
                                     </div>
-                                    <h4 className="font-semibold text-[#7e3f8f] mb-2">Comfortable Environment</h4>
-                                    <p className="text-gray-600">
-                                        Our clinic provides a welcoming, private, and comfortable setting where you can discuss sensitive health concerns without judgment or discomfort.
+                                    <h4 className="font-semibold text-[#5b2e67] mb-2">Initial Consultation</h4>
+                                    <p className="text-gray-600 text-justify md:text-center">
+                                        Your first appointment will focus on understanding your concerns, history, and treatment goals. We'll begin to develop a personalized care plan together.
                                     </p>
                                 </div>
 
@@ -526,19 +528,19 @@ export default function GynecologyObstetricsServices() {
                                     <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#e47f9f] text-white flex items-center justify-center">
                                         <Users className="w-8 h-8" />
                                     </div>
-                                    <h4 className="font-semibold text-[#7e3f8f] mb-2">Attentive Providers</h4>
-                                    <p className="text-gray-600">
-                                        Our healthcare providers take time to listen to your concerns, answer your questions, and involve you in decisions about your care, ensuring you feel heard and respected.
+                                    <h4 className="font-semibold text-[#5b2e67] mb-2">Ongoing Care</h4>
+                                    <p className="text-gray-600 text-justify md:text-center">
+                                        Regular sessions with your treatment team will help monitor progress, adjust treatment as needed, and provide ongoing support through your recovery journey.
                                     </p>
                                 </div>
 
                                 <div className="text-center p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#7e3f8f] to-[#e47f9f] text-white flex items-center justify-center">
+                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white flex items-center justify-center">
                                         <Trophy className="w-8 h-8" />
                                     </div>
-                                    <h4 className="font-semibold text-[#7e3f8f] mb-2">Comprehensive Support</h4>
-                                    <p className="text-gray-600">
-                                        Beyond medical treatment, we provide resources, education, and emotional support to help you navigate your health journey with confidence and peace of mind.
+                                    <h4 className="font-semibold text-[#5b2e67] mb-2">Long-Term Support</h4>
+                                    <p className="text-gray-600 text-justify md:text-center">
+                                        As you progress, we'll help you transition to maintenance care, develop relapse prevention strategies, and provide resources for continued wellbeing.
                                     </p>
                                 </div>
                             </div>
@@ -547,7 +549,7 @@ export default function GynecologyObstetricsServices() {
                 )}
 
                 {/* Contact Information */}
-                <div className="mt-12 bg-white rounded-xl shadow-lg p-6">
+                <div className="mt-12 bg-white rounded-xl shadow-lg p-2 md:p-4 lg:p-6">
                     <h3 className="text-xl font-bold text-[#7e3f8f] mb-6 text-center">Contact & Hours</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="flex items-center">

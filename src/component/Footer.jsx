@@ -28,7 +28,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4 flex items-center text-lg lg:text-lg">
                             <MdCall className="mr-1 text-2xl" />
-                            <a href="tel:9838346118" className="hover:text-[#5B2E67]">+91 9838346118</a>
+                            <a href="tel:919838346118" className="hover:text-[#5B2E67]">+91 9838346118</a>
                             {/* <a href="tel:8115544102" className="hover:text-[#5B2E67] ml-1">+91 8115544102</a> */}
                         </li>
 

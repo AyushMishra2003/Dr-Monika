@@ -99,8 +99,8 @@ const HomeBlogSlider = () => {
                 <div className="slick-equal-height">
                     <Slider {...settings}>
                         {blogPosts.map(post => (
-                            <div key={post.id} className="px-2 h-full pb-8">
-                                <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                            <div key={post.id} className="px-2 h-full ">
+                                <div className="bg-white rounded-lg shadow-md overflow-hidden h-full border ">
                                     {/* Image Container with Fixed Height */}
                                     <div className="h-48 overflow-hidden relative">
                                         <img
@@ -114,7 +114,7 @@ const HomeBlogSlider = () => {
                                     </div>
                                     
                                     {/* Content Container with Fixed Height */}
-                                    <div className="p-5 flex flex-col h-68">
+                                    <div className="p-5 flex flex-col h-fit">
                                         {/* Title with Fixed Height */}
                                         <h2 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 h-14">
                                             {post.title}
