@@ -170,7 +170,7 @@ export default function PsychiatricServicesDetails() {
                             <p className="text-xl text-white/80 max-w-2xl mx-auto">
                                 Personalized care for mental health and wellbeing with evidence-based treatments
                             </p>
-                            <button onClick={() => navigate("/contact")} className="mt-6 cursor-pointer bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <button onClick={() => navigate("/appoitment")} className="mt-6 cursor-pointer bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Schedule a Consultation
                             </button>
                         </div>
@@ -545,7 +545,7 @@ export default function PsychiatricServicesDetails() {
                             Our compassionate team of experts is ready to help you overcome your challenges and improve your mental wellbeing.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Link to="/contact" className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <Link to="/appoitment" className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Schedule Consultation
                             </Link>
                         </div>

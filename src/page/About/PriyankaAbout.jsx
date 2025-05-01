@@ -3,12 +3,13 @@ import { Heart, Calendar, Mail, Phone, MapPin, Award, BookOpen } from 'lucide-re
 import BreadCrumbs from '../../component/Breadcums';
 import image from  '../../assets/monika.png'
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 export default function AboutDrMonika() {
   // Define our color scheme as constants
   const primaryColor = "#E47F9F";
   const secondaryColor = "#5B2E67";
-
+  const navigate=useNavigate()
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -105,6 +106,7 @@ export default function AboutDrMonika() {
           
           <div className="flex justify-center">
             <button 
+            onClick={()=>navigate("/appoitment")}
               className="px-6 py-3 rounded-full text-white font-medium transition-all hover:shadow-lg"
               style={{ background: `linear-gradient(to right, ${primaryColor}, ${secondaryColor})` }}
             >

@@ -123,7 +123,7 @@ const WhyWeChooseUs = () => {
 
                         {/* Call to Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                            <button onClick={()=>navigate("/contact")}  className="bg-[#E47F97] cursor-pointer  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
+                            <button onClick={()=>navigate("/appoitment")}  className="bg-[#E47F97] cursor-pointer  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
                                 Book An Appointment
                                 <ChevronRight className="ml-2 w-5 h-5" />
                             </button>

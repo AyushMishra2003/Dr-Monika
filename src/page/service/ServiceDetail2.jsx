@@ -213,7 +213,7 @@ export default function GynecologyObstetricsServices() {
                             <p className="text-xl text-white/80 max-w-2xl mx-auto">
                                 Specialized gynecology and obstetrics care for every stage of a woman's life
                             </p>
-                            <button onClick={()=>navigate("/contact")} className="mt-6 bg-white cursor-pointer text-[#7e3f8f] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
+                            <button onClick={()=>navigate("/appoitment")} className="mt-6 bg-white cursor-pointer text-[#7e3f8f] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Book an Appointment
                             </button>
                         </div>

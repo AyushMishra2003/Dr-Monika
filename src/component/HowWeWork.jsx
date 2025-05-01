@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Calendar, Clipboard, Stethoscope, FileText, PhoneCall, ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HowWeWork() {
   const [activeStep, setActiveStep] = useState(null);
@@ -141,8 +142,8 @@ export default function HowWeWork() {
         
         {/* CTA */}
         <div className="mt-2 text-center">
-          <a 
-            href="#book-appointment" 
+          <Link 
+             to="/appoitment"
             className="inline-flex items-center px-6 py-3 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             style={{ 
               background: `linear-gradient(to right, ${primaryColor}, ${secondaryColor})`,
@@ -151,7 +152,7 @@ export default function HowWeWork() {
           >
             Schedule Your Visit
             <Calendar className="ml-2" size={18} />
-          </a>
+          </Link>
           <p className="mt-4 text-sm text-gray-500">Experience the difference with Dr. Monika's personalized care</p>
         </div>
       </div>

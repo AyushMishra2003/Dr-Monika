@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import img1 from '../../assets/slider.jpg'
+import img1 from '../../assets/slider1.png'
 import img2 from '../../assets/banner2.png'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';

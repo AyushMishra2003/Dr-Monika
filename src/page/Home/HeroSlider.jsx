@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import { FaArrowLeft, FaArrowRight, FaPills, FaHeartbeat, FaUserMd, FaMicroscope, FaAppleAlt } from 'react-icons/fa';
+import image from '../../assets/slider1.png'
 
 const HomeSlider = () => {
 
@@ -39,8 +40,8 @@ const HomeSlider = () => {
   return (
     <div className="relative w-full mx-auto">
       {/* Slider Section */}
-      <Slider {...settings} className="relative h-auto">
-        {[b1,b2].map((src, index) => (
+      <Slider {...settings} className="relative h-auto " >
+        {[image,image].map((src, index) => (
           <div className="relative" key={index}>
             <img
               src={src}

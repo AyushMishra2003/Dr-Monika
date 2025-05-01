@@ -3,6 +3,7 @@ import BreadCrumbs from '../../component/Breadcums';
 import image from '../../assets/monika.png'
 import image1 from '../../assets/clinic.webp'
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AboutClinic() {
@@ -11,6 +12,8 @@ export default function AboutClinic() {
     window.scrollTo(0, 0);
   }, []);
 
+
+  const navigate=useNavigate()
 
   return (
     <div className="font-sans">
@@ -308,7 +311,7 @@ export default function AboutClinic() {
                   She specializes in high-risk pregnancies, minimally invasive gynecological surgeries, and comprehensive women's health care. Her approach combines medical expertise with compassionate care, ensuring that each patient receives personalized attention.
                 </p>
                 <div className="flex space-x-4">
-                  <button className="px-6 py-3 text-white rounded-md hover:opacity-90 transition" style={{ backgroundColor: '#E47F97' }}>Book Appointment</button>
+                  <button onClick={()=>navigate("/appoitment")} className="px-6 py-3 text-white rounded-md hover:opacity-90 transition" style={{ backgroundColor: '#E47F97' }}>Book Appointment</button>
                   <button className="px-6 py-3 border rounded-md hover:bg-purple-50 transition" style={{ borderColor: '#5B2E67', color: '#5B2E67' }}>View Profile</button>
                 </div>
               </div>
