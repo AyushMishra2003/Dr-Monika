@@ -378,6 +378,11 @@ export default function AppointmentBooking() {
     );
   }
 
+    // useEffect(() => {
+    //   window.scrollTo(0, 0);
+    // }, []);
+  
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-pink-50 to-purple-100 p-4">
       <div className="max-w-4xl mx-auto w-full bg-white rounded-xl shadow-lg overflow-hidden">
@@ -600,7 +605,7 @@ export default function AppointmentBooking() {
 
         {/* Footer */}
         <div className="bg-gray-50 p-4 text-center text-gray-500 text-sm border-t border-gray-200">
-          <p>Need help? Contact our support team at support@example.com</p>
+          <a href='href="mailto:monikapandey185@gmail.com"'>Need help? Contact our support team at monikapandey185@gmail.com</a>
         </div>
       </div>
     </div>
