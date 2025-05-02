@@ -1,7 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
-import img1 from '../../assets/slider1.png'
-import img2 from '../../assets/banner2.png'
+import img1 from '../../assets/1.jpg'
+import img2 from '../../assets/2.jpg'
+import img3 from '../../assets/11.jpg'
+import img4 from '../../assets/22.jpg'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -36,7 +38,7 @@ const HomeSlider = () => {
       <Slider {...settings} className="relative h-fit">
         <div className="relative">
           <img
-            src={b1}
+            src={img1}
             alt="Gastroenterology Specialist - Book Your Appointment"
             className="w-full  object-cover"
             loading="lazy"
@@ -44,7 +46,23 @@ const HomeSlider = () => {
         </div>
         <div className="relative">
           <img
-            src={b2}
+            src={img2}
+            alt="Advanced Medical Treatments - Consult Our Experts"
+            className="w-full  object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="relative">
+          <img
+            src={img3}
+            alt="Advanced Medical Treatments - Consult Our Experts"
+            className="w-full  object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="relative">
+          <img
+            src={img4}
             alt="Advanced Medical Treatments - Consult Our Experts"
             className="w-full  object-cover"
             loading="lazy"
