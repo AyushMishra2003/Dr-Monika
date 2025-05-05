@@ -8,29 +8,30 @@ import "aos/dist/aos.css";
 const stats = [
   {
     id: 1,
-    title: "Tests Conducted",
-    count: "50000",
-    icon: <FaMicroscope className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
+    title: "Happy Patients",
+    count: "10000",
+    icon: <FaRegHospital className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
   {
     id: 2,
-    title: "Years of Excellence",
-    count: "2",
+    title: "Years Experience",
+    count: "30",
     icon: <MdAccessTime className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
   {
     id: 3,
-    title: "Fully Automated Labs",
-    count: "3",
-    icon: <FaRegHospital className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
+    title: "Total Cases Solved",
+    count: "10000",
+    icon: <FaMicroscope className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
   {
     id: 4,
-    title: "Tests Available",
-    count: "5000",
+    title: "Successful Surgeries",
+    count: "7000",
     icon: <FaVial className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
 ];
+
 
 const ClinicStats = () => {
   useEffect(() => {

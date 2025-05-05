@@ -55,7 +55,7 @@ const Home = () => {
         <Services/>
         <ClinicStats/>
         <WhyWeChooseUs/>
-        <AnotherService/>
+        {/* <AnotherService/> */}
         <MonikaAbout/>
         <HowWeWorkPremium/>
         <Testinomial/>

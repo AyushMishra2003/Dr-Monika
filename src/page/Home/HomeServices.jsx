@@ -6,29 +6,33 @@ const HomeService = () => {
   // Brand colors
   const primaryPink = "#E47F97";
   const primaryPurple = "#5B2E67";
-  
+
   const services = [
     {
-      id: "physiotherapy",
+      id: "psychiatry",
       title: "Psychiatrist",
       subtitle: "Mental Health & Wellness",
-      description: "Comprehensive psychiatric care for emotional, behavioral, and mental health challenges with personalized treatment approaches.",
+      description:
+        "Comprehensive psychiatric care for emotional, behavioral, and mental health challenges through personalized treatment plans.",
       icon: <Activity className="h-10 w-10" />,
       color: primaryPurple,
       features: [
         {
           icon: <Shield className="h-5 w-5" />,
-          text: "Licensed Mental Health Experts"
-
+          text: "Treatment for anxiety, depression, and stress disorders"
         },
         {
           icon: <Star className="h-5 w-5" />,
-        text: "Confidential & Personalized Therapy"
+          text: "Management of mood, sleep, and behavioral issues"
         },
-        // {
-        //   icon: <Clock className="h-5 w-5" />,
-        //   text: "Quick Recovery Programs"
-        // }
+        {
+          icon: <Shield className="h-5 w-5" />,
+          text: "Counseling and therapy for individuals and families"
+        },
+        {
+          icon: <Star className="h-5 w-5" />,
+          text: "Personalized treatment plans for each patient"
+        }
       ],
       link: "/services/physiotherapy"
     },
@@ -36,56 +40,65 @@ const HomeService = () => {
       id: "gynecology",
       title: "Obstetrics & Gynecology",
       subtitle: "Complete Women's Healthcare",
-      description: "Comprehensive care for women's health needs including pregnancy support, preventive care, and specialized treatments.",
+      description:
+        "Sadbhawna Clinic provides comprehensive women’s health care, including pregnancy support, preventive services, and specialized treatments.",
       icon: <Heart className="h-10 w-10" />,
       color: primaryPink,
       features: [
         {
           icon: <Shield className="h-5 w-5" />,
-          text: "Board-Certified Specialists"
+          text: "Comprehensive women’s health care at all life stages"
         },
         {
           icon: <Star className="h-5 w-5" />,
-          text: "Compassionate Care Approach"
+          text: "Pregnancy support and antenatal care"
         },
-        // {
-        //   icon: <Clock className="h-5 w-5" />,
-        //   text: "Comprehensive Pregnancy Support"
-        // }
+        {
+          icon: <Shield className="h-5 w-5" />,
+          text: "Management of menstrual, hormonal, and fertility issues"
+        },
+        {
+          icon: <Star className="h-5 w-5" />,
+          text: "Preventive screenings and wellness check-ups"
+        }
       ],
       link: "/services/gynecology"
     }
   ];
+  
 
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="md:text-center text-start lg:mb-16 mb-6 md:mb-8 ">
-          <span className="inline-block px-4 py-1 rounded-full bg-gray-100 text-gray-800 text-sm font-medium mb-4">
-            World-Class Healthcare
-          </span>
+
+
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2" style={{ color: primaryPurple }}>
             Our Specialized Services
           </h2>
           <div className="w-32 h-1 mx-auto mb-6" style={{ backgroundColor: primaryPink }}></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
-            Dr. Monika Pandey's Clinic provides exceptional care with a personalized approach to your health and wellbeing
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
+              Sadbhawna Clinic provides expert Psychiatry and Gynecology services, offering compassionate and confidential care for mental wellness and women’s health at every stage of life.
+            </p>
+
           </p>
         </div>
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {services.map((service) => (
-            <div 
-              key={service.id} 
+            <div
+              key={service.id}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] group"
               style={{ borderBottom: `5px solid ${service.color}` }}
             >
               <div className="p-4 md:6 lg:p-10">
                 {/* Card Header */}
                 <div className="flex items-center mb-6">
-                  <div 
+                  <div
                     className="p-3 rounded-xl mr-4 group-hover:scale-110 transition-all duration-300"
                     style={{ backgroundColor: `${service.color}15` }}
                   >
@@ -102,17 +115,17 @@ const HomeService = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Card Body */}
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   {service.description}
                 </p>
-                
+
                 {/* Key Features */}
                 <div className="space-y-4 mb-8">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center">
-                      <div 
+                      <div
                         className="p-1.5 rounded-full mr-3 flex-shrink-0"
                         style={{ backgroundColor: `${service.color}20` }}
                       >
@@ -124,20 +137,20 @@ const HomeService = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 {/* Card Footer */}
-                <Link 
+                <Link
                   to={service.link}
                   className="inline-flex items-center group/btn"
                 >
-                  <div 
+                  <div
                     className="relative px-6 py-3 rounded-lg text-white font-medium overflow-hidden"
                     style={{ backgroundColor: service.color }}
                   >
                     <span className="relative z-10">View More Details</span>
                     <div className="absolute top-0 -right-12 w-12 h-full bg-white bg-opacity-20 skew-x-[-20deg] transform transition-all duration-500 group-hover/btn:right-0"></div>
                   </div>
-                  <div 
+                  <div
                     className="ml-3 w-8 h-8 rounded-full flex items-center justify-center transform transition-transform duration-300 group-hover/btn:translate-x-1"
                     style={{ backgroundColor: `${service.color}15`, color: service.color }}
                   >

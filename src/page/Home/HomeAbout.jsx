@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import image from '../../assets/monika.png'
+import image1 from '../../assets/clinic.webp'
 
 const HomeAbout = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -25,7 +26,7 @@ const HomeAbout = () => {
                         {/* Main image */}
                         <div className="relative">
                             <img
-                                src={image}
+                                src={image1}
                                 alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
                                 className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
                             />
@@ -44,18 +45,18 @@ const HomeAbout = () => {
                     <div className="w-full lg:w-1/2 lg:pl-12">
                         <div className="text-[#E47F97] font-medium flex items-center mb-2">
                             <span className="mr-2">+</span>
-                            <span>ABOUT SAMBHAWNA CLINIC</span>
+                            <span>ABOUT SADBHAWNA CLINIC</span>
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                            <span className="text-[#E47F97]">Sambhawna Clinic</span> – Complete Medical Care in Lucknow
+                            <span className="text-[#E47F97]">Sadbhawna Clinic</span> – Expert Mental & Women's Healthcare Under One Roof
                         </h1>
 
                         <p className="text-gray-600 mb-4 text-justify">
-                            Welcome to <strong>Sambhawna Clinic</strong>, your trusted healthcare center in Lucknow.
-                            We offer comprehensive medical services and provide all types of medications for various health conditions.
-                            Our clinic is equipped with modern facilities and staffed by qualified healthcare professionals dedicated to your wellbeing.
-                            At <strong>Sambhawna Clinic</strong>, patient health and satisfaction are our highest priorities.
+                            <strong>Sadbhawna Clinic</strong> is a trusted healthcare center specializing in Psychiatry and Gynecology,
+                            offering compassionate care for Mental Wellness and Women's Health. From Stress, Anxiety, and Mood Disorders
+                            to Menstrual Issues, Fertility, and Pregnancy Care — we provide personalized, confidential, and holistic
+                            treatment for every stage of life.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -63,31 +64,32 @@ const HomeAbout = () => {
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Complete Range of Medicines</span>
+                                <span className="text-slate-700 font-medium">Expert treatment for anxiety, depression & mood disorders</span>
                             </div>
 
                             <div className="flex items-center">
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Quality Healthcare Services</span>
+                                <span className="text-slate-700 font-medium">Comprehensive women’s health services</span>
                             </div>
 
                             <div className="flex items-center">
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Experienced Medical Staff</span>
+                                <span className="text-slate-700 font-medium">Personalized fertility & pregnancy care</span>
                             </div>
 
                             <div className="flex items-center">
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Emergency Medical Assistance</span>
+                                <span className="text-slate-700 font-medium">Safe and supportive environment for all ages</span>
                             </div>
                         </div>
                     </div>
+
 
                 </div>
             </main>
