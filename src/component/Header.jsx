@@ -40,18 +40,20 @@ export default function Header() {
         { name: 'About  Sambhawna Clinic', link: '/about/clinic' }
       ]
     },
-    {
-      name: 'Services',
-      dropdown: true,
-      items: [
-        { name: 'Psychiatric', link: '/services/physiotherapy' },
-        { name: 'Gynecology', link: '/services/gynecology' }
-      ]
-    },
-    { name: 'Blogs', link: '/blogs' },
-    { name: 'Cases', link: '/cases' },
-
+    // {
+    //   name: 'Services',
+    //   dropdown: true,
+    //   items: [
+    //     { name: 'Psychiatric', link: '/services/physiotherapy' },
+    //     { name: 'Gynecology', link: '/services/gynecology' }
+    //   ]
+    // },
+    {name:"Psychiatric Service" , link :'/services/physiotherapy'},
+    {name:"Gynecology Service" , link :'/services/gynecology'},
+    // { name: 'Blogs', link: '/blogs' },
+    // { name: 'Cases', link: '/cases' },
     { name: 'Gallery', link: '/gallery' },
+
     { name: 'Contact Us', link: '/contact' },
   ];
 
@@ -137,7 +139,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center z-10">
             <a
               href="/appoitment"
-              className="ml-4 px-6 py-2 bg-[#E39AB2] text-white font-medium rounded-full flex items-center hover:bg-pink-600 transition-colors shadow-md"
+              className="ml-4 px-6 py-2 bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white font-medium rounded-full flex items-center hover:bg-pink-600 transition-colors shadow-md"
             >
               <Calendar size={18} className="mr-2" />
               Appointment
@@ -207,7 +209,7 @@ export default function Header() {
               <div className="flex flex-col space-y-3">
                 <a
                   href="/contact"
-                  className="px-4 py-2 bg-pink-500 text-white font-medium rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors shadow-md"
+                  className="px-4 py-2 bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white font-medium rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors shadow-md"
                 >
                   <Calendar size={18} className="mr-2" />
                   Make Appointment

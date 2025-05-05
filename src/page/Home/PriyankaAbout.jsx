@@ -65,7 +65,7 @@ export default function MonikaAbout() {
               </div>
               
               <div className="mt-6">
-                <button  onClick={()=>navigate("/appoitment")}   className="bg-[#E47F9F] text-white px-4 py-2 rounded-md hover:bg-pink-600 transition duration-300 mr-2">
+                <button  onClick={()=>navigate("/appoitment")}   className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white px-4 py-2 rounded-md  transition duration-300 mr-2">
                   Book Appointment
                 </button>
                 <button onClick={()=>navigate("/contact")} className="bg-white text-purple-800 border border-purple-800 px-4 py-2 rounded-md hover:bg-purple-50 transition duration-300">

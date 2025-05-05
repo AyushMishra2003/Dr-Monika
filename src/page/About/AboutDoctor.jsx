@@ -136,6 +136,7 @@ const AboutDoctor = () => {
         </div>
 
         {/* Professional Experience Section */}
+      
         <div className="mt-12">
           <div className="flex items-center space-x-2" data-aos="fade-up">
             <FaBriefcase className="text-[#2C3E50] text-3xl" />
@@ -284,6 +285,8 @@ const AboutDoctor = () => {
           </a>
         </div> */}
       </main>
+
+      
     </div>
   );
 };

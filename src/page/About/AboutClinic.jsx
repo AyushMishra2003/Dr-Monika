@@ -125,7 +125,7 @@ export default function AboutClinic() {
                 <div className="text-white font-semibold">HAPPY PATIENTS</div>
               </div>
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">15+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">30+</div>
                 <div className="text-white font-semibold">YEARS EXPERIENCE</div>
               </div>
               <div className="p-4">
@@ -294,7 +294,7 @@ export default function AboutClinic() {
         </section>
 
         {/* Doctor Profile */}
-        <section className="py-16 px-4 bg-gray-50">
+        {/* <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -317,7 +317,7 @@ export default function AboutClinic() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact */}
         {/* <section className="py-12 px-4" style={{ backgroundColor: '#5B2E67' }}>

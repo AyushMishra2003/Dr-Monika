@@ -84,7 +84,7 @@ const WhyWeChooseUs = () => {
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Left Content */}
                     <div className="lg:w-1/2">
-                        <button className="bg-[#E47F97] hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-medium mb-6 transition-all">
+                        <button className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-medium mb-6 transition-all">
                             Why Choose Us
                         </button>
 
@@ -123,7 +123,7 @@ const WhyWeChooseUs = () => {
 
                         {/* Call to Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                            <button onClick={()=>navigate("/appoitment")}  className="bg-[#E47F97] cursor-pointer  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
+                            <button onClick={()=>navigate("/appoitment")}  className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] cursor-pointer  text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
                                 Book An Appointment
                                 <ChevronRight className="ml-2 w-5 h-5" />
                             </button>
@@ -135,7 +135,7 @@ const WhyWeChooseUs = () => {
                                     <a href="tel:919838346118" className="text-blue-950 font-bold text-xl" >+91 9838346118</a>
                                 </div>
                                 
-                                <div className="bg-[#E47F97] p-3 rounded-full text-white">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-3 rounded-full text-white">
                                     <a href="tel:919838346118"  className='cursor-pointer'>
                                     <Phone className="w-6 h-6" />
                                     </a>

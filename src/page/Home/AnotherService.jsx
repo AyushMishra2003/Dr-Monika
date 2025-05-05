@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ServiceCard = ({ title, subtitle, description, icon, color }) => {
+const ServiceCard = ({ title, subtitle, description, icon, color ,link}) => {
   return (
+    <Link to={link}>
+
     <div className={`rounded-lg p-8 ${color} text-white flex flex-col h-full`}>
       <div className="flex-1">
         <h3 className="text-xl font-normal mb-1">{title}</h3>
@@ -20,6 +23,7 @@ const ServiceCard = ({ title, subtitle, description, icon, color }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
@@ -53,6 +57,7 @@ const AnotherService=()=> {
             subtitle="Medicines"
             description="Essentials at your doorstep anytime in emergency situation."
             color="bg-purple-400"
+            link="/appoitment"
             icon={
               <svg className="w-32 h-32 opacity-90" viewBox="0 0 100 100">
                 <circle cx="60" cy="40" r="8" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -71,6 +76,7 @@ const AnotherService=()=> {
             subtitle="Lab Tests"
             description="Sample pickup at your home & give 99.8% accuracy in results."
             color="bg-red-400"
+            link="/home-collection"
             icon={
               <svg className="w-32 h-32 opacity-90" viewBox="0 0 100 100">
                 <path d="M50,20v15L35,65c-2,5,0,15,15,15s17-10,15-15L50,35" fill="none" stroke="currentColor" strokeWidth="2"/>

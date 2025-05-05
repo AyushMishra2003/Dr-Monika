@@ -17,7 +17,7 @@ const Footer = () => {
                 </svg>
             </div>
 
-            <div className="relative bg-[#E47F97] lg:py-12 py-6 md:py-8 ">
+            <div className="relative bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] lg:py-12 py-6 md:py-8 ">
                 <div className="mx-auto max-w-7xl flex flex-col lg:flex-row justify-between max-w-8xl px-4 gap-6">
                     {/* Contact Section */}
                     <div className="w-full lg:w-1/4 md:mb-8 mb-2 ">

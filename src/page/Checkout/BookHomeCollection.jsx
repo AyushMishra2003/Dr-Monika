@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, Calendar, MapPin, Phone, User, Clock, X, ArrowRight, ArrowLeft } from "lucide-react";
 
 export default function BookHomeCollection() {
@@ -189,6 +189,10 @@ export default function BookHomeCollection() {
       </div>
     );
   }
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">

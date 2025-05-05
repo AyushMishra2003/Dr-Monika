@@ -44,18 +44,18 @@ const HomeAbout = () => {
                     <div className="w-full lg:w-1/2 lg:pl-12">
                         <div className="text-[#E47F97] font-medium flex items-center mb-2">
                             <span className="mr-2">+</span>
-                            <span>ABOUT DR. MONIKA PANDEY'S CLINIC</span>
+                            <span>ABOUT SAMBHAWNA CLINIC</span>
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                            <span className="text-[#E47F97]">Dr. Monika Pandey's Clinic</span> – Complete Medical Care in Lucknow
+                            <span className="text-[#E47F97]">Sambhawna Clinic</span> – Complete Medical Care in Lucknow
                         </h1>
 
                         <p className="text-gray-600 mb-4 text-justify">
-                            Welcome to <strong>Dr. Monika Pandey's Clinic</strong>, your trusted healthcare center in Lucknow. 
-                            We offer comprehensive medical services and provide all types of medications for various health conditions. 
-                            Our clinic is equipped with modern facilities and staffed by qualified healthcare professionals dedicated to your wellbeing. 
-                            At <strong>Dr. Monika Pandey's Clinic</strong>, patient health and satisfaction are our highest priorities.
+                            Welcome to <strong>Sambhawna Clinic</strong>, your trusted healthcare center in Lucknow.
+                            We offer comprehensive medical services and provide all types of medications for various health conditions.
+                            Our clinic is equipped with modern facilities and staffed by qualified healthcare professionals dedicated to your wellbeing.
+                            At <strong>Sambhawna Clinic</strong>, patient health and satisfaction are our highest priorities.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -88,6 +88,7 @@ const HomeAbout = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </main>
         </div>

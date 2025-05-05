@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy } from 'lucide-react';
+import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy, Phone, Mail, Clock } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -117,37 +117,37 @@ export default function PsychiatricServicesDetails() {
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
             <Helmet>
-        <title>Physiotherapy Services | Comprehensive Rehab & Pain Relief Care</title>
-        <meta
-          name="description"
-          content="Restore mobility and relieve pain with our expert physiotherapy services. Personalized rehab, injury recovery, and chronic pain care tailored to your unique needs."
-        />
-        <meta
-          name="keywords"
-          content="physiotherapy in Lucknow, pain management, rehabilitation, post-surgery physiotherapy, back pain, joint therapy, physical therapy clinic"
-        />
-        <meta name="author" content="Sambhawna Clinic" />
-        <link rel="canonical" href="https://yourdomain.com/services/physiotherapy" />
+                <title>Physiotherapy Services | Comprehensive Rehab & Pain Relief Care</title>
+                <meta
+                    name="description"
+                    content="Restore mobility and relieve pain with our expert physiotherapy services. Personalized rehab, injury recovery, and chronic pain care tailored to your unique needs."
+                />
+                <meta
+                    name="keywords"
+                    content="physiotherapy in Lucknow, pain management, rehabilitation, post-surgery physiotherapy, back pain, joint therapy, physical therapy clinic"
+                />
+                <meta name="author" content="Sambhawna Clinic" />
+                <link rel="canonical" href="https://yourdomain.com/services/physiotherapy" />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Physiotherapy Services | Restore Movement & Relieve Pain" />
-        <meta
-          property="og:description"
-          content="Get personalized physiotherapy care at Sambhawna Clinic. We specialize in pain relief, mobility restoration, and rehabilitation."
-        />
-        <meta property="og:url" content="https://yourdomain.com/services/physiotherapy" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://yourdomain.com/images/physiotherapy-cover.jpg" />
+                {/* Open Graph / Facebook */}
+                <meta property="og:title" content="Physiotherapy Services | Restore Movement & Relieve Pain" />
+                <meta
+                    property="og:description"
+                    content="Get personalized physiotherapy care at Sambhawna Clinic. We specialize in pain relief, mobility restoration, and rehabilitation."
+                />
+                <meta property="og:url" content="https://yourdomain.com/services/physiotherapy" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://yourdomain.com/images/physiotherapy-cover.jpg" />
 
-        {/* Twitter */}
-        <meta name="twitter:title" content="Physiotherapy Services | Sambhawna Clinic" />
-        <meta
-          name="twitter:description"
-          content="Expert physiotherapists offering rehab, injury recovery, and pain management at Sambhawna Clinic. Book your session today."
-        />
-        <meta name="twitter:image" content="https://yourdomain.com/images/physiotherapy-cover.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+                {/* Twitter */}
+                <meta name="twitter:title" content="Physiotherapy Services | Sambhawna Clinic" />
+                <meta
+                    name="twitter:description"
+                    content="Expert physiotherapists offering rehab, injury recovery, and pain management at Sambhawna Clinic. Book your session today."
+                />
+                <meta name="twitter:image" content="https://yourdomain.com/images/physiotherapy-cover.jpg" />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
 
             <BreadCrumbs
                 items={[
@@ -182,7 +182,7 @@ export default function PsychiatricServicesDetails() {
                     <button
                         onClick={() => setActiveTab('treatments')}
                         className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'treatments'
-                            ? 'bg-[#5b2e67] text-white shadow-lg'
+                            ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
                         Treatment Conditions
@@ -190,7 +190,7 @@ export default function PsychiatricServicesDetails() {
                     <button
                         onClick={() => setActiveTab('therapies')}
                         className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'therapies'
-                            ? 'bg-[#e47f9f] text-white shadow-lg'
+                            ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
                         Therapy Services
@@ -499,38 +499,61 @@ export default function PsychiatricServicesDetails() {
                         </div>
 
                         {/* Patient Experience Section */}
-                        <div className="bg-white rounded-xl shadow-lg p-2 md:p-8">
-                            <h3 className="text-xl font-bold text-[#5b2e67] mb-6 text-center">What to Expect as a Patient</h3>
+                        <div className="p-4 max-w-7xl mx-auto">
+                            <h3 className="text-2xl font-bold text-[#5b2e67] mb-8 text-center">
+                                What to Expect as a Patient
+                            </h3>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="text-center p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#5b2e67] text-white flex items-center justify-center">
-                                        <Calendar className="w-8 h-8" />
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {/* Card 1 */}
+                                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                                    <div className="bg-[#5b2e67] p-4 flex justify-center">
+                                        <div className="w-16 h-16 rounded-full bg-white text-[#5b2e67] flex items-center justify-center">
+                                            <Calendar className="w-8 h-8" />
+                                        </div>
                                     </div>
-                                    <h4 className="font-semibold text-[#5b2e67] mb-2">Initial Consultation</h4>
-                                    <p className="text-gray-600 text-justify md:text-center">
-                                        Your first appointment will focus on understanding your concerns, history, and treatment goals. We'll begin to develop a personalized care plan together.
-                                    </p>
+                                    <div className="p-6">
+                                        <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
+                                            Initial Consultation
+                                        </h4>
+                                        <p className="text-gray-700 text-center">
+                                            Your first appointment will focus on understanding your concerns, history, and treatment goals. We'll begin to develop a personalized care plan together.
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div className="text-center p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#e47f9f] text-white flex items-center justify-center">
-                                        <Users className="w-8 h-8" />
+                                {/* Card 2 */}
+                                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                                    <div className="bg-[#e47f9f] p-4 flex justify-center">
+                                        <div className="w-16 h-16 rounded-full bg-white text-[#e47f9f] flex items-center justify-center">
+                                            <Users className="w-8 h-8" />
+                                        </div>
                                     </div>
-                                    <h4 className="font-semibold text-[#5b2e67] mb-2">Ongoing Care</h4>
-                                    <p className="text-gray-600 text-justify md:text-center">
-                                        Regular sessions with your treatment team will help monitor progress, adjust treatment as needed, and provide ongoing support through your recovery journey.
-                                    </p>
+                                    <div className="p-6">
+                                        <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
+                                            Ongoing Care
+                                        </h4>
+                                        <p className="text-gray-700 text-center">
+                                            Regular sessions with your treatment team will help monitor progress, adjust treatment as needed, and provide ongoing support through your recovery journey.
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div className="text-center p-4">
-                                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white flex items-center justify-center">
-                                        <Trophy className="w-8 h-8" />
+                                {/* Card 3 */}
+                                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                                    <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex justify-center">
+                                        <div className="w-16 h-16 rounded-full bg-white text-[#5b2e67] flex items-center justify-center">
+                                            <Trophy className="w-8 h-8" />
+                                        </div>
                                     </div>
-                                    <h4 className="font-semibold text-[#5b2e67] mb-2">Long-Term Support</h4>
-                                    <p className="text-gray-600 text-justify md:text-center">
-                                        As you progress, we'll help you transition to maintenance care, develop relapse prevention strategies, and provide resources for continued wellbeing.
-                                    </p>
+                                    <div className="p-6">
+                                        <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
+                                            Long-Term Support
+                                        </h4>
+                                        <p className="text-gray-700 text-center">
+                                            As you progress, we'll help you transition to maintenance care, develop relapse prevention strategies, and provide resources for continued wellbeing.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -538,16 +561,81 @@ export default function PsychiatricServicesDetails() {
                 )}
 
                 {/* Call to Action */}
-                <div className="lg:mt-16 mt-8 text-center">
-                    <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white py-10 px-6 rounded-2xl shadow-lg">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">Begin Your Healing Journey Today</h2>
-                        <p className="text-white/90 max-w-2xl mx-auto mb-8">
-                            Our compassionate team of experts is ready to help you overcome your challenges and improve your mental wellbeing.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Link to="/appoitment" className="bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
-                                Schedule Consultation
-                            </Link>
+                <div className="max-w-6xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
+                    <div className="relative">
+                        {/* Decorative header bar */}
+                        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#5B2E67] via-[#E47F9F] to-[#5B2E67]"></div>
+
+                        {/* Decorative circles */}
+                        <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#E47F9F] opacity-20"></div>
+                        <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-[#5B2E67] opacity-20"></div>
+
+                        <div className="p-8">
+                            {/* Header */}
+                            <div className="text-center mb-8">
+                                <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5B2E67] to-[#E47F9F]">
+                                    Get in Touch With Us
+                                </h3>
+                                <div className="mt-2 h-1 w-24 mx-auto bg-gradient-to-r from-[#5B2E67] to-[#E47F9F] rounded-full"></div>
+                            </div>
+
+                            {/* Contact Cards */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {/* Phone Card */}
+                                <div className="bg-white p-5 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-1 border-l-4 border-[#E47F9F]">
+                                    <div className="flex items-start">
+                                        <div className="p-3 bg-pink-50 rounded-lg">
+                                            <Phone className="text-[#E47F9F]" size={24} />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="font-semibold text-gray-800 mb-1">Call Us</h4>
+                                            <a href="tel:9838346118" className="text-gray-600 mb-1 block hover:text-[#E47F9F] transition-colors">
+                                                9838346118
+                                            </a>
+                                            <a href="tel:9277163686" className="text-gray-600 block hover:text-[#E47F9F] transition-colors">
+                                                9277163686
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Email Card */}
+                                <div className="bg-white p-5 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-1 border-l-4 border-[#5B2E67]">
+                                    <div className="flex items-start">
+                                        <div className="p-3 bg-purple-50 rounded-lg">
+                                            <Mail className="text-[#5B2E67]" size={24} />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
+                                            <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
+                                                monikapandey185@gmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Hours Card */}
+                                <div className="bg-white p-5 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-1 border-l-4 border-[#E47F9F]">
+                                    <div className="flex items-start">
+                                        <div className="p-3 bg-pink-50 rounded-lg">
+                                            <Clock className="text-[#E47F9F]" size={24} />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="font-semibold text-gray-800 mb-1">Hours</h4>
+                                            <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 PM</p>
+                                            <p className="text-gray-600 mb-1">Evening: 00:06 PM - 06:30 PM</p>
+                                            <p className="text-gray-500 text-sm">(Monday - Sunday)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Appointment Button */}
+                            <div className="mt-8 text-center">
+                                <button  onClick={()=>navigate("/appoitment")} className="px-6 py-3 bg-gradient-to-r from-[#5B2E67] to-[#E47F9F] text-white font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                                    Book an Appointment
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
