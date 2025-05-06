@@ -27,7 +27,7 @@ const stats = [
   {
     id: 4,
     title: "Successful Surgeries",
-    count: "7000",
+    count: "5000",
     icon: <FaVial className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
 ];
@@ -42,41 +42,37 @@ const ClinicStats = () => {
   }, []);
 
   return (
-    <section
-      className="relative py-[4rem] flex flex-col items-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${"https://www.shanyascans.com/assets/stat_bg-CKbRlElS.jpg"})` }}
-    >
-      {/* Darker Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
-
-      <div className="relative container mx-auto z-10">
-        {/* Stat Icons and Numbers */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-16 lg:gap-[4rem] justify-items-center">
-          {stats.map((stat, index) => (
-            <div
-              key={stat.id}
-              className="flex flex-col items-center text-center w-1/2 sm:w-auto mb-8 sm:mb-0"
-              data-aos="fade-up"
-              data-aos-delay={index * 200} // staggered animation
-            >
-              {/* Icon */}
-              <div className="mb-4 text-main">{stat.icon}</div>
-
-              {/* Count */}
-              <h4 className="text-4xl sm:text-5xl font-extrabold text-[#E47F9F] mb-1">
-                {stat.count}+
-              </h4>
-
-              {/* Title */}
-              <p className="text-xs sm:text-sm font-semibold text-white uppercase tracking-wide">
-                {stat.title}
-              </p>
-            </div>
-          ))}
+    <section className="py-8" style={{ background: `linear-gradient(to right, ${hexToRgba('#E47F97', 0.8)}, ${hexToRgba('#5B2E67', 0.9)})` }}>
+      <div className="container mx-auto lg:px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="p-4">
+            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
+            <div className="text-white font-semibold">HAPPY PATIENTS</div>
+          </div>
+          <div className="p-4">
+            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">30+</div>
+            <div className="text-white font-semibold">YEARS EXPERIENCE</div>
+          </div>
+          <div className="p-4">
+            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
+            <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
+          </div>
+          <div className="p-4">
+            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">5000+</div>
+            <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
+// Helper function to convert hex to rgba for gradient backgrounds
+function hexToRgba(hex, alpha) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 export default ClinicStats;

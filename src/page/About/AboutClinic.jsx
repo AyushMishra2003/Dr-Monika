@@ -146,7 +146,7 @@ export default function AboutClinic() {
           <div className="container mx-auto lg:px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">2000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
                 <div className="text-white font-semibold">HAPPY PATIENTS</div>
               </div>
               <div className="p-4">
@@ -154,11 +154,11 @@ export default function AboutClinic() {
                 <div className="text-white font-semibold">YEARS EXPERIENCE</div>
               </div>
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">2500+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
                 <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
               </div>
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">1500+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">5000+</div>
                 <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
               </div>
             </div>

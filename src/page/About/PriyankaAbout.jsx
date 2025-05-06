@@ -225,7 +225,7 @@ export default function AboutDrMonika() {
 
         {/* Expertise Section */}
         <div
-          className="w-full py-16"
+          className="w-full py-8"
           style={{ background: `linear-gradient(to bottom right, ${primaryColor}10, ${secondaryColor}10)` }}
         >
           <div className="container mx-auto px-4 md:px-8">

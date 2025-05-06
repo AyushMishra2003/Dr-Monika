@@ -55,7 +55,7 @@ export default function Header() {
     // { name: 'Cases', link: '/cases' },
     { name: 'Gallery', link: '/gallery' },
 
-    // { name: 'Contact Us', link: '/contact' },
+    { name: 'Contact Us', link: '/contact' },
   ];
 
   return (
@@ -101,7 +101,7 @@ export default function Header() {
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
-                  <div className="flex items-center">
+                  <div className="flex items-center ">
                     <button
                       onClick={() => toggleDropdown(item.name)}
                       className="px-0 xl:px-4 py-2 text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
@@ -112,12 +112,12 @@ export default function Header() {
                     </button>
 
                     {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 w-48 bg-white rounded-lg shadow-xl py-2 z-10 border-t-2 border-pink-500">
+                      <div className="absolute top-full   left-0 w-50 bg-white rounded-lg shadow-xl py-2 z-10 ">
                         {item.items.map((subItem) => (
                           <a
                             key={subItem.name}
                             href={subItem.link}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600"
+                            className="block px-2 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600"
                             style={{ whiteSpace: 'nowrap' }}
                           >
                             {subItem.name}

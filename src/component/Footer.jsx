@@ -24,11 +24,11 @@ const Footer = () => {
                         <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
                         <li className="mb-4 flex items-center text-md">
                             <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
-                            <a href="mailto:monikapandey185@gmail.com" className="hover:text-[#5B2E67]">monikapandey185@gmail.com</a>
+                            <a href="mailto:monikapandey185@gmail.com" className="">monikapandey185@gmail.com</a>
                         </li>
                         <li className="mb-4 flex items-center text-lg lg:text-lg">
                             <MdCall className="mr-1 text-2xl" />
-                            <a href="tel:919838346118" className="hover:text-[#5B2E67]">+91 9838346118</a>
+                            <a href="tel:919838346118" className="]">+91 9838346118</a>
                             {/* <a href="tel:8115544102" className="hover:text-[#5B2E67] ml-1">+91 8115544102</a> */}
                         </li>
 
@@ -37,7 +37,7 @@ const Footer = () => {
                             <MdLocationOn className="mr-1 text-xl lg:text-6xl" />
                             <a href="https://www.google.com/maps"
                                 target="_blank" rel="noopener noreferrer"
-                                className="hover:text-[#5B2E67] transition-all duration-300 text-[16px]">
+                                className=" transition-all duration-300 text-[16px]">
                                 Indira Nagar, Lucknow, Uttar Pradesh 226016
                             </a>
                         </li>
@@ -52,7 +52,7 @@ const Footer = () => {
                             <Link to={`/services/gynecology`}>
                                 <li className="mb-2 hover:text-[#5B2E67] flex items-center">
                                     <MdKeyboardArrowRight className="mr-2" />  Obstetrics
-                                </li>    
+                                </li>
                             </Link>
                             <Link to={`/services/gynecology'`}>
                                 <li className="mb-2 hover:text-[#5B2E67] flex items-center">
@@ -122,7 +122,7 @@ const Footer = () => {
                     {/* Map Section */}
                     <div className="w-full lg:w-1/4">
                         <h2 className="text-xl font-semibold mb-4 text-white" >Find Us</h2>
-                        <div className="h-48 lg:h-64 w-full bg-gray-300 rounded-lg overflow-hidden shadow-md">
+                        <div className="h-48 lg:h-48 w-full bg-gray-300 rounded-lg overflow-hidden shadow-md">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.569616102303!2d80.99869537489408!3d26.885411761264237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999592fb08ce83b%3A0x969f7467a24cfb3b!2sDr%20Monika%20Pandey%20Best%20Gynaecologist%20in%20Indira%20Nagar!5e0!3m2!1sen!2sin!4v1745921970061!5m2!1sen!2sin"
                                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="Location Map"

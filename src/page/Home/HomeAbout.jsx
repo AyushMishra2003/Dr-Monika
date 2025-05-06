@@ -49,14 +49,11 @@ const HomeAbout = () => {
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                             Expert Mental & Women's Healthcare Under One Roof
+                        Expert Women's Healthcare & Mental Wellness Under One Roof
                         </h1>
 
                         <p className="text-gray-600 mb-4 text-justify">
-                            <strong>Sadbhawna Clinic</strong> is a trusted healthcare center specializing in Psychiatry and Gynecology,
-                            offering compassionate care for Mental Wellness and Women's Health. From Stress, Anxiety, and Mood Disorders
-                            to Menstrual Issues, Fertility, and Pregnancy Care — we provide personalized, confidential, and holistic
-                            treatment for every stage of life.
+                            <strong>Sadbhawna Clinic</strong> is a trusted healthcare center with a primary focus on Gynecology, offering expert care for every stage of a woman’s life. From menstrual issues, fertility, and pregnancy care to hormonal health and menopause management, we provide personalized and confidential treatment in a compassionate setting. Our integrated approach also supports mental wellness, addressing stress, anxiety, and mood concerns with empathy and expertise.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -64,28 +61,28 @@ const HomeAbout = () => {
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Expert treatment for anxiety, depression & mood disorders</span>
+                                <span className="text-slate-700 font-medium">Comprehensive gynecological care for all ages</span>
                             </div>
 
                             <div className="flex items-center">
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Comprehensive women’s health services</span>
+                                <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
                             </div>
 
                             <div className="flex items-center">
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Personalized fertility & pregnancy care</span>
+                                <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
                             </div>
 
                             <div className="flex items-center">
                                 <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Safe and supportive environment for all ages</span>
+                                <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
                             </div>
                         </div>
                     </div>

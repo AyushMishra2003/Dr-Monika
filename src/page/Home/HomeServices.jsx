@@ -9,6 +9,34 @@ const HomeService = () => {
 
   const services = [
     {
+      id: "gynecology",
+      title: "Obstetrics & Gynecology",
+      subtitle: "Complete Women's Healthcare",
+      description:
+        "Sadbhawna Clinic provides comprehensive women’s health care, including pregnancy support, preventive services, and specialized treatments.",
+      icon: <Heart className="h-10 w-10" />,
+      color: primaryPink,
+      features: [
+        {
+          icon: <Shield className="h-5 w-5" />,
+          text: "Comprehensive women’s health care at all life stages"
+        },
+        {
+          icon: <Star className="h-5 w-5" />,
+          text: "Pregnancy support and antenatal care"
+        },
+        {
+          icon: <Shield className="h-5 w-5" />,
+          text: "Management of menstrual, hormonal, and fertility issues"
+        },
+        {
+          icon: <Star className="h-5 w-5" />,
+          text: "Preventive screenings and wellness check-ups"
+        }
+      ],
+      link: "/services/gynecology"
+    },
+    {
       id: "psychiatry",
       title: "Psychiatrist",
       subtitle: "Mental Health & Wellness",
@@ -36,34 +64,7 @@ const HomeService = () => {
       ],
       link: "/services/physiotherapy"
     },
-    {
-      id: "gynecology",
-      title: "Obstetrics & Gynecology",
-      subtitle: "Complete Women's Healthcare",
-      description:
-        "Sadbhawna Clinic provides comprehensive women’s health care, including pregnancy support, preventive services, and specialized treatments.",
-      icon: <Heart className="h-10 w-10" />,
-      color: primaryPink,
-      features: [
-        {
-          icon: <Shield className="h-5 w-5" />,
-          text: "Comprehensive women’s health care at all life stages"
-        },
-        {
-          icon: <Star className="h-5 w-5" />,
-          text: "Pregnancy support and antenatal care"
-        },
-        {
-          icon: <Shield className="h-5 w-5" />,
-          text: "Management of menstrual, hormonal, and fertility issues"
-        },
-        {
-          icon: <Star className="h-5 w-5" />,
-          text: "Preventive screenings and wellness check-ups"
-        }
-      ],
-      link: "/services/gynecology"
-    }
+  
   ];
   
 

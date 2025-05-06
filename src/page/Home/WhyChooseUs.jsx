@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { ChevronRight, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import image from '../../assets/whychoose.jpg'
+
 
 const WhyWeChooseUs = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
@@ -71,11 +73,11 @@ const WhyWeChooseUs = () => {
                         </button>
 
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 mb-4">
-                            Your Trusted Partner in Mental and Women’s Health
+                        Your Trusted Partner in Women’s Health and Mental Wellness
                         </h2>
 
                         <p className="text-gray-700 mb-8">
-                            Choose Sadbhawna Clinic for expert, compassionate care in psychiatry and gynecology, offering personalized, confidential treatments for overall wellness.
+                        Choose Sadbhawna Clinic for expert, compassionate care in Obstetrics & Gynaecology and Psychiatry, offering Personalized and Confidential treatments for complete Women’s Wellness.
                         </p>
 
                         {/* Feature Cards */}
@@ -103,7 +105,7 @@ const WhyWeChooseUs = () => {
                         </div>
 
                         {/* Call to Action Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                        {/* <div className="flex flex-col sm:flex-row gap-4 mt-8">
                             <button onClick={() => navigate("/appoitment")} className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] cursor-pointer text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center">
                                 Book An Appointment
                                 <ChevronRight className="ml-2 w-5 h-5" />
@@ -121,14 +123,14 @@ const WhyWeChooseUs = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right Image */}
                     <div className="lg:w-1/2">
                         <div className="rounded-lg overflow-hidden h-full">
                             <img
-                                src="https://themes.envytheme.com/mavis/wp-content/uploads/2024/08/main.jpg"
+                                src={image}
                                 alt="Doctor with patients"
                                 className="w-full h-180 object-cover"
                             />

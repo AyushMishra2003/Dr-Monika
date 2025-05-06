@@ -201,7 +201,7 @@ export default function PsychiatricServicesDetails() {
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
-                       Therapies
+                        Therapies
                     </button>
                 </div>
 
@@ -333,39 +333,45 @@ export default function PsychiatricServicesDetails() {
                 )}
 
                 {/* Approach Tab Content */}
-           
+
 
 
                 {activeTab === 'approach' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Therapeutic Approaches</h2>
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Therapies</h2>
                             <p className="text-gray-600 md:max-w-3xl w-full mx-auto text-lg text-justify md:text-center">
-                                We offer a variety of evidence-based therapeutic approaches tailored to address specific mental health concerns.
-                                Our experienced therapists work collaboratively with you to select the most effective therapy for your unique situation.
+                                We provide a range of evidence-based therapies designed to support various mental health needs.
+                                Our skilled therapists collaborate with you to choose the most suitable therapeutic path for your individual journey.
                             </p>
                         </div>
+
 
                         {/* Featured Therapy */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex">
                                 <div className="md:w-1/2 bg-gradient-to-br from-[#5b2e67] to-[#e47f9f] lg:p-8 p-4 text-white">
-                                    <h3 className="text-2xl font-bold mb-4">Personalized Therapeutic Interventions</h3>
+                                    <h3 className="text-2xl font-bold mb-4">Therapies</h3>
                                     <p className="mb-4">
-                                        Therapy is a collaborative process between you and a trained professional aimed at improving your mental health and wellbeing. Each therapeutic approach uses different techniques to help you develop coping strategies, process emotions, change thought patterns, and improve relationships.
+                                        Our therapy services encompass a wide range of evidence-based approaches designed to support your mental and emotional well-being. Whether you’re dealing with anxiety, depression, trauma, or relationship challenges, we offer effective therapeutic solutions.
                                     </p>
                                     <p className="mb-4">
-                                        We believe in personalized care that addresses your specific challenges and goals. Our therapists are trained in multiple modalities and can adapt their approach to best suit your needs, preferences, and circumstances.
+                                        Each therapy is tailored to your individual needs, ensuring that you receive the most appropriate and impactful care. Our licensed therapists draw from various modalities to create a personalized and empowering experience.
                                     </p>
                                     <p>
-                                        Successful therapy provides a safe space for exploration and growth, equipping you with skills and insights that extend well beyond your therapy sessions and into your daily life.
+                                        Therapy is more than just treatment—it’s a journey toward self-awareness, healing, and lasting growth. We’re here to walk with you every step of the way.
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Therapeutic approaches" className="w-full h-full object-cover" />
+                                    <img
+                                        src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180"
+                                        alt="Therapies"
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             </div>
                         </div>
+
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {/* Cognitive Behavioral Therapy */}

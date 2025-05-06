@@ -59,6 +59,7 @@ export default function AppointmentBooking() {
     };
     
     fetchAppointments();
+    window.scrollTo(0, 0);
   }, []);
 
   // Generate dates for the next 7 days
@@ -377,7 +378,11 @@ export default function AppointmentBooking() {
       </div>
     );
   }
+  
 
+    // useEffect(() => {
+    //   window.scrollTo(0, 0);
+    // }, []);
     // useEffect(() => {
     //   window.scrollTo(0, 0);
     // }, []);
