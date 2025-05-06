@@ -13,6 +13,7 @@ import MonikaAbout from './PriyankaAbout'
 import HowWeWorkPremium from '../../component/HowWeWork'
 import HomeBlogSlider from './HomeBlogSlider'
 import { Helmet } from 'react-helmet'
+import AppointmentCTA from '../../component/BookingCta'
 
 
 
@@ -55,6 +56,7 @@ const Home = () => {
         <Services/>
         <ClinicStats/>
         <WhyWeChooseUs/>
+        <AppointmentCTA/>
         {/* <AnotherService/> */}
         <MonikaAbout/>
         <HowWeWorkPremium/>

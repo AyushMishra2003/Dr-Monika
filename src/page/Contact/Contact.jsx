@@ -114,7 +114,7 @@ const Contact = () => {
                     href="https://www.google.co.in/maps/place/Dr+Monika+Pandey+Best+Gynaecologist+in+Indira+Nagar/@26.8854118,80.9986954,17z/data=!3m1!4b1!4m6!3m5!1s0x3999592fb08ce83b:0x969f7467a24cfb3b!8m2!3d26.885407!4d81.0012703!16s%2Fg%2F11vpf7nlyn?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#E47F9F] p-3 rounded-md"
+                    className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-3 rounded-md"
                   >
                     <FaLocationDot className="text-[1.4rem] text-white" />
                   </a>
@@ -135,7 +135,7 @@ const Contact = () => {
                 <div className="flex items-start space-x-4">
                   <a
                     href="tel:917379127000"
-                    className="bg-[#E47F9F] p-3 rounded-md"
+                    className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-3 rounded-md"
                   >
                     <MdContactPhone className="text-[1.4rem] text-white" />
                   </a>
@@ -159,7 +159,7 @@ const Contact = () => {
                 <div className="flex items-start space-x-4">
                   <a
                     href="tel:+917570018529"
-                    className="bg-[#E47F9F] p-3 rounded-md"
+                    className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-3 rounded-md"
                   >
                     <IoMdTime className="text-[1.4rem] text-white" />
                   </a>
@@ -185,7 +185,7 @@ const Contact = () => {
                 <div className="flex items-start space-x-4">
                   <a
                     href="mailto:saumya.751983@gmail.com"
-                    className="bg-[#E47F9F] p-3 rounded-md"
+                    className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-3 rounded-md"
                   >
                     <MdEmail className="text-[1.4rem] text-white" />
                   </a>
@@ -224,7 +224,7 @@ const Contact = () => {
           </div>
 
           {/* Form Section */}
-          <div className="p-4 bg-[#E47F9F] text-white relative shadow-md rounded-lg mt-4 lg:mt-0">
+          <div className="p-4  bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white relative shadow-md rounded-lg mt-4 lg:mt-0">
             <form onSubmit={handleSubmit} className="space-y-6">
               <h3 className="lg:text-3xl text-xl sm:text-2xl font-semibold">Contact Us</h3>
 

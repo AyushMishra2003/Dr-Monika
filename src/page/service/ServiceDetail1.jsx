@@ -185,7 +185,7 @@ export default function PsychiatricServicesDetails() {
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
-                        Treatment Conditions
+                        Psychiatry Treatment
                     </button>
                     <button
                         onClick={() => setActiveTab('therapies')}
@@ -193,7 +193,7 @@ export default function PsychiatricServicesDetails() {
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
-                        Therapy Services
+                        Counselling Services
                     </button>
                     <button
                         onClick={() => setActiveTab('approach')}
@@ -201,7 +201,7 @@ export default function PsychiatricServicesDetails() {
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
-                        Our Approach
+                       Therapies
                     </button>
                 </div>
 
@@ -209,7 +209,7 @@ export default function PsychiatricServicesDetails() {
                 {activeTab === 'treatments' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Mental Health Conditions We Treat</h2>
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Psychiatry Treatment </h2>
                             <p className="text-gray-600 md:max-w-3xl w-full mx-auto text-lg text-justify md:text-center">
                                 Our experienced team of psychiatrists and therapists provides evidence-based treatment for a wide range of
                                 psychiatric conditions. We offer comprehensive care tailored to your unique needs and circumstances.
@@ -266,37 +266,39 @@ export default function PsychiatricServicesDetails() {
                     </div>
                 )}
 
-                {/* Therapies Tab Content */}
+
                 {activeTab === 'therapies' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Our Therapeutic Services</h2>
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Our Counseling Services</h2>
                             <p className="text-gray-600 lg:max-w-3xl w-full text-justify md:text-center mx-auto text-lg">
-                                We offer a comprehensive range of evidence-based therapies tailored to your unique needs.
-                                Our expert clinicians are trained in various therapeutic modalities to address a wide spectrum of mental health concerns.
+                                We provide personalized counseling services to support individuals through emotional, psychological, and life challenges.
+                                Our qualified counselors specialize in a variety of approaches to help clients navigate stress, anxiety, relationship issues, and personal growth.
                             </p>
                         </div>
+
 
                         {/* Featured Therapy Section */}
                         <div className="lg:mb-12 bg-white rounded-xl shadow-lg overflow-hidden mb-4">
                             <div className="md:flex flex-row-reverse">
                                 <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#5b2e67] lg:p-8 p-4 text-white">
-                                    <h3 className="lg:text-2xl text-xl font-bold mb-4">The Power of Therapeutic Intervention</h3>
+                                    <h3 className="lg:text-2xl text-xl font-bold mb-4">The Value of Counseling Support</h3>
                                     <p className="mb-4">
-                                        Therapy provides a supportive environment where you can talk openly with a trained professional who's objective, neutral, and nonjudgmental. Through various therapeutic techniques, you can gain insight into your feelings, behaviors, and thoughts, develop coping strategies, and work toward positive change.
+                                        Counseling offers a safe and confidential space where you can express your concerns and emotions freely with a trained professional who listens with empathy and without judgment. It empowers you to explore your thoughts, feelings, and behaviors to better understand yourself.
                                     </p>
                                     <p className="mb-4">
-                                        Each therapy type has unique approaches and benefits. Our specialists will help determine which therapy or combination of therapies might work best for your specific situation and needs.
+                                        Our counselors utilize evidence-based approaches tailored to your individual circumstances. Whether you're facing anxiety, depression, relationship difficulties, or seeking clarity in life decisions, counseling can offer tools and support to manage life’s challenges more effectively.
                                     </p>
                                     <p>
-                                        Whether you're dealing with a specific mental health condition, life transitions, relationship issues, or simply seeking personal growth, our therapeutic services can help you navigate challenges and improve your quality of life.
+                                        No matter where you are on your personal journey, our counseling services are here to guide you toward emotional well-being, healthier relationships, and greater self-awareness.
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Therapeutic services" className="w-full h-full object-cover" />
+                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Counseling services" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
+
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {therapies.map((therapy, index) => (
@@ -331,228 +333,265 @@ export default function PsychiatricServicesDetails() {
                 )}
 
                 {/* Approach Tab Content */}
+           
+
+
                 {activeTab === 'approach' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Our Treatment Approach</h2>
-                            <p className="text-gray-600 max-w-3xl mx-auto text-lg md:text-center text-justify ">
-                                Our approach to psychiatric care is comprehensive, personalized, and focused on long-term wellbeing.
-                                We believe in treating the whole person, not just symptoms.
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Therapeutic Approaches</h2>
+                            <p className="text-gray-600 md:max-w-3xl w-full mx-auto text-lg text-justify md:text-center">
+                                We offer a variety of evidence-based therapeutic approaches tailored to address specific mental health concerns.
+                                Our experienced therapists work collaboratively with you to select the most effective therapy for your unique situation.
                             </p>
                         </div>
 
-                        {/* Philosophy Section */}
+                        {/* Featured Therapy */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex">
                                 <div className="md:w-1/2 bg-gradient-to-br from-[#5b2e67] to-[#e47f9f] lg:p-8 p-4 text-white">
-                                    <h3 className="text-2xl font-bold mb-4">Our Philosophy of Care</h3>
+                                    <h3 className="text-2xl font-bold mb-4">Personalized Therapeutic Interventions</h3>
                                     <p className="mb-4">
-                                        We believe that every individual deserves compassionate, respectful, and evidence-based care for their mental health needs. Our approach is founded on the understanding that mental health is an essential component of overall wellbeing, and that recovery is possible with proper support and treatment.
+                                        Therapy is a collaborative process between you and a trained professional aimed at improving your mental health and wellbeing. Each therapeutic approach uses different techniques to help you develop coping strategies, process emotions, change thought patterns, and improve relationships.
                                     </p>
                                     <p className="mb-4">
-                                        We recognize that each person's journey is unique, and we are committed to providing personalized care that addresses individual needs, preferences, and goals. Our integrative approach combines the best of modern psychiatric medicine with holistic considerations of lifestyle, relationships, and personal values.
+                                        We believe in personalized care that addresses your specific challenges and goals. Our therapists are trained in multiple modalities and can adapt their approach to best suit your needs, preferences, and circumstances.
                                     </p>
                                     <p>
-                                        We strive to create a safe, welcoming environment where individuals feel empowered to actively participate in their treatment and recovery process.
+                                        Successful therapy provides a safe space for exploration and growth, equipping you with skills and insights that extend well beyond your therapy sessions and into your daily life.
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-
-                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Psychiatric care philosophy" className="w-full h-full object-cover" />
+                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Therapeutic approaches" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-lg p-4 md:p-8 mb-12">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                <div>
-                                    <h3 className="text-xl font-bold text-[#5b2e67] mb-6 flex items-center">
-                                        <ClipboardCheck className="w-6 h-6 mr-2 text-[#e47f9f]" />
-                                        Treatment Process
-                                    </h3>
-
-                                    <div className="space-y-6">
-                                        <div className="flex">
-                                            <div className="mr-4">
-                                                <div className="w-10 h-10 rounded-full bg-[#5b2e67] text-white flex items-center justify-center font-bold">1</div>
-                                                <div className="h-full w-0.5 bg-[#e47f9f] mx-auto mt-2 mb-2"></div>
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-[#5b2e67]">Comprehensive Assessment</h4>
-                                                <p className="text-gray-600 mt-1">
-                                                    Thorough evaluation of symptoms, medical history, and psychological factors to develop a complete understanding of your needs.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex">
-                                            <div className="mr-4">
-                                                <div className="w-10 h-10 rounded-full bg-[#5b2e67] text-white flex items-center justify-center font-bold">2</div>
-                                                <div className="h-full w-0.5 bg-[#e47f9f] mx-auto mt-2 mb-2"></div>
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-[#5b2e67]">Personalized Treatment Planning</h4>
-                                                <p className="text-gray-600 mt-1">
-                                                    Creation of a customized treatment plan that addresses your specific condition, symptoms, and personal goals.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex">
-                                            <div className="mr-4">
-                                                <div className="w-10 h-10 rounded-full bg-[#5b2e67] text-white flex items-center justify-center font-bold">3</div>
-                                                <div className="h-full w-0.5 bg-[#e47f9f] mx-auto mt-2 mb-2"></div>
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-[#5b2e67]">Active Treatment</h4>
-                                                <p className="text-gray-600 mt-1">
-                                                    Implementation of evidence-based therapies, medication management when appropriate, and ongoing support throughout your treatment journey.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex">
-                                            <div className="mr-4">
-                                                <div className="w-10 h-10 rounded-full bg-[#5b2e67] text-white flex items-center justify-center font-bold">4</div>
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-[#5b2e67]">Continuous Monitoring & Adjustment</h4>
-                                                <p className="text-gray-600 mt-1">
-                                                    Regular assessment of progress, refinement of treatment approaches as needed, and long-term follow-up care.
-                                                </p>
-                                            </div>
-                                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {/* Cognitive Behavioral Therapy */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                        </svg>
                                     </div>
+                                    <h3 className="text-xl font-bold text-white">Cognitive Behavioral Therapy (CBT)</h3>
                                 </div>
-
-                                <div>
-                                    <h3 className="text-xl font-bold text-[#5b2e67] mb-6 flex items-center">
-                                        <Star className="w-6 h-6 mr-2 text-[#e47f9f]" />
-                                        Our Core Principles
-                                    </h3>
-
-                                    <div className="bg-purple-50 lg:p-6 p-2 md:p-4 rounded-xl">
-                                        <ul className="space-y-4">
-                                            <li className="flex">
-                                                <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
-                                                    <CheckIcon className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-semibold text-[#5b2e67]">Patient-Centered Care</h4>
-                                                    <p className="text-gray-600 mt-1">
-                                                        Your needs, preferences, and goals are at the center of every treatment decision.
-                                                    </p>
-                                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Cognitive Behavioral Therapy is a structured, goal-oriented therapy that helps you identify and change negative thought patterns and behaviors. CBT is based on the concept that your thoughts, feelings, and actions are interconnected, and that changing one affects the others.
+                                    </p>
+                                    <div>
+                                        <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Effective for depression, anxiety, PTSD, and phobias
                                             </li>
-
-                                            <li className="flex">
-                                                <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
-                                                    <CheckIcon className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-semibold text-[#5b2e67]">Evidence-Based Practices</h4>
-                                                    <p className="text-gray-600 mt-1">
-                                                        All treatments are grounded in scientific research and clinical expertise.
-                                                    </p>
-                                                </div>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Focuses on current problems rather than past issues
                                             </li>
-
-                                            <li className="flex">
-                                                <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
-                                                    <CheckIcon className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-semibold text-[#5b2e67]">Holistic Approach</h4>
-                                                    <p className="text-gray-600 mt-1">
-                                                        Addressing all aspects of wellbeing: mental, physical, social, and spiritual.
-                                                    </p>
-                                                </div>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Teaches practical coping skills and strategies
                                             </li>
-
-                                            <li className="flex">
-                                                <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
-                                                    <CheckIcon className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-semibold text-[#5b2e67]">Compassionate Care</h4>
-                                                    <p className="text-gray-600 mt-1">
-                                                        Treatment delivered with empathy, respect, and without judgment.
-                                                    </p>
-                                                </div>
-                                            </li>
-
-                                            <li className="flex">
-                                                <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
-                                                    <CheckIcon className="w-5 h-5" />
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-semibold text-[#5b2e67]">Collaborative Treatment</h4>
-                                                    <p className="text-gray-600 mt-1">
-                                                        Working together with you and your support network to achieve the best outcomes.
-                                                    </p>
-                                                </div>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Usually shorter-term than other therapies
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Patient Experience Section */}
-                        <div className="p-4 max-w-7xl mx-auto">
-                            <h3 className="text-2xl font-bold text-[#5b2e67] mb-8 text-center">
-                                What to Expect as a Patient
-                            </h3>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                {/* Card 1 */}
-                                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
-                                    <div className="bg-[#5b2e67] p-4 flex justify-center">
-                                        <div className="w-16 h-16 rounded-full bg-white text-[#5b2e67] flex items-center justify-center">
-                                            <Calendar className="w-8 h-8" />
-                                        </div>
+                            {/* Psychotherapy */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                        </svg>
                                     </div>
-                                    <div className="p-6">
-                                        <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
-                                            Initial Consultation
-                                        </h4>
-                                        <p className="text-gray-700 text-center">
-                                            Your first appointment will focus on understanding your concerns, history, and treatment goals. We'll begin to develop a personalized care plan together.
-                                        </p>
+                                    <h3 className="text-xl font-bold text-white">Psychotherapy</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Psychotherapy, also known as talk therapy, encompasses a range of techniques for treating mental health problems by talking with a psychiatrist, psychologist, or other mental health provider. It helps you understand your feelings, thoughts, and behaviors, and develop healthier ways of coping.
+                                    </p>
+                                    <div>
+                                        <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Treats a wide range of mental health conditions
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Improves communication and interpersonal skills
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Helps process trauma and difficult emotions
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Provides insight into patterns and triggers
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
 
-                                {/* Card 2 */}
-                                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
-                                    <div className="bg-[#e47f9f] p-4 flex justify-center">
-                                        <div className="w-16 h-16 rounded-full bg-white text-[#e47f9f] flex items-center justify-center">
-                                            <Users className="w-8 h-8" />
-                                        </div>
+                            {/* Aversion Therapy */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                        </svg>
                                     </div>
-                                    <div className="p-6">
-                                        <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
-                                            Ongoing Care
-                                        </h4>
-                                        <p className="text-gray-700 text-center">
-                                            Regular sessions with your treatment team will help monitor progress, adjust treatment as needed, and provide ongoing support through your recovery journey.
-                                        </p>
+                                    <h3 className="text-xl font-bold text-white">Aversion Therapy</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Aversion therapy is a form of behavioral treatment that aims to reduce unwanted behaviors by associating them with unpleasant stimuli or discomfort. This type of therapy is primarily used to treat certain addictions, substance abuse disorders, and harmful habits.
+                                    </p>
+                                    <div>
+                                        <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Can help reduce addictive behaviors
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Effective for specific compulsive behaviors
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Often used as part of a comprehensive treatment plan
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Can produce results in a relatively short time frame
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
 
-                                {/* Card 3 */}
-                                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
-                                    <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex justify-center">
-                                        <div className="w-16 h-16 rounded-full bg-white text-[#5b2e67] flex items-center justify-center">
-                                            <Trophy className="w-8 h-8" />
-                                        </div>
+                            {/* Dialectical Behavior Therapy */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                        </svg>
                                     </div>
-                                    <div className="p-6">
-                                        <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
-                                            Long-Term Support
-                                        </h4>
-                                        <p className="text-gray-700 text-center">
-                                            As you progress, we'll help you transition to maintenance care, develop relapse prevention strategies, and provide resources for continued wellbeing.
-                                        </p>
+                                    <h3 className="text-xl font-bold text-white">Dialectical Behavior Therapy (DBT)</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Dialectical Behavior Therapy is a modified form of CBT that teaches skills to manage painful emotions and decrease conflict in relationships. DBT specifically focuses on providing therapeutic skills in four key areas: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness.
+                                    </p>
+                                    <div>
+                                        <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Effective for borderline personality disorder
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Helps with emotional dysregulation
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Teaches practical mindfulness and coping skills
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Improves interpersonal relationships
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Family Therapy */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">Family Therapy</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Family therapy is a form of psychotherapy that helps family members improve communication and resolve conflicts. It views problems in the context of the family unit and emphasizes the role of family relationships in psychological health.
+                                    </p>
+                                    <div>
+                                        <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Improves family communication patterns
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Addresses family roles and behavior patterns
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Helps families navigate major life transitions
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Builds stronger family support systems
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Group Therapy */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">Group Therapy</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Group therapy involves one or more therapists working with several individuals at the same time. This approach allows members to receive support from peers facing similar challenges while learning from their experiences and insights.
+                                    </p>
+                                    <div>
+                                        <h4 className="font-semibold text-[#5b2e67] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Creates a supportive community atmosphere
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Provides multiple perspectives on problems
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Improves social skills through interaction
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">•</span>
+                                                Reduces feelings of isolation and loneliness
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -632,7 +671,7 @@ export default function PsychiatricServicesDetails() {
 
                             {/* Appointment Button */}
                             <div className="mt-8 text-center">
-                                <button  onClick={()=>navigate("/appoitment")} className="px-6 py-3 bg-gradient-to-r from-[#5B2E67] to-[#E47F9F] text-white font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                                <button onClick={() => navigate("/appoitment")} className="px-6 py-3 bg-gradient-to-r from-[#5B2E67] to-[#E47F9F] text-white font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                                     Book an Appointment
                                 </button>
                             </div>

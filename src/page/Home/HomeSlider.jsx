@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import img1 from '../../assets/1.jpg'
-import img2 from '../../assets/2.jpg'
-import img3 from '../../assets/11.jpg'
+import img1 from '../../assets/banner1.jpg'
+import img2 from '../../assets/banner2.jpg'
+import img3 from '../../assets/banner3.jpg'
 import img4 from '../../assets/22.jpg'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -60,14 +60,14 @@ const HomeSlider = () => {
             loading="lazy"
           />
         </div>
-        <div className="relative">
+        {/* <div className="relative">
           <img
             src={img4}
             alt="Advanced Medical Treatments - Consult Our Experts"
             className="w-full  object-cover"
             loading="lazy"
           />
-        </div>
+        </div> */}
       </Slider>
 
     </div>

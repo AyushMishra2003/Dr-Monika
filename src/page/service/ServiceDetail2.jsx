@@ -222,29 +222,30 @@ export default function GynecologyObstetricsServices() {
 
                 {/* Navigation Tabs */}
                 <div className="flex flex-wrap justify-center mb-10">
-                    <button
-                        onClick={() => setActiveTab('obstetrics')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'obstetrics'
-                            ? 'bg-[#7e3f8f] text-white shadow-lg'
-                            : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
-                    >
-                        Obstetrics (O)
-                    </button>
+
                     <button
                         onClick={() => setActiveTab('gynecology')}
                         className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'gynecology'
                             ? 'bg-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
-                        Gynecology (G)
+                        Gynecology
                     </button>
                     <button
-                        onClick={() => setActiveTab('approach')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'approach'
+                        onClick={() => setActiveTab('obstetrics')}
+                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'obstetrics'
+                            ? 'bg-[#7e3f8f] text-white shadow-lg'
+                            : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
+                    >
+                        Obstetrics
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('infertility')}
+                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'infertility'
                             ? 'bg-gradient-to-r from-[#7e3f8f] to-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
-                        Our Approach
+                        Infertility Treatment
                     </button>
                 </div>
 
@@ -371,6 +372,207 @@ export default function GynecologyObstetricsServices() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                )}
+
+
+                {activeTab === 'infertility' && (
+                    <div>
+                        <div className="text-center mb-10">
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Infertility Treatment</h2>
+                            <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
+                                We provide comprehensive infertility evaluation and treatment options for couples
+                                struggling to conceive, addressing both female and male fertility factors with
+                                compassion and advanced medical care.
+                            </p>
+                        </div>
+
+                        {/* Featured Infertility Section */}
+                        <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div className="md:flex flex-row-reverse">
+                                <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#7e3f8f] lg:p-8 p-4 text-white">
+                                    <h3 className="text-2xl font-bold mb-4">Comprehensive Fertility Solutions</h3>
+                                    <p className="mb-4">
+                                        Our fertility specialists understand the emotional and physical challenges of infertility. We offer personalized treatment plans tailored to address the unique factors affecting each couple's fertility journey.
+                                    </p>
+                                    <p className="mb-4">
+                                        Using advanced diagnostic techniques and evidence-based treatments, we help identify the underlying causes and develop effective strategies to overcome fertility obstacles.
+                                    </p>
+                                    <p>
+                                        Our compassionate team provides support throughout the entire process, combining medical expertise with emotional guidance to help you achieve your dream of parenthood.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2">
+                                    <img src="https://tse3.mm.bing.net/th?id=OIP.NiUnw_CvMjCv2vGnufRclQHaEK&pid=Api&P=0&h=180" alt="Infertility treatment" className="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                            {/* Anovulation */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#e47f9f] to-[#7e3f8f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">Anovulation Treatment</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Anovulation occurs when eggs are not released from the ovaries, which is a common cause of infertility. We provide comprehensive diagnosis and treatment for various conditions that can cause anovulation, including PCOS, thyroid disorders, and stress-related factors.
+                                    </p>
+                                    <div className="mb-4">
+                                        <h4 className="font-semibold text-[#7e3f8f] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Thorough hormonal assessment
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Ovulation induction medications
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Lifestyle and dietary guidance
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Monitoring of follicular development
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                        <strong>Average Treatment Duration:</strong> 3-6 months
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Blocked Fallopian Tubes */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#e47f9f] to-[#7e3f8f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">Fallopian Tube Treatment</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Blocked or damaged fallopian tubes prevent eggs from traveling from the ovaries to the uterus and block sperm from reaching the egg. We offer advanced diagnostic testing and treatment options to address tubal blockages and improve fertility potential.
+                                    </p>
+                                    <div className="mb-4">
+                                        <h4 className="font-semibold text-[#7e3f8f] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Hysterosalpingogram (HSG) diagnostics
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Laparoscopic tubal surgery
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Minimally invasive procedures
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Alternative IVF options when needed
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                        <strong>Average Treatment Duration:</strong> Varies by procedure
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Hormonal Problems */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#e47f9f] to-[#7e3f8f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">Hormonal Imbalance Therapy</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Hormonal imbalances can significantly impact fertility in both men and women. Our specialists conduct thorough hormonal assessments and develop personalized treatment plans to restore balance and optimize fertility potential.
+                                    </p>
+                                    <div className="mb-4">
+                                        <h4 className="font-semibold text-[#7e3f8f] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Comprehensive hormone testing
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Tailored hormone replacement therapy
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Treatment for PCOS and thyroid disorders
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Regular monitoring and adjustment
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                        <strong>Average Treatment Duration:</strong> 3-12 months
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Male Factor Infertility */}
+                            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <div className="bg-gradient-to-r from-[#e47f9f] to-[#7e3f8f] p-4 flex items-center">
+                                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">Male Factor Infertility</h3>
+                                </div>
+                                <div className="lg:p-6 p-2">
+                                    <p className="text-gray-600 mb-4">
+                                        Male factor infertility contributes to approximately 40% of infertility cases. We offer comprehensive evaluation of sperm quality, quantity, and function, along with effective treatments to address male fertility challenges.
+                                    </p>
+                                    <div className="mb-4">
+                                        <h4 className="font-semibold text-[#7e3f8f] mb-2">Key Benefits:</h4>
+                                        <ul className="space-y-1">
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Detailed semen analysis
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Treatment for low sperm count and motility
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Surgical sperm retrieval when needed
+                                            </li>
+                                            <li className="flex items-center text-gray-600">
+                                                <span className="text-[#e47f9f] mr-2">✓</span>
+                                                Lifestyle modifications to improve fertility
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                        <strong>Average Treatment Duration:</strong> 2-6 months
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )}

@@ -36,8 +36,9 @@ export default function Header() {
       name: 'About',
       dropdown: true,
       items: [
-        { name: 'About Dr. Monika', link: '/about/dr-monika' },
-        { name: 'About  Sambhawna Clinic', link: '/about/clinic' }
+        { name: 'About  Sambhawna Clinic', link: '/about/clinic' },
+        { name: 'About Dr. Monika Pandey', link: '/about/dr-monika' },
+     
       ]
     },
     // {
@@ -54,7 +55,7 @@ export default function Header() {
     // { name: 'Cases', link: '/cases' },
     { name: 'Gallery', link: '/gallery' },
 
-    { name: 'Contact Us', link: '/contact' },
+    // { name: 'Contact Us', link: '/contact' },
   ];
 
   return (
@@ -66,7 +67,7 @@ export default function Header() {
         <div className="absolute top-0 right-0 w-2/5 h-full bg-pink-300 transform -skew-x-12 origin-top-right"></div>
       </div> */}
 
-      <div className="relative w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full mx-auto px-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to={"/"}>
@@ -75,12 +76,12 @@ export default function Header() {
             <img src={logo} alt="sambhawna_logo" className="w-[4rem] h-[4rem]" />
 
             <div className="flex flex-col ml-2">
-              <span className="text-2xl font-bold text-[#5B2E65]">SAMBHAWNA</span>
+              <span className="text-2xl lg:text-xl font-bold text-[#5B2E65]">SAMBHAWNA</span>
 
               <div className="flex items-center">
-              <div className="w-10 h-[2px] bg-[#E39AB2] mr-1"></div>
-                <span className="text-xl font-semibold text-[#E39AB2] tracking-widest">CLINIC</span>
-                <div className="w-10 h-[2px] bg-[#E39AB2] ml-1"></div>
+              <div className="xl:w-10 w-8 h-[2px] bg-[#E39AB2] mr-1"></div>
+                <span className="text-xl lg:text-xl font-semibold text-[#E39AB2] tracking-widest">CLINIC</span>
+                <div className="xl:w-10 w-8 h-[2px] bg-[#E39AB2] ml-1"></div>
               </div>
             </div>
           </div>
@@ -96,14 +97,15 @@ export default function Header() {
      
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 z-10">
+          <nav className="hidden lg:flex items-center space-x-1 z-10 ">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <div className="flex items-center">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="px-4 py-2 text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
+                      className="px-0 xl:px-4 py-2 text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
+                      style={{ whiteSpace: 'nowrap' }}
                     >
                       {item.name}
                       {activeDropdown === item.name ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />}
@@ -116,6 +118,7 @@ export default function Header() {
                             key={subItem.name}
                             href={subItem.link}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600"
+                            style={{ whiteSpace: 'nowrap' }}
                           >
                             {subItem.name}
                           </a>
@@ -126,7 +129,8 @@ export default function Header() {
                 ) : (
                   <a
                     href={item.link}
-                    className="px-4 py-2 text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200"
+                    className="xl:px-4 px-2 py-2 text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200"
+                    style={{ whiteSpace: 'nowrap' }}
                   >
                     {item.name}
                   </a>

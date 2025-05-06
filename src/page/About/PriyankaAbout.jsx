@@ -18,33 +18,33 @@ export default function AboutDrMonika() {
   return (
     <section>
       <Helmet>
-        <title>Dr. Monika Pandey - General Physician in Lucknow | 30+ Years Experience</title>
+        <title>Dr. Monika Pandey - Specialist in Obstetrics, Gynecology & Infertility | 30+ Years Experience</title>
         <meta
           name="description"
-          content="Dr. Monika Pandey is a compassionate general physician with 30+ years of experience in providing personalized and holistic healthcare in Lucknow. Book an appointment today."
+          content="Dr. Monika Pandey is a compassionate specialist in Obstetrics, Gynecology & Infertility with 30+ years of experience in providing personalized and holistic healthcare. Book an appointment today."
         />
         <meta
           name="keywords"
-          content="Dr. Monika Pandey, General Physician in Lucknow, MBBS Doctor, Experienced Family Doctor, Preventive Healthcare, Holistic Medicine, Chronic Disease Management"
+          content="Dr. Monika Pandey, Obstetrician in Lucknow, Gynecologist, Infertility Specialist, High-Risk Pregnancy, IVF, PCOS Management, Women's Healthcare"
         />
         <meta name="author" content="Dr. Monika Pandey" />
         <link rel="canonical" href="https://yourdomain.com/about-dr-monika-pandey" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Dr. Monika Pandey - Experienced General Physician in Lucknow" />
+        <meta property="og:title" content="Dr. Monika Pandey - Specialist in Obstetrics, Gynecology & Infertility" />
         <meta
           property="og:description"
-          content="With 30 years of experience, Dr. Monika Pandey offers individualized and holistic care as a trusted general physician in Lucknow."
+          content="With 30+ years of experience, Dr. Monika Pandey offers comprehensive care in Obstetrics, Gynecology & Infertility treatments."
         />
         <meta property="og:url" content="https://yourdomain.com/about-dr-monika-pandey" />
         <meta property="og:type" content="profile" />
         <meta property="og:image" content="https://yourdomain.com/images/dr-monika-pandey.jpg" />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="Dr. Monika Pandey - General Physician in Lucknow" />
+        <meta name="twitter:title" content="Dr. Monika Pandey - Obstetrics, Gynecology & Infertility Specialist" />
         <meta
           name="twitter:description"
-          content="MBBS, 30+ years experience. Trusted general physician offering expert, holistic care in Lucknow. Book an appointment now."
+          content="30+ years experience in women's healthcare. Expert in pregnancy care, infertility treatments, and gynecological services. Book now."
         />
         <meta name="twitter:image" content="https://yourdomain.com/images/dr-monika-pandey.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -66,7 +66,7 @@ export default function AboutDrMonika() {
             }}
           />
 
-          <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="container mx-auto px-4 md:px-8 relative ">
             <div className="flex flex-col md:flex-row items-center justify-center">
               <div className="w-48 h-48 bg-white p-1 rounded-full shadow-xl mb-6 md:mb-0 md:mr-8">
                 <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
@@ -84,11 +84,11 @@ export default function AboutDrMonika() {
                   Dr. Monika Pandey
                 </h1>
                 <p className="text-white text-xl opacity-90 mb-4">
-                  Gynecologist
+                  Specialist in Obstetrics, Gynecology & Infertility
                 </p>
-                <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                {/* <div className="flex flex-wrap justify-center md:justify-start gap-3">
                   <span className="bg-white bg-opacity-30 text-[#E48F97] px-4 py-1 rounded-full text-sm">MBBS</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -98,10 +98,13 @@ export default function AboutDrMonika() {
         <div className="container mx-auto px-4 md:px-8 -mt-16 relative z-20">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center" style={{ color: primaryColor }}>
-              Specialized Women's Healthcare
+              <strong>Specialized Women's Healthcare</strong>
             </h2>
             <p className="text-gray-700 mb-6 text-center max-w-4xl mx-auto">
-              A skilled and compassionate gynecologist, Dr. Monika Pandey is committed to providing exceptional women's healthcare at every stage of life. With 30 years of experience in the field, her practice reflects the belief that women's healthcare is deeply personal and needs an individualized approach.
+              <strong>Dr. Monika Pandey</strong> is a highly skilled and compassionate <strong>Obstetrician</strong>, <strong>Gynecologist</strong>, and <strong>Infertility Specialist</strong> committed to providing exceptional care for women at every stage of life. With over <strong>30 years of experience</strong>, she believes in a personalized approach to women’s health, ensuring each patient feels <strong>Heard</strong>, <strong>Understood</strong>, and <strong>Supported</strong>.
+            </p>
+            <p className="text-gray-700 mb-6 text-center max-w-4xl mx-auto">
+              Her areas of expertise include <strong>Pregnancy Care</strong>, <strong>High-Risk Obstetrics</strong>, <strong>Normal and Cesarean Deliveries</strong>, <strong>PCOS Management</strong>, <strong>Infertility Treatments</strong>, <strong>IVF</strong>, <strong>Menstrual Disorders</strong>, <strong>Menopause-Related Issues</strong>, <strong>Family Planning</strong>, and <strong>Cervical Cancer Screening and Vaccination</strong>. <strong>Dr. Pandey</strong> combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
             </p>
 
             <div className="flex justify-center">
@@ -116,6 +119,7 @@ export default function AboutDrMonika() {
           </div>
         </div>
 
+
         {/* Why Choose Section */}
         <div className="container mx-auto px-4 md:px-8 py-16">
           <div className="max-w-5xl mx-auto">
@@ -129,42 +133,92 @@ export default function AboutDrMonika() {
               Why Patients Choose Dr. Monika
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: primaryColor }}>
-                <h3 className="text-xl font-semibold mb-4" style={{ color: primaryColor }}>
-                  Expert Care
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {/* <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: secondaryColor }}>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: secondaryColor }}>
+                  30+ Years of Expertise
                 </h3>
                 <p className="text-gray-700">
-                  With three decades of experience in gynecology, Dr. Monika combines clinical expertise with genuine empathy for her patients. She specializes in women's reproductive health, pregnancy care, and gynecological conditions with a focus on preventive care.
+                  Trusted experience in Obstetrics, Gynecology & Infertility care.
+
+                </p>
+              </div> */}
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: primaryColor }}>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: primaryColor }}>
+                  Compassionate Approach
+                </h3>
+                <p className="text-gray-700">
+                  Known for her kind, empathetic, and patient-centered care.
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: secondaryColor }}>
                 <h3 className="text-xl font-semibold mb-4" style={{ color: secondaryColor }}>
-                  Personal Philosophy
+                  High-Risk Pregnancy Care
                 </h3>
                 <p className="text-gray-700">
-                  Her philosophy of care is simple: to empower women to make informed choices about their health while providing unwavering support. Dr. Monika believes in partnership with patients for better outcomes throughout all stages of womanhood.
-                </p>
-              </div>
+                  Specialized in managing complex and high-risk pregnancy cases.
 
-              <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: secondaryColor }}>
-                <h3 className="text-xl font-semibold mb-4" style={{ color: secondaryColor }}>
-                  Individualized Approach
-                </h3>
-                <p className="text-gray-700">
-                  Dr. Monika believes that every woman has unique healthcare needs. From the first consultation, she takes the time to listen, understand, and create a plan that's tailored to each individual's gynecological health requirements.
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: primaryColor }}>
                 <h3 className="text-xl font-semibold mb-4" style={{ color: primaryColor }}>
-                  Compassionate Care
+                  Advanced Infertility Solutions
                 </h3>
                 <p className="text-gray-700">
-                  She's known for her gentle approach to sensitive women's health issues, advocating for wellness, and taking a comprehensive approach to gynecological healthcare—always focusing on the overall wellbeing of her patients.
+                  Expert in fertility treatments, including IVF, IUI, and hormonal therapy.
                 </p>
               </div>
+
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: secondaryColor }}>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: secondaryColor }}>
+                  Personalized Treatment Plans
+                </h3>
+                <p className="text-gray-700">
+                  Tailored care based on each patient’s unique health needs and goals.
+                </p>
+              </div>
+
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: primaryColor }}>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: primaryColor }}>
+                  Safe Deliveries
+                </h3>
+                <p className="text-gray-700">
+                  Extensive experience in both normal and cesarean section deliveries.
+                </p>
+              </div>
+
+
+
+              {/* <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: secondaryColor }}>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: secondaryColor }}>
+                  Supportive Environment
+
+                </h3>
+                <p className="text-gray-700">
+                  Prioritizes patient privacy, comfort, and emotional well-being.
+                </p>
+              </div> */}
+
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4" style={{ borderColor: primaryColor }}>
+                <h3 className="text-xl font-semibold mb-4" style={{ color: primaryColor }}>
+                  Ethical & Transparent Care
+
+                </h3>
+                <p className="text-gray-700">
+                  Respected for honest guidance and consistently positive outcomes.
+                </p>
+              </div>
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -188,14 +242,14 @@ export default function AboutDrMonika() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { title: "Obstetrics Care", desc: "Comprehensive pregnancy and childbirth care" },
-                  { title: "Gynecological Exams", desc: "Regular check-ups and preventive screenings" },
-                  { title: "Fertility Treatment", desc: "Helping couples achieve pregnancy" },
-                  { title: "Menopause Management", desc: "Support through hormonal transitions" },
-                  { title: "Family Planning", desc: "Contraception and reproductive health counseling" },
-                  { title: "Women's Wellness", desc: "Holistic women's health and wellness" },
-                  { title: "Gynecological Surgery", desc: "Minimally invasive surgical procedures" },
-                  { title: "PCOS Treatment", desc: "Management of polycystic ovary syndrome" }
+                  { title: "Obstetrics Care", desc: "Normal and high-risk pregnancy management" },
+                  { title: "Safe Deliveries", desc: "Expert in normal and cesarean deliveries" },
+                  { title: "Infertility Treatment", desc: "IVF, IUI and advanced fertility solutions" },
+                  { title: "PCOS Management", desc: "Treatment for polycystic ovary syndrome" },
+                  { title: "Menstrual Disorders", desc: "Diagnosis and treatment of menstrual issues" },
+                  { title: "Menopause Care", desc: "Support through hormonal transitions" },
+                  { title: "Family Planning", desc: "Comprehensive contraception counseling" },
+                  { title: "Cancer Screening", desc: "Cervical cancer screening and vaccination" }
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -226,7 +280,7 @@ export default function AboutDrMonika() {
           </div>
         </div>
 
-        {/* Education Section */}
+        {/* Education Section - Keeping the same structure but with false condition as in original code */}
         {false &&
           <div className="container mx-auto px-4 md:px-8 lg:py-16 py-8 md:py-12">
             <div className="max-w-5xl mx-auto">
@@ -300,7 +354,7 @@ export default function AboutDrMonika() {
           </div>
         }
 
-        {/* Contact Section */}
+        {/* Contact Section - commented out as in original code */}
         {/* <div className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4 md:px-8">
           <div className="max-w-5xl mx-auto">
@@ -355,7 +409,7 @@ export default function AboutDrMonika() {
         </div>
       </div> */}
 
-        {/* Footer */}
+        {/* Footer - commented out as in original code */}
         {/* <footer className="bg-black text-white py-6">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <p>&copy; {new Date().getFullYear()} Dr. Monika Pandey Gynecologist. All rights reserved.</p>

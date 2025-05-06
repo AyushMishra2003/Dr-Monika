@@ -49,7 +49,7 @@ const HomeAbout = () => {
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                            <span className="text-[#E47F97]">Sadbhawna Clinic</span> – Expert Mental & Women's Healthcare Under One Roof
+                             Expert Mental & Women's Healthcare Under One Roof
                         </h1>
 
                         <p className="text-gray-600 mb-4 text-justify">

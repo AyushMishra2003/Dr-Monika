@@ -4,6 +4,19 @@ import image from '../../assets/monika.png'
 import image1 from '../../assets/clinic.webp'
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
+import {
+  Calendar,
+  Users,
+  Trophy,
+  Star,
+  CheckIcon,
+  ClipboardCheck,
+  Clock,
+  Mail,
+  Phone,
+  MapPin,
+  Check
+} from 'lucide-react';
 
 
 export default function AboutClinic() {
@@ -13,11 +26,11 @@ export default function AboutClinic() {
   }, []);
 
 
-  const navigate=useNavigate()
+  const navigate = useNavigate()
 
   return (
-    <div className="font-sans">
-      
+    <div >
+
       <BreadCrumbs
         items={[
           { label: 'Home', path: '/' },
@@ -29,91 +42,103 @@ export default function AboutClinic() {
 
       {/* Main Content */}
       <main>
-      <Helmet>
-        <title>Sambhawna Clinic - Women's Health Care in Lucknow | Dr. Monika Pandey</title>
-        <meta
-          name="description"
-          content="Sambhawna Clinic in Lucknow, led by Dr. Monika Pandey, offers expert gynecological and obstetric care with over 15 years of experience. Personalized, compassionate care for every woman."
-        />
-        <meta
-          name="keywords"
-          content="Sambhawna Clinic, Women's Health Care, Gynecologist in Lucknow, Obstetrician, Dr. Monika Pandey, High-Risk Pregnancy, Laparoscopic Surgery, Women's Wellness, Fertility Care, Women's Health Clinic"
-        />
-        <meta name="author" content="Dr. Monika Pandey" />
-        <link rel="canonical" href="https://yourdomain.com/about-clinic" />
-        <meta property="og:title" content="Sambhawna Clinic - Women's Health Care in Lucknow" />
-        <meta
-          property="og:description"
-          content="Dr. Monika Pandey offers compassionate and expert care in gynecology and obstetrics at Sambhawna Clinic, Lucknow. Book your appointment today."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/about-clinic" />
-        <meta property="og:image" content="https://yourdomain.com/images/sambhawna-clinic.jpg" />
-      </Helmet>
+        <Helmet>
+          <title>Sambhawna Clinic - Women's Health Care in Lucknow | Dr. Monika Pandey</title>
+          <meta
+            name="description"
+            content="Sambhawna Clinic in Lucknow, led by Dr. Monika Pandey, offers expert gynecological and obstetric care with over 15 years of experience. Personalized, compassionate care for every woman."
+          />
+          <meta
+            name="keywords"
+            content="Sambhawna Clinic, Women's Health Care, Gynecologist in Lucknow, Obstetrician, Dr. Monika Pandey, High-Risk Pregnancy, Laparoscopic Surgery, Women's Wellness, Fertility Care, Women's Health Clinic"
+          />
+          <meta name="author" content="Dr. Monika Pandey" />
+          <link rel="canonical" href="https://yourdomain.com/about-clinic" />
+          <meta property="og:title" content="Sambhawna Clinic - Women's Health Care in Lucknow" />
+          <meta
+            property="og:description"
+            content="Dr. Monika Pandey offers compassionate and expert care in gynecology and obstetrics at Sambhawna Clinic, Lucknow. Book your appointment today."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://yourdomain.com/about-clinic" />
+          <meta property="og:image" content="https://yourdomain.com/images/sambhawna-clinic.jpg" />
+        </Helmet>
         {/* Hero Section */}
         <section className="py-8 px-4">
-          <div className="container mx-auto">
-            <h2 className="lg:text-3xl md:text-2xl text-xl font-bold mb-4" style={{ color: '#E47F97' }}>About Sambhawna Clinic For Women's Health Care</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className=''>
-                <h1 className="lg:text-4xl text-2xl md:text-3xl font-bold lg:mb-6 mb-2 md:mb-4" style={{ color: '#5B2E67' }}>
-                  Best Obstetrician and Gynecologist in Lucknow
-                </h1>
-                <p className="mb-6 text-gray-700">
-                  Dr. Monika Pandey is a dedicated gynecologist with a passion for providing comprehensive care tailored to women's health. With years of experience, she believes in empowering women through knowledge and personalized treatment plans.
-                </p>
-                <p className="mb-6 text-gray-700">
-                  At our clinic, we prioritize your comfort and health. We offer a range of services from routine check-ups to specialized treatments, ensuring every woman receives the highest standard of care.
-                </p>
+          <main className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center">
+              {/* Left side with images */}
+              <div className="w-full lg:w-1/2 relative mb-8 lg:mb-0">
+                {/* Main image */}
+                <div className="relative">
+                  <img
+                    src={image1}
+                    alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
+                    className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
+                  />
+                </div>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <svg className="w-5 h-5" style={{ color: '#E47F97' }} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="ml-2 text-gray-700">Personalized care plans</p>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <svg className="w-5 h-5" style={{ color: '#E47F97' }} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="ml-2 text-gray-700">Experienced medical staff</p>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <svg className="w-5 h-5" style={{ color: '#E47F97' }} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="ml-2 text-gray-700">State-of-the-art equipment</p>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mt-1">
-                      <svg className="w-5 h-5" style={{ color: '#E47F97' }} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="ml-2 text-gray-700">Comfortable clinic environment</p>
-                  </div>
+                {/* Decorative stars */}
+                <div className="absolute top-1/4 left-0 transform -translate-x-1/2 text-pink-200 text-4xl">
+                  ✦
+                </div>
+                <div className="absolute bottom-1/4 left-1/4 text-pink-200 text-4xl">
+                  ✦
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="col-span-2">
-                  <div className="bg-gray-100 lg:p-4 rounded-lg">
-                    <img src={image1} alt="Clinic Sign" className="w-full h-auto rounded" />
+              {/* Right side with text content */}
+              <div className="w-full lg:w-1/2 lg:pl-12">
+                <div className="text-[#E47F97] font-medium flex items-center mb-2">
+                  <span className="mr-2">+</span>
+                  <span>ABOUT SADBHAWNA CLINIC</span>
+                </div>
+
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+                  Expert Mental & Women's Healthcare Under One Roof
+                </h1>
+
+                <p className="text-gray-600 mb-4 text-justify">
+                  <strong>Sadbhawna Clinic</strong> is a trusted healthcare center specializing in Psychiatry and Gynecology,
+                  offering compassionate care for Mental Wellness and Women's Health. From Stress, Anxiety, and Mood Disorders
+                  to Menstrual Issues, Fertility, and Pregnancy Care — we provide personalized, confidential, and holistic
+                  treatment for every stage of life.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Expert treatment for anxiety, depression & mood disorders</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Comprehensive women’s health services</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Personalized fertility & pregnancy care</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Safe and supportive environment for all ages</span>
                   </div>
                 </div>
-               
               </div>
 
 
             </div>
-          </div>
+          </main>
         </section>
 
         {/* Statistics Section */}
@@ -121,7 +146,7 @@ export default function AboutClinic() {
           <div className="container mx-auto lg:px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">2000+</div>
                 <div className="text-white font-semibold">HAPPY PATIENTS</div>
               </div>
               <div className="p-4">
@@ -129,11 +154,11 @@ export default function AboutClinic() {
                 <div className="text-white font-semibold">YEARS EXPERIENCE</div>
               </div>
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">2500+</div>
                 <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
               </div>
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">7000+</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">1500+</div>
                 <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
               </div>
             </div>
@@ -141,157 +166,331 @@ export default function AboutClinic() {
         </section>
 
         {/* Vision and Mission */}
-        <section className="lg:py-16 py-6 md:py-10 px-4">
-          <div className="container mx-auto">
-            <h2 className="lg:text-4xl text-2xl md:text-3xl font-bold lg:mb-10 mb-6 md:mb-8 text-center" style={{ color: '#5B2E67' }}>
-              Our Vision and Mission for the Future: To Serve with Integrity and Compassion
-            </h2>
 
-            <div className="flex flex-wrap justify-center lg:mb-10 mb-6 md:mb-8">
-              <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>ABOUT</button>
-              <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: '#E47F97', color: 'white' }}>Why Choose Us</button>
-              <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>MISSION</button>
-              <button className="m-2 px-8 py-3 rounded-md transition" style={{ backgroundColor: hexToRgba('#E47F97', 0.2), color: '#5B2E67' }}>Approach</button>
-            </div>
+        <div className="container mx-auto px-4 py-12">
+          {/* Hero Section with Image */}
 
-            {/* Why Choose Us Section */}
-            <div className="bg-white lg:p-8 p-4 rounded-lg shadow-sm border border-gray-100 mb-12">
-              <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Why Choose Us</h3>
 
-              <p className="mb-8 text-gray-700">
-                At Astitva Clinic, we combine medical excellence with a deeply compassionate approach to women's healthcare. Our commitment to your wellbeing sets us apart.
-              </p>
+          {/* Navigation Tabs */}
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
-                  <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Expert Medical Team</h4>
-                  <p className="text-gray-700">Led by Dr. Monika Pandey, our team consists of highly qualified professionals dedicated to providing the best care possible for women.</p>
-                </div>
 
-                <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
-                  <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Patient-Centered Approach</h4>
-                  <p className="text-gray-700">We take time to listen to your concerns, answer questions, and develop personalized treatment plans tailored to your specific needs.</p>
-                </div>
 
-                <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
-                  <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Advanced Technology</h4>
-                  <p className="text-gray-700">Our clinic is equipped with state-of-the-art medical technology that ensures accurate diagnosis and effective treatments.</p>
-                </div>
 
-                <div className="p-4 rounded-lg border border-gray-100" style={{ borderLeft: `4px solid #E47F97` }}>
-                  <h4 className="text-xl font-semibold mb-2" style={{ color: '#5B2E67' }}>Comprehensive Care</h4>
-                  <p className="text-gray-700">From routine check-ups to complex procedures, we offer a wide range of services to address all aspects of women's health.</p>
-                </div>
+
+
+
+          {/* Approach Tab Content */}
+          {true && (
+            <div>
+              <div className="text-center mb-10">
+                <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Our Care Approach</h2>
+                <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
+                  Our approach to women's healthcare combines medical expertise with compassionate support,
+                  focusing on personalized care plans that address individual needs and concerns.
+                </p>
               </div>
-            </div>
 
-            {/* Mission Section */}
-            <div className="bg-white lg:p-8 p-4 rounded-lg shadow-sm border border-gray-100 mb-12">
-              <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Our Mission</h3>
-
-              <p className="mb-6 text-gray-700">
-                Our mission is to empower women through comprehensive healthcare, education, and support. We strive to:
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
+              {/* Philosophy Section */}
+              <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/2 bg-gradient-to-br from-[#7e3f8f] to-[#e47f9f] lg:p-8 p-4 text-white">
+                    <h3 className="text-2xl font-bold mb-4">Our Philosophy of Care</h3>
+                    <p className="mb-4">
+                      We believe that women deserve healthcare that recognizes their unique needs throughout all stages of life. Our practice is built on the understanding that optimal health requires a personalized approach that considers physical, emotional, and social wellbeing.
+                    </p>
+                    <p className="mb-4">
+                      We strive to create a supportive environment where women feel comfortable discussing sensitive health issues and actively participating in decisions about their care. Our team is committed to providing evidence-based treatments while respecting individual preferences and cultural backgrounds.
+                    </p>
+                    <p>
+                      From adolescence through menopause and beyond, we are dedicated to helping women maintain reproductive health and overall wellness through comprehensive and compassionate care.
+                    </p>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1" style={{ color: '#5B2E67' }}>Provide Excellence in Healthcare</h4>
-                    <p className="text-gray-700">Deliver the highest quality medical care with integrity, expertise, and compassion.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1" style={{ color: '#5B2E67' }}>Educate and Empower</h4>
-                    <p className="text-gray-700">Equip women with knowledge and resources to make informed decisions about their health.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1" style={{ color: '#5B2E67' }}>Create a Supportive Environment</h4>
-                    <p className="text-gray-700">Ensure every woman feels respected, heard, and supported throughout her healthcare journey.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 p-2 rounded-full mr-4" style={{ backgroundColor: '#E47F97' }}>
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1" style={{ color: '#5B2E67' }}>Advance Women's Healthcare</h4>
-                    <p className="text-gray-700">Stay at the forefront of medical advancements to provide innovative and effective treatments.</p>
+                  <div className="md:w-1/2">
+                    <img src="https://assets-global.website-files.com/5ede763fa68713434223e0bc/5f584e20dc51eb99d0b7c1fe_During-Pregnancy-003.jpg" alt="Women's healthcare philosophy" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-2 md:p-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#7e3f8f] mb-6 flex items-center">
+                      <ClipboardCheck className="w-6 h-6 mr-2 text-[#e47f9f]" />
+                      Treatment Process
+                    </h3>
+
+                    <div className="space-y-6">
+                      <div className="flex">
+                        <div className="mr-4">
+                          <div className="w-10 h-10 rounded-full bg-[#7e3f8f] text-white flex items-center justify-center font-bold">1</div>
+                          <div className="h-full w-0.5 bg-[#e47f9f] mx-auto mt-2 mb-2"></div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[#7e3f8f]">Initial Consultation</h4>
+                          <p className="text-gray-600 mt-1">
+                            Comprehensive assessment of your health history, concerns, and goals to understand your unique needs.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex">
+                        <div className="mr-4">
+                          <div className="w-10 h-10 rounded-full bg-[#7e3f8f] text-white flex items-center justify-center font-bold">2</div>
+                          <div className="h-full w-0.5 bg-[#e47f9f] mx-auto mt-2 mb-2"></div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[#7e3f8f]">Diagnostic Evaluation</h4>
+                          <p className="text-gray-600 mt-1">
+                            Thorough examination and necessary testing to accurately diagnose conditions and identify appropriate treatment options.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex">
+                        <div className="mr-4">
+                          <div className="w-10 h-10 rounded-full bg-[#7e3f8f] text-white flex items-center justify-center font-bold">3</div>
+                          <div className="h-full w-0.5 bg-[#e47f9f] mx-auto mt-2 mb-2"></div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[#7e3f8f]">Personalized Treatment Plan</h4>
+                          <p className="text-gray-600 mt-1">
+                            Development of a tailored care plan that addresses your specific condition and aligns with your preferences and goals.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex">
+                        <div className="mr-4">
+                          <div className="w-10 h-10 rounded-full bg-[#7e3f8f] text-white flex items-center justify-center font-bold">4</div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[#7e3f8f]">Ongoing Care & Follow-up</h4>
+                          <p className="text-gray-600 mt-1">
+                            Regular follow-up appointments to monitor progress, make necessary adjustments to your treatment plan, and address any new concerns.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-bold text-[#7e3f8f] mb-6 flex items-center">
+                      <Star className="w-6 h-6 mr-2 text-[#e47f9f]" />
+                      Our Core Principles
+                    </h3>
+
+                    <div className="bg-purple-50 p-6 rounded-xl">
+                      <ul className="space-y-4">
+                        <li className="flex">
+                          <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
+                            <CheckIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-[#7e3f8f]">Compassionate Care</h4>
+                            <p className="text-gray-600 mt-1">
+                              Treating each woman with empathy, dignity, and respect throughout her healthcare journey.
+                            </p>
+                          </div>
+                        </li>
+
+                        <li className="flex">
+                          <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
+                            <CheckIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-[#7e3f8f]">Evidence-Based Medicine</h4>
+                            <p className="text-gray-600 mt-1">
+                              Providing treatments and recommendations based on the latest research and clinical guidelines.
+                            </p>
+                          </div>
+                        </li>
+
+                        <li className="flex">
+                          <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
+                            <CheckIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-[#7e3f8f]">Patient Education</h4>
+                            <p className="text-gray-600 mt-1">
+                              Empowering women with knowledge about their bodies and health conditions to make informed decisions.
+                            </p>
+                          </div>
+                        </li>
+
+                        <li className="flex">
+                          <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
+                            <CheckIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-[#7e3f8f]">Preventive Focus</h4>
+                            <p className="text-gray-600 mt-1">
+                              Emphasizing preventive care and early intervention to maintain optimal health and prevent complications.
+                            </p>
+                          </div>
+                        </li>
+
+                        <li className="flex">
+                          <div className="w-8 h-8 rounded-full bg-[#e47f9f] text-white flex items-center justify-center mr-3 flex-shrink-0">
+                            <CheckIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-[#7e3f8f]">Collaborative Approach</h4>
+                            <p className="text-gray-600 mt-1">
+                              Working together with patients and other healthcare providers to ensure comprehensive and coordinated care.
+                            </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Patient Experience Section */}
+              <div className="p-4 max-w-7xl mx-auto">
+                <h3 className="text-2xl font-bold text-[#5b2e67] mb-8 text-center">
+                  What to Expect as a Patient
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {/* Card 1 */}
+                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div className="bg-[#5b2e67] p-4 flex justify-center">
+                      <div className="w-16 h-16 rounded-full bg-white text-[#5b2e67] flex items-center justify-center">
+                        <Calendar className="w-8 h-8" />
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
+                        Initial Consultation
+                      </h4>
+                      <p className="text-gray-700 text-center">
+                        Your first appointment will focus on understanding your concerns, history, and treatment goals. We'll begin to develop a personalized care plan together.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div className="bg-[#e47f9f] p-4 flex justify-center">
+                      <div className="w-16 h-16 rounded-full bg-white text-[#e47f9f] flex items-center justify-center">
+                        <Users className="w-8 h-8" />
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
+                        Ongoing Care
+                      </h4>
+                      <p className="text-gray-700 text-center">
+                        Regular sessions with your treatment team will help monitor progress, adjust treatment as needed, and provide ongoing support through your recovery journey.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex justify-center">
+                      <div className="w-16 h-16 rounded-full bg-white text-[#5b2e67] flex items-center justify-center">
+                        <Trophy className="w-8 h-8" />
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="font-bold text-lg text-[#5b2e67] mb-3 text-center">
+                        Long-Term Support
+                      </h4>
+                      <p className="text-gray-700 text-center">
+                        As you progress, we'll help you transition to maintenance care, develop relapse prevention strategies, and provide resources for continued wellbeing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          )}
 
-            {/* Approach Section */}
-            <div className="bg-white lg:p-8 p-4 rounded-lg shadow-sm border border-gray-100">
-              <h3 className="text-3xl font-bold mb-6" style={{ color: '#E47F97' }}>Our Approach</h3>
+          {/* Contact Information */}
+          <div className="max-w-6xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
+            <div className="relative">
+              {/* Decorative header bar */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#5B2E67] via-[#E47F9F] to-[#5B2E67]"></div>
 
-              <p className="mb-8 text-gray-700">
-                We prioritize a patient-centered approach in gynecological care, integrating cutting-edge medical advancements with compassionate service.
-              </p>
+              {/* Decorative circles */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-[#E47F9F] opacity-20"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-[#5B2E67] opacity-20"></div>
 
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#E47F97' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="ml-4 text-gray-700">Comprehensive Gynecological Services for all stages of life.</p>
+              <div className="p-8">
+                {/* Header */}
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#5B2E67] to-[#E47F9F]">
+                    Get in Touch With Us
+                  </h3>
+                  <div className="mt-2 h-1 w-24 mx-auto bg-gradient-to-r from-[#5B2E67] to-[#E47F9F] rounded-full"></div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#5B2E67' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
+                {/* Contact Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Phone Card */}
+                  <div className="bg-white p-5 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-1 border-l-4 border-[#E47F9F]">
+                    <div className="flex items-start">
+                      <div className="p-3 bg-pink-50 rounded-lg">
+                        <Phone className="text-[#E47F9F]" size={24} />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-semibold text-gray-800 mb-1">Call Us</h4>
+                        <a href="tel:9838346118" className="text-gray-600 mb-1 block hover:text-[#E47F9F] transition-colors">
+                          9838346118
+                        </a>
+                        <a href="tel:9277163686" className="text-gray-600 block hover:text-[#E47F9F] transition-colors">
+                          9277163686
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <p className="ml-4 text-gray-700">Education and Empowerment to help women make informed health decisions.</p>
+
+                  {/* Email Card */}
+                  <div className="bg-white p-5 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-1 border-l-4 border-[#5B2E67]">
+                    <div className="flex items-start">
+                      <div className="p-3 bg-purple-50 rounded-lg">
+                        <Mail className="text-[#5B2E67]" size={24} />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
+                        <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
+                          monikapandey185@gmail.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hours Card */}
+                  <div className="bg-white p-5 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:translate-y-1 border-l-4 border-[#E47F9F]">
+                    <div className="flex items-start">
+                      <div className="p-3 bg-pink-50 rounded-lg">
+                        <Clock className="text-[#E47F9F]" size={24} />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-semibold text-gray-800 mb-1">Hours</h4>
+                        <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 PM</p>
+                        <p className="text-gray-600 mb-1">Evening: 00:06 PM - 06:30 PM</p>
+                        <p className="text-gray-500 text-sm">(Monday - Sunday)</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#E47F97' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                    </svg>
-                  </div>
-                  <p className="ml-4 text-gray-700">Seamless Care Coordination for a smooth healthcare experience.</p>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 p-2 rounded-md text-white" style={{ backgroundColor: '#5B2E67' }}>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="ml-4 text-gray-700">Holistic approach addressing physical, emotional, and mental well-being.</p>
+                {/* Appointment Button */}
+                <div className="mt-8 text-center">
+                  <button onClick={() => navigate("/appoitment")} className="px-6 py-3 bg-gradient-to-r from-[#5B2E67] to-[#E47F9F] text-white font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    Book an Appointment
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+
+
+        </div>
+
 
         {/* Doctor Profile */}
         {/* <section className="py-16 px-4 bg-gray-50">
