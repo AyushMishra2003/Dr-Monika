@@ -126,8 +126,8 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      Indira Nagar,   <br />
-                      Lucknow, Uttar Pradesh 226016
+                      H-No 2, Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park, <br/> Lucknow, Uttar Pradesh 226016
+                 
                     </a>
                   </div>
                 </div>
@@ -192,10 +192,10 @@ const Contact = () => {
                   <div>
                     <h2 className="text-[#E47F9F] text-[1.3rem] sora-600">Mail for Information</h2>
                     <a
-                      href="mailto:monikapandey185"
+                      href="mailto:sadbhawnaclinic98@gmail.com"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      monikapandey185@gmail.com
+                      sadbhawnaclinic98@gmail.com
                     </a>
                   </div>
                 </div>

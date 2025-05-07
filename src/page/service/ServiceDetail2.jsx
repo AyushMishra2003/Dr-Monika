@@ -15,6 +15,9 @@ import BreadCrumbs from '../../component/Breadcums';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import img1 from '../../assets/Gynecology.jpg';
+import img2 from '../../assets/inf.jpg';
+
 // Placeholder BreadCrumbs component
 
 
@@ -24,7 +27,7 @@ export default function GynecologyObstetricsServices() {
 
     const obstetricServices = [
         {
-            title: "Regular Health Check-ups of Pregnant Women",
+            title: "Regular Health Check-ups of Pregnant Women and Vaccination",
             longDescription: "Comprehensive prenatal care including regular monitoring, ultrasounds, and necessary vaccinations to ensure healthy pregnancy progression and early detection of potential complications.",
             symptoms: [
                 "Routine prenatal checkups",
@@ -48,7 +51,7 @@ export default function GynecologyObstetricsServices() {
             icon: <ClipboardCheck className="w-6 h-6 text-white" />
         },
         {
-            title: "Normal Delivery and Caesarean Section",
+            title: "Normal Delivery and Caesarean  Section",
             longDescription: "Expert care for both vaginal deliveries and C-sections when medically necessary, with comprehensive pre and post-delivery support to ensure the health and safety of both mother and baby.",
             symptoms: [
                 "Labor and delivery management",
@@ -75,7 +78,7 @@ export default function GynecologyObstetricsServices() {
 
     const gynecologyServices = [
         {
-            title: "Irregular Periods Management",
+            title: "Irregular Periods",
             longDescription: "Diagnosis and treatment of menstrual irregularities, including amenorrhea, oligomenorrhea, and polymenorrhea, addressing underlying hormonal imbalances and other causes.",
             benefits: [
                 "Hormonal balance restoration",
@@ -88,7 +91,7 @@ export default function GynecologyObstetricsServices() {
             icon: <Calendar className="w-6 h-6 text-white" />
         },
         {
-            title: "Family Planning Services",
+            title: "Family Planning Services-Injection,Pills,IUCD",
             longDescription: "Comprehensive contraceptive counseling and options including injections, pills, IUDs, and long-term methods, tailored to individual needs, lifestyle and future family planning goals.",
             benefits: [
                 "Personalized contraceptive solutions",
@@ -114,20 +117,35 @@ export default function GynecologyObstetricsServices() {
             icon: <ClipboardCheck className="w-6 h-6 text-white" />
         },
         {
-            title: "PCOS & Endometriosis Treatment",
-            longDescription: "Diagnosis and management of polycystic ovary syndrome, endometriosis, uterine fibroids, and other gynecological conditions with customized treatment plans addressing symptoms and long-term health.",
+            title: "PCOS, Endometriosis & Early Cessation of Periods",
+            longDescription:
+                "Comprehensive diagnosis and treatment of PCOS, endometriosis, and early cessation of periods. Personalized care plans to manage hormonal imbalances, relieve symptoms, and support reproductive health.",
             benefits: [
-                "Reduced pain and discomfort",
+                "Relief from pelvic pain and irregular periods",
                 "Hormonal balance restoration",
-                "Improved fertility outcomes",
-                "Management of unwanted symptoms",
-                "Comprehensive care for chronic conditions"
+                "Improved reproductive outcomes",
+                "Customized long-term management plans",
+                "Support for menstrual health"
             ],
             duration: "45-60 minutes",
             icon: <Star className="w-6 h-6 text-white" />
         },
         {
-            title: "Menopause Management",
+            title: "Fibroids & Ovarian Tumor Treatment",
+            longDescription:
+                "Effective management of uterine fibroids and ovarian tumors through early diagnosis and tailored treatment options, ensuring symptom relief and better quality of life.",
+            benefits: [
+                "Reduced pelvic discomfort and bloating",
+                "Minimally invasive treatment options",
+                "Preservation of reproductive organs",
+                "Prevention of tumor progression",
+                "Regular follow-up and care"
+            ],
+            duration: "45-60 minutes",
+            icon: <Star className="w-6 h-6 text-white" />
+        },
+        {
+            title: "Menopause Related Problems",
             longDescription: "Comprehensive care for symptoms associated with perimenopause and menopause, including hot flashes, mood changes, sleep disturbances, and hormone replacement therapy when appropriate.",
             benefits: [
                 "Reduced menopausal symptoms",
@@ -225,7 +243,7 @@ export default function GynecologyObstetricsServices() {
 
                     <button
                         onClick={() => setActiveTab('gynecology')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'gynecology'
+                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'gynecology'
                             ? 'bg-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
@@ -233,7 +251,7 @@ export default function GynecologyObstetricsServices() {
                     </button>
                     <button
                         onClick={() => setActiveTab('obstetrics')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'obstetrics'
+                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'obstetrics'
                             ? 'bg-[#7e3f8f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
@@ -241,7 +259,7 @@ export default function GynecologyObstetricsServices() {
                     </button>
                     <button
                         onClick={() => setActiveTab('infertility')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'infertility'
+                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'infertility'
                             ? 'bg-gradient-to-r from-[#7e3f8f] to-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
@@ -339,7 +357,7 @@ export default function GynecologyObstetricsServices() {
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="https://assets-global.website-files.com/5ede763fa68713434223e0bc/5f584e20dc51eb99d0b7c1fe_During-Pregnancy-003.jpg" alt="Gynecological care" className="w-full h-full object-cover" />
+                                    <img src={img1} alt="Gynecological care" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -366,9 +384,9 @@ export default function GynecologyObstetricsServices() {
                                                 ))}
                                             </ul>
                                         </div>
-                                        <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                        {/* <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
                                             <strong>Average Consultation:</strong> {service.duration}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             ))}
@@ -392,7 +410,7 @@ export default function GynecologyObstetricsServices() {
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex flex-row-reverse">
                                 <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#7e3f8f] lg:p-8 p-4 text-white">
-                                    <h3 className="text-2xl font-bold mb-4">Comprehensive Fertility Solutions</h3>
+                                    <h3 className="text-2xl font-bold mb-4">Infertility Treatment</h3>
                                     <p className="mb-4">
                                         Our fertility specialists understand the emotional and physical challenges of infertility. We offer personalized treatment plans tailored to address the unique factors affecting each couple's fertility journey.
                                     </p>
@@ -404,7 +422,7 @@ export default function GynecologyObstetricsServices() {
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="https://tse3.mm.bing.net/th?id=OIP.NiUnw_CvMjCv2vGnufRclQHaEK&pid=Api&P=0&h=180" alt="Infertility treatment" className="w-full h-full object-cover" />
+                                    <img src={img2} alt="Infertility treatment" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -418,7 +436,7 @@ export default function GynecologyObstetricsServices() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-xl font-bold text-white">Anovulation Treatment</h3>
+                                    <h3 className="text-xl font-bold text-white">Anovulation </h3>
                                 </div>
                                 <div className="lg:p-6 p-2">
                                     <p className="text-gray-600 mb-4">
@@ -445,9 +463,9 @@ export default function GynecologyObstetricsServices() {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                    {/* <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
                                         <strong>Average Treatment Duration:</strong> 3-6 months
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
@@ -459,7 +477,7 @@ export default function GynecologyObstetricsServices() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-xl font-bold text-white">Fallopian Tube Treatment</h3>
+                                    <h3 className="text-xl font-bold text-white">Blocked Fallopian Tubes</h3>
                                 </div>
                                 <div className="lg:p-6 p-2">
                                     <p className="text-gray-600 mb-4">
@@ -486,9 +504,9 @@ export default function GynecologyObstetricsServices() {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                    {/* <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
                                         <strong>Average Treatment Duration:</strong> Varies by procedure
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
@@ -500,7 +518,7 @@ export default function GynecologyObstetricsServices() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                                         </svg>
                                     </div>
-                                    <h3 className="text-xl font-bold text-white">Hormonal Imbalance Therapy</h3>
+                                    <h3 className="text-xl font-bold text-white">Hormonal   Problem</h3>
                                 </div>
                                 <div className="lg:p-6 p-2">
                                     <p className="text-gray-600 mb-4">
@@ -527,9 +545,9 @@ export default function GynecologyObstetricsServices() {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                    {/* <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
                                         <strong>Average Treatment Duration:</strong> 3-12 months
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
@@ -568,9 +586,9 @@ export default function GynecologyObstetricsServices() {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                    {/* <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
                                         <strong>Average Treatment Duration:</strong> 2-6 months
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -807,7 +825,7 @@ export default function GynecologyObstetricsServices() {
                 )}
 
                 {/* Contact Information */}
-                <div className="max-w-6xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
+                <div className="max-w-7xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
                     <div className="relative">
                         {/* Decorative header bar */}
                         <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#5B2E67] via-[#E47F9F] to-[#5B2E67]"></div>
@@ -836,10 +854,10 @@ export default function GynecologyObstetricsServices() {
                                         <div className="ml-4">
                                             <h4 className="font-semibold text-gray-800 mb-1">Call Us</h4>
                                             <a href="tel:9838346118" className="text-gray-600 mb-1 block hover:text-[#E47F9F] transition-colors">
-                                                9838346118
+                                                +91 9838346118
                                             </a>
                                             <a href="tel:9277163686" className="text-gray-600 block hover:text-[#E47F9F] transition-colors">
-                                                9277163686
+                                                +91 9277163686
                                             </a>
                                         </div>
                                     </div>
@@ -854,7 +872,7 @@ export default function GynecologyObstetricsServices() {
                                         <div className="ml-4">
                                             <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
                                             <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
-                                                monikapandey185@gmail.com
+                                                sadbhawnaclinic98@gmail.com
                                             </a>
                                         </div>
                                     </div>
@@ -866,11 +884,16 @@ export default function GynecologyObstetricsServices() {
                                         <div className="p-3 bg-pink-50 rounded-lg">
                                             <Clock className="text-[#E47F9F]" size={24} />
                                         </div>
+                                        {/* Opening Hours
+                                        Monday-Sunday
+                                        Mor :- 10AM-1:30PM
+                                        Eve :- 6PM - 8:30PM */}
                                         <div className="ml-4">
-                                            <h4 className="font-semibold text-gray-800 mb-1">Hours</h4>
-                                            <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 PM</p>
-                                            <p className="text-gray-600 mb-1">Evening: 00:06 PM - 06:30 PM</p>
+                                            <h4 className="font-semibold text-gray-800 mb-1">Opening Hours</h4>
                                             <p className="text-gray-500 text-sm">(Monday - Sunday)</p>
+                                            <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 AM</p>
+                                            <p className="text-gray-600 mb-1">Evening: 06:00 PM - 08:30 PM</p>
+                                  
                                         </div>
                                     </div>
                                 </div>

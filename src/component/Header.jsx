@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronUp, Calendar, Microscope, Heart } from 'lucide-react';
-import logo from '../assets/logo1.jpg'
+import logo from '../assets/logo.png'
 import logo1 from '../assets/logo.jpg'
 import { Link } from 'react-router-dom';
 
@@ -49,11 +49,12 @@ export default function Header() {
     //     { name: 'Gynecology', link: '/services/gynecology' }
     //   ]
     // },
-    {name:"Psychiatric Service" , link :'/services/physiotherapy'},
     {name:"Gynecology Service" , link :'/services/gynecology'},
+    {name:"Psychiatric Service" , link :'/services/physiotherapy'},
+
     // { name: 'Blogs', link: '/blogs' },
     // { name: 'Cases', link: '/cases' },
-    { name: 'Gallery', link: '/gallery' },
+    { name: 'Cases', link: '/gallery' },
 
     { name: 'Contact Us', link: '/contact' },
   ];
@@ -73,8 +74,8 @@ export default function Header() {
           <Link to={"/"}>
     
           <div className="flex items-center z-10">
-            <img src={logo} alt="sambhawna_logo" className="w-[4rem] h-[4rem]" />
-
+            <img src={logo} alt="sambhawna_logo" className="w-auto h-16" />
+{/* 
             <div className="flex flex-col ml-2">
               <span className="text-2xl lg:text-xl font-bold text-[#5B2E65]">SAMBHAWNA</span>
 
@@ -83,7 +84,7 @@ export default function Header() {
                 <span className="text-xl lg:text-xl font-semibold text-[#E39AB2] tracking-widest">CLINIC</span>
                 <div className="xl:w-10 w-8 h-[2px] bg-[#E39AB2] ml-1"></div>
               </div>
-            </div>
+            </div> */}
           </div>
 
 

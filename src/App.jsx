@@ -20,6 +20,7 @@ import NotFound from './component/NotFound'
 import Pratice from './page/pratice/Pratice'
 import AppointmentBooking from './page/Checkout/Appoitment'
 import BookHomeCollection from './page/Checkout/BookHomeCollection'
+import TopHeader from './component/TopHeader'
 
 
 
@@ -27,6 +28,7 @@ import BookHomeCollection from './page/Checkout/BookHomeCollection'
 const App = () => {
   return (
     <div >
+      <TopHeader/>
       <Header/>
          <Routes>
           <Route  path='/'  element={<Home/>}/>

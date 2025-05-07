@@ -79,32 +79,36 @@ export default function AboutDrMonika() {
                 </div>
               </div>
 
-              <div className="text-center md:text-left">
+              <div className="md:text-center text-justify md:max-w-1/2 ">
                 <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">
                   Dr. Monika Pandey
                 </h1>
-                <p className="text-white text-xl opacity-90 mb-4">
+                <p className="text-white text-xl opacity-90 mb-2">
                   Specialist in Obstetrics, Gynecology & Infertility
                 </p>
-                {/* <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                  <span className="bg-white bg-opacity-30 text-[#E48F97] px-4 py-1 rounded-full text-sm">MBBS</span>
-                </div> */}
+                <p className="text-white text-md opacity-90 mb-2">
+                  MBBS (Agra University), Medical Registration(40837), DGO (Calcutta), CIMP(Credentialed Indian Menopause Practitioner)
+                </p>
+                <p className="text-white text-md opacity-80 mb-4">
+                  Formerly at Hindu Rao Hospital New Delhi & CMO- SVK, Telco Lucknow
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Introduction Card */}
-        <div className="container mx-auto px-4 md:px-8 -mt-16 relative z-20">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+        <div className="max-w-full px-2 mx-auto  -mt-16 relative z-20">
+          <div className="bg-white rounded-2xl shadow-lg p-4 md:p-10 ">
             <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center" style={{ color: primaryColor }}>
               <strong>Specialized Women's Healthcare</strong>
+              <strong></strong>
             </h2>
-            <p className="text-gray-700 mb-6 text-center max-w-4xl mx-auto">
-              <strong>Dr. Monika Pandey</strong> is a highly skilled and compassionate <strong>Obstetrician</strong>, <strong>Gynecologist</strong>, and <strong>Infertility Specialist</strong> committed to providing exceptional care for women at every stage of life. With over <strong>30 years of experience</strong>, she believes in a personalized approach to women’s health, ensuring each patient feels <strong>Heard</strong>, <strong>Understood</strong>, and <strong>Supported</strong>.
+            <p className="text-gray-700 mb-6 lg:text-center text-justify md:max-w-4xl mx-auto">
+              <strong>Dr. Monika Pandey</strong> is a highly skilled and compassionate <strong>Obstetrician</strong>, <strong>Gynecologist</strong>, and <strong>CIMP (Credentialed Indian Menopause Practitioner)</strong> committed to providing exceptional care for women at every stage of life. With over <strong>30+ years of experience</strong>, she believes in a personalized approach to women’s health, ensuring each patient feels <strong>Heard</strong>, <strong>Understood</strong>, and <strong>Supported</strong>.
             </p>
-            <p className="text-gray-700 mb-6 text-center max-w-4xl mx-auto">
-              Her areas of expertise include <strong>Pregnancy Care</strong>, <strong>High-Risk Obstetrics</strong>, <strong>Normal and Cesarean Deliveries</strong>, <strong>PCOS Management</strong>, <strong>Infertility Treatments</strong>, <strong>IVF</strong>, <strong>Menstrual Disorders</strong>, <strong>Menopause-Related Issues</strong>, <strong>Family Planning</strong>, and <strong>Cervical Cancer Screening and Vaccination</strong>. <strong>Dr. Pandey</strong> combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
+            <p className="text-gray-700 mb-6 lg:text-center text-justify md:max-w-4xl mx-auto">
+              Her areas of expertise include <strong>Pregnancy Care</strong>, <strong>High-Risk Pregnancies</strong>, <strong>Normal and Cesarean Deliveries</strong>, <strong>PCOS & Endometriosis</strong>, <strong>Infertility Treatment</strong>, <strong>Irregular Periods</strong>, <strong>Menstrual Disorders</strong>, <strong>Menopause-Related Issues</strong>, <strong>Regular Health Check-ups of Pregnant Women</strong>, <strong>Hormonal Imbalance</strong>, <strong>Safe Termination of Pregnancy</strong>, <strong>Family Planning</strong>, and <strong>Cervical Cancer Screening and Vaccination</strong>. <strong>Dr. Monika Pandey</strong> combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
             </p>
 
             <div className="flex justify-center">
@@ -242,14 +246,14 @@ export default function AboutDrMonika() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { title: "Obstetrics Care", desc: "Normal and high-risk pregnancy management" },
-                  { title: "Safe Deliveries", desc: "Expert in normal and cesarean deliveries" },
-                  { title: "Infertility Treatment", desc: "IVF, IUI and advanced fertility solutions" },
-                  { title: "PCOS Management", desc: "Treatment for polycystic ovary syndrome" },
-                  { title: "Menstrual Disorders", desc: "Diagnosis and treatment of menstrual issues" },
-                  { title: "Menopause Care", desc: "Support through hormonal transitions" },
-                  { title: "Family Planning", desc: "Comprehensive contraception counseling" },
-                  { title: "Cancer Screening", desc: "Cervical cancer screening and vaccination" }
+                  { title: "High-Risk Pregnancy", desc: "Early detection ensures better management and optimal outcomes for both mother and baby." },
+                  { title: "PCOS Management", desc: "Comprehensive lifetime management, including medications and psychological support." },
+                  { title: "Infertility", desc: "Comprehensive management of both female and male-related issues." },
+                  { title: "Family Planning", desc: "Family planning services to prevent unplanned pregnancies and promote reproductive health." },
+                  { title: "Safe Abortion Practices", desc: "Safe abortion services, offering both medical and surgical options under expert care." },
+                  { title: "Adolescent Health Problems", desc: "Comprehensive care for adolescent girls to address physical, mental, and sexual health concerns." },
+                  { title: "Menopausal Women", desc: "Ensuring a dignified and healthy life for menopausal women through expert support." },
+                  { title: "Preventive Healthcare & Lifestyle", desc: "Early detection of breast and cervical cancer for better health outcomes." }
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -279,6 +283,7 @@ export default function AboutDrMonika() {
             </div>
           </div>
         </div>
+l
 
         {/* Education Section - Keeping the same structure but with false condition as in original code */}
         {false &&

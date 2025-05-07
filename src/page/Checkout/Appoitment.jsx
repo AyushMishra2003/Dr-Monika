@@ -610,7 +610,7 @@ export default function AppointmentBooking() {
 
         {/* Footer */}
         <div className="bg-gray-50 p-4 text-center text-gray-500 text-sm border-t border-gray-200">
-          <a href='href="mailto:monikapandey185@gmail.com"'>Need help? Contact our support team at monikapandey185@gmail.com</a>
+          <a href='href="mailto:sadbhawnaclinic98@gmail.com'>Need help? Contact our support team at sadbhawnaclinic98@gmail.com</a>
         </div>
       </div>
     </div>

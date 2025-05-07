@@ -19,68 +19,9 @@ const Footer = () => {
 
             <div className="relative bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] lg:py-12 py-6 md:py-8 ">
                 <div className="mx-auto max-w-7xl flex flex-col lg:flex-row justify-between max-w-8xl px-4 gap-6">
-                    {/* Contact Section */}
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 ">
-                        <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
-                        <li className="mb-4 flex items-center text-md">
-                            <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
-                            <a href="mailto:monikapandey185@gmail.com" className="">monikapandey185@gmail.com</a>
-                        </li>
-                        <li className="mb-4 flex items-center text-lg lg:text-lg">
-                            <MdCall className="mr-1 text-2xl" />
-                            <a href="tel:919838346118" className="]">+91 9838346118</a>
-                            {/* <a href="tel:8115544102" className="hover:text-[#5B2E67] ml-1">+91 8115544102</a> */}
-                        </li>
-
-
-                        <li className="flex items-start text-lg lg:text-lg">
-                            <MdLocationOn className="mr-1 text-xl lg:text-6xl" />
-                            <a href="https://www.google.com/maps"
-                                target="_blank" rel="noopener noreferrer"
-                                className=" transition-all duration-300 text-[16px]">
-                                Indira Nagar, Lucknow, Uttar Pradesh 226016
-                            </a>
-                        </li>
-                    </div>
 
 
 
-                    {/* Services Section */}
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 lg:ml-[4rem]">
-                        <h2 className="text-xl font-semibold mb-4 text-white">Our Services</h2>
-                        <ul className="text-md">
-                            <Link to={`/services/gynecology`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />  Obstetrics
-                                </li>
-                            </Link>
-                            <Link to={`/services/gynecology'`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />
-                                    Gynaecology
-                                </li>
-                            </Link>
-                            <Link to={`/services/physiotherapy`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />Psychiatry Treatment
-                                </li>
-                            </Link>
-                            <Link to={`/services/physiotherapy`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />
-                                    Counselling Services
-                                </li>
-                            </Link>
-                            <Link to={`/services/physiotherapy`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />Therapies
-                                </li>
-                            </Link>
-
-                        </ul>
-                    </div>
-
-                    {/* Quick Links Section */}
                     <div className="w-full lg:w-1/4 md:mb-8 mb-2  lg:ml-[4rem]">
 
                         <h2 className="text-xl font-semibold mb-4 text-white">Quick Links</h2>
@@ -118,6 +59,83 @@ const Footer = () => {
 
                         </ul>
                     </div>
+
+
+
+
+                    {/* Services Section */}
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 lg:ml-[4rem]">
+                        <h2 className="text-xl font-semibold mb-4 text-white">Our Services</h2>
+               
+
+
+
+                        <ul className="text-md">
+                            <Link to={`/services/gynecology`}>
+                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
+                                    <MdKeyboardArrowRight className="mr-2" />  Obstetrics
+                                </li>
+                            </Link>
+                            <Link to={`/services/gynecology'`}>
+                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
+                                    <MdKeyboardArrowRight className="mr-2" />
+                                    Gynaecology
+                                </li>
+                            </Link>
+                            <Link to={`/services/gynecology'`}>
+                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
+                                    <MdKeyboardArrowRight className="mr-2" />
+                                    Infertility Treatment
+                                </li>
+                            </Link>
+                            <Link to={`/services/physiotherapy`}>
+                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
+                                    <MdKeyboardArrowRight className="mr-2" />Psychiatry Treatment
+                                </li>
+                            </Link>
+                            <Link to={`/services/physiotherapy`}>
+                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
+                                    <MdKeyboardArrowRight className="mr-2" />
+                                    Counselling Services
+                                </li>
+                            </Link>
+                            <Link to={`/services/physiotherapy`}>
+                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
+                                    <MdKeyboardArrowRight className="mr-2" />Therapies
+                                </li>
+                            </Link>
+
+                        </ul>
+                    </div>
+
+                    {/* Contact Section */}
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 ">
+                        <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
+                        <li className="mb-4 flex items-center text-md">
+                            <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
+                            <a href="mailto:sadbhawnaclinic98@gmail.com" className="">sadbhawnaclinic98@gmail.com</a>
+                        </li>
+                        <li className="mb-4 flex items-center text-lg lg:text-lg">
+                            <MdCall className="mr-1 text-2xl" />
+                            {/* <a href="tel:919838346118" className="]">+91 9838346118</a> */}
+                            <a href="tel:91-9277163686
+" className="hover:text-[#5B2E67] ml-1">+91 91-9277163686
+                            </a>
+                        </li>
+
+
+                        <li className="flex items-start text-lg lg:text-lg">
+                            <MdLocationOn className="mr-1 text-xl lg:text-6xl" />
+                            <a href="https://www.google.com/maps"
+                                target="_blank" rel="noopener noreferrer"
+                                className=" transition-all duration-300 text-[16px]">
+                                Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park, Lucknow
+                            </a>
+                        </li>
+                    </div>
+
+                    {/* Quick Links Section */}
+
 
                     {/* Map Section */}
                     <div className="w-full lg:w-1/4">

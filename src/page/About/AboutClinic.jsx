@@ -64,9 +64,9 @@ export default function AboutClinic() {
           <meta property="og:image" content="https://yourdomain.com/images/sambhawna-clinic.jpg" />
         </Helmet>
         {/* Hero Section */}
-        <section className="py-8 px-4">
-          <main className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center">
+        <section className="py-8 lg:px-4 ">
+          <main className=" mx-auto md:px-4 px-2">
+            <div className="flex flex-col lg:flex-row items-start">
               {/* Left side with images */}
               <div className="w-full lg:w-1/2 relative mb-8 lg:mb-0">
                 {/* Main image */}
@@ -74,7 +74,7 @@ export default function AboutClinic() {
                   <img
                     src={image1}
                     alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
-                    className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
+                    className="rounded-lg shadow-lg w-full h-auto md:h-120 object-cover "
                   />
                 </div>
 
@@ -88,50 +88,48 @@ export default function AboutClinic() {
               </div>
 
               {/* Right side with text content */}
-              <div className="w-full lg:w-1/2 lg:pl-12">
+              <div className="w-full lg:w-1/2 lg:pl-12 ">
                 <div className="text-[#E47F97] font-medium flex items-center mb-2">
                   <span className="mr-2">+</span>
                   <span>ABOUT SADBHAWNA CLINIC</span>
                 </div>
 
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                  Expert Mental & Women's Healthcare Under One Roof
+                  Expert Women's Healthcare & Mental Wellness Under One Roof
                 </h1>
-
                 <p className="text-gray-600 mb-4 text-justify">
-                  <strong>Sadbhawna Clinic</strong> is a trusted healthcare center specializing in Psychiatry and Gynecology,
-                  offering compassionate care for Mental Wellness and Women's Health. From Stress, Anxiety, and Mood Disorders
-                  to Menstrual Issues, Fertility, and Pregnancy Care — we provide personalized, confidential, and holistic
-                  treatment for every stage of life.
+                  <strong>Sadbhawna Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
                 </p>
+
+
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div className="flex items-center">
                     <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                       <Check className="h-5 w-5 text-white" />
                     </div>
-                    <span className="text-slate-700 font-medium">Expert treatment for anxiety, depression & mood disorders</span>
+                    <span className="text-slate-700 font-medium">Comprehensive gynecological care for all ages</span>
                   </div>
 
                   <div className="flex items-center">
                     <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                       <Check className="h-5 w-5 text-white" />
                     </div>
-                    <span className="text-slate-700 font-medium">Comprehensive women’s health services</span>
+                    <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
                   </div>
 
                   <div className="flex items-center">
                     <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                       <Check className="h-5 w-5 text-white" />
                     </div>
-                    <span className="text-slate-700 font-medium">Personalized fertility & pregnancy care</span>
+                    <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
                   </div>
 
                   <div className="flex items-center">
                     <div className="bg-[#E47F97] rounded-full p-1 mr-3">
                       <Check className="h-5 w-5 text-white" />
                     </div>
-                    <span className="text-slate-700 font-medium">Safe and supportive environment for all ages</span>
+                    <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
                   </div>
                 </div>
               </div>
@@ -347,7 +345,7 @@ export default function AboutClinic() {
               </div>
 
               {/* Patient Experience Section */}
-              <div className="p-4 max-w-7xl mx-auto">
+              <div className="mx-auto container">
                 <h3 className="text-2xl font-bold text-[#5b2e67] mb-8 text-center">
                   What to Expect as a Patient
                 </h3>
@@ -409,7 +407,7 @@ export default function AboutClinic() {
           )}
 
           {/* Contact Information */}
-          <div className="max-w-6xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
+          <div className="max-w-7xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
             <div className="relative">
               {/* Decorative header bar */}
               <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#5B2E67] via-[#E47F9F] to-[#5B2E67]"></div>
@@ -438,10 +436,10 @@ export default function AboutClinic() {
                       <div className="ml-4">
                         <h4 className="font-semibold text-gray-800 mb-1">Call Us</h4>
                         <a href="tel:9838346118" className="text-gray-600 mb-1 block hover:text-[#E47F9F] transition-colors">
-                          9838346118
+                          +91 9838346118
                         </a>
                         <a href="tel:9277163686" className="text-gray-600 block hover:text-[#E47F9F] transition-colors">
-                          9277163686
+                          +91 9277163686
                         </a>
                       </div>
                     </div>
@@ -455,8 +453,8 @@ export default function AboutClinic() {
                       </div>
                       <div className="ml-4">
                         <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
-                        <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
-                          monikapandey185@gmail.com
+                        <a href="mailto:sadbhawnaclinic98@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
+                          sadbhawnaclinic98@gmail.com
                         </a>
                       </div>
                     </div>
@@ -469,10 +467,11 @@ export default function AboutClinic() {
                         <Clock className="text-[#E47F9F]" size={24} />
                       </div>
                       <div className="ml-4">
-                        <h4 className="font-semibold text-gray-800 mb-1">Hours</h4>
-                        <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 PM</p>
-                        <p className="text-gray-600 mb-1">Evening: 00:06 PM - 06:30 PM</p>
+                        <h4 className="font-semibold text-gray-800 mb-1">Opening Hours</h4>
                         <p className="text-gray-500 text-sm">(Monday - Sunday)</p>
+                        <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 AM</p>
+                        <p className="text-gray-600 mb-1">Evening: 06:00 PM - 08:30 PM</p>
+
                       </div>
                     </div>
                   </div>

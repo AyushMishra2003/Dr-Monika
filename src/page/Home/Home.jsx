@@ -51,7 +51,7 @@ const Home = () => {
       </Helmet>
 
         <HomeSlider/>
-        {/* <HomeSlider/> */}
+  
         <HomeAbout/>
         <Services/>
         <ClinicStats/>

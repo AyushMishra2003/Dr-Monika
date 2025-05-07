@@ -49,12 +49,13 @@ const HomeAbout = () => {
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-                        Expert Women's Healthcare & Mental Wellness Under One Roof
+                            Expert Women's Healthcare & Mental Wellness Under One Roof
                         </h1>
-
                         <p className="text-gray-600 mb-4 text-justify">
-                            <strong>Sadbhawna Clinic</strong> is a trusted healthcare center with a primary focus on Gynecology, offering expert care for every stage of a woman’s life. From menstrual issues, fertility, and pregnancy care to hormonal health and menopause management, we provide personalized and confidential treatment in a compassionate setting. Our integrated approach also supports mental wellness, addressing stress, anxiety, and mood concerns with empathy and expertise.
+                            <strong>Sadbhawna Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
                         </p>
+
+
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                             <div className="flex items-center">

@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy, Phone, Mail, Clock } from 'lucide-react';
+import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy, Phone, Mail, Clock, Briefcase } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+
+import img1 from  '../../assets/consuling.jpg'
+import img2 from  '../../assets/psychotriy.jpg'
+import img3 from  '../../assets/Therapies.jpg'
 
 
 
@@ -12,101 +16,176 @@ export default function PsychiatricServicesDetails() {
 
     // List of psychiatric conditions/treatments
     const treatments = [
+        // Existing entries (already included, not repeated)
         {
             title: "Depression",
             icon: <Zap className="w-8 h-8 text-white" />,
-            description: "Evidence-based treatment approaches for depressive disorders, including medication management, psychotherapy, and lifestyle interventions.",
+            description: "Evidence-based treatment for depressive disorders through medication, psychotherapy, and lifestyle support.",
             symptoms: ["Persistent sadness", "Loss of interest", "Fatigue", "Changes in appetite", "Feelings of worthlessness"],
-            longDescription: "Depression is a common but serious mood disorder that causes severe symptoms that affect how you feel, think, and handle daily activities. Our treatment combines medication, therapy, and lifestyle changes to help you regain joy and functionality in your life."
+            longDescription: "Depression is a mood disorder that impacts how one thinks, feels, and behaves. Our multidisciplinary approach helps individuals regain emotional balance."
         },
         {
             title: "Anxiety Disorders",
             icon: <Activity className="w-8 h-8 text-white" />,
-            description: "Comprehensive care for anxiety disorders that may present with various symptoms, including personalized treatment plans and coping strategies.",
+            description: "Comprehensive care for anxiety disorders, including therapy and stress management techniques.",
             symptoms: ["Excessive worry", "Restlessness", "Difficulty concentrating", "Sleep disturbances", "Panic attacks"],
-            longDescription: "Anxiety disorders involve excessive fear or worry that doesn't go away and can worsen over time. Our treatment approaches include cognitive behavioral therapy, medication when appropriate, and mindfulness techniques to help manage symptoms."
+            longDescription: "Anxiety disorders involve persistent fear or worry. We offer personalized therapy, medication, and lifestyle strategies to support recovery."
         },
         {
             title: "Substance Use Disorders",
             icon: <Coffee className="w-8 h-8 text-white" />,
-            description: "Professional treatment for substance dependence and addiction recovery, including assessment, detoxification support, and long-term recovery planning.",
+            description: "Treatment for addiction including detox, rehab programs, and ongoing support for long-term recovery.",
             symptoms: ["Compulsive drug seeking", "Withdrawal symptoms", "Tolerance development", "Physical dependence", "Social withdrawal"],
-            longDescription: "Substance use disorders include a range of conditions related to the use of alcohol, prescription medications, and illicit drugs. Our comprehensive approach includes detoxification, therapy, support groups, and aftercare planning."
+            longDescription: "We treat substance abuse issues using a tailored plan that includes counseling, group therapy, and relapse prevention strategies."
         },
         {
             title: "Obsessive Compulsive Disorder",
             icon: <RefreshCw className="w-8 h-8 text-white" />,
-            description: "Specialized treatment for OCD, focusing on breaking the cycle of obsessions and compulsions through behavioral therapy and medication when needed.",
+            description: "Behavioral therapy and medication to manage obsessions and compulsions.",
             symptoms: ["Intrusive thoughts", "Repetitive behaviors", "Excessive cleaning", "Checking rituals", "Arranging items symmetrically"],
-            longDescription: "OCD is characterized by unreasonable thoughts and fears (obsessions) that lead to repetitive behaviors (compulsions). Our specialized treatment includes exposure and response prevention therapy and medication management."
+            longDescription: "We use evidence-based therapy like ERP (Exposure and Response Prevention) and SSRIs to treat OCD symptoms effectively."
         },
         {
             title: "Sleep Disorders",
             icon: <Moon className="w-8 h-8 text-white" />,
-            description: "Diagnosis and treatment of various sleep disorders, including insomnia, sleep apnea, and circadian rhythm disturbances.",
+            description: "Sleep assessment and therapy for insomnia, apnea, and other disturbances.",
             symptoms: ["Difficulty falling asleep", "Waking during the night", "Excessive daytime sleepiness", "Irregular sleep patterns", "Sleep-related breathing issues"],
-            longDescription: "Sleep disorders affect the quality, timing, and amount of sleep, leading to daytime distress and impaired functioning. Our treatment includes sleep hygiene education, cognitive behavioral therapy for insomnia, and when appropriate, medication management."
+            longDescription: "Improving sleep through CBT-I, sleep hygiene education, and medical support when necessary."
         },
         {
             title: "Psychotic Disorders",
             icon: <Brain className="w-8 h-8 text-white" />,
-            description: "Comprehensive care for psychotic disorders, including early intervention, medication management, and supportive therapy.",
+            description: "Specialized care for managing psychosis symptoms, including medication and therapy.",
             symptoms: ["Hallucinations", "Delusions", "Disorganized thinking", "Social withdrawal", "Lack of motivation"],
-            longDescription: "Psychotic disorders are severe mental disorders characterized by abnormal thinking and perceptions. Our treatment focuses on antipsychotic medications, psychosocial treatments, and family education and support."
+            longDescription: "We provide integrated services including pharmacological and psychosocial support for psychotic conditions."
+        },
+    
+        // Newly added conditions
+        {
+            title: "Drug Deaddiction",
+            icon: <Zap className="w-8 h-8 text-white" />,
+            description: "Comprehensive deaddiction services for individuals struggling with drug dependence.",
+            symptoms: ["Cravings", "Physical dependence", "Behavioral changes", "Neglect of responsibilities", "Withdrawal symptoms"],
+            longDescription: "We offer detox programs, counseling, relapse prevention plans, and support groups for lasting recovery from drug addiction."
+        },
+        {
+            title: "Mixed Anxiety and Sexual Disorder",
+            icon: <Activity className="w-8 h-8 text-white" />,
+            description: "Specialized treatment for co-existing anxiety and sexual dysfunction.",
+            symptoms: ["Anxiety during intimacy", "Erectile dysfunction", "Performance anxiety", "Low libido", "Intrusive thoughts"],
+            longDescription: "This condition is addressed through combined therapy for anxiety and sexual health education, along with medical treatment if needed."
+        },
+        {
+            title: "Suicidal Thoughts",
+            icon: <Brain className="w-8 h-8 text-white" />,
+            description: "Crisis intervention and ongoing support for individuals experiencing suicidal ideation.",
+            symptoms: ["Hopelessness", "Talking about death", "Withdrawal", "Mood swings", "Feeling trapped"],
+            longDescription: "Our team provides immediate risk assessment, therapy, and safety planning to support those at risk of suicide."
+        },
+        {
+            title: "Schizophrenia",
+            icon: <RefreshCw className="w-8 h-8 text-white" />,
+            description: "Long-term care for schizophrenia including antipsychotic medication and psychoeducation.",
+            symptoms: ["Hallucinations", "Paranoia", "Disorganized behavior", "Flat affect", "Cognitive issues"],
+            longDescription: "A chronic mental illness treated with a structured plan involving medication, therapy, and family support."
+        },
+        {
+            title: "Postpartum Depression",
+            icon: <Moon className="w-8 h-8 text-white" />,
+            description: "Supportive care for mothers experiencing depression after childbirth.",
+            symptoms: ["Crying spells", "Mood swings", "Difficulty bonding", "Insomnia", "Hopelessness"],
+            longDescription: "Postpartum depression is addressed through therapy, medication, and family support to ensure both mother and child are well cared for."
+        },
+        {
+            title: "Lack of Sleep",
+            icon: <Moon className="w-8 h-8 text-white" />,
+            description: "Evaluation and treatment for chronic sleep deprivation and insomnia.",
+            symptoms: ["Daytime fatigue", "Irritability", "Poor concentration", "Headaches", "Mood swings"],
+            longDescription: "We provide sleep assessments, behavioral techniques, and lifestyle strategies to restore healthy sleep patterns."
         }
     ];
+    
+    
 
     // List of therapy services
     const therapies = [
         {
-            title: "Cognitive Behavioral Therapy",
-            icon: <Brain className="w-8 h-8 text-white" />,
-            description: "Evidence-based approach that focuses on identifying and changing negative thought patterns and behaviors.",
-            benefits: ["Changed thought patterns", "New behavioral responses", "Emotional regulation", "Problem-solving skills", "Stress management"],
-            duration: "45-60 minutes per session",
-            longDescription: "CBT is a structured, goal-oriented therapy that helps patients identify and change destructive thought patterns that influence emotional responses and behavior. It's effective for depression, anxiety disorders, PTSD, and more."
+          title: "Family Counseling",
+          icon: <Users className="w-8 h-8 text-white" />,
+          description: "Therapy aimed at improving communication and resolving conflicts within families.",
+          benefits: [
+            "Improved communication",
+            "Conflict resolution",
+            "Strengthened relationships",
+            "Understanding family roles",
+            "Supportive environment"
+          ],
+          duration: "60-90 minutes per session",
+          longDescription:
+            "Family counseling helps family members improve communication and resolve conflicts. It is useful for addressing various issues such as behavioral problems, family transitions, or mental health concerns affecting the family unit."
         },
         {
-            title: "Psychotherapy",
-            icon: <MessageCircle className="w-8 h-8 text-white" />,
-            description: "Talk therapy that explores thoughts, feelings, and behaviors to improve mental health and well-being.",
-            benefits: ["Self-awareness", "Emotional healing", "Personal growth", "Better relationships", "Coping strategies"],
-            duration: "50-60 minutes per session",
-            longDescription: "Psychotherapy is a collaborative treatment based on the relationship between an individual and a therapist. It provides a supportive environment to talk openly about concerns and feelings, helping you understand and change troubling emotions, thoughts, and behaviors."
+          title: "Career Counseling",
+          icon: <Briefcase className="w-8 h-8 text-white" />,
+          description: "Guidance to help individuals make informed career choices and achieve professional goals.",
+          benefits: [
+            "Clarity on career options",
+            "Skill and interest assessment",
+            "Career goal setting",
+            "Reduced confusion",
+            "Increased motivation"
+          ],
+          duration: "45-60 minutes per session",
+          longDescription:
+            "Career counseling involves exploring interests, strengths, and values to help individuals choose a career path that aligns with their personal and professional goals. It includes assessments, goal-setting, and actionable plans."
         },
         {
-            title: "Family Counseling",
-            icon: <Users className="w-8 h-8 text-white" />,
-            description: "Therapeutic sessions designed to improve family dynamics, communication, and resolve conflicts within the family unit.",
-            benefits: ["Improved communication", "Conflict resolution", "Stronger relationships", "Better boundaries", "Enhanced family functioning"],
-            duration: "60-90 minutes per session",
-            longDescription: "Family therapy helps family members improve communication, resolve conflicts, and deepen understanding. It can be useful for addressing issues that affect the family unit, such as mental illness of a family member, substance abuse, or child and adolescent behavioral problems."
+          title: "Marital Counseling",
+          icon: <Heart className="w-8 h-8 text-white" />,
+          description: "Therapy to support couples in resolving conflicts and improving their relationship.",
+          benefits: [
+            "Better communication",
+            "Conflict resolution",
+            "Enhanced intimacy",
+            "Mutual understanding",
+            "Relationship satisfaction"
+          ],
+          duration: "60-90 minutes per session",
+          longDescription:
+            "Marital counseling helps couples identify issues, improve communication, and resolve conflict. Whether you're dealing with trust issues, lack of intimacy, or communication breakdowns, therapy provides tools for stronger relationships."
         },
         {
-            title: "Medication Management",
-            icon: <Pill className="w-8 h-8 text-white" />,
-            description: "Expert prescription and monitoring of psychiatric medications to effectively manage symptoms with minimal side effects.",
-            benefits: ["Symptom relief", "Personalized medication plans", "Side effect management", "Regular monitoring", "Medication education"],
-            duration: "20-30 minutes per session",
-            longDescription: "Our medication management services include comprehensive evaluation, prescription of appropriate medications, and ongoing monitoring to ensure effectiveness and minimize side effects. We work closely with patients to find the right medications and dosages."
+          title: "Drug De-addiction Counseling",
+          icon: <Pill className="w-8 h-8 text-white" />,
+          description: "Supportive therapy focused on overcoming substance dependence and building a drug-free life.",
+          benefits: [
+            "Understanding addiction",
+            "Coping strategies",
+            "Relapse prevention",
+            "Family involvement",
+            "Improved well-being"
+          ],
+          duration: "60-90 minutes per session",
+          longDescription:
+            "Drug de-addiction counseling offers a structured path to recovery. It focuses on identifying triggers, managing cravings, and building a sustainable, healthy lifestyle. Family involvement and relapse prevention strategies are also included."
         },
         {
-            title: "Trauma-Focused Therapy",
-            icon: <Shield className="w-8 h-8 text-white" />,
-            description: "Specialized therapy designed to address the emotional and mental health needs of people who have experienced traumatic events.",
-            benefits: ["Processing traumatic memories", "Reduced trauma symptoms", "Improved coping skills", "Restored sense of safety", "Post-traumatic growth"],
-            duration: "60-90 minutes per session",
-            longDescription: "Trauma-focused therapy helps individuals process difficult emotions related to traumatic experiences. Techniques may include EMDR (Eye Movement Desensitization and Reprocessing), prolonged exposure therapy, and cognitive processing therapy."
-        },
-        {
-            title: "Group Therapy",
-            icon: <Users className="w-8 h-8 text-white" />,
-            description: "Therapeutic sessions conducted in groups to provide support, perspectives, and skill development among peers facing similar challenges.",
-            benefits: ["Peer support", "Different perspectives", "Social skill practice", "Sense of belonging", "Cost-effective treatment"],
-            duration: "90-120 minutes per session",
-            longDescription: "Group therapy involves one or more therapists working with a group of people. It provides the opportunity to learn that you're not alone in your struggles, gain different perspectives, and practice new skills in a supportive environment."
+          title: "Sex Counseling",
+          icon: <Heart className="w-8 h-8 text-white" />,
+          description: "Confidential counseling to address sexual health, intimacy issues, and relationship concerns.",
+          benefits: [
+            "Improved intimacy",
+            "Better communication",
+            "Understanding sexual concerns",
+            "Reduced anxiety",
+            "Healthier relationships"
+          ],
+          duration: "45-60 minutes per session",
+          longDescription:
+            "Sex counseling helps individuals and couples address concerns related to intimacy, sexual performance, and sexual identity. It offers a safe and supportive environment to talk openly and improve emotional and physical intimacy."
         }
-    ];
+      ];
+      
 
     const navigate = useNavigate()
 
@@ -161,13 +240,13 @@ export default function PsychiatricServicesDetails() {
                 {/* Hero Section with Image */}
                 <div className="lg:mb-16 mb-6 md:mb-10 text-center relative overflow-hidden rounded-3xl shadow-xl">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#5b2e67]/90 to-[#e47f9f]/90 z-10"></div>
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Mental health support" className="w-full object-cover h-64 md:h-96" />
+                    <img src={img1} alt="Mental health support" className="w-full object-cover h-64 md:h-96" />
                     <div className="absolute inset-0 flex items-center justify-center z-20">
                         <div className="px-4 py-6 text-white">
                             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                                 Comprehensive <span className="text-white/90">Psychiatric Services</span>
                             </h1>
-                            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+                            <p className="text-xlimport img2 from  '../../assets/psychotriy.jpg' text-white/80 max-w-2xl mx-auto">
                                 Personalized care for mental health and wellbeing with evidence-based treatments
                             </p>
                             <button onClick={() => navigate("/appoitment")} className="mt-6 cursor-pointer bg-white text-[#5b2e67] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
@@ -232,7 +311,7 @@ export default function PsychiatricServicesDetails() {
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Mental health treatment" className="w-full h-full object-cover" />
+                                    <img src={img2} alt="Mental health treatment" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -294,7 +373,7 @@ export default function PsychiatricServicesDetails() {
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180" alt="Counseling services" className="w-full h-full object-cover" />
+                                    <img src={img1} alt="Counseling services" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -364,7 +443,7 @@ export default function PsychiatricServicesDetails() {
                                 </div>
                                 <div className="md:w-1/2">
                                     <img
-                                        src="https://tse3.mm.bing.net/th?id=OIP.iI5m-yGjhrnwG-EpMXdLdgHaE1&pid=Api&P=0&h=180"
+                                        src={img3}
                                         alt="Therapies"
                                         className="w-full h-full object-cover"
                                     />
@@ -606,7 +685,7 @@ export default function PsychiatricServicesDetails() {
                 )}
 
                 {/* Call to Action */}
-                <div className="max-w-6xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
+                <div className="max-w-7xl mx-auto mt-12 overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-white to-purple-50">
                     <div className="relative">
                         {/* Decorative header bar */}
                         <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#5B2E67] via-[#E47F9F] to-[#5B2E67]"></div>
@@ -635,10 +714,10 @@ export default function PsychiatricServicesDetails() {
                                         <div className="ml-4">
                                             <h4 className="font-semibold text-gray-800 mb-1">Call Us</h4>
                                             <a href="tel:9838346118" className="text-gray-600 mb-1 block hover:text-[#E47F9F] transition-colors">
-                                                9838346118
+                                                +91 9838346118
                                             </a>
                                             <a href="tel:9277163686" className="text-gray-600 block hover:text-[#E47F9F] transition-colors">
-                                                9277163686
+                                                +91 9277163686
                                             </a>
                                         </div>
                                     </div>
@@ -653,7 +732,7 @@ export default function PsychiatricServicesDetails() {
                                         <div className="ml-4">
                                             <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
                                             <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
-                                                monikapandey185@gmail.com
+                                              sadbhawnaclinic98@gmail.com
                                             </a>
                                         </div>
                                     </div>
@@ -666,10 +745,11 @@ export default function PsychiatricServicesDetails() {
                                             <Clock className="text-[#E47F9F]" size={24} />
                                         </div>
                                         <div className="ml-4">
-                                            <h4 className="font-semibold text-gray-800 mb-1">Hours</h4>
-                                            <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 PM</p>
-                                            <p className="text-gray-600 mb-1">Evening: 00:06 PM - 06:30 PM</p>
+                                            <h4 className="font-semibold text-gray-800 mb-1">Opening Hours</h4>
                                             <p className="text-gray-500 text-sm">(Monday - Sunday)</p>
+                                            <p className="text-gray-600 mb-1">Morning: 10:00 AM - 1:30 AM</p>
+                                            <p className="text-gray-600 mb-1">Evening: 06:00 PM - 08:30 PM</p>
+                                  
                                         </div>
                                     </div>
                                 </div>
