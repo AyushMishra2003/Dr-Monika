@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hoveredDropdown, setHoveredDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,68 +42,34 @@ export default function Header() {
      
       ]
     },
-    // {
-    //   name: 'Services',
-    //   dropdown: true,
-    //   items: [
-    //     { name: 'Psychiatric', link: '/services/physiotherapy' },
-    //     { name: 'Gynecology', link: '/services/gynecology' }
-    //   ]
-    // },
     {name:"Gynecology Service" , link :'/services/gynecology'},
     {name:"Psychiatric Service" , link :'/services/physiotherapy'},
-
-    // { name: 'Blogs', link: '/blogs' },
-    // { name: 'Cases', link: '/cases' },
     { name: 'Cases', link: '/gallery' },
-
     { name: 'Contact Us', link: '/contact' },
   ];
 
   return (
     <header className={`border border-red-500`}>
-      {/* Pink diagonal background */}
-      {/* <div className="absolute inset-0 bg-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-3/5 h-full bg-pink-100 transform -skew-x-12 origin-top-right"></div>
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-pink-200 transform -skew-x-12 origin-top-right"></div>
-        <div className="absolute top-0 right-0 w-2/5 h-full bg-pink-300 transform -skew-x-12 origin-top-right"></div>
-      </div> */}
-
       <div className="relative w-full mx-auto px-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to={"/"}>
-    
-          <div className="flex items-center z-10">
-            <img src={logo} alt="sambhawna_logo" className="w-auto h-16" />
-{/* 
-            <div className="flex flex-col ml-2">
-              <span className="text-2xl lg:text-xl font-bold text-[#5B2E65]">SAMBHAWNA</span>
-
-              <div className="flex items-center">
-              <div className="xl:w-10 w-8 h-[2px] bg-[#E39AB2] mr-1"></div>
-                <span className="text-xl lg:text-xl font-semibold text-[#E39AB2] tracking-widest">CLINIC</span>
-                <div className="xl:w-10 w-8 h-[2px] bg-[#E39AB2] ml-1"></div>
-              </div>
-            </div> */}
-          </div>
-
-
+            <div className="flex items-center z-10">
+              <img src={logo} alt="sambhawna_logo" className="w-auto h-16" />
+            </div>
           </Link>
 
-
-{/* 
-          <img src={logo1} alt="" /> */}
-           
-
-     
-
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 z-10 ">
+          <nav className="hidden lg:flex items-center space-x-1 z-10">
             {navItems.map((item) => (
-              <div key={item.name} className="relative group">
+              <div 
+                key={item.name} 
+                className="relative group"
+                onMouseEnter={() => item.dropdown && setHoveredDropdown(item.name)}
+                onMouseLeave={() => item.dropdown && setHoveredDropdown(null)}
+              >
                 {item.dropdown ? (
-                  <div className="flex items-center ">
+                  <div className="flex items-center">
                     <button
                       onClick={() => toggleDropdown(item.name)}
                       className="px-0 xl:px-4 py-2 text-gray-700 font-medium hover:text-pink-600 transition-colors duration-200 flex items-center"
@@ -112,13 +79,13 @@ export default function Header() {
                       {activeDropdown === item.name ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />}
                     </button>
 
-                    {activeDropdown === item.name && (
-                      <div className="absolute top-full   left-0 w-50 bg-white rounded-lg shadow-xl py-2 z-10 ">
+                    {(activeDropdown === item.name || hoveredDropdown === item.name) && (
+                      <div className="absolute top-full left-0 w-auto min-w-max bg-white rounded-lg shadow-xl py-2 z-10 transition-all duration-300 ease-in-out opacity-100 transform translate-y-0">
                         {item.items.map((subItem) => (
                           <a
                             key={subItem.name}
                             href={subItem.link}
-                            className="block px-2 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
                             style={{ whiteSpace: 'nowrap' }}
                           >
                             {subItem.name}
@@ -149,13 +116,6 @@ export default function Header() {
               <Calendar size={18} className="mr-2" />
               Appointment
             </a>
-            {/* <a
-              href="/home-collection"
-              className="ml-4 px-6 py-2 bg-white text-pink-500 border-2 border-pink-500 font-medium rounded-full flex items-center hover:bg-pink-50 transition-colors shadow-md"
-            >
-              <Microscope size={18} className="mr-2" />
-              Home Collection
-            </a> */}
           </div>
 
           {/* Mobile menu button */}
@@ -180,7 +140,7 @@ export default function Header() {
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium hover:bg-pink-50 hover:text-pink-600"
+                      className="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
                     >
                       {item.name}
                       {activeDropdown === item.name ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -192,7 +152,7 @@ export default function Header() {
                           <a
                             key={subItem.name}
                             href={subItem.link}
-                            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-100 hover:text-pink-600"
+                            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-100 hover:text-pink-600 transition-colors duration-200"
                           >
                             {subItem.name}
                           </a>
@@ -203,7 +163,7 @@ export default function Header() {
                 ) : (
                   <a
                     href={item.link}
-                    className="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-50 hover:text-pink-600"
+                    className="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
                   >
                     {item.name}
                   </a>
@@ -214,14 +174,14 @@ export default function Header() {
               <div className="flex flex-col space-y-3">
                 <a
                   href="/contact"
-                  className="px-4 py-2 bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white font-medium rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors shadow-md"
+                  className="px-4 py-2 bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white font-medium rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-200 shadow-md"
                 >
                   <Calendar size={18} className="mr-2" />
                   Make Appointment
                 </a>
                 <a
                   href="/home-collection"
-                  className="px-4 py-2 bg-white text-pink-500 border-2 border-pink-500 font-medium rounded-full flex items-center justify-center hover:bg-pink-50 transition-colors shadow-md"
+                  className="px-4 py-2 bg-white text-pink-500 border-2 border-pink-500 font-medium rounded-full flex items-center justify-center hover:bg-pink-50 transition-colors duration-200 shadow-md"
                 >
                   <Microscope size={18} className="mr-2" />
                   Home Collection
@@ -231,7 +191,6 @@ export default function Header() {
           </div>
         </div>
       )}
-
     </header>
   );
 }

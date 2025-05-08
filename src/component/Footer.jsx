@@ -22,38 +22,38 @@ const Footer = () => {
 
 
 
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-2  lg:ml-[4rem]">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-1  lg:ml-[4rem]">
 
                         <h2 className="text-xl font-semibold mb-4 text-white">Quick Links</h2>
                         <ul className="text-md">
                             <Link to={"/"}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" /> Home
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Home
                                 </li>
                             </Link>
                             <Link to={"/about/dr-monika"}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" /> About Our Expert
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> About Our Expert
                                 </li>
                             </Link>
                             <Link to={"/about/clinic"}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />Sadbhawna Clinic
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />Sadbhawna Clinic
                                 </li>
                             </Link>
                             <Link to={"/gallery"}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" /> Cases
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Cases
                                 </li>
                             </Link>
                             <Link to={"/blogs"}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" /> Blogs
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Blogs
                                 </li>
                             </Link>
                             <Link to={"/contact"}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" /> Contact Us
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Contact Us
                                 </li>
                             </Link>
 
@@ -64,7 +64,7 @@ const Footer = () => {
 
 
                     {/* Services Section */}
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 lg:ml-[4rem]">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-1 lg:ml-[4rem]">
                         <h2 className="text-xl font-semibold mb-4 text-white">Our Services</h2>
                
 
@@ -72,36 +72,36 @@ const Footer = () => {
 
                         <ul className="text-md">
                             <Link to={`/services/gynecology`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />  Obstetrics
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />  Obstetrics
                                 </li>
                             </Link>
                             <Link to={`/services/gynecology`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />
                                     Gynaecology
                                 </li>
                             </Link>
                             <Link to={`/services/gynecology`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />
                                     Infertility Treatment
                                 </li>
                             </Link>
                             <Link to={`/services/physiotherapy`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />Psychiatry Treatment
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />Psychiatry Treatment
                                 </li>
                             </Link>
                             <Link to={`/services/physiotherapy`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />
                                     Counselling Services
                                 </li>
                             </Link>
                             <Link to={`/services/physiotherapy`}>
-                                <li className="mb-2 hover:text-[#5B2E67] flex items-center">
-                                    <MdKeyboardArrowRight className="mr-2" />Therapies
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" />Therapies
                                 </li>
                             </Link>
 
@@ -109,17 +109,17 @@ const Footer = () => {
                     </div>
 
                     {/* Contact Section */}
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-2 ">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-1 ">
                         <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
-                        <li className="mb-4 flex items-center text-md">
+                        <li className="mb-2 flex items-center text-md">
                             <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
                             <a href="mailto:sadbhawnaclinic98@gmail.com" className="">sadbhawnaclinic98@gmail.com</a>
                         </li>
-                        <li className="mb-4 flex items-center text-lg lg:text-lg">
+                        <li className="mb-2 flex items-center text-lg lg:text-lg">
                             <MdCall className="mr-1 text-2xl" />
                             {/* <a href="tel:919838346118" className="]">+91 9838346118</a> */}
                             <a href="tel:919277163686
-" className="hover:text-[#5B2E67] ml-1">+91 9277163686
+" className=". ml-1">+91 9277163686
                             </a>
                         </li>
 
