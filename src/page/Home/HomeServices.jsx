@@ -82,7 +82,7 @@ const HomeService = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
-              Sadbhawna Clinic provides expert Psychiatry and Gynecology services, offering compassionate and confidential care for mental wellness and women’s health at every stage of life.
+              Sadbhawna Clinic provides expert  Gynecology services and  Psychiatry , offering compassionate and confidential care for women’s health and  mental wellness   at every stage of life.
             </p>
 
           </p>

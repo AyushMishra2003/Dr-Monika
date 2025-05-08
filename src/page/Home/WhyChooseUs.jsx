@@ -12,7 +12,7 @@ const WhyWeChooseUs = () => {
         {
             id: 1,
             title: "Expert Care",
-            description: "Specialized in Psychiatry and Gynecology, offering comprehensive solutions for mental and physical health.",
+            description: "Specialized in Gynecology and  Psychiatry , offering comprehensive solutions for  physical health and  mental ",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6">
                     <path d="M12 2L2 7l10 5 10-5-10-5z" />

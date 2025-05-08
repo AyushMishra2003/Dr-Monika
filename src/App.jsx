@@ -21,6 +21,7 @@ import Pratice from './page/pratice/Pratice'
 import AppointmentBooking from './page/Checkout/Appoitment'
 import BookHomeCollection from './page/Checkout/BookHomeCollection'
 import TopHeader from './component/TopHeader'
+import Pathology from './page/pathology/Pathology'
 
 
 
@@ -36,6 +37,7 @@ const App = () => {
           <Route  path='/about/clinic'  element={<AboutClinic/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/appoitment' element={<AppointmentBooking/>}/>
+          <Route path='/pathology' element={<Pathology/>}/>
           <Route path='/home-collection' element={<BookHomeCollection/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
           <Route path='/pratice' element={<Pratice/>}/>

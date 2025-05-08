@@ -76,13 +76,13 @@ const Footer = () => {
                                     <MdKeyboardArrowRight className="mr-2" />  Obstetrics
                                 </li>
                             </Link>
-                            <Link to={`/services/gynecology'`}>
+                            <Link to={`/services/gynecology`}>
                                 <li className="mb-2 hover:text-[#5B2E67] flex items-center">
                                     <MdKeyboardArrowRight className="mr-2" />
                                     Gynaecology
                                 </li>
                             </Link>
-                            <Link to={`/services/gynecology'`}>
+                            <Link to={`/services/gynecology`}>
                                 <li className="mb-2 hover:text-[#5B2E67] flex items-center">
                                     <MdKeyboardArrowRight className="mr-2" />
                                     Infertility Treatment
@@ -118,8 +118,8 @@ const Footer = () => {
                         <li className="mb-4 flex items-center text-lg lg:text-lg">
                             <MdCall className="mr-1 text-2xl" />
                             {/* <a href="tel:919838346118" className="]">+91 9838346118</a> */}
-                            <a href="tel:91-9277163686
-" className="hover:text-[#5B2E67] ml-1">+91 91-9277163686
+                            <a href="tel:919277163686
+" className="hover:text-[#5B2E67] ml-1">+91 9277163686
                             </a>
                         </li>
 

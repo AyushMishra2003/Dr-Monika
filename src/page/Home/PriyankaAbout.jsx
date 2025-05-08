@@ -16,7 +16,7 @@ export default function MonikaAbout() {
           <div className="w-full lg:w-2/3 p-4 md:p-8">
     
             <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-blue-950 mb-4">
-            Leading Specialist in Obstetrics, Gynecology, and Infertility Treatments
+            Dr. Monika Pandey: Leading Specialist in Obstetrics, Gynecology, and Infertility Treatment
             </h2>
 
             <div className="mt-4 md:mt-6">
