@@ -29,7 +29,7 @@ const Contact = () => {
     },
     {
       icon: <FaWhatsapp />,
-      url: `https://wa.me/917570018529?text=${encodeURIComponent("Hello, I need help!")}`, // Replace with your WhatsApp number
+      url: `https://wa.me/919277163686?text=${encodeURIComponent("Hello, I need help!")}`, // Replace with your WhatsApp number
       color: "bg-green-500", // WhatsApp green
     },
   ];
@@ -169,13 +169,14 @@ const Contact = () => {
                       href="tel:917379127000"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      10:00-1:30 PM (MON-SUN) ,
+                      {/* 10:00-1:30 PM (MON-SUN) , */}
+                      (Monday-Sunday) 10:00-1:30PM & 6:00-8:30PM
                     </a>
                     <a
                       href="tel:917379127000"
                       className="sora-400 text-[1rem] text-[#535760] no-underline ml-1"
                     >
-                      06-8:30 PM (MON-SUN)
+                      {/* 06-8:30 PM (MON-SUN) */}
                     </a>
                   </div>
                 </div>
@@ -234,7 +235,7 @@ const Contact = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b-2 border-white py-2 outline-none pr-2 focus:border-teal-300 placeholder-white"
+                  className="w-full bg-transparent border-b-2 border-white py-2 outline-none pr-2 focus:border-teal-300 placeholder-white px-2"
                   placeholder="Name"
                   required
                 />
@@ -245,7 +246,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b-2 border-white py-2 pr-2 outline-none focus:border-teal-300 placeholder-white"
+                  className="w-full bg-transparent border-b-2 border-white py-2 pr-2 outline-none focus:border-teal-300 placeholder-white  px-2"
                   placeholder="Email"
                   required
                 />
@@ -256,7 +257,7 @@ const Contact = () => {
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b-2 border-white py-2  pr-2 outline-none focus:border-teal-300 placeholder-white"
+                  className="w-full bg-transparent border-b-2 border-white py-2  pr-2 outline-none focus:border-teal-300 placeholder-white px-2"
                   placeholder="Phone"
                   required
                 />
@@ -266,7 +267,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b-2 border-white py-2 outline-none focus:border-teal-300 placeholder-white resize-none"
+                  className="w-full bg-transparent border-b-2 border-white py-2 outline-none focus:border-teal-300 placeholder-white resize-none px-2"
                   rows="4"
                   placeholder="Message"
                   required

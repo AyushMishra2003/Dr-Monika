@@ -15,8 +15,8 @@ import BreadCrumbs from '../../component/Breadcums';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import img1 from '../../assets/Gynecology.jpg';
-import img2 from '../../assets/inf.jpg';
+import img1 from '../../assets/Gynae.jpg';
+import img2 from '../../assets/infetility.jpg';
 
 // Placeholder BreadCrumbs component
 
@@ -156,19 +156,6 @@ export default function GynecologyObstetricsServices() {
             ],
             duration: "45-60 minutes",
             icon: <CheckIcon className="w-6 h-6 text-white" />
-        },
-        {
-            title: "Infertility Assessment & Treatment",
-            longDescription: "Comprehensive evaluation and treatment for couples experiencing difficulty conceiving, including diagnosis and management of anovulation, blocked fallopian tubes, hormonal problems, and male factor infertility.",
-            benefits: [
-                "Thorough fertility evaluation",
-                "Personalized treatment plans",
-                "Advanced reproductive technologies",
-                "Emotional support throughout process",
-                "Collaborative care with specialists"
-            ],
-            duration: "60-90 minutes",
-            icon: <Trophy className="w-6 h-6 text-white" />
         }
     ];
 

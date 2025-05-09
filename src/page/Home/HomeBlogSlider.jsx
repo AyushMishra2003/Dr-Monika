@@ -93,15 +93,15 @@ const HomeBlogSlider = () => {
     };
 
     return (
-        <section className='bg-gray-100'>
-            <div className="px-4 lg:px-2 py-8 sm:py-12 md:py-14 lg:py-16 bg-gray-100 max-w-7xl mx-auto">
+        <section className='bg-gray-100 '>
+            <div className="px-2 lg:px-2 py-8 sm:py-12 md:py-14 lg:py-10 bg-gray-100 container mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Latest Blog Posts</h2>
                 <div className="slick-equal-height">
                     <Slider {...settings}>
                         {blogPosts.map(post => (
-                            <div key={post.id} className="px-2 h-full ">
-                                <div className="bg-white rounded-lg shadow-md overflow-hidden h-full border ">
-                                    {/* Image Container with Fixed Height */}
+                            <div key={post.id} className="px-2">
+                                <div className="bg-white rounded-lg shadow-md overflow-hidden h-full border flex flex-col">
+                                    {/* Image */}
                                     <div className="h-48 overflow-hidden relative">
                                         <img
                                             src={post.image}
@@ -112,23 +112,23 @@ const HomeBlogSlider = () => {
                                             {post.date}
                                         </div>
                                     </div>
-                                    
-                                    {/* Content Container with Fixed Height */}
-                                    <div className="p-5 flex flex-col h-fit">
-                                        {/* Title with Fixed Height */}
-                                        <h2 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 h-14">
+
+                                    {/* Content */}
+                                    <div className="p-4 flex flex-col flex-1">
+                                        {/* Title with ellipsis */}
+                                        <h2 className="text-[1rem] font-bold text-gray-800 mb-2 line-clamp-2">
                                             {post.title}
                                         </h2>
-                                        
-                                        {/* Excerpt with Fixed Height and Line Clamp */}
-                                        <p className="text-sm text-gray-600 line-clamp-4 flex-grow">
+
+                                        {/* Excerpt with ellipsis */}
+                                        <p className="text-sm text-gray-600 mb-4 line-clamp-4 flex-grow">
                                             {post.excerpt}
                                         </p>
-                                        
-                                        {/* Read More Button - Optional */}
-                                        <button 
+
+                                        {/* Read More aligned to bottom */}
+                                        <button
                                             onClick={() => handleReadMore(post.title)}
-                                            className="mt-4 text-[#E47F9F] font-medium flex items-center text-sm hover:underline"
+                                            className="mt-auto text-[#E47F9F] font-medium flex items-center text-sm hover:underline"
                                         >
                                             Read More
                                             <ArrowRight size={16} className="ml-1" />
@@ -136,11 +136,12 @@ const HomeBlogSlider = () => {
                                     </div>
                                 </div>
                             </div>
+
                         ))}
                     </Slider>
                 </div>
             </div>
-            
+
             {/* Add this CSS for equal height slick slides */}
             <style jsx>{`
                 .slick-equal-height .slick-track {

@@ -401,9 +401,9 @@ export default function PsychiatricServicesDetails() {
                                                 ))}
                                             </ul>
                                         </div>
-                                        <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
+                                        {/* <div className="pt-3 border-t border-gray-100 text-gray-500 text-sm">
                                             <strong>Session Duration:</strong> {therapy.duration}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             ))}

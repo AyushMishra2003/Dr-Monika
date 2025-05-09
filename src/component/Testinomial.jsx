@@ -1,29 +1,33 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Testinomial = () => {
-  useEffect(() => {
-    // Dynamically load the Tagembed script
-    const script = document.createElement('script');
-    script.src = "https://widget.tagembed.com/embed.min.js";
-    script.type = "text/javascript";
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script); 
-    };
-  }, []);
-
+  const primaryColor = "#E47F97"; // Rose/pink
+  const secondaryColor = "#5B2E67"; // Deep purple
   return (
-    <section className='container mx-auto py-10'>   
-    <div
-      className="tagembed-widget "
-      style={{ width: '100%', height: '100%' }}
-      data-widget-id="2145663"
-      data-tags="false"
-      view-url="https://widget.tagembed.com/2145663"
-    ></div>
+    <section className="bg-gray-50 py-10 px-4">
+      <div className="max-w-7xl mx-auto text-center">
 
-</section>
+        <h2 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4" style={{ color: secondaryColor }}>
+          Our Testimonial
+        </h2>
+        <p className="text-lg max-w-3xl mx-auto mb-10" style={{ color: primaryColor }}>
+          Dr. Monika Pandey is caring, attentive, and truly committed to patient well-being. I felt supported every step of the way.
+        </p>
+
+
+        <div className="shadow-lg rounded-lg overflow-hidden border border-gray-200">
+          <iframe
+            src="https://cdn.trustindex.io/amp-widget.html#0a6234b4540a97560b86aa18478"
+            width="100%"
+            height="268"
+            style={{ border: 'none', overflow: 'hidden' }}
+            sandbox="allow-scripts allow-same-origin"
+            loading="lazy"
+            title="Customer Testimonials"
+          ></iframe>
+        </div>
+      </div>
+    </section>
   );
 };
 

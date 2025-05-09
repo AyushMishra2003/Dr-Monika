@@ -9,20 +9,7 @@ const TopHeader=()=> {
   return (
     <div className="w-full bg-[#5B2E67] text-white py-1 hidden md:block">
       <div className="max-w-full px-4 mx-auto  flex justify-between items-center">
-        <div className="flex items-center space-x-6">
-          <Link to="/" className="flex items-center hover:text-[#E47F9F] transition-colors">
-            <Home size={16} className="mr-1" />
-            <span>Home</span>
-          </Link>
-          <Link to="/home-collection" className="flex items-center hover:text-[#E47F9F] transition-colors">
-            <MapPin size={16} className="mr-1" />
-            <span>Home-Collections</span>
-          </Link>
-          <Link to="/pathology" className="flex items-center hover:text-[#E47F9F] transition-colors">
-            <User size={16} className="mr-1" />
-            <span>Pathology</span>
-          </Link>
-        </div>
+   
         <div className="flex items-center space-x-6">
         <div className="flex items-center">
             <Phone size={16} className="mr-1" />
@@ -34,6 +21,23 @@ const TopHeader=()=> {
           </div>
 
         </div>
+
+        <div className="flex items-center space-x-6">
+          {/* <Link to="/" className="flex items-center hover:text-[#E47F9F] transition-colors">
+            <Home size={16} className="mr-1" />
+            <span>Home</span>
+          </Link> */}
+          <Link to="/home-collection" className="flex items-center hover:text-[#E47F9F] transition-colors">
+            <MapPin size={16} className="mr-1" />
+            <span>Home-Collections</span>
+          </Link>
+          <Link to="/pathology" className="flex items-center hover:text-[#E47F9F] transition-colors">
+            <User size={16} className="mr-1" />
+            <span>Pathology</span>
+          </Link>
+        </div>
+
+
       </div>
     </div>
   );

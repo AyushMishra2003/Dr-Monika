@@ -172,7 +172,7 @@ export default function AboutDrMonika() {
                   Advanced Infertility Solutions
                 </h3>
                 <p className="text-gray-700">
-                  Expert in fertility treatments, including IVF, IUI, and hormonal therapy.
+                  Expert in fertility treatments and hormonal therapy.
                 </p>
               </div>
 
