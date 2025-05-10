@@ -19,14 +19,14 @@ export default function AppointmentBooking() {
   const [bookedAppointments, setBookedAppointments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   // Patient details
   const [patientDetails, setPatientDetails] = useState({
     patientName: '',
     phoneNumber: '',
     address: ''
   });
-  
+
   // Handle patient details change
   const handlePatientDetailsChange = (e) => {
     setPatientDetails({
@@ -34,7 +34,7 @@ export default function AppointmentBooking() {
       [e.target.name]: e.target.value
     });
   };
-  
+
   // Fetch existing appointments
   useEffect(() => {
     const fetchAppointments = async () => {
@@ -57,7 +57,7 @@ export default function AppointmentBooking() {
         setIsLoading(false);
       }
     };
-    
+
     fetchAppointments();
     window.scrollTo(0, 0);
   }, []);
@@ -72,85 +72,85 @@ export default function AppointmentBooking() {
   // Generate time slots based on current date and existing bookings
   useEffect(() => {
     if (isLoading) return;
-    
+
     const morningSlots = [];
     const eveningSlots = [];
-    
+
     // Get current time
     const now = new Date();
     const isToday = selectedDate.toDateString() === now.toDateString();
     const currentHour = now.getHours();
     const currentMinute = now.getMinutes();
-    
+
     // Format selected date to check against booked appointments
     const formatSelectedDate = (hour, minute) => {
       const date = new Date(selectedDate);
       date.setHours(hour, minute, 0, 0);
       return date;
     };
-    
+
     // Check if a slot is already booked
     const isSlotBooked = (hour, minute) => {
       const slotDateTime = formatSelectedDate(hour, minute);
-      
+
       return bookedAppointments.some(appointment => {
         const appointmentDate = new Date(appointment.dateTime);
         return appointmentDate.getTime() === slotDateTime.getTime();
       });
     };
-    
+
     // Morning slots (10:00 AM - 1:30 PM)
     for (let hour = 10; hour <= 13; hour++) {
       for (let minute = 0; minute < 60; minute += 20) {
         // Skip if last slot at 1:30 PM
         if (hour === 13 && minute > 30) continue;
-        
+
         // Skip slots in the past for today
         if (isToday && (hour < currentHour || (hour === currentHour && minute < currentMinute))) {
           continue;
         }
-        
+
         const timeStr = `${hour}:${minute === 0 ? '00' : minute}`;
         const displayHour = hour > 12 ? hour - 12 : hour;
         const ampm = hour >= 12 ? 'PM' : 'AM';
         const displayTime = `${displayHour}:${minute === 0 ? '00' : minute} ${ampm}`;
         const slotDate = formatSelectedDate(hour, minute);
-        
-        morningSlots.push({ 
-          id: timeStr, 
-          displayTime, 
+
+        morningSlots.push({
+          id: timeStr,
+          displayTime,
           booked: isSlotBooked(hour, minute),
           dateTime: slotDate.toISOString()
         });
       }
     }
-    
+
     // Evening slots (6:00 PM - 8:30 PM)
     for (let hour = 18; hour <= 20; hour++) {
       for (let minute = 0; minute < 60; minute += 20) {
         // Skip if last slot at 8:30 PM
         if (hour === 20 && minute > 30) continue;
-        
+
         // Skip slots in the past for today
         if (isToday && (hour < currentHour || (hour === currentHour && minute < currentMinute))) {
           continue;
         }
-        
+
         const timeStr = `${hour}:${minute === 0 ? '00' : minute}`;
         const displayHour = hour > 12 ? hour - 12 : hour;
         const ampm = 'PM';
         const displayTime = `${displayHour}:${minute === 0 ? '00' : minute} ${ampm}`;
         const slotDate = formatSelectedDate(hour, minute);
-        
-        eveningSlots.push({ 
-          id: timeStr, 
-          displayTime, 
+
+        eveningSlots.push({
+          id: timeStr,
+          displayTime,
           booked: isSlotBooked(hour, minute),
           dateTime: slotDate.toISOString()
         });
       }
     }
-    
+
     setAvailableTimeSlots([...morningSlots, ...eveningSlots]);
   }, [selectedDate, bookedAppointments, isLoading]);
 
@@ -172,24 +172,36 @@ export default function AppointmentBooking() {
     if (!selectedTimeSlot || !patientDetails.patientName || !patientDetails.phoneNumber) {
       return;
     }
-  
+
+    console.log(selectedTimeSlot, patientDetails);
+
+
     setPaymentStatus('processing');
-  
+
     try {
       // Convert to ISO string with timezone offset (+05:30)
-      const istDateTime = new Date(selectedTimeSlot.dateTime).toLocaleString("sv-SE", {
-        timeZone: "Asia/Kolkata"
-      }).replace(" ", "T") + "+05:30";
-  
+      // const istDateTime = new Date(selectedTimeSlot.dateTime).toLocaleString("sv-SE", {
+      //   timeZone: "Asia/Kolkata"
+      // }).replace(" ", "T") + "+05:30";
+
+
+      const date = new Date(selectedTimeSlot.dateTime);
+
+      // Convert to IST by adding 5.5 hours (19800 seconds = 5.5 * 60 * 60 * 1000 ms)
+      const istTime = new Date(date.getTime() + (5.5 * 60 * 60 * 1000));
+
+
+      // patientName,phoneNumber,gender,purpose, dateTime,address
+
       const bookingData = {
         patientName: patientDetails.patientName,
-        dateTime: istDateTime,
+        dateTime: istTime,
         phoneNumber: patientDetails.phoneNumber,
         address: patientDetails.address
       };
-  
+
       console.log(bookingData);
-  
+
       const response = await fetch(BOOK_APPOINTMENT_URL, {
         method: 'POST',
         headers: {
@@ -197,9 +209,9 @@ export default function AppointmentBooking() {
         },
         body: JSON.stringify(bookingData)
       });
-  
+
       const result = await response.json();
-  
+
       if (result.success) {
         openRazorpayWindow();
       } else {
@@ -212,18 +224,18 @@ export default function AppointmentBooking() {
       console.error('Error booking appointment:', err);
     }
   };
-  
-  
+
+
   // Razorpay payment handler
   const handlePayment = () => {
     if (!patientDetails.patientName || !patientDetails.phoneNumber) {
       setError('Please fill in required patient details');
       return;
     }
-    
+
     handleBookAppointment();
   };
-  
+
   // Function to open Razorpay modal
   const openRazorpayWindow = () => {
     // Create a mock Razorpay options object
@@ -243,12 +255,12 @@ export default function AppointmentBooking() {
         color: "#E47F9F"
       }
     };
-    
+
     // Create mock Razorpay modal
     const razorpayModal = document.createElement('div');
     razorpayModal.className = "fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50";
     razorpayModal.id = "razorpay-modal";
-    
+
     // Modal content
     razorpayModal.innerHTML = `
       <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden">
@@ -313,22 +325,22 @@ export default function AppointmentBooking() {
         </div>
       </div>
     `;
-    
+
     // Add modal to body
     document.body.appendChild(razorpayModal);
-    
+
     // Handle close button
     document.getElementById('razorpay-close').addEventListener('click', () => {
       document.body.removeChild(razorpayModal);
       setPaymentStatus(null);
     });
-    
+
     // Handle cancel button
     document.getElementById('razorpay-cancel').addEventListener('click', () => {
       document.body.removeChild(razorpayModal);
       setPaymentStatus(null);
     });
-    
+
     // Handle pay button
     document.getElementById('razorpay-pay').addEventListener('click', () => {
       // Show processing
@@ -339,11 +351,11 @@ export default function AppointmentBooking() {
         </svg>
         Processing...
       `;
-      
+
       // Simulate processing time
       setTimeout(() => {
         document.body.removeChild(razorpayModal);
-        
+
         // Refresh appointment list after successful booking
         fetch(FETCH_APPOINTMENTS_URL)
           .then(response => response.json())
@@ -353,7 +365,7 @@ export default function AppointmentBooking() {
             }
           })
           .catch(err => console.error('Error refreshing appointments:', err));
-        
+
         setPaymentStatus('success');
       }, 2000);
     });
@@ -378,15 +390,15 @@ export default function AppointmentBooking() {
       </div>
     );
   }
-  
 
-    // useEffect(() => {
-    //   window.scrollTo(0, 0);
-    // }, []);
-    // useEffect(() => {
-    //   window.scrollTo(0, 0);
-    // }, []);
-  
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-pink-50 to-purple-100 p-4">
@@ -402,8 +414,8 @@ export default function AppointmentBooking() {
           <div className="p-4 bg-red-50 text-red-700 flex items-center border-b border-red-100">
             <AlertCircle size={20} className="mr-2" />
             {error}
-            <button 
-              onClick={() => setError(null)} 
+            <button
+              onClick={() => setError(null)}
               className="ml-auto text-red-500 hover:text-red-700"
             >
               ✕
@@ -433,7 +445,7 @@ export default function AppointmentBooking() {
                 <span className="font-medium">{selectedTimeSlot?.displayTime}</span>
               </div>
             </div>
-            <button 
+            <button
               onClick={() => {
                 setPaymentStatus(null);
                 setSelectedTimeSlot(null);
@@ -442,7 +454,7 @@ export default function AppointmentBooking() {
                   phoneNumber: '',
                   address: ''
                 });
-              }} 
+              }}
               className="mt-8 bg-[#5B2E67] hover:bg-purple-900 text-white py-2 px-6 rounded-full transition-colors duration-300 font-medium"
             >
               Book Another Appointment
@@ -461,11 +473,10 @@ export default function AppointmentBooking() {
                   <button
                     key={index}
                     onClick={() => handleDateSelect(date)}
-                    className={`w-full flex items-center p-3 rounded-lg transition-colors duration-200 hover:bg-pink-50 ${
-                      selectedDate.toDateString() === date.toDateString() 
-                        ? 'bg-pink-100 border-l-4 border-[#E47F9F]' 
+                    className={`w-full flex items-center p-3 rounded-lg transition-colors duration-200 hover:bg-pink-50 ${selectedDate.toDateString() === date.toDateString()
+                        ? 'bg-pink-100 border-l-4 border-[#E47F9F]'
                         : 'bg-gray-50'
-                    }`}
+                      }`}
                   >
                     <div className="flex-1">
                       <div className="font-medium">{formatDate(date)}</div>
@@ -478,7 +489,7 @@ export default function AppointmentBooking() {
                 ))}
               </div>
 
-      
+
             </div>
 
             {/* Time slots */}
@@ -487,7 +498,7 @@ export default function AppointmentBooking() {
                 <Clock className="mr-2 text-blue-600" size={18} />
                 Select Time Slot
               </h2>
-              
+
               {availableTimeSlots.length > 0 ? (
                 <>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
@@ -496,13 +507,12 @@ export default function AppointmentBooking() {
                         key={slot.id}
                         onClick={() => handleTimeSlotSelect(slot)}
                         disabled={slot.booked}
-                        className={`p-3 rounded-lg text-center transition-all duration-200 ${
-                          selectedTimeSlot?.id === slot.id
+                        className={`p-3 rounded-lg text-center transition-all duration-200 ${selectedTimeSlot?.id === slot.id
                             ? 'bg-[#E47F9F] text-white ring-2 ring-pink-300 ring-offset-2'
                             : slot.booked
-                            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                            : 'bg-gray-100 hover:bg-pink-50 text-gray-700 hover:text-[#5B2E67]'
-                        }`}
+                              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                              : 'bg-gray-100 hover:bg-pink-50 text-gray-700 hover:text-[#5B2E67]'
+                          }`}
                       >
                         {slot.displayTime}
                         {slot.booked && <div className="text-xs mt-1">(Booked)</div>}
@@ -510,63 +520,62 @@ export default function AppointmentBooking() {
                     ))}
                   </div>
 
-                          {/* Patient details form */}
-              {selectedTimeSlot && (
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <h2 className="text-lg font-semibold mb-4 flex items-center">
-                    <User className="mr-2 text-blue-600" size={18} />
-                    Patient Details
-                  </h2>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">Name *</label>
-                      <input 
-                        type="text" 
-                        name="patientName"
-                        value={patientDetails.patientName}
-                        onChange={handlePatientDetailsChange}
-                        className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
-                        placeholder="Enter your name"
-                        required
-                      />
+                  {/* Patient details form */}
+                  {selectedTimeSlot && (
+                    <div className="mt-6 pt-6 border-t border-gray-200">
+                      <h2 className="text-lg font-semibold mb-4 flex items-center">
+                        <User className="mr-2 text-blue-600" size={18} />
+                        Patient Details
+                      </h2>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="block text-sm text-gray-600 mb-1">Name *</label>
+                          <input
+                            type="text"
+                            name="patientName"
+                            value={patientDetails.patientName}
+                            onChange={handlePatientDetailsChange}
+                            className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
+                            placeholder="Enter your name"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-gray-600 mb-1">Phone Number *</label>
+                          <input
+                            type="tel"
+                            name="phoneNumber"
+                            value={patientDetails.phoneNumber}
+                            onChange={handlePatientDetailsChange}
+                            className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
+                            placeholder="Enter your phone number"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-gray-600 mb-1">Address</label>
+                          <textarea
+                            name="address"
+                            value={patientDetails.address}
+                            onChange={handlePatientDetailsChange}
+                            className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
+                            placeholder="Enter your address"
+                            rows="3"
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">Phone Number *</label>
-                      <input 
-                        type="tel" 
-                        name="phoneNumber"
-                        value={patientDetails.phoneNumber}
-                        onChange={handlePatientDetailsChange}
-                        className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
-                        placeholder="Enter your phone number"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">Address</label>
-                      <textarea 
-                        name="address"
-                        value={patientDetails.address}
-                        onChange={handlePatientDetailsChange}
-                        className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
-                        placeholder="Enter your address"
-                        rows="3"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
+                  )}
 
                   {/* Payment button */}
                   <div className="mt-8 border-t border-gray-200 pt-6">
                     <button
                       onClick={handlePayment}
                       disabled={!selectedTimeSlot || !patientDetails.patientName || !patientDetails.phoneNumber || paymentStatus === 'processing'}
-                      className={`w-full sm:w-auto px-8 py-3 rounded-lg font-medium transition-all duration-300 ${
-                        !selectedTimeSlot || !patientDetails.patientName || !patientDetails.phoneNumber || paymentStatus === 'processing'
+                      className={`w-full sm:w-auto px-8 py-3 rounded-lg font-medium transition-all duration-300 ${!selectedTimeSlot || !patientDetails.patientName || !patientDetails.phoneNumber || paymentStatus === 'processing'
                           ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                           : 'bg-[#5B2E67] hover:bg-purple-900 text-white shadow-md hover:shadow-lg'
-                      }`}
+                        }`}
                     >
                       {paymentStatus === 'processing' ? (
                         <span className="flex items-center justify-center">
@@ -583,7 +592,7 @@ export default function AppointmentBooking() {
                         </span>
                       )}
                     </button>
-                    
+
                     {!selectedTimeSlot && (
                       <div className="mt-3 flex items-center text-amber-600 text-sm">
                         <AlertCircle size={16} className="mr-1" />

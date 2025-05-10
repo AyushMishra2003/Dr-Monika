@@ -46,6 +46,21 @@ const Footer = () => {
                                     <MdKeyboardArrowRight className="mr-1" /> Cases
                                 </li>
                             </Link>
+                                       <Link to={"/term-condition"}>
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Term & Conditions
+                                </li>
+                            </Link>
+                                       <Link to={"/privacy-policy"}>
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Privacy Policy
+                                </li>
+                            </Link>
+                                       <Link to={"/refund-policy"}>
+                                <li className="mb-1 . flex items-center">
+                                    <MdKeyboardArrowRight className="mr-1" /> Refund Policy
+                                </li>
+                            </Link>
                             <Link to={"/blogs"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Blogs
@@ -66,7 +81,7 @@ const Footer = () => {
                     {/* Services Section */}
                     <div className="w-full lg:w-1/4 md:mb-8 mb-1 lg:ml-[4rem]">
                         <h2 className="text-xl font-semibold mb-4 text-white">Our Services</h2>
-               
+
 
 
 

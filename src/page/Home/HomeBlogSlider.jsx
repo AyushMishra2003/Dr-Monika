@@ -94,7 +94,7 @@ const HomeBlogSlider = () => {
 
     return (
         <section className='bg-gray-100 '>
-            <div className="px-2 lg:px-2 py-8 sm:py-12 md:py-14 lg:py-10 bg-gray-100 container mx-auto">
+            <div className="px-2 lg:px-2 py-8 sm:py-12 md:py-14 lg:py-10 bg-gray-100 container mx-auto px-6">
                 <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Latest Blog Posts</h2>
                 <div className="slick-equal-height">
                     <Slider {...settings}>
