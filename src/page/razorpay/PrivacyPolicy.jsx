@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
           <p className="mb-4">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
           <div className="mb-4">
             <p className="font-medium">Dr. Monika's Medical Services</p>
-            <p>Email: sadbhawnaclinic98@gmail.com</p>
+            <p>Email: Sadbhawanaclinic98@gmail.com</p>
             <p>Phone: +91 9277163686</p>
             <p>Address: H-No 2, Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park,
 Lucknow, Uttar Pradesh 226016</p>

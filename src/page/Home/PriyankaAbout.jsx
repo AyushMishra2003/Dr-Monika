@@ -16,14 +16,14 @@ export default function MonikaAbout() {
           <div className="w-full lg:w-2/3 p-4 md:p-8">
     
             <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-blue-950 mb-4">
-            Dr. Monika Pandey: Leading Specialist in Obstetrics, Gynecology, and Infertility Treatment
+            Dr. Monika Pandey: Leading Specialist in Obstetrics, Gynaecology, and Infertility Treatment
             </h2>
 
             <div className="mt-4 md:mt-6">
               <p className="text-gray-700 mb-4 text-justify ">
                 Dr. Monika Pandey is a renowned <span className="font-semibold">Obstetrician & Gynecologist</span> with extensive
                 expertise in <span className="font-semibold">Infertility Treatment</span>. With a deep commitment to Women’s Health,
-                she provides comprehensive care in all aspects of Obstetrics, Gynecology, and Reproductive Health.
+                she provides comprehensive care in all aspects of Obstetrics, Gynaecology, and Reproductive Health.
                 Passionate about helping couples achieve Parenthood, Dr. Monika Pandey offers personalized Infertility
                 Treatment.
               </p>

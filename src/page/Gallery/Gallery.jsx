@@ -1,166 +1,151 @@
-import { useEffect, useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-
-
-import img1 from "../../assets/gallery/gallery1.jpg";
-import img2 from "../../assets/gallery/gallery1.jpg";
-import img3 from "../../assets/gallery/gallery3.jpg";
-import img4 from"../../assets/gallery/gallery4.jpg";
-import img5 from "../../assets/gallery/gallery5.jpg";
-import img6 from "../../assets/gallery/gallery6.jpg";
-import img7 from"../../assets/gallery/gallery7.jpg";
-import img8 from "../../assets/gallery/gallery7.jpg";
-import img9 from "../../assets/gallery/gallery9.jpg";
+import React, { useEffect, useState } from 'react';
+import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
+import { useDispatch, useSelector } from 'react-redux';
 import BreadCrumbs from '../../component/Breadcums';
 
+import img1 from '../../assets/cases/img1.jpg'
+import img2 from '../../assets/cases/img2.jpg'
+import img3 from '../../assets/cases/img3.jpg'
+import img4 from '../../assets/cases/img4.jpg'
+import img5 from '../../assets/cases/img5.jpg'
+import img6 from '../../assets/cases/img6.jpg'
+import img7 from '../../assets/cases/img7.jpg'
+import img8 from '../../assets/cases/img8.jpg'
+import img9 from '../../assets/cases/img9.jpg'
+import img10 from '../../assets/cases/img10.jpg'
+import img11 from '../../assets/cases/img11.jpg'
+import img12 from '../../assets/cases/img12.jpg'
+import img13 from '../../assets/cases/img13.jpg'
 
 
-// Simple slider component
-const Slider = ({ children, settings, ref }) => {
-  const [currentSlide, setCurrentSlide] = useState(settings.initialSlide || 0);
-  
-  const slickPrev = () => {
-    setCurrentSlide((prev) => 
-      prev === 0 ? children.length - 1 : prev - 1
-    );
-  };
-  
-  const slickNext = () => {
-    setCurrentSlide((prev) => 
-      prev === children.length - 1 ? 0 : prev + 1
-    );
-  };
-  
-  if (ref) {
-    ref.current = { slickPrev, slickNext };
-  }
-  
-  return (
-    <div className="relative overflow-hidden">
-      <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-        {children}
-      </div>
-    </div>
-  );
-};
+const galleryData = [
+  { id: 1, src: img1, alt: "Gallery Image 1" },
+  { id: 2, src: img2, alt: "Gallery Image 2" },
+  // { id: 3, src: img3, alt: "Gallery Image 3" },
+  { id: 4, src: img4, alt: "Gallery Image 4" },
+  { id: 5, src: img5, alt: "Gallery Image 5" },
+  // { id: 6, src: img6, alt: "Gallery Image 6" },
+  { id: 7, src: img7, alt: "Gallery Image 7" },
+  // { id: 8, src: img8, alt: "Gallery Image 8" },
+  // { id: 9, src: img9, alt: "Gallery Image 9" },
+  // { id: 10, src: img10, alt: "Gallery Image 9" },
+  // { id: 11, src: img11, alt: "Gallery Image 9" },
+  // { id: 12, src: img12, alt: "Gallery Image 9" },
+  { id: 13, src: img13, alt: "Gallery Image 9" },
+
+];
 
 export default function Gallery() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const sliderRef = useRef(null);
+  
+  // const dispatch = useDispatch()
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // const {galleryData, error, status} = useSelector((state)=>state.data)
 
-  const gallery = [
-    { image: img1 },
-    { image: img2 },
-    { image: img3 },
-    { image: img4 },
-    { image: img5 },
-    { image: img6 },
-    { image: img7 },
-    { image: img8 },
-    { image: img9 }
-  ];
-
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Gallery' },
-  ];
-
+  // useEffect(()=>{
+  //   dispatch(fetchGalleryData())
+  // },[])
   const openModal = (index) => {
     setCurrentImageIndex(index);
-    setIsOpen(true);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsOpen(false);
+    setIsModalOpen(false);
   };
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: currentImageIndex,
-    arrows: false,
+  const goToPrevious = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? galleryData.length - 1 : prevIndex - 1
+    );
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const goToNext = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === galleryData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
-    <section className="bg-pink-50 min-h-screen">
-     <BreadCrumbs  headText={"Gallery"} items={breadcrumbItems} />
-      <div className="relative">
-        <div className="bg-pink-50 py-6 sm:py-8 lg:py-16">
-          <div className="mx-auto container px-4 md:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 xl:gap-8">
-              {gallery.slice().reverse().map((data, index) => (
-                <a
-                  href="#"
-                  className="group relative flex h-[20rem] items-end justify-end overflow-hidden rounded-lg bg-pink-100 shadow-lg md:h-80 hover:shadow-xl transition-shadow"
-                  key={index}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openModal(index);
-                  }}
-                >
-                  <img
-                    src={data.image}
-                    loading="lazy"
-                    alt={`Gallery ${index + 1}`}
-                    className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                  />
-                  {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-pink-800 via-transparent to-transparent opacity-40"></div> */}
-                </a>
-              ))}
+    <>
+     <BreadCrumbs
+            title="Gallery"
+            items={[
+                { label: "Home", link: "/" },
+                { label: "Gallery", link: "/gallery" },
+              ]}
+            // bgImage="/api/placeholder/1920/600"
+          />
+    <div className="min-h-screen bg-gray-100 lg:p-8 p-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Gallery Grid */}
+        <div className="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-3 gap-6">
+          {galleryData.map((image, index) => (
+            <div 
+              key={image.id} 
+              className="relative overflow-hidden  shadow-lg bg-white group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              onClick={() => openModal(index)}
+            >
+              <img 
+                src={image.imageUrl || image.src} 
+                alt={image.alt || 'Gallery Image'} 
+                className="w-full lg:h-110 h-100 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30  flex items-center justify-center transition-all duration-300">
+                <div className="text-white opacity-0 group-hover:opacity-100 transform scale-90 group-hover:scale-100 transition-all duration-300 text-center">
+                  <span className="text-xl font-bold"><ZoomIn size={50} /></span>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
-        {isOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center ">
-            <div className="relative w-full max-w-3xl p-4 bg-white rounded-lg overflow-hidden">
-              <button
+        {/* Modal */}
+        {isModalOpen && (
+          <div 
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+            onClick={closeModal}
+          >
+            <div className="relative max-w-5xl w-full max-h-screen p-4 flex items-center justify-center">
+              <button 
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-pink-800 hover:text-pink-900 z-10"
+                className="absolute top-4 right-4 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-all z-10"
               >
                 <X size={24} />
               </button>
 
-              {/* Custom Arrows */}
-              <button
-                onClick={() => sliderRef.current.slickPrev()}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-pink-100 hover:bg-pink-200 text-pink-800 p-2 rounded-full z-10"
+              {/* Previous Button */}
+              <button 
+                onClick={goToPrevious}
+                className="absolute left-4 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-all z-10"
               >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={() => sliderRef.current.slickNext()}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-pink-100 hover:bg-pink-200 text-pink-800 p-2 rounded-full z-10"
-              >
-                <ChevronRight size={24} />
+                <ChevronLeft size={32} />
               </button>
 
-              <Slider ref={sliderRef} settings={settings}>
-                {gallery.slice().reverse().map((data, index) => (
-                  <div key={index} className="min-w-full flex-shrink-0">
-                    <img
-                      src={data.image}
-                      alt={`Gallery ${index + 1}`}
-                      className="w-full h-[400px] object-contain rounded-lg"
-                    />
-                  </div>
-                ))}
-              </Slider>
+              {/* Next Button */}
+              <button 
+                onClick={goToNext}
+                className="absolute right-4 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-all z-10"
+              >
+                <ChevronRight size={32} />
+              </button>
+
+              {/* Image */}
+              <div className="w-full flex items-center justify-center">
+                <img 
+                  src={galleryData[currentImageIndex].imageUrl || galleryData[currentImageIndex].src} 
+                  alt={galleryData[currentImageIndex].alt || 'Gallery Imnage'} 
+                  className="max-h-screen max-w-full object-contain rounded-md  shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         )}
       </div>
-    </section>
+    </div>
+    </>
   );
 }

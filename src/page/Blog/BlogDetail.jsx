@@ -74,7 +74,7 @@ const BlogDetails = () => {
       image: "https://img.freepik.com/free-photo/portrait-happy-pregnant-woman-touching-her-belly_171337-7024.jpg?t=st=1745824321~exp=1745827921~hmac=1c1517eb89f913d9ff146cea1a8f8a7ef233a8dbb52ececaf4f92898f024560f&w=1380",
       author: "Dr. Priya Verma",
       date: "March 30, 2025",
-      category: "Gynecology and Obstetrics",
+      category: "Gynaecology and Obstetrics",
       content: `
           Pregnancy is an exciting yet challenging time, requiring special attention to both the mother's and the baby’s health. Proper nutrition is essential during this period. A balanced diet rich in vitamins, minerals, and protein supports the development of the baby and helps maintain the mother's energy levels.
 
@@ -91,7 +91,7 @@ const BlogDetails = () => {
       image: "https://img.freepik.com/free-photo/woman-using-nursing-pillow-home-newborn-baby_52683-110702.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
       author: "Dr. Priya Verma",
       date: "March 25, 2025",
-      category: "Gynecology and Obstetrics",
+      category: "Gynaecology and Obstetrics",
       content: `
           The postpartum period is a time of significant physical and emotional changes. After childbirth, new mothers may experience a range of physical symptoms such as vaginal bleeding, uterine contractions, and changes in breast tissue as they begin breastfeeding.
 
@@ -108,7 +108,7 @@ const BlogDetails = () => {
       image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
       author: "Dr. Priya Verma",
       date: "March 20, 2025",
-      category: "Gynecology and Obstetrics",
+      category: "Gynaecology and Obstetrics",
       content: `
           Regular gynecological check-ups are crucial for maintaining women's health and preventing serious conditions such as cervical cancer, ovarian cancer, and sexually transmitted infections (STIs). These check-ups allow your gynecologist to monitor your reproductive health and catch any potential issues early.
 

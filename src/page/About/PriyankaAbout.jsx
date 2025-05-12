@@ -18,10 +18,10 @@ export default function AboutDrMonika() {
   return (
     <section>
       <Helmet>
-        <title>Dr. Monika Pandey - Specialist in Obstetrics, Gynecology & Infertility | 30+ Years Experience</title>
+        <title>Dr. Monika Pandey - Specialist in Obstetrics, Gynaecology & Infertility | 30+ Years Experience</title>
         <meta
           name="description"
-          content="Dr. Monika Pandey is a compassionate specialist in Obstetrics, Gynecology & Infertility with 30+ years of experience in providing personalized and holistic healthcare. Book an appointment today."
+          content="Dr. Monika Pandey is a compassionate specialist in Obstetrics, Gynaecology & Infertility with 30+ years of experience in providing personalized and holistic healthcare. Book an appointment today."
         />
         <meta
           name="keywords"
@@ -31,17 +31,17 @@ export default function AboutDrMonika() {
         <link rel="canonical" href="https://yourdomain.com/about-dr-monika-pandey" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Dr. Monika Pandey - Specialist in Obstetrics, Gynecology & Infertility" />
+        <meta property="og:title" content="Dr. Monika Pandey - Specialist in Obstetrics, Gynaecology & Infertility" />
         <meta
           property="og:description"
-          content="With 30+ years of experience, Dr. Monika Pandey offers comprehensive care in Obstetrics, Gynecology & Infertility treatments."
+          content="With 30+ years of experience, Dr. Monika Pandey offers comprehensive care in Obstetrics, Gynaecology & Infertility treatments."
         />
         <meta property="og:url" content="https://yourdomain.com/about-dr-monika-pandey" />
         <meta property="og:type" content="profile" />
         <meta property="og:image" content="https://yourdomain.com/images/dr-monika-pandey.jpg" />
 
         {/* Twitter */}
-        <meta name="twitter:title" content="Dr. Monika Pandey - Obstetrics, Gynecology & Infertility Specialist" />
+        <meta name="twitter:title" content="Dr. Monika Pandey - Obstetrics, Gynaecology & Infertility Specialist" />
         <meta
           name="twitter:description"
           content="30+ years experience in women's healthcare. Expert in pregnancy care, infertility treatments, and gynecological services. Book now."
@@ -84,7 +84,7 @@ export default function AboutDrMonika() {
                   Dr. Monika Pandey
                 </h1>
                 <p className="text-white text-xl opacity-90 mb-2">
-                  Specialist in Obstetrics, Gynecology & Infertility
+                  Specialist in Obstetrics, Gynaecology & Infertility
                 </p>
                 <p className="text-white text-md opacity-90 mb-2">
                   MBBS (Agra University), Medical Registration(40837), DGO (Calcutta), CIMP(Credentialed Indian Menopause Practitioner)
@@ -108,7 +108,7 @@ export default function AboutDrMonika() {
               <strong>Dr. Monika Pandey</strong> is a highly skilled and compassionate <strong>Obstetrician</strong>, <strong>Gynecologist</strong>, and <strong>CIMP (Credentialed Indian Menopause Practitioner)</strong> committed to providing exceptional care for women at every stage of life. With over <strong>30+ years of experience</strong>, she believes in a personalized approach to women’s health, ensuring each patient feels <strong>Heard</strong>, <strong>Understood</strong>, and <strong>Supported</strong>.
             </p>
             <p className="text-gray-700 mb-6 lg:text-center text-justify md:max-w-4xl mx-auto">
-              Her areas of expertise include <strong>Pregnancy Care</strong>, <strong>High-Risk Pregnancies</strong>, <strong>Normal and Cesarean Deliveries</strong>, <strong>PCOS & Endometriosis</strong>, <strong>Infertility Treatment</strong>, <strong>Irregular Periods</strong>, <strong>Menstrual Disorders</strong>, <strong>Menopause-Related Issues</strong>, <strong>Regular Health Check-ups of Pregnant Women</strong>, <strong>Hormonal Imbalance</strong>, <strong>Safe Termination of Pregnancy</strong>, <strong>Family Planning</strong>, and <strong>Cervical Cancer Screening and Vaccination</strong>. <strong>Dr. Monika Pandey</strong> combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
+              Her areas of expertise include <strong>Regular Health Check-ups of Pregnant Women</strong> combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
             </p>
 
             <div className="flex justify-center">
@@ -143,7 +143,7 @@ export default function AboutDrMonika() {
                   30+ Years of Expertise
                 </h3>
                 <p className="text-gray-700">
-                  Trusted experience in Obstetrics, Gynecology & Infertility care.
+                  Trusted experience in Obstetrics, Gynaecology & Infertility care.
 
                 </p>
               </div> */}
@@ -320,7 +320,7 @@ l
                   {
                     year: "Current",
                     degree: "Practicing at",
-                    institution: "Sadbhawna Clinic, Indira Nagar, Lucknow",
+                    institution: "Sadbhawana Clinic, Indira Nagar, Lucknow",
                     side: "left"
                   }
                 ].map((item, index) => (

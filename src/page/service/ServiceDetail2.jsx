@@ -21,7 +21,7 @@ import img2 from '../../assets/infetility.jpg';
 // Placeholder BreadCrumbs component
 
 
-export default function GynecologyObstetricsServices() {
+export default function GynaecologyObstetricsServices() {
     const [activeTab, setActiveTab] = useState('obstetrics');
     const navigate = useNavigate()
 
@@ -76,7 +76,7 @@ export default function GynecologyObstetricsServices() {
         }
     ];
 
-    const gynecologyServices = [
+    const GynaecologyServices = [
         {
             title: "Irregular Periods",
             longDescription: "Diagnosis and treatment of menstrual irregularities, including amenorrhea, oligomenorrhea, and polymenorrhea, addressing underlying hormonal imbalances and other causes.",
@@ -166,44 +166,44 @@ export default function GynecologyObstetricsServices() {
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
             <Helmet>
-                <title>Women's Healthcare & Gynecology Services | Dr. Monika Pandey</title>
+                <title>Women's Healthcare & Gynaecology Services | Dr. Monika Pandey</title>
                 <meta
                     name="description"
-                    content="Expert gynecology and obstetrics care by Dr. Monika Pandey. Comprehensive pregnancy support, high-risk consultations, delivery options, and women’s wellness services in Lucknow."
+                    content="Expert Gynaecology and obstetrics care by Dr. Monika Pandey. Comprehensive pregnancy support, high-risk consultations, delivery options, and women’s wellness services in Lucknow."
                 />
                 <meta
                     name="keywords"
-                    content="gynecology Lucknow, women healthcare, pregnancy care, obstetrician Lucknow, normal delivery, C-section, prenatal checkups, high-risk pregnancy, Dr Monika Pandey"
+                    content="Gynaecology Lucknow, women healthcare, pregnancy care, obstetrician Lucknow, normal delivery, C-section, prenatal checkups, high-risk pregnancy, Dr Monika Pandey"
                 />
                 <meta name="author" content="Dr. Monika Pandey" />
-                <link rel="canonical" href="https://yourdomain.com/services/gynecology" />
+                <link rel="canonical" href="https://yourdomain.com/services/Gynaecology" />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:title" content="Women's Healthcare & Pregnancy Support in Lucknow" />
                 <meta
                     property="og:description"
-                    content="Comprehensive gynecology and obstetrics care with Dr. Monika Pandey. From prenatal care to safe delivery and postpartum support, get expert help at every stage."
+                    content="Comprehensive Gynaecology and obstetrics care with Dr. Monika Pandey. From prenatal care to safe delivery and postpartum support, get expert help at every stage."
                 />
-                <meta property="og:url" content="https://yourdomain.com/services/gynecology" />
+                <meta property="og:url" content="https://yourdomain.com/services/Gynaecology" />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://yourdomain.com/images/gynecology-cover.jpg" />
+                <meta property="og:image" content="https://yourdomain.com/images/Gynaecology-cover.jpg" />
 
                 {/* Twitter */}
-                <meta name="twitter:title" content="Gynecology & Women's Healthcare | Dr. Monika Pandey" />
+                <meta name="twitter:title" content="Gynaecology & Women's Healthcare | Dr. Monika Pandey" />
                 <meta
                     name="twitter:description"
                     content="Personalized gynecological and obstetric care for every woman. Book an appointment with Dr. Monika Pandey for safe and compassionate healthcare."
                 />
-                <meta name="twitter:image" content="https://yourdomain.com/images/gynecology-cover.jpg" />
+                <meta name="twitter:image" content="https://yourdomain.com/images/Gynaecology-cover.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <BreadCrumbs
                 items={[
                     { label: 'Home', path: '/' },
                     { label: 'Services', path: '/services' },
-                    { label: 'Gynecology & Obstetrics' } // last item without a path
+                    { label: 'Gynaecology & Obstetrics' } // last item without a path
                 ]}
-                headText="Gynecology & Obstetrics"
+                headText="Gynaecology & Obstetrics"
             />
             <div className="container mx-auto px-4 py-12">
                 {/* Hero Section with Image */}
@@ -216,7 +216,7 @@ export default function GynecologyObstetricsServices() {
                                 Complete <span className="text-white/90">Women's Healthcare</span>
                             </h1>
                             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-                                Specialized gynecology and obstetrics care for every stage of a woman's life
+                                Specialized Gynaecology and obstetrics care for every stage of a woman's life
                             </p>
                             <button onClick={() => navigate("/appoitment")} className="mt-6 bg-white cursor-pointer text-[#7e3f8f] font-bold py-3 px-8 rounded-full hover:bg-purple-50 transition-colors">
                                 Book an Appointment
@@ -229,12 +229,12 @@ export default function GynecologyObstetricsServices() {
                 <div className="flex flex-wrap justify-center mb-10">
 
                     <button
-                        onClick={() => setActiveTab('gynecology')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'gynecology'
+                        onClick={() => setActiveTab('Gynaecology')}
+                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'Gynaecology'
                             ? 'bg-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
-                        Gynecology
+                        Gynaecology
                     </button>
                     <button
                         onClick={() => setActiveTab('obstetrics')}
@@ -275,7 +275,7 @@ export default function GynecologyObstetricsServices() {
                                         Pregnancy is a remarkable journey that requires specialized medical attention. Our complete pregnancy care ensures that you and your baby receive the highest standard of healthcare throughout all stages of pregnancy.
                                     </p>
                                     <p className="mb-4">
-                                        From early pregnancy checks to delivery planning, our team of experienced obstetricians provides personalized care tailored to your unique needs. We monitor fetal development, manage pregnancy-related conditions, and prepare you for a safe delivery.
+                                     From early pregnancy checks to delivery planning, Dr. Monika Pandey experienced Obstetricians provides personalized care tailored to your unique needs. We monitor fetal development, manage pregnancy-related conditions, and prepare you for a safe delivery.
                                     </p>
                                     <p>
                                         Our approach combines modern medical technology with compassionate care to give you peace of mind during this important life event.
@@ -316,8 +316,8 @@ export default function GynecologyObstetricsServices() {
                     </div>
                 )}
 
-                {/* Gynecology Tab Content */}
-                {activeTab === 'gynecology' && (
+                {/* Gynaecology Tab Content */}
+                {activeTab === 'Gynaecology' && (
                     <div>
                         <div className="text-center mb-10">
                             <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Gynecological Services</h2>
@@ -328,7 +328,7 @@ export default function GynecologyObstetricsServices() {
                             </p>
                         </div>
 
-                        {/* Featured Gynecology Section */}
+                        {/* Featured Gynaecology Section */}
                         <div className="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
                             <div className="md:flex flex-row-reverse">
                                 <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#7e3f8f] lg:p-8 p-4 text-white">
@@ -337,7 +337,7 @@ export default function GynecologyObstetricsServices() {
                                         Our gynecological services cover all aspects of women's reproductive health, from routine check-ups to specialized treatments for complex conditions. We believe that every woman deserves personalized care that addresses her unique needs.
                                     </p>
                                     <p className="mb-4">
-                                        Our team specializes in diagnosing and treating a wide range of gynecological conditions, providing preventive care, and offering guidance on reproductive health throughout all stages of a woman's life.
+                                        Dr. Monika Pandey specializes in diagnosing and treating a wide range of gynecological conditions, providing preventive care, and offering guidance on reproductive health throughout all stages of a woman's life.
                                     </p>
                                     <p>
                                         With a compassionate approach and evidence-based treatments, we help women maintain optimal reproductive health and address any concerns promptly and effectively.
@@ -350,7 +350,7 @@ export default function GynecologyObstetricsServices() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {gynecologyServices.map((service, index) => (
+                            {GynaecologyServices.map((service, index) => (
                                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                     <div className="bg-gradient-to-r from-[#e47f9f] to-[#7e3f8f] p-4 flex items-center">
                                         <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
@@ -405,7 +405,7 @@ export default function GynecologyObstetricsServices() {
                                         Using advanced diagnostic techniques and evidence-based treatments, we help identify the underlying causes and develop effective strategies to overcome fertility obstacles.
                                     </p>
                                     <p>
-                                        Our compassionate team provides support throughout the entire process, combining medical expertise with emotional guidance to help you achieve your dream of parenthood.
+                                       Dr. Monika Pandey provides support throughout the entire process, combining medical expertise with emotional guidance to help you achieve your dream of parenthood.
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
@@ -859,7 +859,7 @@ export default function GynecologyObstetricsServices() {
                                         <div className="ml-4">
                                             <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
                                             <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
-                                                sadbhawnaclinic98@gmail.com
+                                                Sadbhawanaclinic98@gmail.com
                                             </a>
                                         </div>
                                     </div>

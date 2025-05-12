@@ -39,7 +39,7 @@ export default function Header() {
                 <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block z-10">
                   <div className="py-1">
                     <a href="/services/physiotherapy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-100">Physiotherapy</a>
-                    <a href="/services/gynecology" className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-100">Gynecology</a>
+                    <a href="/services/Gynaecology" className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink-100">Gynaecology</a>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Header() {
               </button>
               <div id="services-dropdown" className="hidden pl-4">
                 <a href="/services/physiotherapy" className="block text-white hover:text-pink-200 px-3 py-2">Physiotherapy</a>
-                <a href="/services/gynecology" className="block text-white hover:text-pink-200 px-3 py-2">Gynecology</a>
+                <a href="/services/Gynaecology" className="block text-white hover:text-pink-200 px-3 py-2">Gynaecology</a>
               </div>
             </div>
             

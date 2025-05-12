@@ -24,28 +24,28 @@ const Footer = () => {
 
                     <div className="w-full lg:w-1/4 md:mb-8 mb-1  lg:ml-[4rem]">
 
-                        <h2 className="text-xl font-semibold mb-4 text-white">Quick Links</h2>
+                        <h2 className="text-xl font-semibold mb-4 text-white">Support</h2>
                         <ul className="text-md">
                             <Link to={"/"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Home
                                 </li>
                             </Link>
-                            <Link to={"/about/dr-monika"}>
+                            {/* <Link to={"/about/dr-monika"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> About Our Expert
                                 </li>
-                            </Link>
-                            <Link to={"/about/clinic"}>
+                            </Link> */}
+                            {/* <Link to={"/about/clinic"}>
                                 <li className="mb-1 . flex items-center">
-                                    <MdKeyboardArrowRight className="mr-1" />Sadbhawna Clinic
+                                    <MdKeyboardArrowRight className="mr-1" />Sadbhawana Clinic
                                 </li>
-                            </Link>
-                            <Link to={"/gallery"}>
+                            </Link> */}
+                            {/* <Link to={"/gallery"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Cases
                                 </li>
-                            </Link>
+                            </Link> */}
                                        <Link to={"/term-condition"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Term & Conditions
@@ -86,18 +86,18 @@ const Footer = () => {
 
 
                         <ul className="text-md">
-                            <Link to={`/services/gynecology`}>
+                            <Link to={`/services/Gynaecology`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />  Obstetrics
                                 </li>
                             </Link>
-                            <Link to={`/services/gynecology`}>
+                            <Link to={`/services/Gynaecology`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />
                                     Gynaecology
                                 </li>
                             </Link>
-                            <Link to={`/services/gynecology`}>
+                            <Link to={`/services/Gynaecology`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />
                                     Infertility Treatment
@@ -128,7 +128,7 @@ const Footer = () => {
                         <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
                         <li className="mb-2 flex items-center text-md">
                             <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
-                            <a href="mailto:sadbhawnaclinic98@gmail.com" className="">sadbhawnaclinic98@gmail.com</a>
+                            <a href="mailto:Sadbhawanaclinic98@gmail.com" className="">Sadbhawanaclinic98@gmail.com</a>
                         </li>
                         <li className="mb-2 flex items-center text-lg lg:text-lg">
                             <MdCall className="mr-1 text-2xl" />
@@ -141,7 +141,7 @@ const Footer = () => {
 
                         <li className="flex items-start text-lg lg:text-lg">
                             <MdLocationOn className="mr-1 text-xl lg:text-6xl" />
-                            <a href="https://www.google.com/maps"
+                            <a href="https://www.google.co.in/maps/place/Dr+Monika+Pandey+Best+Gynaecologist+in+Indira+Nagar/@26.8854118,80.9986954,17z/data=!3m1!4b1!4m6!3m5!1s0x3999592fb08ce83b:0x969f7467a24cfb3b!8m2!3d26.885407!4d81.0012703!16s%2Fg%2F11vpf7nlyn?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                                 target="_blank" rel="noopener noreferrer"
                                 className=" transition-all duration-300 text-[16px]">
                                 Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park, Lucknow

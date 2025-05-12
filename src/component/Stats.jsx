@@ -26,8 +26,8 @@ const stats = [
   },
   {
     id: 4,
-    title: "Successful Surgeries",
-    count: "5000",
+    title: "Deliveries",
+    count: "7000",
     icon: <FaVial className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
 ];
@@ -58,8 +58,8 @@ const ClinicStats = () => {
             <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
           </div>
           <div className="p-4">
-            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">5000+</div>
-            <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
+            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">7000+</div>
+            <div className="text-white font-semibold">Deliveries</div>
           </div>
         </div>
       </div>

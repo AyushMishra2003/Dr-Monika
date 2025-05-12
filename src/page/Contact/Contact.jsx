@@ -19,7 +19,7 @@ const Contact = () => {
     },
     {
       icon: <FaInstagram />,
-      url: "https://www.instagram.com",
+      url: "https://www.instagram.com/drmonikagynae/",
       color: "bg-gradient-to-r from-pink-500 to-yellow-500", // Instagram gradient
     },
     {
@@ -126,7 +126,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      H-No 2, Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park, <br/> Lucknow, Uttar Pradesh 226016
+                     H-No 2, Sadbhavna Clinic, Sect-10, Indira Nagar, Near Arbindo Park, Lucknow, Uttar Pradesh 226016
                  
                     </a>
                   </div>
@@ -193,10 +193,10 @@ const Contact = () => {
                   <div>
                     <h2 className="text-[#E47F9F] text-[1.3rem] sora-600">Mail for Information</h2>
                     <a
-                      href="mailto:sadbhawnaclinic98@gmail.com"
+                      href="mailto:Sadbhawanaclinic98@gmail.com"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                      sadbhawnaclinic98@gmail.com
+                      Sadbhawanaclinic98@gmail.com
                     </a>
                   </div>
                 </div>

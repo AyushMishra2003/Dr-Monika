@@ -12,7 +12,7 @@ import BreadCrumbs from "../../component/Breadcums";
 // Define your treatments array with icons
 const treatments = [
     { name: 'High RISK Pregnancy', icon: <FaStar />, path: '/treatment/highriskpregnancy' },
-    { name: 'Minimally Invasive Gynaecology', icon: <FaStar />, path: '/treatment/minimallyinvasivegynecology' },
+    { name: 'Minimally Invasive Gynaecology', icon: <FaStar />, path: '/treatment/minimallyinvasiveGynaecology' },
     { name: 'Fetal Medicine', icon: <FaStar />, path: '/treatment/fetalmedicine' },
     { name: 'Sustainable Menstruation', icon: <FaStar />, path: '/treatment/sustainablemenstruation' },
     { name: 'Normal & Cesarean Delivery', icon: <FaStar />, path: '/treatment/normalcesareandelivery' },

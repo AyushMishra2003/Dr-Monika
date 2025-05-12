@@ -11,7 +11,7 @@ import BlogDetails from './page/Blog/BlogDetail'
 import AboutDrMonika from './page/About/PriyankaAbout'
 import AboutClinic from './page/About/AboutClinic'
 import PsychiatricServicesDetails from './page/service/ServiceDetail1'
-import GynecologyObstetricsServices from './page/service/ServiceDetail2'
+import GynaecologyObstetricsServices from './page/service/ServiceDetail2'
 
 
 import "slick-carousel/slick/slick.css";
@@ -50,7 +50,7 @@ const App = () => {
         <Route path='/blogs' element={<BlogPage />} />
         <Route path='/blog/:detail' element={<BlogDetails />} />
         <Route path='/services/physiotherapy' element={<PsychiatricServicesDetails />} />
-        <Route path='/services/gynecology' element={<GynecologyObstetricsServices />} />
+        <Route path='/services/Gynaecology' element={<GynaecologyObstetricsServices />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

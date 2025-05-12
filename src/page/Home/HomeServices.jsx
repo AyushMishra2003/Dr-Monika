@@ -9,11 +9,11 @@ const HomeService = () => {
 
   const services = [
     {
-      id: "gynecology",
-      title: "Obstetrics & Gynecology",
+      id: "Gynaecology",
+      title: "Obstetrics & Gynaecology",
       subtitle: "Complete Women's Healthcare",
       description:
-        "Sadbhawna Clinic provides comprehensive women’s health care, including pregnancy support, preventive services, and specialized treatments.",
+        "Sadbhawana Clinic provides comprehensive women’s health care, including pregnancy support, preventive services, and specialized treatments.",
       icon: <Heart className="h-10 w-10" />,
       color: primaryPink,
       features: [
@@ -34,7 +34,7 @@ const HomeService = () => {
           text: "Preventive screenings and wellness check-ups"
         }
       ],
-      link: "/services/gynecology"
+      link: "/services/Gynaecology"
     },
     {
       id: "psychiatry",
@@ -82,7 +82,7 @@ const HomeService = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto lg:text-center text-justify">
-              Sadbhawna Clinic provides expert  Gynecology services and  Psychiatry , offering compassionate and confidential care for women’s health and  mental wellness   at every stage of life.
+              Sadbhawana Clinic provides expert  Gynaecology services and  Psychiatry , offering compassionate and confidential care for women’s health and  mental wellness   at every stage of life.
             </p>
 
           </p>

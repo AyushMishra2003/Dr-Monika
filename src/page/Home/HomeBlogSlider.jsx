@@ -43,7 +43,7 @@ const HomeBlogSlider = () => {
             image: "https://img.freepik.com/free-photo/portrait-happy-pregnant-woman-touching-her-belly_171337-7024.jpg?t=st=1745824321~exp=1745827921~hmac=1c1517eb89f913d9ff146cea1a8f8a7ef233a8dbb52ececaf4f92898f024560f&w=1380",
             author: "Dr. Monika Pandey",
             date: "March 30, 2025",
-            category: "Gynecology and Obstetrics"
+            category: "Gynaecology and Obstetrics"
         },
         {
             id: 5,
@@ -52,7 +52,7 @@ const HomeBlogSlider = () => {
             image: "https://img.freepik.com/free-photo/woman-using-nursing-pillow-home-newborn-baby_52683-110702.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
             author: "Dr. Monika Pandey",
             date: "March 25, 2025",
-            category: "Gynecology and Obstetrics"
+            category: "Gynaecology and Obstetrics"
         },
         {
             id: 6,
@@ -61,7 +61,7 @@ const HomeBlogSlider = () => {
             image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
             author: "Dr. Monika Pandey",
             date: "March 20, 2025",
-            category: "Gynecology and Obstetrics"
+            category: "Gynaecology and Obstetrics"
         }
     ];
 

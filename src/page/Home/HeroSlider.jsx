@@ -33,7 +33,7 @@ const HomeSlider = () => {
     { icon: <FaMicroscope />, title: 'Pregnancy Testing' },
     { icon: <FaHeartbeat />, title: 'Health Care' },
     { icon: <FaUserMd />, title: 'Abortion Services' },
-    { icon: <FaUserMd />, title: 'Gynecology Services' },
+    { icon: <FaUserMd />, title: 'Gynaecology Services' },
     { icon: <FaAppleAlt />, title: 'Family Planning' },
   ];
 

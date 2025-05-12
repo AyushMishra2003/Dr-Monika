@@ -41,7 +41,7 @@ const BlogPage = () => {
             image: "https://img.freepik.com/free-photo/portrait-happy-pregnant-woman-touching-her-belly_171337-7024.jpg?t=st=1745824321~exp=1745827921~hmac=1c1517eb89f913d9ff146cea1a8f8a7ef233a8dbb52ececaf4f92898f024560f&w=1380",
             author: "Dr. Monika Pandey",
             date: "March 30, 2025",
-            category: "Gynecology and Obstetrics"
+            category: "Gynaecology and Obstetrics"
         },
         {
             id: 5,
@@ -50,7 +50,7 @@ const BlogPage = () => {
             image: "https://img.freepik.com/free-photo/woman-using-nursing-pillow-home-newborn-baby_52683-110702.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
             author: "Dr. Monika Pandey",
             date: "March 25, 2025",
-            category: "Gynecology and Obstetrics"
+            category: "Gynaecology and Obstetrics"
         },
         {
             id: 6,
@@ -59,7 +59,7 @@ const BlogPage = () => {
             image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
             author: "Dr. Monika Pandey",
             date: "March 20, 2025",
-            category: "Gynecology and Obstetrics"
+            category: "Gynaecology and Obstetrics"
         }
     ];
     
@@ -103,7 +103,7 @@ const BlogPage = () => {
         />
         <meta
           name="keywords"
-          content="health blog, mental health blog, gynecology tips, pregnancy advice, women health articles, Dr Monika Pandey, wellness blog, medical tips"
+          content="health blog, mental health blog, Gynaecology tips, pregnancy advice, women health articles, Dr Monika Pandey, wellness blog, medical tips"
         />
         <meta name="author" content="Dr. Monika Pandey" />
         <link rel="canonical" href="https://yourdomain.com/blog" />
@@ -112,7 +112,7 @@ const BlogPage = () => {
         <meta property="og:title" content="Blog - Health & Wellness by Dr. Monika Pandey" />
         <meta
           property="og:description"
-          content="Read expert blogs by Dr. Monika Pandey on mental health, women’s healthcare, gynecology, and wellbeing. Stay updated and informed."
+          content="Read expert blogs by Dr. Monika Pandey on mental health, women’s healthcare, Gynaecology, and wellbeing. Stay updated and informed."
         />
         <meta property="og:url" content="https://yourdomain.com/blog" />
         <meta property="og:type" content="website" />

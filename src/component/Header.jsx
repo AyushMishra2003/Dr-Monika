@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronUp, Calendar, Microscope, Heart } from 'lucide-react';
-import logo from '../assets/logo.png'
+import logo from '../assets/logo/logo.png'
 import logo1 from '../assets/logo.jpg'
 import { Link } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ export default function Header() {
      
       ]
     },
-    {name:"Gynecology Service" , link :'/services/gynecology'},
+    {name:"Gynaecology Service" , link :'/services/Gynaecology'},
     {name:"Psychiatric Service" , link :'/services/physiotherapy'},
     { name: 'Cases', link: '/gallery' },
     { name: 'Contact Us', link: '/contact' },

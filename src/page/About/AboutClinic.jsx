@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import BreadCrumbs from '../../component/Breadcums';
 import image from '../../assets/monika.png'
-import image1 from '../../assets/clinic.webp'
+import image1 from  '../../assets/logo/clinic.jpg'
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -57,7 +57,7 @@ export default function AboutClinic() {
           <meta property="og:title" content="Sambhawna Clinic - Women's Health Care in Lucknow" />
           <meta
             property="og:description"
-            content="Dr. Monika Pandey offers compassionate and expert care in gynecology and obstetrics at Sambhawna Clinic, Lucknow. Book your appointment today."
+            content="Dr. Monika Pandey offers compassionate and expert care in Gynaecology and obstetrics at Sambhawna Clinic, Lucknow. Book your appointment today."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://yourdomain.com/about-clinic" />
@@ -93,14 +93,14 @@ export default function AboutClinic() {
                            <div className="w-full lg:w-1/2 lg:pl-12">
                                <div className="text-[#E47F97] font-medium flex items-center mb-2">
                                    <span className="mr-2">+</span>
-                                   <span>ABOUT SADBHAWNA CLINIC</span>
+                                   <span>ABOUT SADBHAWANA CLINIC</span>
                                </div>
        
                                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
                                    Expert Women's Healthcare & Mental Wellness Under One Roof
                                </h1>
                                <p className="text-gray-600 mb-2 text-justify">
-                                   <strong>Sadbhawna Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
+                                   <strong>Sadbhawana Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Obstetric & Gynecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
                                </p>
        
        
@@ -159,8 +159,8 @@ export default function AboutClinic() {
                 <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
               </div>
               <div className="p-4">
-                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">5000+</div>
-                <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">7000+</div>
+                <div className="text-white font-semibold">Deliveries</div>
               </div>
             </div>
           </div>
@@ -456,8 +456,8 @@ export default function AboutClinic() {
                       </div>
                       <div className="ml-4">
                         <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
-                        <a href="mailto:sadbhawnaclinic98@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
-                          sadbhawnaclinic98@gmail.com
+                        <a href="mailto:Sadbhawanaclinic98@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
+                          Sadbhawanaclinic98@gmail.com
                         </a>
                       </div>
                     </div>
@@ -506,7 +506,7 @@ export default function AboutClinic() {
                 <h2 className="text-4xl font-bold mb-6" style={{ color: '#5B2E67' }}>Dr. Monika Pandey</h2>
                 <p className="text-gray-700 mb-4">MBBS, MS(OBG/GYN) Gold Medalist</p>
                 <p className="text-gray-700 mb-6">
-                  Dr. Monika Pandey is a highly skilled gynecologist and obstetrician with over 15 years of experience in women's healthcare. She completed her MBBS and MS in Obstetrics and Gynecology with a gold medal, demonstrating her excellence in academic and clinical practice.
+                  Dr. Monika Pandey is a highly skilled gynecologist and obstetrician with over 15 years of experience in women's healthcare. She completed her MBBS and MS in Obstetrics and Gynaecology with a gold medal, demonstrating her excellence in academic and clinical practice.
                 </p>
                 <p className="text-gray-700 mb-6">
                   She specializes in high-risk pregnancies, minimally invasive gynecological surgeries, and comprehensive women's health care. Her approach combines medical expertise with compassionate care, ensuring that each patient receives personalized attention.

@@ -80,7 +80,7 @@ export default function PsychiatricServicesDetails() {
             icon: <Brain className="w-8 h-8 text-white" />,
             description: "Crisis intervention and ongoing support for individuals experiencing suicidal ideation.",
             symptoms: ["Hopelessness", "Talking about death", "Withdrawal", "Mood swings", "Feeling trapped"],
-            longDescription: "Our team provides immediate risk assessment, therapy, and safety planning to support those at risk of suicide."
+            longDescription: "Our Doctor provides immediate risk assessment, therapy, and safety planning to support those at risk of suicide.  "
         },
         {
             title: "Schizophrenia",
@@ -234,7 +234,7 @@ export default function PsychiatricServicesDetails() {
                     { label: 'Services', path: '/services' },
                     { label: 'Psychiatric' } // last item without a path
                 ]}
-                headText="Gynecology & Obstetrics"
+                headText="Gynaecology & Obstetrics"
             />
             <div className="container mx-auto px-4 lg:py-12 py-6 md:py-8 ">
                 {/* Hero Section with Image */}
@@ -290,8 +290,7 @@ export default function PsychiatricServicesDetails() {
                         <div className="text-center mb-10">
                             <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Psychiatry Treatment </h2>
                             <p className="text-gray-600 md:max-w-3xl w-full mx-auto text-lg text-justify md:text-center">
-                                Our experienced team of psychiatrists and therapists provides evidence-based treatment for a wide range of
-                                psychiatric conditions. We offer comprehensive care tailored to your unique needs and circumstances.
+                               Our experienced Psychiatrists and Therapists provides evidence-based treatment for a wide range of psychiatric conditions. We offer comprehensive care tailored to your unique needs and circumstances.
                             </p>
                         </div>
 
@@ -732,7 +731,7 @@ export default function PsychiatricServicesDetails() {
                                         <div className="ml-4">
                                             <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
                                             <a href="mailto:monikapandey185@gmail.com" className="text-gray-600 break-all block hover:text-[#5B2E67] transition-colors">
-                                              sadbhawnaclinic98@gmail.com
+                                              Sadbhawanaclinic98@gmail.com
                                             </a>
                                         </div>
                                     </div>

@@ -45,14 +45,14 @@ const HomeAbout = () => {
                     <div className="w-full lg:w-1/2 lg:pl-12">
                         <div className="text-[#E47F97] font-medium flex items-center mb-2">
                             <span className="mr-2">+</span>
-                            <span>ABOUT SADBHAWNA CLINIC</span>
+                            <span>ABOUT Sadbhawana CLINIC</span>
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
                             Expert Women's Healthcare & Mental Wellness Under One Roof
                         </h1>
                         <p className="text-gray-600 mb-2 text-justify">
-                            <strong>Sadbhawna Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
+                            <strong>Sadbhawana Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynaecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
                         </p>
 
 

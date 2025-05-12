@@ -125,7 +125,7 @@ const AboutDoctor = () => {
               "Comprehensive reproductive health management",
               "Infertility consultation and treatment",
               "Menopause management",
-              "Adolescent gynecology",
+              "Adolescent Gynaecology",
               "Pelvic floor disorders",
             ].map((skill, index) => (
               <li key={index} className="flex items-center">
