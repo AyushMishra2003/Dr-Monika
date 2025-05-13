@@ -4,6 +4,7 @@ import { CalendarDays, User, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import img1 from '../../assets/blog1.jpg'
 
 const HomeBlogSlider = () => {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const HomeBlogSlider = () => {
             id: 1,
             title: "The Importance of Mental Health Awareness",
             excerpt: "Mental health awareness is crucial for recognizing the signs of mental health issues. Learn why staying informed about mental health can help individuals get the support they need.",
-            image: "https://tse3.mm.bing.net/th?id=OIF.cuWRIGUMWjAKVs%2fn5LGoRg&pid=Api&P=0&h=180",
+            image: img1,
             author: "Dr. Monika Pandey",
             date: "April 15, 2025",
             category: "Psychiatric"
@@ -56,8 +57,8 @@ const HomeBlogSlider = () => {
         },
         {
             id: 6,
-            title: "The Importance of Regular Gynecological Check-ups",
-            excerpt: "Routine gynecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and ensure your well-being.",
+            title: "The Importance of Regular Gynaecological Check-ups",
+            excerpt: "Routine Gynaecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and ensure your well-being.",
             image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
             author: "Dr. Monika Pandey",
             date: "March 20, 2025",

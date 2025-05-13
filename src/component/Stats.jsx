@@ -30,6 +30,12 @@ const stats = [
     count: "7000",
     icon: <FaVial className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
   },
+    {
+    id: 4,
+    title: "Deliveries",
+    count: "7000",
+    icon: <FaVial className="text-[#fff] h-12 w-12 sm:h-16 sm:w-16" />,
+  },
 ];
 
 
@@ -44,7 +50,7 @@ const ClinicStats = () => {
   return (
     <section className="py-8" style={{ background: `linear-gradient(to right, ${hexToRgba('#E47F97', 0.8)}, ${hexToRgba('#5B2E67', 0.9)})` }}>
       <div className="container mx-auto lg:px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
           <div className="p-4">
             <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
             <div className="text-white font-semibold">HAPPY PATIENTS</div>
@@ -56,6 +62,10 @@ const ClinicStats = () => {
           <div className="p-4">
             <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
             <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
+          </div>
+                    <div className="p-4">
+            <div className="text-white lg:text-5xl text-4xl font-bold mb-2">5000+</div>
+            <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
           </div>
           <div className="p-4">
             <div className="text-white lg:text-5xl text-4xl font-bold mb-2">7000+</div>

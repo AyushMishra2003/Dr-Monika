@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import BreadCrumbs from '../../component/Breadcums';
 import image from '../../assets/monika.png'
-import image1 from  '../../assets/logo/clinic.jpg'
+import image1 from '../../assets/logo/clinic.jpg'
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -46,7 +46,7 @@ export default function AboutClinic() {
           <title>Sambhawna Clinic - Women's Health Care in Lucknow | Dr. Monika Pandey</title>
           <meta
             name="description"
-            content="Sambhawna Clinic in Lucknow, led by Dr. Monika Pandey, offers expert gynecological and obstetric care with over 15 years of experience. Personalized, compassionate care for every woman."
+            content="Sambhawna Clinic in Lucknow, led by Dr. Monika Pandey, offers expert Gynaecological and obstetric care with over 15 years of experience. Personalized, compassionate care for every woman."
           />
           <meta
             name="keywords"
@@ -65,87 +65,87 @@ export default function AboutClinic() {
         </Helmet>
         {/* Hero Section */}
         {/* <section className="py-8 lg:px-4 "> */}
-          <div className="bg-white font-sans lg:py-10 py-4 sm:py-6 md:py-8">
-                   {/* Main content */}
-                   <main className="max-w-7xl mx-auto px-4">
-                       <div className="flex flex-col lg:flex-row items-center">
-                           {/* Left side with images */}
-                           <div className="w-full lg:w-1/2 relative mb-8 lg:mb-0">
-                               {/* Main image */}
-                               <div className="relative">
-                                   <img
-                                       src={image1}
-                                       alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
-                                       className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
-                                   />
-                               </div>
-       
-                               {/* Decorative stars */}
-                               <div className="absolute top-1/4 left-0 transform -translate-x-1/2 text-pink-200 text-4xl">
-                                   ✦
-                               </div>
-                               <div className="absolute bottom-1/4 left-1/4 text-pink-200 text-4xl">
-                                   ✦
-                               </div>
-                           </div>
-       
-                           {/* Right side with text content */}
-                           <div className="w-full lg:w-1/2 lg:pl-12">
-                               <div className="text-[#E47F97] font-medium flex items-center mb-2">
-                                   <span className="mr-2">+</span>
-                                   <span>ABOUT SADBHAWANA CLINIC</span>
-                               </div>
-       
-                               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
-                                   Expert Women's Healthcare & Mental Wellness Under One Roof
-                               </h1>
-                               <p className="text-gray-600 mb-2 text-justify">
-                                   <strong>Sadbhawana Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Obstetric & Gynecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
-                               </p>
-       
-       
-       
-                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                                   <div className="flex items-center">
-                                       <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                                           <Check className="h-5 w-5 text-white" />
-                                       </div>
-                                       <span className="text-slate-700 font-medium">Comprehensive gynecological care for all ages</span>
-                                   </div>
-       
-                                   <div className="flex items-center">
-                                       <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                                           <Check className="h-5 w-5 text-white" />
-                                       </div>
-                                       <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
-                                   </div>
-       
-                                   <div className="flex items-center">
-                                       <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                                           <Check className="h-5 w-5 text-white" />
-                                       </div>
-                                       <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
-                                   </div>
-       
-                                   <div className="flex items-center">
-                                       <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                                           <Check className="h-5 w-5 text-white" />
-                                       </div>
-                                       <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
-                                   </div>
-                               </div>
-                           </div>
-       
-       
-                       </div>
-                   </main>
-               </div>
+        <div className="bg-white font-sans lg:py-10 py-4 sm:py-6 md:py-8">
+          {/* Main content */}
+          <main className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center">
+              {/* Left side with images */}
+              <div className="w-full lg:w-1/2 relative mb-8 lg:mb-0">
+                {/* Main image */}
+                <div className="relative">
+                  <img
+                    src={image1}
+                    alt="Dr. Monika Pandey's Medical Clinic in Lucknow"
+                    className="rounded-lg shadow-lg w-full h-auto md:h-96 object-cover"
+                  />
+                </div>
+
+                {/* Decorative stars */}
+                <div className="absolute top-1/4 left-0 transform -translate-x-1/2 text-pink-200 text-4xl">
+                  ✦
+                </div>
+                <div className="absolute bottom-1/4 left-1/4 text-pink-200 text-4xl">
+                  ✦
+                </div>
+              </div>
+
+              {/* Right side with text content */}
+              <div className="w-full lg:w-1/2 lg:pl-12">
+                <div className="text-[#E47F97] font-medium flex items-center mb-2">
+                  <span className="mr-2">+</span>
+                  <span>ABOUT SADBHAWANA CLINIC</span>
+                </div>
+
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
+                  Expert Women's Healthcare & Mental Wellness Under One Roof
+                </h1>
+                 <p className="text-gray-600 mb-2 text-justify">
+                            <strong>Sadbhawana Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynaecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual Issues</strong>, <strong>Fertility</strong>, and <strong>Regular Health Check-ups of Pregnant Women</strong>  and <strong>Menopause Management</strong>, We provide <strong>Personalized</strong> and <strong>Confidential treatment</strong> in a <strong>Compassionate</strong> setting. Our integrated approach also supports <strong>Mental Wellness</strong>, addressing <strong>Stress</strong>, <strong>Anxiety</strong>, and <strong>Mood Concerns</strong> with <strong>Empathy</strong> and <strong>Expertise</strong>.
+                        </p>
+
+
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Comprehensive Gynaecological care for all ages</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                      <Check className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </main>
+        </div>
         {/* </section> */}
 
         {/* Statistics Section */}
         <section className="py-8" style={{ background: `linear-gradient(to right, ${hexToRgba('#E47F97', 0.8)}, ${hexToRgba('#5B2E67', 0.9)})` }}>
           <div className="container mx-auto lg:px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
               <div className="p-4">
                 <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
                 <div className="text-white font-semibold">HAPPY PATIENTS</div>
@@ -157,6 +157,10 @@ export default function AboutClinic() {
               <div className="p-4">
                 <div className="text-white lg:text-5xl text-4xl font-bold mb-2">10000+</div>
                 <div className="text-white font-semibold">TOTAL CASES SOLVED</div>
+              </div>
+              <div className="p-4">
+                <div className="text-white lg:text-5xl text-4xl font-bold mb-2">5000+</div>
+                <div className="text-white font-semibold">SUCCESSFUL SURGERIES</div>
               </div>
               <div className="p-4">
                 <div className="text-white lg:text-5xl text-4xl font-bold mb-2">7000+</div>
@@ -509,7 +513,7 @@ export default function AboutClinic() {
                   Dr. Monika Pandey is a highly skilled gynecologist and obstetrician with over 15 years of experience in women's healthcare. She completed her MBBS and MS in Obstetrics and Gynaecology with a gold medal, demonstrating her excellence in academic and clinical practice.
                 </p>
                 <p className="text-gray-700 mb-6">
-                  She specializes in high-risk pregnancies, minimally invasive gynecological surgeries, and comprehensive women's health care. Her approach combines medical expertise with compassionate care, ensuring that each patient receives personalized attention.
+                  She specializes in high-risk pregnancies, minimally invasive Gynaecological surgeries, and comprehensive women's health care. Her approach combines medical expertise with compassionate care, ensuring that each patient receives personalized attention.
                 </p>
                 <div className="flex space-x-4">
                   <button onClick={()=>navigate("/appoitment")} className="px-6 py-3 text-white rounded-md hover:opacity-90 transition" style={{ backgroundColor: '#E47F97' }}>Book Appointment</button>

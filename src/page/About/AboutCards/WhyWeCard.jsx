@@ -8,7 +8,7 @@ const WhyWeCard = () => {
                 Why Choose Us
             </h2>
             <p className='text-left mb-4 text-sm sm:text-base md:text-lg'>
-                We are a trusted provider of gynecological services, delivering high-quality care with a personal touch.
+                We are a trusted provider of Gynaecological services, delivering high-quality care with a personal touch.
             </p>
             <ul className='list-disc list-inside text-sm sm:text-base md:text-lg flex flex-col gap-4'>
                 <li className='flex items-center gap-2 sm:gap-3'>

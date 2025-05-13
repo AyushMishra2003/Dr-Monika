@@ -8,7 +8,7 @@ const MissionCard = () => {
                 Our Mission
             </h2>
             <p className=' md:text-left mb-4 text-sm sm:text-base md:text-lg'>
-                Our mission is to empower women through comprehensive and compassionate gynecological care.
+                Our mission is to empower women through comprehensive and compassionate Gynaecological care.
             </p>
             <ul className='list-disc list-inside text-sm sm:text-base md:text-lg flex flex-col gap-4'>
                 <li className='flex items-center gap-2 sm:gap-3'>

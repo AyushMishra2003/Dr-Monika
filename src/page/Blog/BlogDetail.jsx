@@ -103,20 +103,20 @@ const BlogDetails = () => {
     },
     {
       id: 6,
-      title: "The Importance of Regular Gynecological Check-ups",
-      excerpt: "Routine gynecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and maintain your well-being.",
+      title: "The Importance of Regular Gynaecological Check-ups",
+      excerpt: "Routine Gynaecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and maintain your well-being.",
       image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
       author: "Dr. Priya Verma",
       date: "March 20, 2025",
       category: "Gynaecology and Obstetrics",
       content: `
-          Regular gynecological check-ups are crucial for maintaining women's health and preventing serious conditions such as cervical cancer, ovarian cancer, and sexually transmitted infections (STIs). These check-ups allow your gynecologist to monitor your reproductive health and catch any potential issues early.
+          Regular Gynaecological check-ups are crucial for maintaining women's health and preventing serious conditions such as cervical cancer, ovarian cancer, and sexually transmitted infections (STIs). These check-ups allow your gynecologist to monitor your reproductive health and catch any potential issues early.
 
           The American College of Obstetricians and Gynecologists (ACOG) recommends women begin seeing a gynecologist in their teenage years and continue routine visits throughout adulthood. Regular screenings, such as Pap smears and mammograms, can detect abnormal changes that may require further investigation or treatment.
 
           By maintaining regular check-ups, women can take proactive steps to ensure their overall health and well-being.
         `,
-      url: "the-importance-of-regular-gynecological-check-ups"
+      url: "the-importance-of-regular-Gynaecological-check-ups"
     }
   ];
 

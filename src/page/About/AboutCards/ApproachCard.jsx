@@ -8,12 +8,12 @@ const ApproachCard = () => {
                 Our Approach
             </h2>
             <p className=' md:text-left mb-4 text-sm sm:text-base md:text-lg'>
-                We prioritize a patient-centered approach in gynecological care, integrating cutting-edge medical advancements with compassionate service.
+                We prioritize a patient-centered approach in Gynaecological care, integrating cutting-edge medical advancements with compassionate service.
             </p>
             <ul className='list-disc list-inside text-sm sm:text-base md:text-lg flex flex-col gap-4'>
                 <li className='flex items-center gap-2 sm:gap-3'>
                     <FaBriefcaseMedical className='text-green-500 text-[1.5rem] sm:text-[2rem]' />
-                    <span>Comprehensive Gynecological Services for all stages of life.</span>
+                    <span>Comprehensive Gynaecological Services for all stages of life.</span>
                 </li>
                 <li className='flex items-center gap-2 sm:gap-3'>
                     <FaClipboardCheck className='text-blue-500 text-[1.5rem] sm:text-[2rem]' />

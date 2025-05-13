@@ -9,7 +9,7 @@ const AboutCard = () => {
                 About Dr. S. Singh
             </h2>
             <p className=' mb-4 text-sm sm:text-base md:text-lg lg:text-xl'>
-                At  Dr. S. Singh clinic, we are dedicated to providing comprehensive and compassionate gynecological care.
+                At  Dr. S. Singh clinic, we are dedicated to providing comprehensive and compassionate Gynaecological care.
             </p>
             <ul className='list-disc list-inside text-base sm:text-lg md:text-xl flex flex-col gap-4'>
                 <li className='flex items-center gap-2 md:gap-3'>

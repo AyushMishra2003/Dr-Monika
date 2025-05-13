@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 
 
@@ -8,30 +8,38 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoMdTime } from "react-icons/io";
 import BreadCrumbs from "../../component/Breadcums";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
 
   const socialLinks = [
-    {
-      icon: <FaFacebookF />,
-      url: "https://www.facebook.com/",
-      color: "bg-blue-600", // Facebook blue
-    },
+
     {
       icon: <FaInstagram />,
       url: "https://www.instagram.com/drmonikagynae/",
       color: "bg-gradient-to-r from-pink-500 to-yellow-500", // Instagram gradient
     },
+        {
+      icon: <FaWhatsapp />,
+      url: `https://wa.me/919277163686?text=${encodeURIComponent("Hello, I need help!")}`, // Replace with your WhatsApp number
+      color: "bg-green-500", // WhatsApp green
+    },
+      {
+    icon: <FaPhoneAlt />,
+    url: "tel:+919277163686",
+    color: "bg-indigo-600", // Call button with indigo background
+  },
     {
       icon: <FaYoutube />,
       url: "https://www.youtube.com",
       color: "bg-red-600", // YouTube red
     },
-    {
-      icon: <FaWhatsapp />,
-      url: `https://wa.me/919277163686?text=${encodeURIComponent("Hello, I need help!")}`, // Replace with your WhatsApp number
-      color: "bg-green-500", // WhatsApp green
+        {
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/",
+      color: "bg-blue-600", // Facebook blue
     },
+
   ];
 
 
@@ -43,6 +51,7 @@ const Contact = () => {
     message: ""
   });
   const [isLoading, setIsLoading] = useState(false);
+  const location=useLocation()
 
 
   // Handle change for input fields
@@ -75,6 +84,13 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+    useEffect(() => {
+    if (location.pathname === '/contact') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
 
   return (
     <section>
@@ -126,7 +142,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="sora-400 text-[1rem] text-[#535760] no-underline"
                     >
-                     H-No 2, Sadbhavna Clinic, Sect-10, Indira Nagar, Near Arbindo Park, Lucknow, Uttar Pradesh 226016
+                     H-No 2, Sadbhavna Clinic, Sector-10, Indira Nagar,<br></br> Near Arbindo Park, Lucknow, Uttar Pradesh 226016
                  
                     </a>
                   </div>

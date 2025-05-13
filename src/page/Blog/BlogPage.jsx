@@ -54,8 +54,8 @@ const BlogPage = () => {
         },
         {
             id: 6,
-            title: "The Importance of Regular Gynecological Check-ups",
-            excerpt: "Routine gynecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and ensure your well-being.",
+            title: "The Importance of Regular Gynaecological Check-ups",
+            excerpt: "Routine Gynaecological check-ups are essential for women's health. Discover why regular visits to your gynecologist can help prevent serious conditions and ensure your well-being.",
             image: "https://img.freepik.com/free-photo/front-view-doctor-holding-anatomic-model_23-2149351652.jpg?ga=GA1.1.477998870.1745404788&semt=ais_hybrid&w=740",
             author: "Dr. Monika Pandey",
             date: "March 20, 2025",

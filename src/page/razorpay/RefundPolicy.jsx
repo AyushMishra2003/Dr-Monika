@@ -160,7 +160,7 @@ const RefundPolicy = () => {
             >
                 <div className="max-w-6xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold text-white">Refund Policy</h1>
-                    <p className="text-gray-200 mt-2">Dr. Monika's Medical Services - Your Health, Our Priority</p>
+                    <p className="text-gray-200 mt-2">Sadbhawana Clinic - Your Health, Our Priority</p>
                 </div>
             </header>
 
@@ -172,7 +172,7 @@ const RefundPolicy = () => {
                             Our Approach to Refunds and Cancellations
                         </h2>
                         <p className="text-gray-700">
-                            At Dr. Monika's Medical Services, we understand that circumstances may arise requiring you to cancel or reschedule your appointment, home collection, or pathology test. We have established this refund policy to ensure transparency and fairness in all our transactions.
+                            At Sadbhawana Clinic, we understand that circumstances may arise requiring you to cancel or reschedule your appointment, home collection, or pathology test. We have established this refund policy to ensure transparency and fairness in all our transactions.
                         </p>
                         <p className="text-gray-700 mt-4">
                             We strive to provide flexible options while maintaining the quality and sustainability of our services. Please review our refund policy carefully before scheduling appointments or services.

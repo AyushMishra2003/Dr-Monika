@@ -17,20 +17,20 @@ const Footer = () => {
                 </svg>
             </div>
 
-            <div className="relative bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] lg:py-12 py-6 md:py-8 ">
-                <div className="mx-auto max-w-7xl flex flex-col lg:flex-row justify-between max-w-8xl px-4 gap-6">
+            <div className="relative bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] lg:py-12 py-6 md:py-8 px-4 ">
+                <div className="mx-auto container flex flex-col lg:flex-row justify-between  px-4 gap-6">
 
 
 
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-1  lg:ml-[4rem]">
+                    <div className="w-full lg:w-[18%] md:mb-8 mb-1  ">
 
                         <h2 className="text-xl font-semibold mb-4 text-white">Support</h2>
                         <ul className="text-md">
-                            <Link to={"/"}>
+                            {/* <Link to={"/"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Home
                                 </li>
-                            </Link>
+                            </Link> */}
                             {/* <Link to={"/about/dr-monika"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> About Our Expert
@@ -46,17 +46,17 @@ const Footer = () => {
                                     <MdKeyboardArrowRight className="mr-1" /> Cases
                                 </li>
                             </Link> */}
-                                       <Link to={"/term-condition"}>
+                            <Link to={"/term-condition"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Term & Conditions
                                 </li>
                             </Link>
-                                       <Link to={"/privacy-policy"}>
+                            <Link to={"/privacy-policy"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Privacy Policy
                                 </li>
                             </Link>
-                                       <Link to={"/refund-policy"}>
+                            <Link to={"/refund-policy"}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" /> Refund Policy
                                 </li>
@@ -79,42 +79,42 @@ const Footer = () => {
 
 
                     {/* Services Section */}
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-1 lg:ml-[4rem]">
+                    <div className="w-full lg:w-1/4 md:mb-8 mb-1 ">
                         <h2 className="text-xl font-semibold mb-4 text-white">Our Services</h2>
 
 
 
 
                         <ul className="text-md">
-                            <Link to={`/services/Gynaecology`}>
+                            <Link to={`/services/obstetrics`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />  Obstetrics
                                 </li>
                             </Link>
-                            <Link to={`/services/Gynaecology`}>
+                            <Link to={`/services/gynaecology`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />
                                     Gynaecology
                                 </li>
                             </Link>
-                            <Link to={`/services/Gynaecology`}>
+                            <Link to={`/services/infertility`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />
                                     Infertility Treatment
                                 </li>
                             </Link>
-                            <Link to={`/services/physiotherapy`}>
+                            <Link to={`/service/treatments`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />Psychiatry Treatment
                                 </li>
                             </Link>
-                            <Link to={`/services/physiotherapy`}>
+                            <Link to={`/service/counselling`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />
                                     Counselling Services
                                 </li>
                             </Link>
-                            <Link to={`/services/physiotherapy`}>
+                            <Link to={`/service/therapies`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />Therapies
                                 </li>
@@ -124,36 +124,36 @@ const Footer = () => {
                     </div>
 
                     {/* Contact Section */}
-                    <div className="w-full lg:w-1/4 md:mb-8 mb-1 ">
+                    <div className="w-full lg:w-[30%] md:mb-8 mb-1 ">
                         <h2 className="text-xl font-semibold mb-4 text-white">Get In Touch With Us</h2>
-                        <li className="mb-2 flex items-center text-md">
-                            <IoMdMail className="mr-3 text-2xl lg:text-2xl" />
-                            <a href="mailto:Sadbhawanaclinic98@gmail.com" className="">Sadbhawanaclinic98@gmail.com</a>
-                        </li>
-                        <li className="mb-2 flex items-center text-lg lg:text-lg">
-                            <MdCall className="mr-1 text-2xl" />
-                            {/* <a href="tel:919838346118" className="]">+91 9838346118</a> */}
-                            <a href="tel:919277163686
-" className=". ml-1">+91 9277163686
-                            </a>
-                        </li>
 
-
-                        <li className="flex items-start text-lg lg:text-lg">
+                              <li className="flex items-start text-lg lg:text-sm">
                             <MdLocationOn className="mr-1 text-xl lg:text-6xl" />
                             <a href="https://www.google.co.in/maps/place/Dr+Monika+Pandey+Best+Gynaecologist+in+Indira+Nagar/@26.8854118,80.9986954,17z/data=!3m1!4b1!4m6!3m5!1s0x3999592fb08ce83b:0x969f7467a24cfb3b!8m2!3d26.885407!4d81.0012703!16s%2Fg%2F11vpf7nlyn?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
                                 target="_blank" rel="noopener noreferrer"
                                 className=" transition-all duration-300 text-[16px]">
-                                Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park, Lucknow
+                        H-No 2, Sadbhavna Clinic, Sector-10, Indira Nagar, Near Arbindo Park, Lucknow, Uttar Pradesh 226016
                             </a>
                         </li>
+
+                             <li className="mb-2 flex items-center text-lg lg:text-lg">
+                            <MdCall className=" text-xl" />
+                            {/* <a href="tel:919838346118" className="]">+91 9838346118</a> */}
+                            <a href="tel:919277163686 " className="">+91 9277163686 </a> , 
+                                   <a href="tel:919838346118 " className="">+91 9838346118 </a>
+                        </li>
+                        <li className="mb-2 flex items-center text-md">
+                            <IoMdMail className="mr-1 text-2xl lg:text-2xl" />
+                            <a href="mailto:sadbhawanaclinic98@gmail.com" className="">sadbhawanaclinic98@gmail.com</a>
+                        </li>
+
                     </div>
 
                     {/* Quick Links Section */}
 
 
                     {/* Map Section */}
-                    <div className="w-full lg:w-1/4">
+                    <div className="w-full lg:w-[20%]">
                         <h2 className="text-xl font-semibold mb-4 text-white" >Find Us</h2>
                         <div className="h-48 lg:h-48 w-full bg-gray-300 rounded-lg overflow-hidden shadow-md">
                             <iframe
@@ -162,6 +162,8 @@ const Footer = () => {
                             ></iframe>
                         </div>
                     </div>
+
+
                 </div>
             </div>
 

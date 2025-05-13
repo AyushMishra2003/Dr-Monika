@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Brain, Heart, Users, Activity, Moon, MessageCircle, Zap, Coffee, Shield, RefreshCw, Pill, ClipboardCheck, Star, CheckIcon, Calendar, Trophy, Phone, Mail, Clock, Briefcase } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 
@@ -13,6 +13,13 @@ import img3 from  '../../assets/Therapies.jpg'
 
 export default function PsychiatricServicesDetails() {
     const [activeTab, setActiveTab] = useState('treatments');
+    const location=useLocation()
+     const {name}=useParams()
+
+
+
+
+     
 
     // List of psychiatric conditions/treatments
     const treatments = [
@@ -189,9 +196,27 @@ export default function PsychiatricServicesDetails() {
 
     const navigate = useNavigate()
 
+    const handleTabClick = (tab) => {
+  setActiveTab(tab);
+  navigate(`/service/${tab}`);
+};
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+
+
+
+
+  useEffect(()=>{
+    setActiveTab(name)
+        if (location.pathname === `/service/${name}`) {
+      window.scrollTo(0, 0);
+    }
+    
+
+  },[name,location])
 
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
@@ -259,7 +284,7 @@ export default function PsychiatricServicesDetails() {
                 {/* Navigation Tabs */}
                 <div className="flex flex-wrap justify-center mb-10">
                     <button
-                        onClick={() => setActiveTab('treatments')}
+                     onClick={() => handleTabClick('treatments')}
                         className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'treatments'
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
@@ -267,16 +292,16 @@ export default function PsychiatricServicesDetails() {
                         Psychiatry Treatment
                     </button>
                     <button
-                        onClick={() => setActiveTab('therapies')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'therapies'
+                        onClick={() => handleTabClick('counselling')}
+                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'counselling'
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
                         Counselling Services
                     </button>
                     <button
-                        onClick={() => setActiveTab('approach')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'approach'
+                        onClick={() => handleTabClick('therapies')}
+                        className={`px-6 py-3 m-1 rounded-full font-medium ${activeTab === 'therapies'
                             ? 'bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#5b2e67] shadow hover:shadow-md'}`}
                     >
@@ -345,7 +370,7 @@ export default function PsychiatricServicesDetails() {
                 )}
 
 
-                {activeTab === 'therapies' && (
+                {activeTab === 'counselling' && (
                     <div>
                         <div className="text-center mb-10">
                             <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Our Counseling Services</h2>
@@ -414,7 +439,7 @@ export default function PsychiatricServicesDetails() {
 
 
 
-                {activeTab === 'approach' && (
+                {activeTab === 'therapies' && (
                     <div>
                         <div className="text-center mb-10">
                             <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#5b2e67] mb-4">Therapies</h2>

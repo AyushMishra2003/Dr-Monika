@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, useNavigate } from "react-router-dom";
 
+import image from "../assets/appointment.jpeg"
+
 const AppointmentCTA = () => {
   useEffect(() => {
     AOS.init({
@@ -17,7 +19,7 @@ const AppointmentCTA = () => {
   return (
     <section
       className="relative py-16 md:py-14 flex flex-col items-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${"https://tse2.mm.bing.net/th?id=OIP.OLISx3i9b2NHFkJ4BvKL2QHaEH&pid=Api&P=0&h=180"})` }}
+      style={{ backgroundImage: `url(${image})` }}
     >
       {/* Darker Overlay */}
       <div className="absolute inset-0 bg-black opacity-70"></div>

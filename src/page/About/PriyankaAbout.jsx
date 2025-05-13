@@ -44,7 +44,7 @@ export default function AboutDrMonika() {
         <meta name="twitter:title" content="Dr. Monika Pandey - Obstetrics, Gynaecology & Infertility Specialist" />
         <meta
           name="twitter:description"
-          content="30+ years experience in women's healthcare. Expert in pregnancy care, infertility treatments, and gynecological services. Book now."
+          content="30+ years experience in women's healthcare. Expert in pregnancy care, infertility treatments, and Gynaecological services. Book now."
         />
         <meta name="twitter:image" content="https://yourdomain.com/images/dr-monika-pandey.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -108,8 +108,9 @@ export default function AboutDrMonika() {
               <strong>Dr. Monika Pandey</strong> is a highly skilled and compassionate <strong>Obstetrician</strong>, <strong>Gynecologist</strong>, and <strong>CIMP (Credentialed Indian Menopause Practitioner)</strong> committed to providing exceptional care for women at every stage of life. With over <strong>30+ years of experience</strong>, she believes in a personalized approach to women’s health, ensuring each patient feels <strong>Heard</strong>, <strong>Understood</strong>, and <strong>Supported</strong>.
             </p>
             <p className="text-gray-700 mb-6 lg:text-center text-justify md:max-w-4xl mx-auto">
-              Her areas of expertise include <strong>Regular Health Check-ups of Pregnant Women</strong> combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
+              Her areas of expertise include <strong>Regular Health Check-ups of Pregnant Women, High-Risk Pregnancies, Normal and Cesarean Deliveries, PCOS & Endometriosis, Infertility Treatment, Irregular Periods, Menstrual Disorders, Menopause-Related Issues, Hormonal Imbalance, Safe Termination of Pregnancy, Family Planning, and Cervical Cancer Screening and Vaccination.</strong> Dr. Monika Pandey combines advanced medical knowledge with a compassionate touch to deliver comprehensive, patient-centered care.
             </p>
+
 
             <div className="flex justify-center">
               <button
@@ -283,7 +284,7 @@ export default function AboutDrMonika() {
             </div>
           </div>
         </div>
-l
+        l
 
         {/* Education Section - Keeping the same structure but with false condition as in original code */}
         {false &&

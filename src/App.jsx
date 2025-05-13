@@ -49,8 +49,8 @@ const App = () => {
         <Route path='/pratice' element={<Pratice />} />
         <Route path='/blogs' element={<BlogPage />} />
         <Route path='/blog/:detail' element={<BlogDetails />} />
-        <Route path='/services/physiotherapy' element={<PsychiatricServicesDetails />} />
-        <Route path='/services/Gynaecology' element={<GynaecologyObstetricsServices />} />
+        <Route path='/service/:name' element={<PsychiatricServicesDetails />} />
+        <Route path='/services/:name' element={<GynaecologyObstetricsServices />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

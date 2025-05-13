@@ -37,28 +37,35 @@ const HomeSlider = () => {
       {/* Slider */}
       <Slider {...settings} className="relative h-fit">
         <div className="relative">
+
+          <Link to={"/appoitment"}>
           <img
             src={img1}
             alt="Gastroenterology Specialist - Book Your Appointment"
             className="w-full  object-cover"
             loading="lazy"
           />
+                  </Link>
         </div>
         <div className="relative">
+                <Link to={"/appoitment"}>
           <img
             src={img2}
             alt="Advanced Medical Treatments - Consult Our Experts"
             className="w-full  object-cover"
             loading="lazy"
           />
+          </Link>
         </div>
         <div className="relative">
+                  <Link to={"/appoitment"}>
           <img
             src={img3}
             alt="Advanced Medical Treatments - Consult Our Experts"
             className="w-full  object-cover"
             loading="lazy"
           />
+          </Link>
         </div>
         {/* <div className="relative">
           <img

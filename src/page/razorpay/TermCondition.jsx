@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
             title: "Acceptance of Terms",
             content: (
                 <div>
-                    <p className="mb-4">By accessing and using the services provided by At Sadbhawanaa Clinic (Sadbhavna Clinic), you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
+                    <p className="mb-4">By accessing and using the services provided by At Sadbhawana Clinic (Sadbhavna Clinic), you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
                     <p>These Terms and Conditions apply to all services offered, including but not limited to appointment booking, consultations, home collection services, pathology testing, and any other medical services provided through our website, mobile application, or in-person visits.</p>
                 </div>
             )
@@ -133,26 +133,26 @@ const TermsAndConditions = () => {
                 </div>
             )
         },
-        {
-            title: "Limitation of Liability",
-            content: (
-                <div>
-                    <p className="mb-4">To the fullest extent permitted by law:</p>
-                    <ul className="list-disc pl-6 mb-4">
-                        <li className="mb-2">At Sadbhawanaa Clinic (Sadbhavna Clinic) and its healthcare professionals shall not be liable for any indirect, incidental, special, consequential, or punitive damages.</li>
-                        <li className="mb-2">We are not liable for any harm resulting from your reliance on information obtained through our services.</li>
-                        <li className="mb-2">Our liability for any claim arising from our services shall not exceed the amount paid by you for the specific service in question.</li>
-                        <li className="mb-2">We are not liable for any delay or failure to perform due to causes beyond our reasonable control.</li>
-                    </ul>
-                    <p>This limitation of liability does not apply to liability arising from gross negligence or willful misconduct.</p>
-                </div>
-            )
-        },
+        // {
+        //     title: "Limitation of Liability",
+        //     content: (
+        //         <div>
+        //             <p className="mb-4">To the fullest extent permitted by law:</p>
+        //             <ul className="list-disc pl-6 mb-4">
+        //                 <li className="mb-2">At Sadbhawana Clinic (Sadbhavna Clinic) and its healthcare professionals shall not be liable for any indirect, incidental, special, consequential, or punitive damages.</li>
+        //                 <li className="mb-2">We are not liable for any harm resulting from your reliance on information obtained through our services.</li>
+        //                 <li className="mb-2">Our liability for any claim arising from our services shall not exceed the amount paid by you for the specific service in question.</li>
+        //                 <li className="mb-2">We are not liable for any delay or failure to perform due to causes beyond our reasonable control.</li>
+        //             </ul>
+        //             <p>This limitation of liability does not apply to liability arising from gross negligence or willful misconduct.</p>
+        //         </div>
+        //     )
+        // },
         // {
         //     title: "Intellectual Property",
         //     content: (
         //         <div>
-        //             <p className="mb-4">All content on our website and applications, including but not limited to text, graphics, logos, images, and software, is the property of At Sadbhawanaa Clinic (Sadbhavna Clinic) and is protected by intellectual property laws.</p>
+        //             <p className="mb-4">All content on our website and applications, including but not limited to text, graphics, logos, images, and software, is the property of At Sadbhawana Clinic (Sadbhavna Clinic) and is protected by intellectual property laws.</p>
         //             <ul className="list-disc pl-6 mb-4">
         //                 <li className="mb-2">You may not reproduce, distribute, modify, or create derivative works from any content without our express written consent.</li>
         //                 <li className="mb-2">You may print or download content for personal, non-commercial use only.</li>
@@ -202,7 +202,7 @@ const TermsAndConditions = () => {
             >
                 <div className="max-w-6xl mx-auto">
                     <h1 className="text-2xl md:text-3xl font-bold text-white">Terms & Conditions</h1>
-                    <p className="text-gray-200 mt-2">At Sadbhawanaa Clinic - Your Health, Our Priority</p>
+                    <p className="text-gray-200 mt-2">At Sadbhawana Clinic - Your Health, Our Priority</p>
                 </div>
             </header>
 
@@ -210,11 +210,11 @@ const TermsAndConditions = () => {
             <main className="max-w-6xl mx-auto py-8 px-4 md:px-8">
                 <div className="bg-white shadow-md rounded-lg p-6 mb-8">
                     <div className="mb-8">
-                        <h2 className="text-xl md:text-2xl font-semibold mb-4" style={{ color: secondaryColor }}>
+                        {/* <h2 className="text-xl md:text-2xl font-semibold mb-4" style={{ color: secondaryColor }}>
                             Terms of Service Agreement
-                        </h2>
+                        </h2> */}
                         <p className="text-gray-700">
-                            Welcome to At Sadbhawanaa Clinic. These Terms and Conditions constitute a legally binding agreement between you and At Sadbhawanaa Clinic regarding your use of our healthcare services, website, and other offerings.
+                            Welcome to At Sadbhawana Clinic. These Terms and Conditions constitute a legally binding agreement between you and At Sadbhawana Clinic regarding your use of our healthcare services, website, and other offerings.
                         </p>
                         <p className="text-gray-700 mt-4">
                             Please read these terms carefully before using our services. By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.

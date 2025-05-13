@@ -37,13 +37,13 @@ export default function Header() {
       name: 'About',
       dropdown: true,
       items: [
-        { name: 'About  Sambhawna Clinic', link: '/about/clinic' },
+        { name: 'About  Sadbhawana  Clinic', link: '/about/clinic' },
         { name: 'About Dr. Monika Pandey', link: '/about/dr-monika' },
      
       ]
     },
-    {name:"Gynaecology Service" , link :'/services/Gynaecology'},
-    {name:"Psychiatric Service" , link :'/services/physiotherapy'},
+    {name:"Gynaecology Service" , link :'/services/gynaecology'},
+    {name:"Psychiatric Service" , link :'/service/counselling'},
     { name: 'Cases', link: '/gallery' },
     { name: 'Contact Us', link: '/contact' },
   ];

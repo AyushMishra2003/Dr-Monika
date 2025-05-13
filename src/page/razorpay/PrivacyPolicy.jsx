@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
       title: "Information We Collect",
       content: (
         <div>
-          <p className="mb-4">At Dr. Monika's Medical Services, we collect the following types of personal information:</p>
+          <p className="mb-4">At Sadbhawana Clinic, we collect the following types of personal information:</p>
           <ul className="list-disc pl-6 mb-4">
             <li className="mb-2">Personal details (name, age, gender, address, contact information)</li>
             <li className="mb-2">Medical history and health information</li>
@@ -139,7 +139,7 @@ const PrivacyPolicy = () => {
         <div>
           <p className="mb-4">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
           <div className="mb-4">
-            <p className="font-medium">Dr. Monika's Medical Services</p>
+            <p className="font-medium">At Sadbhawana Clinic</p>
             <p>Email: Sadbhawanaclinic98@gmail.com</p>
             <p>Phone: +91 9277163686</p>
             <p>Address: H-No 2, Sadbhavna Clinic, Sect-10, Indira Nagar, near Arvindo Park,
@@ -165,7 +165,7 @@ Lucknow, Uttar Pradesh 226016</p>
       >
         <div className="max-w-6xl mx-auto">
           <h1 className="text-2xl md:text-3xl font-bold text-white">Privacy Policy</h1>
-          <p className="text-gray-200 mt-2">Dr. Monika's Medical Services - Your Health, Our Priority</p>
+          <p className="text-gray-200 mt-2">At Sadbhawana Clinic - Your Health, Our Priority</p>
         </div>
       </header>
 
@@ -177,7 +177,7 @@ Lucknow, Uttar Pradesh 226016</p>
               Our Commitment to Your Privacy
             </h2>
             <p className="text-gray-700">
-              At Dr. Monika's Medical Services, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, including appointment booking, home collection services, and pathology testing.
+               At Sadbhawana Clinic, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, including appointment booking, home collection services, and pathology testing.
             </p>
             <p className="text-gray-700 mt-4">
               By using our services, you consent to the practices described in this policy. Please read this policy carefully to understand our practices regarding your personal information.

@@ -12,7 +12,7 @@ import {
     MapPin
 } from 'lucide-react';
 import BreadCrumbs from '../../component/Breadcums';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import img1 from '../../assets/Gynae.jpg';
@@ -24,6 +24,8 @@ import img2 from '../../assets/infetility.jpg';
 export default function GynaecologyObstetricsServices() {
     const [activeTab, setActiveTab] = useState('obstetrics');
     const navigate = useNavigate()
+    const location=useLocation()
+    const {name}=useParams()
 
     const obstetricServices = [
         {
@@ -163,6 +165,24 @@ export default function GynaecologyObstetricsServices() {
         window.scrollTo(0, 0);
     }, []);
 
+
+
+        const handleTabClick = (tab) => {
+  setActiveTab(tab);
+  navigate(`/services/${tab}`);
+};
+
+    
+      useEffect(()=>{
+        setActiveTab(name)
+            if (location.pathname === `/services/${name}`) {
+          window.scrollTo(0, 0);
+        }
+
+    
+      },[name,location])
+    
+
     return (
         <div className="bg-gradient-to-b from-white to-purple-50 min-h-screen">
             <Helmet>
@@ -192,7 +212,7 @@ export default function GynaecologyObstetricsServices() {
                 <meta name="twitter:title" content="Gynaecology & Women's Healthcare | Dr. Monika Pandey" />
                 <meta
                     name="twitter:description"
-                    content="Personalized gynecological and obstetric care for every woman. Book an appointment with Dr. Monika Pandey for safe and compassionate healthcare."
+                    content="Personalized Gynaecological and obstetric care for every woman. Book an appointment with Dr. Monika Pandey for safe and compassionate healthcare."
                 />
                 <meta name="twitter:image" content="https://yourdomain.com/images/Gynaecology-cover.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
@@ -229,15 +249,15 @@ export default function GynaecologyObstetricsServices() {
                 <div className="flex flex-wrap justify-center mb-10">
 
                     <button
-                        onClick={() => setActiveTab('Gynaecology')}
-                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'Gynaecology'
+                        onClick={() => handleTabClick('gynaecology')}
+                        className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'gynaecology'
                             ? 'bg-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
                     >
                         Gynaecology
                     </button>
                     <button
-                        onClick={() => setActiveTab('obstetrics')}
+                        onClick={() => handleTabClick('obstetrics')}
                         className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'obstetrics'
                             ? 'bg-[#7e3f8f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
@@ -245,7 +265,7 @@ export default function GynaecologyObstetricsServices() {
                         Obstetrics
                     </button>
                     <button
-                        onClick={() => setActiveTab('infertility')}
+                        onClick={() => handleTabClick('infertility')}
                         className={`px-6 py-3 m-1 rounded-full font-medium cursor-pointer ${activeTab === 'infertility'
                             ? 'bg-gradient-to-r from-[#7e3f8f] to-[#e47f9f] text-white shadow-lg'
                             : 'bg-white text-[#7e3f8f] shadow hover:shadow-md'}`}
@@ -260,7 +280,7 @@ export default function GynaecologyObstetricsServices() {
                         <div className="text-center mb-10">
                             <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Obstetric Care Services</h2>
                             <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
-                                Our experienced team provides complete care throughout pregnancy, from
+                            Dr. Monika Pandey provides complete care throughout pregnancy, from
                                 pre-conception counseling to delivery and postnatal support, ensuring the health
                                 and wellbeing of both mother and baby.
                             </p>
@@ -317,12 +337,12 @@ export default function GynaecologyObstetricsServices() {
                 )}
 
                 {/* Gynaecology Tab Content */}
-                {activeTab === 'Gynaecology' && (
+                {activeTab === 'gynaecology' && (
                     <div>
                         <div className="text-center mb-10">
-                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Gynecological Services</h2>
+                            <h2 className="lg:text-3xl text-xl md:text-2xl font-bold text-[#7e3f8f] mb-4">Gynaecological Services</h2>
                             <p className="text-gray-600 max-w-3xl mx-auto text-lg text-justify md:text-center">
-                                We offer comprehensive gynecological care for women of all ages, addressing
+                                We offer comprehensive Gynaecological care for women of all ages, addressing
                                 reproductive health concerns, preventive care, and specialized treatments for
                                 various conditions.
                             </p>
@@ -334,17 +354,17 @@ export default function GynaecologyObstetricsServices() {
                                 <div className="md:w-1/2 bg-gradient-to-br from-[#e47f9f] to-[#7e3f8f] lg:p-8 p-4 text-white">
                                     <h3 className="text-2xl font-bold mb-4">Complete Women's Healthcare</h3>
                                     <p className="mb-4">
-                                        Our gynecological services cover all aspects of women's reproductive health, from routine check-ups to specialized treatments for complex conditions. We believe that every woman deserves personalized care that addresses her unique needs.
+                                        Our Gynaecological services cover all aspects of women's reproductive health, from routine check-ups to specialized treatments for complex conditions. We believe that every woman deserves personalized care that addresses her unique needs.
                                     </p>
                                     <p className="mb-4">
-                                        Dr. Monika Pandey specializes in diagnosing and treating a wide range of gynecological conditions, providing preventive care, and offering guidance on reproductive health throughout all stages of a woman's life.
+                                        Dr. Monika Pandey specializes in diagnosing and treating a wide range of Gynaecological conditions, providing preventive care, and offering guidance on reproductive health throughout all stages of a woman's life.
                                     </p>
                                     <p>
                                         With a compassionate approach and evidence-based treatments, we help women maintain optimal reproductive health and address any concerns promptly and effectively.
                                     </p>
                                 </div>
                                 <div className="md:w-1/2">
-                                    <img src={img1} alt="Gynecological care" className="w-full h-full object-cover" />
+                                    <img src={img1} alt="Gynaecological care" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                         </div>

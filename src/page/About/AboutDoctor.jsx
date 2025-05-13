@@ -89,7 +89,7 @@ const AboutDoctor = () => {
           <p className="mt-4 text-gray-700 text-lg leading-relaxed" data-aos="fade-left">
             With over a decade of experience in women’s health, Dr. S. Singh
             combines clinical expertise with genuine empathy for her patients.
-            She specializes in managing complex obstetric and gynecological
+            She specializes in managing complex obstetric and Gynaecological
             cases, focusing on minimally invasive procedures and preventive
             care. Her philosophy of care is simple: to empower women to make
             informed choices about their health while providing unwavering
@@ -120,7 +120,7 @@ const AboutDoctor = () => {
           <ul className="list-disc ml-6 mt-4 text-gray-700 text-lg space-y-2" data-aos="fade-left" data-aos-delay="300">
             {[
               "Complex obstetric care and high-risk pregnancies",
-              "Minimally invasive gynecological surgery",
+              "Minimally invasive Gynaecological surgery",
               "Advanced laparoscopic and hysteroscopic procedures",
               "Comprehensive reproductive health management",
               "Infertility consultation and treatment",

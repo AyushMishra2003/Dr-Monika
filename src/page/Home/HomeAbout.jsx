@@ -1,7 +1,8 @@
 import { Check } from "lucide-react";
 import { useState, useEffect } from "react";
 import image from '../../assets/monika.png'
-import image1 from '../../assets/clinic.webp'
+import image1 from '../../assets/logo/clinic.jpg'
+
 
 const HomeAbout = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -45,42 +46,42 @@ const HomeAbout = () => {
                     <div className="w-full lg:w-1/2 lg:pl-12">
                         <div className="text-[#E47F97] font-medium flex items-center mb-2">
                             <span className="mr-2">+</span>
-                            <span>ABOUT Sadbhawana CLINIC</span>
+                            <span>ABOUT SADBHAWANA  CLINIC</span>
                         </div>
 
                         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
                             Expert Women's Healthcare & Mental Wellness Under One Roof
                         </h1>
                         <p className="text-gray-600 mb-2 text-justify">
-                            <strong>Sadbhawana Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynaecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual issues</strong>, <strong>Fertility</strong>, and <strong>Pregnancy care</strong> to <strong>Hormonal health</strong> and <strong>Menopause management</strong>, we provide <strong>personalized</strong> and <strong>confidential treatment</strong> in a <strong>compassionate</strong> setting. Our integrated approach also supports <strong>Mental wellness</strong>, addressing <strong>stress</strong>, <strong>Anxiety</strong>, and <strong>Mood concerns</strong> with <strong>Empathy</strong> and <strong>expertise</strong>.
+                            <strong>Sadbhawana Clinic</strong> is a trusted healthcare center with a primary focus on <strong>Gynaecology</strong>, offering expert care for every stage of a woman’s life. From <strong>Menstrual Issues</strong>, <strong>Fertility</strong>, and <strong>Regular Health Check-ups of Pregnant Women</strong>  and <strong>Menopause Management</strong>, We provide <strong>Personalized</strong> and <strong>Confidential treatment</strong> in a <strong>Compassionate</strong> setting. Our integrated approach also supports <strong>Mental Wellness</strong>, addressing <strong>Stress</strong>, <strong>Anxiety</strong>, and <strong>Mood Concerns</strong> with <strong>Empathy</strong> and <strong>Expertise</strong>.
                         </p>
 
 
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
                             <div className="flex items-center">
-                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
-                                <span className="text-slate-700 font-medium">Comprehensive gynecological care for all ages</span>
+                                <span className="text-slate-700 font-medium">Comprehensive Gynaecological care for all ages</span>
                             </div>
 
                             <div className="flex items-center">
-                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
                             </div>
 
                             <div className="flex items-center">
-                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
                             </div>
 
                             <div className="flex items-center">
-                                <div className="bg-[#E47F97] rounded-full p-1 mr-3">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
                                     <Check className="h-5 w-5 text-white" />
                                 </div>
                                 <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
