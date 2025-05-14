@@ -233,7 +233,7 @@ export default function AppointmentBooking() {
       return;
     }
 
-    handleBookAppointment();
+    // handleBookAppointment();
   };
 
   // Function to open Razorpay modal
@@ -264,7 +264,7 @@ export default function AppointmentBooking() {
     // Modal content
     razorpayModal.innerHTML = `
       <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 overflow-hidden">
-        <div class="bg-[#E47F9F] p-4 flex justify-between items-center">
+        <div class="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] p-4 flex justify-between items-center">
           <div class="flex items-center">
             <img src="/api/placeholder/40/40" alt="Logo" class="w-8 h-8 mr-2 rounded" />
             <h3 class="text-white font-medium">Health Clinic</h3>
@@ -404,7 +404,7 @@ export default function AppointmentBooking() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-pink-50 to-purple-100 p-4">
       <div className="max-w-4xl mx-auto w-full bg-white rounded-xl shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-[#E47F9F] text-white p-6">
+        <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] text-white p-6">
           <h1 className="text-2xl font-bold">Book Your Appointment</h1>
           <p className="text-pink-100 mt-2">Select your preferred date and time slot</p>
         </div>
@@ -483,7 +483,7 @@ export default function AppointmentBooking() {
                       <div className="text-sm text-gray-500">{DAYS_OF_WEEK[date.getDay() === 0 ? 6 : date.getDay() - 1]}</div>
                     </div>
                     {selectedDate.toDateString() === date.toDateString() && (
-                      <div className="w-2 h-2 rounded-full bg-[#E47F9F]"></div>
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#5b2e67] to-[#e47f9f]"></div>
                     )}
                   </button>
                 ))}

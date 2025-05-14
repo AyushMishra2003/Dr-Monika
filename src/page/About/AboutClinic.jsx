@@ -29,7 +29,7 @@ export default function AboutClinic() {
   const navigate = useNavigate()
 
   return (
-    <div >
+    <div className='border ' >
 
       <BreadCrumbs
         items={[
@@ -65,7 +65,7 @@ export default function AboutClinic() {
         </Helmet>
         {/* Hero Section */}
         {/* <section className="py-8 lg:px-4 "> */}
-        <div className="bg-white font-sans lg:py-10 py-4 sm:py-6 md:py-8">
+        <div className=" font-sans lg:py-10 py-4 sm:py-6 md:py-8">
           {/* Main content */}
           <main className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center">
@@ -106,34 +106,34 @@ export default function AboutClinic() {
 
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                  <div className="flex items-center">
-                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                      <Check className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="text-slate-700 font-medium">Comprehensive Gynaecological care for all ages</span>
-                  </div>
+                            <div className="flex items-center">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
+                                    <Check className="h-5 w-5 text-white" />
+                                </div>
+                                <span className="text-slate-700 font-medium">Comprehensive Gynaecological care for all ages</span>
+                            </div>
 
-                  <div className="flex items-center">
-                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                      <Check className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
-                  </div>
+                            <div className="flex items-center">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
+                                    <Check className="h-5 w-5 text-white" />
+                                </div>
+                                <span className="text-slate-700 font-medium">Personalized fertility and pregnancy support</span>
+                            </div>
 
-                  <div className="flex items-center">
-                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                      <Check className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
-                  </div>
+                            <div className="flex items-center">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
+                                    <Check className="h-5 w-5 text-white" />
+                                </div>
+                                <span className="text-slate-700 font-medium">Expert hormonal and menstrual health management</span>
+                            </div>
 
-                  <div className="flex items-center">
-                    <div className="bg-[#E47F97] rounded-full p-1 mr-3">
-                      <Check className="h-5 w-5 text-white" />
-                    </div>
-                    <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
-                  </div>
-                </div>
+                            <div className="flex items-center">
+                                <div className="bg-gradient-to-r from-[#5b2e67] to-[#e47f9f] rounded-full p-1 mr-3">
+                                    <Check className="h-5 w-5 text-white" />
+                                </div>
+                                <span className="text-slate-700 font-medium">Safe, supportive environment for total well-being</span>
+                            </div>
+                        </div>
               </div>
 
 
