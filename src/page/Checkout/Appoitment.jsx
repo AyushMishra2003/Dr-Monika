@@ -228,12 +228,12 @@ export default function AppointmentBooking() {
 
   // Razorpay payment handler
   const handlePayment = () => {
+
     if (!patientDetails.patientName || !patientDetails.phoneNumber) {
       setError('Please fill in required patient details');
       return;
     }
-
-    // handleBookAppointment();
+    handleBookAppointment();
   };
 
   // Function to open Razorpay modal
