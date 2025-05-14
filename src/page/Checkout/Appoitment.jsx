@@ -24,6 +24,7 @@ export default function AppointmentBooking() {
   const [patientDetails, setPatientDetails] = useState({
     patientName: '',
     phoneNumber: '',
+    patientEmail:'',
     address: ''
   });
 
@@ -46,6 +47,7 @@ export default function AppointmentBooking() {
         }
         const result = await response.json();
         if (result.success) {
+            console.log("sssss",result.data);
           setBookedAppointments(result.data);
         } else {
           throw new Error(result.message || 'Failed to fetch appointments');
@@ -197,7 +199,8 @@ export default function AppointmentBooking() {
         patientName: patientDetails.patientName,
         dateTime: istTime,
         phoneNumber: patientDetails.phoneNumber,
-        address: patientDetails.address
+        address: patientDetails.address,
+        email:patientDetails.patientEmail
       };
 
       console.log(bookingData);
@@ -451,6 +454,7 @@ export default function AppointmentBooking() {
                 setSelectedTimeSlot(null);
                 setPatientDetails({
                   patientName: '',
+                  patientEmail:'',
                   phoneNumber: '',
                   address: ''
                 });
@@ -474,8 +478,8 @@ export default function AppointmentBooking() {
                     key={index}
                     onClick={() => handleDateSelect(date)}
                     className={`w-full flex items-center p-3 rounded-lg transition-colors duration-200 hover:bg-pink-50 ${selectedDate.toDateString() === date.toDateString()
-                        ? 'bg-pink-100 border-l-4 border-[#E47F9F]'
-                        : 'bg-gray-50'
+                      ? 'bg-pink-100 border-l-4 border-[#E47F9F]'
+                      : 'bg-gray-50'
                       }`}
                   >
                     <div className="flex-1">
@@ -508,10 +512,10 @@ export default function AppointmentBooking() {
                         onClick={() => handleTimeSlotSelect(slot)}
                         disabled={slot.booked}
                         className={`p-3 rounded-lg text-center transition-all duration-200 ${selectedTimeSlot?.id === slot.id
-                            ? 'bg-[#E47F9F] text-white ring-2 ring-pink-300 ring-offset-2'
-                            : slot.booked
-                              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                              : 'bg-gray-100 hover:bg-pink-50 text-gray-700 hover:text-[#5B2E67]'
+                          ? 'bg-[#E47F9F] text-white ring-2 ring-pink-300 ring-offset-2'
+                          : slot.booked
+                            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                            : 'bg-gray-100 hover:bg-pink-50 text-gray-700 hover:text-[#5B2E67]'
                           }`}
                       >
                         {slot.displayTime}
@@ -534,6 +538,18 @@ export default function AppointmentBooking() {
                             type="text"
                             name="patientName"
                             value={patientDetails.patientName}
+                            onChange={handlePatientDetailsChange}
+                            className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
+                            placeholder="Enter your name"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-gray-600 mb-1">Email *</label>
+                          <input
+                            type="text"
+                            name="patientEmail"
+                            value={patientDetails.patientEmail}
                             onChange={handlePatientDetailsChange}
                             className="w-full p-2 border rounded focus:ring-2 focus:ring-[#E47F9F] focus:outline-none"
                             placeholder="Enter your name"
@@ -573,8 +589,8 @@ export default function AppointmentBooking() {
                       onClick={handlePayment}
                       disabled={!selectedTimeSlot || !patientDetails.patientName || !patientDetails.phoneNumber || paymentStatus === 'processing'}
                       className={`w-full sm:w-auto px-8 py-3 rounded-lg font-medium transition-all duration-300 ${!selectedTimeSlot || !patientDetails.patientName || !patientDetails.phoneNumber || paymentStatus === 'processing'
-                          ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                          : 'bg-[#5B2E67] hover:bg-purple-900 text-white shadow-md hover:shadow-lg'
+                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        : 'bg-[#5B2E67] hover:bg-purple-900 text-white shadow-md hover:shadow-lg'
                         }`}
                     >
                       {paymentStatus === 'processing' ? (
