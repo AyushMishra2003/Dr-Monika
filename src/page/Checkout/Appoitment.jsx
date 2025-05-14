@@ -7,6 +7,7 @@ const DAYS_OF_WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 // API endpoints
 // const API_BASE_URL = 'http://localhost:6002/api/v1';
 const API_BASE_URL = 'https://hr-management-codecrafter-1.onrender.com/api/v1'
+
 const FETCH_APPOINTMENTS_URL = `${API_BASE_URL}/appointment/all`;
 const BOOK_APPOINTMENT_URL = `${API_BASE_URL}/appointment/booking`;
 
@@ -48,7 +49,7 @@ export default function AppointmentBooking() {
         const result = await response.json();
         if (result.success) {
             console.log("sssss",result.data);
-          setBookedAppointments(result.data);
+           setBookedAppointments(result.data);
         } else {
           throw new Error(result.message || 'Failed to fetch appointments');
         }
@@ -181,11 +182,6 @@ export default function AppointmentBooking() {
     setPaymentStatus('processing');
 
     try {
-      // Convert to ISO string with timezone offset (+05:30)
-      // const istDateTime = new Date(selectedTimeSlot.dateTime).toLocaleString("sv-SE", {
-      //   timeZone: "Asia/Kolkata"
-      // }).replace(" ", "T") + "+05:30";
-
 
       const date = new Date(selectedTimeSlot.dateTime);
 
@@ -212,15 +208,20 @@ export default function AppointmentBooking() {
         },
         body: JSON.stringify(bookingData)
       });
+      
+      console.log(response);
 
-      const result = await response.json();
+       setPaymentStatus('success');
+      
 
-      if (result.success) {
-        openRazorpayWindow();
-      } else {
-        setPaymentStatus('failed');
-        setError(result.message || 'Failed to book appointment');
-      }
+
+
+      // if (result.success) {
+      //   openRazorpayWindow();
+      // } else {
+      //   setPaymentStatus('failed');
+      //   setError(result.message || 'Failed to book appointment');
+      // }
     } catch (err) {
       setPaymentStatus('failed');
       setError(err.message || 'Failed to book appointment');
@@ -231,6 +232,8 @@ export default function AppointmentBooking() {
 
   // Razorpay payment handler
   const handlePayment = () => {
+
+     console.log("ayush -handle payment123")
 
     if (!patientDetails.patientName || !patientDetails.phoneNumber) {
       setError('Please fill in required patient details');
@@ -433,7 +436,7 @@ export default function AppointmentBooking() {
               <Check className="text-green-600" size={32} />
             </div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">Thank You for Your Booking!</h2>
-            <p className="text-gray-600 mb-6">Your appointment has been confirmed.</p>
+            <p className="text-gray-600 mb-6">Your appointment has been confirmed. Your Team Will Reach You </p>
             <div className="bg-gray-50 p-4 rounded-lg inline-block mx-auto max-w-md">
               <div className="flex items-center mb-2">
                 <User className="text-gray-600 mr-2" size={20} />
@@ -599,7 +602,7 @@ export default function AppointmentBooking() {
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          Processing Payment...
+                          Processing Payment
                         </span>
                       ) : (
                         <span className="flex items-center justify-center">
@@ -611,7 +614,7 @@ export default function AppointmentBooking() {
 
                     {!selectedTimeSlot && (
                       <div className="mt-3 flex items-center text-amber-600 text-sm">
-                        <AlertCircle size={16} className="mr-1" />
+                        <AlertCircle size={16} className="` mr-1" />
                         Please select a time slot to continue
                       </div>
                     )}

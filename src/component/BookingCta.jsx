@@ -14,17 +14,17 @@ const AppointmentCTA = () => {
     });
   }, []);
 
-  const navigate=useNavigate()
+  const navigate = useNavigate()
 
   return (
     <section
-      className="relative py-16 md:py-14 flex flex-col items-center bg-cover bg-center"
+      className="relative py-16 md:py-14 flex flex-col items-start bg-cover bg-center px-6"
       style={{ backgroundImage: `url(${image})` }}
     >
       {/* Darker Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70"></div>
+      <div className="absolute inset-0"></div>
 
-      <div className="relative container mx-auto px-4 z-10 text-center">
+      <div className="relative container px-4 z-10 text-left">
         {/* Heading */}
         <h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
@@ -35,7 +35,7 @@ const AppointmentCTA = () => {
 
         {/* Subheading */}
         <p
-          className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -44,7 +44,7 @@ const AppointmentCTA = () => {
 
         {/* CTA Buttons */}
         <div
-          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"
+          className="flex flex-col sm:flex-row justify-start gap-4 sm:gap-6"
           data-aos="fade-up"
           data-aos-delay="200"
         >
