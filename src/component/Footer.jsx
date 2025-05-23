@@ -111,7 +111,7 @@ const Footer = () => {
                             <Link to={`/service/counselling`}>
                                 <li className="mb-1 . flex items-center">
                                     <MdKeyboardArrowRight className="mr-1" />
-                                    Counselling Services
+                                    Counseling Services
                                 </li>
                             </Link>
                             <Link to={`/service/therapies`}>
